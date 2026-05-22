@@ -1,0 +1,72 @@
+---
+interface Props {
+  variant?: 'sine' | 'zigzag' | 'morse' | 'rising' | 'current';
+  color?: 'pulse' | 'signal';
+  width?: string;
+  animated?: boolean;
+}
+const { variant = 'sine', color = 'pulse', width = '100%', animated = true } = Astro.props;
+const stroke = color === 'pulse' ? 'var(--owc-pulse)' : 'var(--owc-signal)';
+const paths = {
+  sine: 'M5 16 Q 22 4 40 16 T 80 16 T 120 16 T 160 16 T 200 16 T 235 16',
+  zigzag: 'M5 16 L 25 4 L 45 28 L 65 4 L 85 28 L 105 4 L 125 28 L 145 4 L 165 28 L 185 4 L 205 28 L 225 4 L 240 16',
+  rising: 'M5 16 Q 18 14 30 16 T 60 16 Q 75 8 90 16 T 130 16 Q 150 2 170 16 T 220 16 Q 235 -2 240 16',
+};
+const id = `sq-${Math.random().toString(36).substr(2, 8)}`;
+---
+{variant === 'morse' ? (
+  <svg class={`squiggle ${animated ? 'animated' : ''}`} viewBox="0 0 240 32" style={`width: ${width};`} aria-hidden="true" data-id={id}>
+    <circle cx="20" cy="16" r="3" fill={stroke}/>
+    <circle cx="40" cy="16" r="3" fill={stroke}/>
+    <circle cx="60" cy="16" r="3" fill={stroke}/>
+    <rect x="85" y="13" width="22" height="6" fill={stroke} rx="2"/>
+    <rect x="115" y="13" width="22" height="6" fill={stroke} rx="2"/>
+    <rect x="145" y="13" width="22" height="6" fill={stroke} rx="2"/>
+    <circle cx="180" cy="16" r="3" fill={stroke}/>
+    <circle cx="200" cy="16" r="3" fill={stroke}/>
+    <circle cx="220" cy="16" r="3" fill={stroke}/>
+  </svg>
+) : variant === 'current' ? (
+  <svg class={`squiggle ${animated ? 'animated' : ''}`} viewBox="0 0 240 32" style={`width: ${width};`} aria-hidden="true" data-id={id}>
+    {[10, 50, 90, 130, 170, 210].map((x) => (
+      <g>
+        <circle cx={x} cy="16" r="3" fill="var(--owc-signal)"/>
+        <rect x={x + 8} y="13" width="20" height="6" fill="var(--owc-signal)" rx="2"/>
+      </g>
+    ))}
+  </svg>
+) : (
+  <svg class={`squiggle ${animated ? 'animated' : ''}`} viewBox="0 0 240 32" style={`width: ${width};`} aria-hidden="true" data-id={id}>
+    <path d={paths[variant]} fill="none" stroke={stroke} stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+)}
+
+<style>
+  .squiggle { display: block; height: auto; }
+  .squiggle.animated path {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+  }
+  .squiggle.animated.in-view path {
+    animation: drawSquiggle 1.4s ease-out forwards;
+  }
+  @keyframes drawSquiggle { to { stroke-dashoffset: 0; } }
+  @media (prefers-reduced-motion: reduce) {
+    .squiggle.animated path { stroke-dasharray: none; stroke-dashoffset: 0; animation: none; }
+  }
+</style>
+
+<script>
+  // Trigger animation on viewport entry
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.4 });
+    document.querySelectorAll('.squiggle.animated').forEach((sq) => observer.observe(sq));
+  }
+</script>
