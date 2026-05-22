@@ -1,0 +1,43 @@
+---
+interface Props {
+  size?: 'sm' | 'md' | 'lg' | 'xl';
+  variant?: 'dark' | 'light' | 'darkmode';
+}
+const { size = 'md', variant = 'dark' } = Astro.props;
+const colors = {
+  dark: { type: 'var(--owc-ink)', squiggle: 'var(--owc-pulse)' },
+  light: { type: 'var(--owc-bone)', squiggle: 'var(--owc-pulse)' },
+  darkmode: { type: 'var(--owc-bone)', squiggle: 'var(--owc-pulse)' },
+};
+const c = colors[variant];
+const sizeMap = { sm: '28px', md: '48px', lg: '72px', xl: '96px' };
+const fontSize = sizeMap[size];
+---
+<a href="/" class="wordmark" data-size={size} aria-label="oddlywiredco home" style={`font-size: ${fontSize};`}>
+  <span class="part bold" style={`color: ${c.type};`}>odd</span><span class="part reg" style={`color: ${c.type};`}>ly</span><span class="part bold" style={`color: ${c.type};`}>wired</span><span class="part co" style={`color: ${c.type};`}>co</span>
+</a>
+
+<style>
+  .wordmark {
+    display: inline-flex;
+    align-items: baseline;
+    font-family: 'Courier New', Menlo, monospace;
+    letter-spacing: -2px;
+    line-height: 1;
+    transition: transform 0.15s ease-out;
+  }
+  .wordmark:hover { transform: skewX(-4deg); }
+  .wordmark .bold { font-weight: 700; }
+  .wordmark .reg { font-weight: 400; }
+  .wordmark .co {
+    font-weight: 400;
+    font-style: italic;
+    font-size: 0.55em;
+    opacity: 0.55;
+    margin-left: 2px;
+    align-self: flex-start;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .wordmark:hover { transform: none; }
+  }
+</style>
