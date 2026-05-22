@@ -1,0 +1,76 @@
+---
+---
+<form class="newsletter-form" method="POST" action="/api/subscribe" novalidate>
+  <input type="email" name="email" placeholder="your email" required aria-label="email" class="email-input"/>
+  <input type="text" name="name" tabindex="-1" autocomplete="off" class="honeypot" aria-hidden="true"/>
+  <button type="submit" class="button">i'm in</button>
+  <div class="message" role="status" aria-live="polite"></div>
+</form>
+
+<style>
+  .newsletter-form { display: flex; gap: 12px; flex-wrap: wrap; max-width: 480px; }
+  .email-input {
+    flex: 1;
+    min-width: 200px;
+    padding: 14px 18px;
+    background: transparent;
+    border: 2px solid var(--owc-bone);
+    color: var(--owc-bone);
+    font-family: var(--font-mono);
+    font-size: 14px;
+    border-radius: 8px;
+  }
+  .email-input::placeholder { color: var(--owc-bone); opacity: 0.4; }
+  .email-input:focus {
+    outline: none;
+    border-color: var(--owc-pulse);
+  }
+  .honeypot { position: absolute; left: -9999px; }
+  .message { width: 100%; margin-top: 8px; font-size: 14px; opacity: 0; transition: opacity 0.2s; }
+  .message.visible { opacity: 1; }
+  .message.success { color: var(--owc-pulse); font-family: var(--font-mono); }
+  .message.error { color: var(--owc-signal); }
+  .newsletter-form.shake { animation: shake 0.4s; }
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-6px); }
+    75% { transform: translateX(6px); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .newsletter-form.shake { animation: none; }
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.newsletter-form').forEach((form) => {
+    const f = form as HTMLFormElement;
+    const message = f.querySelector('.message') as HTMLDivElement;
+    const button = f.querySelector('button') as HTMLButtonElement;
+
+    f.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const data = new FormData(f);
+      if (data.get('name')) return; // honeypot tripped
+
+      button.textContent = '...';
+      button.disabled = true;
+      message.className = 'message';
+
+      try {
+        const res = await fetch('/api/subscribe', { method: 'POST', body: data });
+        if (res.ok) {
+          f.innerHTML = '<div class="message visible success">you\'re in. i\'ll only email when there\'s something worth saying.</div>';
+        } else {
+          throw new Error('non-200');
+        }
+      } catch {
+        f.classList.add('shake');
+        setTimeout(() => f.classList.remove('shake'), 400);
+        message.textContent = 'something glitched. try once more?';
+        message.className = 'message visible error';
+        button.textContent = "i'm in";
+        button.disabled = false;
+      }
+    });
+  });
+</script>
