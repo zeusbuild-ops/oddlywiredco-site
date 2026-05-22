@@ -1,17 +1,113 @@
 ---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Wordmark from '../components/Wordmark.astro';
+import Squiggle from '../components/Squiggle.astro';
+import CursorTypeHero from '../components/CursorTypeHero.astro';
+import ProductCard from '../components/ProductCard.astro';
+import NewsletterForm from '../components/NewsletterForm.astro';
 
+const products = [
+  { slug: 'masking-fatigue-mug', name: 'masking fatigue mug', tag: 'running low on mask battery', price: 18, image: '/products/masking-fatigue-hero.png' },
+  { slug: 'time-blindness-mug', name: 'time blindness mug', tag: 'two speeds: not yet / oh no i\'m late', price: 18, image: '/products/time-blindness-hero.png' },
+  { slug: 'brain-dump-journal', name: 'brain dump journal', tag: 'everything is happening at once', price: 19, image: '/products/brain-dump-hero.png' },
+];
 ---
+<BaseLayout
+  title="OddlyWiredCo — your brain isn't broken, it's just oddly wired"
+  description="An ADHD brand for the moments nobody else names. Mugs, journals, prints made by an ADHD person for ADHD/AuDHD brains. UK-printed."
+>
+  <!-- Fold 1: Hero (Ink) -->
+  <section class="fold dark hero-fold">
+    <div class="container">
+      <div class="meta">oddlywiredco · est. 2026</div>
+      <Wordmark size="xl" variant="darkmode"/>
+      <Squiggle variant="sine" width="100%"/>
+      <CursorTypeHero lines={["your brain isn't broken.", "it's just oddly wired."]}/>
+      <p class="hero-sub">the chaos is a feature.</p>
+      <a href="#stuff" class="button">see the stuff →</a>
+    </div>
+  </section>
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+  <!-- Fold 2: Who this is for (Bone) -->
+  <section class="fold light">
+    <div class="container">
+      <div class="meta">02 / who this is for</div>
+      <h2 class="h-mono lg">this is for the brains<br>that don't sit still.</h2>
+      <ul class="who-list">
+        <li>if your brain has 47 tabs open</li>
+        <li>if "just do it" feels like a war crime</li>
+        <li>if you found out late and you're still processing</li>
+      </ul>
+      <p class="who-arrow">→ you're in the right place.</p>
+    </div>
+  </section>
+
+  <!-- Fold 3: The stuff (Ink) -->
+  <section class="fold dark" id="stuff">
+    <div class="container">
+      <div class="meta">03 / the catalogue</div>
+      <h2 class="h-mono lg">made for moments<br>nobody else names.</h2>
+      <Squiggle variant="zigzag" width="50%"/>
+      <div class="product-grid">
+        {products.map(p => <ProductCard {...p}/>)}
+      </div>
+    </div>
+  </section>
+
+  <!-- Fold 4: About teaser (Bone) -->
+  <section class="fold light">
+    <div class="container">
+      <div class="meta">04 / who's behind this</div>
+      <p class="about-body">
+        Oddlywired is an ADHD brand made by an ADHD person.
+        Every product comes from a moment I needed someone else to have named for me.
+      </p>
+      <a href="/about" class="button outline">more about us →</a>
+    </div>
+  </section>
+
+  <!-- Fold 5: Newsletter (Ink) -->
+  <section class="fold dark">
+    <div class="container">
+      <div class="meta">05 / stay in the loop</div>
+      <h2 class="h-mono md">get the next thing first.</h2>
+      <p class="newsletter-sub">no spam, no schedule, just a heads-up when something new lands.</p>
+      <NewsletterForm/>
+    </div>
+  </section>
+
+  <!-- Fold 6: Footer (Bone) -->
+  <footer class="fold light footer-fold">
+    <div class="container">
+      <Squiggle variant="sine" width="200px"/>
+      <Wordmark size="md" variant="dark"/>
+      <ul class="footer-links">
+        <li><a href="https://www.etsy.com/shop/oddlywiredco" rel="noopener" target="_blank">Etsy</a></li>
+        <li><span>TikTok (coming soon)</span></li>
+        <li><span>Pinterest (coming soon)</span></li>
+        <li><span>Instagram (coming soon)</span></li>
+      </ul>
+      <p class="copyright">© 2026 OddlyWiredCo</p>
+      <p class="easter-egg">made with executive dysfunction</p>
+    </div>
+  </footer>
+
+  <style>
+    .hero-fold { min-height: 92vh; display: flex; align-items: center; }
+    .hero-fold .container { display: flex; flex-direction: column; gap: 28px; }
+    .hero-sub { color: var(--owc-bone); opacity: 0.65; font-family: var(--font-mono); font-size: 14px; }
+    .who-list { display: flex; flex-direction: column; gap: 16px; margin: 24px 0; font-family: var(--font-mono); font-size: clamp(24px, 4vw, 36px); font-weight: 700; }
+    .who-arrow { font-family: var(--font-mono); font-size: 18px; color: var(--owc-signal); margin-top: 24px; }
+    .product-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 36px; }
+    @media (max-width: 800px) { .product-grid { grid-template-columns: 1fr; } }
+    .about-body { font-size: 21px; line-height: 1.5; max-width: 640px; margin-bottom: 24px; }
+    .newsletter-sub { opacity: 0.7; margin-bottom: 32px; font-size: 16px; }
+    .footer-fold { padding-top: 64px; padding-bottom: 64px; }
+    .footer-fold .container { display: flex; flex-direction: column; gap: 24px; align-items: flex-start; }
+    .footer-links { display: flex; gap: 24px; flex-wrap: wrap; font-family: var(--font-mono); font-size: 13px; text-transform: uppercase; letter-spacing: 1.5px; }
+    .footer-links a:hover { color: var(--owc-pulse); }
+    .footer-links span { opacity: 0.4; }
+    .copyright { font-family: var(--font-mono); font-size: 12px; opacity: 0.5; }
+    .easter-egg { font-family: var(--font-mono); font-size: 10px; opacity: 0.3; text-transform: uppercase; letter-spacing: 2px; }
+  </style>
+</BaseLayout>
