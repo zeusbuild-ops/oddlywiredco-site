@@ -1,0 +1,22 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Wordmark from '../components/Wordmark.astro';
+import Squiggle from '../components/Squiggle.astro';
+---
+<BaseLayout title="404 · OddlyWiredCo" description="page not found">
+  <section class="fold dark error-fold">
+    <div class="container error-container">
+      <Wordmark size="md" variant="darkmode"/>
+      <Squiggle variant="zigzag" width="240px"/>
+      <h1 class="h-mono xl error-h">404.<br>you went the wrong way.</h1>
+      <p class="error-sub">happens to the best of us. tabs are like that.</p>
+      <a href="/" class="button">take me home →</a>
+    </div>
+  </section>
+  <style>
+    .error-fold { min-height: 100vh; display: flex; align-items: center; }
+    .error-container { display: flex; flex-direction: column; gap: 28px; }
+    .error-h { color: var(--owc-bone); }
+    .error-sub { color: var(--owc-bone); opacity: 0.6; font-size: 18px; }
+  </style>
+</BaseLayout>
