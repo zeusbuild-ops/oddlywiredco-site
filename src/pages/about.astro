@@ -1,0 +1,174 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Wordmark from '../components/Wordmark.astro';
+import Squiggle from '../components/Squiggle.astro';
+---
+<BaseLayout
+  title="About — OddlyWiredCo"
+  description="An ADHD brand made by an ADHD person. We name the parts nobody else is brave enough to put on a mug. UK-printed, neurodivergent-first, no toxic positivity."
+>
+  <!-- Fold 1: Hero (Ink) -->
+  <section class="fold dark about-hero">
+    <div class="container">
+      <Wordmark size="sm" variant="darkmode"/>
+      <div class="meta">about / who's behind this</div>
+      <h1 class="h-mono lg">an adhd brand<br>made by an adhd person.</h1>
+      <Squiggle variant="sine" width="50%"/>
+      <p class="hero-sub">we name the parts of adhd nobody else is brave enough to put on a mug.</p>
+    </div>
+  </section>
+
+  <!-- Fold 2: Hi, I'm Jay (Bone) -->
+  <section class="fold light">
+    <div class="container">
+      <div class="meta">01 / hi, i'm jay</div>
+      <h2 class="h-mono md">i started this after my diagnosis<br>in my thirties.</h2>
+      <p class="body">
+        I realised two things at once. One: a lot of my life suddenly made sense.
+        Two: most of the products marketed at people like me were either clinical and joyless,
+        or built around the idea that ADHD is a quirky productivity superpower if you just hustle harder.
+      </p>
+      <p class="body">
+        Neither of those felt like my actual experience. The actual experience is funnier,
+        messier, more tender, and a lot more specific than that. So I started making the things
+        I wished existed when I got diagnosed.
+      </p>
+    </div>
+  </section>
+
+  <!-- Fold 3: Who this is for (Ink) -->
+  <section class="fold dark">
+    <div class="container">
+      <div class="meta">02 / who this is for</div>
+      <h2 class="h-mono md">the late-diagnosed.<br>the audhd ones.<br>the ones who slipped through.</h2>
+      <p class="body">
+        OddlyWiredCo is built for the late-diagnosed adults, the AuDHD ones, the ADHD women who slipped through every
+        screening as kids, the ADHD parents raising ADHD kids, and anyone who has ever sat in a chair for forty minutes
+        trying to start a task they actually wanted to do.
+      </p>
+      <p class="body">
+        If "I thought I was just bad at being a person, turns out I'm neurodivergent" landed somewhere
+        in your gut — you are in the right shop.
+      </p>
+      <div class="pullquote">
+        this is an adhd-only brand by design.<br>
+        no general productivity merch.<br>
+        no inspirational quotes.<br>
+        no toxic positivity.<br>
+        one niche, full commitment.
+      </div>
+    </div>
+  </section>
+
+  <!-- Fold 4: What we sell + How designs are made (Bone) -->
+  <section class="fold light">
+    <div class="container">
+      <div class="meta">03 / what we make</div>
+      <h2 class="h-mono md">three things,<br>all neurodivergent.</h2>
+      <p class="body">
+        Humour and identity mugs and prints. Digital planners and tools designed for executive-function reality
+        (not the "wake up at 5am and journal" version). Seasonal drops around moments like Mental Health Awareness
+        Month, perimenopause overlap, and late-diagnosis anniversaries.
+      </p>
+      <p class="body">
+        Every product targets a specific neurodivergent moment. Masking fatigue. Time blindness. Object permanence.
+        The 2am doom-scroll. The hyperfocus spiral. Rejection sensitivity. The bits that do not make it into
+        mainstream "ADHD content" because they are too honest.
+      </p>
+
+      <Squiggle variant="zigzag" width="40%"/>
+
+      <div class="meta sub-meta">04 / how designs are made</div>
+      <p class="body">
+        Honestly: I use AI tools as part of the design process. I generate layout drafts, explore type and colour
+        variations, and speed up the production side using AI. Every design is then reviewed, edited, voiced, and
+        finalised by me as a human. The taste, the lines, the choices about what to say and what not to say — those are mine.
+      </p>
+      <p class="body">
+        I mention this because I think you have a right to know how the things you buy are made.
+        I would rather tell you up front than have it be a hidden detail.
+      </p>
+    </div>
+  </section>
+
+  <!-- Fold 5: What you will not find (Ink) -->
+  <section class="fold dark">
+    <div class="container">
+      <div class="meta">05 / what you will not find here</div>
+      <h2 class="h-mono md">no "adhd is your superpower" content.</h2>
+      <ul class="wont-list">
+        <li>no clinical advice</li>
+        <li>no content that talks down to neurodivergent people</li>
+        <li>no promises that a planner will fix you</li>
+        <li>no treating us as a problem to be solved</li>
+      </ul>
+      <p class="hero-sub">tools and humour, that's it.</p>
+    </div>
+  </section>
+
+  <!-- Fold 6: Thanks + CTAs (Bone) -->
+  <section class="fold light">
+    <div class="container">
+      <div class="meta">06 / thanks for being here</div>
+      <p class="body">
+        If you buy something, I see your order. If you message the shop, you are messaging me.
+        If a product does not work for your brain, that's information about the product, not about you.
+        I make this for people who get it. I am glad you found the shop.
+      </p>
+      <div class="cta-row">
+        <a href="https://www.etsy.com/shop/oddlywiredco" class="button" target="_blank" rel="noopener">shop on etsy →</a>
+        <a href="/" class="button outline">← back to home</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer (Bone) -->
+  <footer class="fold light footer-fold">
+    <div class="container">
+      <Squiggle variant="sine" width="200px"/>
+      <Wordmark size="md" variant="dark"/>
+      <ul class="footer-links">
+        <li><a href="https://www.etsy.com/shop/oddlywiredco" rel="noopener" target="_blank">Etsy</a></li>
+        <li><span>TikTok (coming soon)</span></li>
+        <li><span>Pinterest (coming soon)</span></li>
+        <li><span>Instagram (coming soon)</span></li>
+      </ul>
+      <p class="copyright">© 2026 OddlyWiredCo</p>
+      <p class="easter-egg">made with executive dysfunction</p>
+    </div>
+  </footer>
+
+  <style>
+    .about-hero { padding-top: 64px; padding-bottom: 64px; }
+    .about-hero .container { display: flex; flex-direction: column; gap: 20px; }
+    .hero-sub { color: var(--owc-bone); opacity: 0.65; font-family: var(--font-mono); font-size: 16px; max-width: 620px; }
+    .body { font-size: 18px; line-height: 1.6; max-width: 680px; margin: 0 0 20px; }
+    .pullquote {
+      font-family: var(--font-mono);
+      font-size: clamp(18px, 2.2vw, 22px);
+      font-weight: 700;
+      line-height: 1.45;
+      border-left: 4px solid var(--owc-pulse);
+      padding: 18px 24px;
+      margin: 32px 0 0;
+      max-width: 640px;
+    }
+    .sub-meta { margin-top: 48px; }
+    .wont-list {
+      display: flex; flex-direction: column; gap: 12px;
+      margin: 24px 0;
+      font-family: var(--font-mono);
+      font-size: 18px;
+      max-width: 620px;
+    }
+    .wont-list li::before { content: '× '; color: var(--owc-signal); margin-right: 4px; }
+    .cta-row { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 24px; }
+    .footer-fold { padding-top: 64px; padding-bottom: 64px; }
+    .footer-fold .container { display: flex; flex-direction: column; gap: 24px; align-items: flex-start; }
+    .footer-links { display: flex; gap: 24px; flex-wrap: wrap; font-family: var(--font-mono); font-size: 13px; text-transform: uppercase; letter-spacing: 1.5px; }
+    .footer-links a:hover { color: var(--owc-pulse); }
+    .footer-links span { opacity: 0.4; }
+    .copyright { font-family: var(--font-mono); font-size: 12px; opacity: 0.5; }
+    .easter-egg { font-family: var(--font-mono); font-size: 10px; opacity: 0.3; text-transform: uppercase; letter-spacing: 2px; }
+  </style>
+</BaseLayout>
