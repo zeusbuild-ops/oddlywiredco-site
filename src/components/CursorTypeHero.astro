@@ -1,0 +1,73 @@
+---
+interface Props {
+  lines: string[];
+  charDelay?: number;
+  lineDelay?: number;
+}
+const { lines, charDelay = 35, lineDelay = 280 } = Astro.props;
+const id = `hero-${Math.random().toString(36).substr(2, 8)}`;
+---
+<div class="cursor-hero" id={id} data-lines={JSON.stringify(lines)} data-char-delay={charDelay} data-line-delay={lineDelay}>
+  <div class="hero-typed h-mono xl"></div>
+  <span class="cursor" aria-hidden="true"></span>
+</div>
+
+<style>
+  .cursor-hero {
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .hero-typed { color: var(--owc-bone); white-space: pre-wrap; }
+  .cursor {
+    display: inline-block;
+    width: 0.55em;
+    height: 0.85em;
+    background: var(--owc-pulse);
+    animation: blink 1s steps(2, start) infinite;
+    margin-bottom: 0.1em;
+  }
+  @keyframes blink { 50% { opacity: 0; } }
+  @media (prefers-reduced-motion: reduce) {
+    .cursor { animation: none; }
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.cursor-hero').forEach((root) => {
+    const target = root.querySelector('.hero-typed') as HTMLElement;
+    const lines = JSON.parse(root.getAttribute('data-lines') || '[]') as string[];
+    const charDelay = parseInt(root.getAttribute('data-char-delay') || '35', 10);
+    const lineDelay = parseInt(root.getAttribute('data-line-delay') || '280', 10);
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      target.textContent = lines.join('\n');
+      return;
+    }
+
+    let lineIdx = 0;
+    let charIdx = 0;
+    let output = '';
+
+    function tick() {
+      if (lineIdx >= lines.length) return;
+      const line = lines[lineIdx];
+      if (charIdx < line.length) {
+        output += line[charIdx];
+        target.textContent = output;
+        charIdx++;
+        setTimeout(tick, charDelay);
+      } else {
+        if (lineIdx < lines.length - 1) {
+          output += '\n';
+          target.textContent = output;
+          lineIdx++;
+          charIdx = 0;
+          setTimeout(tick, lineDelay);
+        }
+      }
+    }
+    setTimeout(tick, 400);
+  });
+</script>
