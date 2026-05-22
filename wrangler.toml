@@ -1,6 +1,9 @@
 name = "oddlywiredco-site"
 compatibility_date = "2026-01-01"
 
+[triggers]
+custom_domains = ["oddlywiredco.com"]
+
 [[d1_databases]]
 binding = "DB"
 database_name = "oddlywiredco-newsletter"
