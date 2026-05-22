@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 48" role="img" aria-label="oddlywiredco signal current squiggle">
+  <g fill="#FF5C5C">
+    <circle cx="10" cy="24" r="3"/>
+    <rect x="22" y="21" width="20" height="6" rx="2"/>
+    <circle cx="54" cy="24" r="3"/>
+    <rect x="66" y="21" width="20" height="6" rx="2"/>
+    <circle cx="98" cy="24" r="3"/>
+    <rect x="110" y="21" width="20" height="6" rx="2"/>
+    <circle cx="142" cy="24" r="3"/>
+    <rect x="154" y="21" width="20" height="6" rx="2"/>
+    <circle cx="186" cy="24" r="3"/>
+    <rect x="198" y="21" width="20" height="6" rx="2"/>
+    <circle cx="230" cy="24" r="3"/>
+    <rect x="242" y="21" width="20" height="6" rx="2"/>
+    <circle cx="274" cy="24" r="3"/>
+    <rect x="286" y="21" width="20" height="6" rx="2"/>
+    <circle cx="318" cy="24" r="3"/>
+    <rect x="330" y="21" width="20" height="6" rx="2"/>
+    <circle cx="362" cy="24" r="3"/>
+    <rect x="374" y="21" width="20" height="6" rx="2"/>
+    <circle cx="406" cy="24" r="3"/>
+    <rect x="418" y="21" width="20" height="6" rx="2"/>
+    <circle cx="450" cy="24" r="3"/>
+    <rect x="462" y="21" width="20" height="6" rx="2"/>
+    <circle cx="494" cy="24" r="3"/>
+    <rect x="506" y="21" width="20" height="6" rx="2"/>
+    <circle cx="538" cy="24" r="3"/>
+    <rect x="550" y="21" width="20" height="6" rx="2"/>
+    <circle cx="582" cy="24" r="3"/>
+    <rect x="594" y="21" width="20" height="6" rx="2"/>
+    <circle cx="626" cy="24" r="3"/>
+    <rect x="638" y="21" width="20" height="6" rx="2"/>
+    <circle cx="670" cy="24" r="3"/>
+    <rect x="682" y="21" width="20" height="6" rx="2"/>
+    <circle cx="714" cy="24" r="3"/>
+    <rect x="726" y="21" width="20" height="6" rx="2"/>
+    <circle cx="758" cy="24" r="3"/>
+    <rect x="770" y="21" width="20" height="6" rx="2"/>
+  </g>
+</svg>

@@ -1,0 +1,21 @@
+:root {
+  /* Chrome palette — 5 colours, locked. Brand identity only. */
+  --owc-ink:    #0E0E11;
+  --owc-bone:   #F4EFE6;
+  --owc-pulse:  #4CE2C1;
+  --owc-signal: #FF5C5C;
+  --owc-clay:   #C77A5A;
+
+  /* Product extension palette — 6 colours. Product artwork ONLY.
+     NEVER appears on chrome (site, packaging, social, Pinterest, Etsy banner). */
+  --owc-spark:  #FFD93D;
+  --owc-static: #3A7CA5;
+  --owc-cosmic: #6B4E8E;
+  --owc-sage:   #7A9B7E;
+  --owc-rose:   #E8B4B4;
+  --owc-bronze: #B07B47;
+
+  /* Type colours derived from surface system */
+  --owc-type-on-light: var(--owc-ink);
+  --owc-type-on-dark:  var(--owc-bone);
+}

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="580" height="14" viewBox="0 0 580 14">
+  <!--
+    OddlyWiredCo Signature Squiggle — standalone motif.
+
+    The brand's most recognizable visual element: a quadratic Bezier sine wave
+    representing "oddly wired" thinking. Extracted from the wordmark for reuse
+    as an accent, divider, transition, or animation motif across listings,
+    pins, video, and other brand surfaces.
+
+    Stroke uses currentColor so the squiggle inherits the parent's text color.
+    Brand-frame default: Electric Teal #2EC4B6 (the signature accent — set the
+    parent's color to #2EC4B6 in CSS, or override the stroke attribute on this
+    element). When used as a niche-specific accent inside a product palette,
+    set color to the relevant ADHD or ND palette colour instead.
+
+    Aspect ratio: ~41:1. For shorter accents, crop the viewBox horizontally.
+    For animations: the path is a single continuous d attribute, so dasharray
+    + dashoffset will animate cleanly along the wave.
+  -->
+  <path d="M0,7 Q50,0 100,7 Q150,14 200,7 Q250,0 300,7 Q350,14 400,7 Q450,0 500,7 Q550,14 580,7"
+    stroke="#4CE2C1"
+    stroke-width="2.5"
+    fill="none"
+    stroke-linecap="round"/>
+</svg>

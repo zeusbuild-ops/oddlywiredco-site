@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <!-- OddlyWiredCo Icon Mark -->
+  <!-- A circle with a quirky wire/squiggle through it — "oddly wired" visualized -->
+  <!-- Works at 16px favicon up to large format -->
+
+  <!-- Outer circle -->
+  <circle cx="100" cy="100" r="90" fill="none" stroke="#0E0E11" stroke-width="8"/>
+
+  <!-- Inner wire squiggle — the signature element, Pulse (brand-frame accent) -->
+  <path d="M35,100 Q55,65 75,100 Q95,135 115,100 Q135,65 155,100"
+    stroke="#4CE2C1"
+    stroke-width="7"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"/>
+
+  <!-- Two small dots at wire ends — electrical terminals in Pulse -->
+  <circle cx="35" cy="100" r="6" fill="#4CE2C1"/>
+  <circle cx="155" cy="100" r="6" fill="#4CE2C1"/>
+</svg>

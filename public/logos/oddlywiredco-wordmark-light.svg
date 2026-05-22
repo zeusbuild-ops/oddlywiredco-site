@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="120" viewBox="0 0 600 120">
+  <!-- OddlyWiredCo Wordmark — Light on Dark -->
+
+  <text x="0" y="78"
+    font-family="'Courier New', 'Courier', monospace"
+    font-weight="700"
+    font-size="72"
+    fill="#FAFAF9"
+    letter-spacing="-2">Oddly</text>
+
+  <text x="248" y="78"
+    font-family="'Courier New', 'Courier', monospace"
+    font-weight="400"
+    font-size="72"
+    fill="#FAFAF9"
+    letter-spacing="-2">Wired</text>
+
+  <text x="502" y="78"
+    font-family="'Courier New', 'Courier', monospace"
+    font-weight="400"
+    font-style="italic"
+    font-size="48"
+    fill="#A8A29E">Co</text>
+
+  <!-- Signature wire squiggle — Electric Teal (brand-frame accent, consistent across dark + light wordmarks) -->
+  <path d="M0,95 Q50,88 100,95 Q150,102 200,95 Q250,88 300,95 Q350,102 400,95 Q450,88 500,95 Q550,102 580,95"
+    stroke="#4CE2C1"
+    stroke-width="2.5"
+    fill="none"
+    stroke-linecap="round"/>
+</svg>
