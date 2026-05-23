@@ -1,5 +1,4 @@
 import type { APIRoute } from 'astro';
-import { env } from 'cloudflare:workers';
 
 async function hashIp(ip: string): Promise<string> {
   const enc = new TextEncoder().encode(ip + 'owc_salt_2026');
@@ -7,8 +6,8 @@ async function hashIp(ip: string): Promise<string> {
   return Array.from(new Uint8Array(hash)).map(b => b.toString(16).padStart(2, '0')).join('');
 }
 
-export const POST: APIRoute = async ({ request }) => {
-  const DB = (env as any).DB as D1Database | undefined;
+export const POST: APIRoute = async ({ request, locals }) => {
+  const DB = locals.runtime?.env?.DB;
 
   try {
     const form = await request.formData();

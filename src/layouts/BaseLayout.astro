@@ -29,6 +29,9 @@ const canonical = new URL(Astro.url.pathname, Astro.site).toString();
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content={title}>
+  <meta name="twitter:description" content={description}>
+  <meta name="twitter:image" content={new URL(ogImage, Astro.site).toString()}>
 
   <!-- Inter + Space Mono via Google Fonts (only external dep — OK for v1) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">

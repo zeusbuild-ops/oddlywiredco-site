@@ -53,6 +53,19 @@
 .button.signal { background: var(--owc-signal); color: var(--owc-bone); }
 .button.outline { background: transparent; border: 2px solid var(--owc-pulse); color: var(--owc-pulse); padding: 12px 22px; }
 
+:focus { outline: none; }
+:focus-visible {
+  outline: 2px solid var(--owc-pulse);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+.button:focus-visible {
+  outline-offset: 4px;
+}
+.fold.dark :focus-visible {
+  outline-color: var(--owc-pulse);
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;

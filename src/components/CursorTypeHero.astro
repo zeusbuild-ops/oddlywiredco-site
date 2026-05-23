@@ -5,10 +5,10 @@ interface Props {
   lineDelay?: number;
 }
 const { lines, charDelay = 35, lineDelay = 280 } = Astro.props;
-const id = `hero-${Math.random().toString(36).substr(2, 8)}`;
+const initialText = lines.join('\n');
 ---
-<div class="cursor-hero" id={id} data-lines={JSON.stringify(lines)} data-char-delay={charDelay} data-line-delay={lineDelay}>
-  <div class="hero-typed h-mono xl"></div>
+<div class="cursor-hero" data-lines={JSON.stringify(lines)} data-char-delay={charDelay} data-line-delay={lineDelay}>
+  <div class="hero-typed h-mono xl">{initialText}</div>
   <span class="cursor" aria-hidden="true"></span>
 </div>
 
@@ -45,6 +45,9 @@ const id = `hero-${Math.random().toString(36).substr(2, 8)}`;
       target.textContent = lines.join('\n');
       return;
     }
+
+    // Clear the pre-populated no-JS fallback before typing.
+    target.textContent = '';
 
     let lineIdx = 0;
     let charIdx = 0;
