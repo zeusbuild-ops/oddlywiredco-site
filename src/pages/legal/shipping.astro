@@ -1,0 +1,123 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const LAUNCH_DATE = '2026-05-27';
+---
+<BaseLayout
+  title="Shipping | OddlyWiredCo"
+  description="OddlyWiredCo shipping information: production time, UK and international delivery estimates, tracking, customs and lost-parcel policy."
+>
+  <section class="fold light">
+    <div class="container legal">
+      <p class="meta">Legal · Shipping</p>
+      <h1 class="h-mono lg">Shipping</h1>
+      <p class="effective">Effective {LAUNCH_DATE}. Last updated {LAUNCH_DATE}.</p>
+
+      <h2>Production time</h2>
+      <p>
+        Every item is made to order. Our print partner (Printify) typically produces journals,
+        mugs and stickers in <strong>2–5 working days</strong> from order confirmation. Production
+        time is separate from shipping time.
+      </p>
+
+      <h2>Delivery estimates</h2>
+      <p>Total time from order confirmation to delivery, including production:</p>
+      <ul>
+        <li><strong>United Kingdom</strong> — 5–10 working days</li>
+        <li><strong>European Union</strong> — 10–15 working days</li>
+        <li><strong>United States &amp; Canada</strong> — 10–18 working days</li>
+        <li><strong>Rest of world</strong> — 15–25 working days</li>
+      </ul>
+      <p>
+        These are estimates, not guarantees. Carriers occasionally have delays we cannot control,
+        especially around UK and US public holidays.
+      </p>
+
+      <h2>Shipping cost</h2>
+      <p>
+        Shipping is calculated at checkout based on your delivery address. The exact cost is shown
+        before you confirm payment.
+      </p>
+
+      <h2>Where we ship from</h2>
+      <p>
+        Orders are dispatched from our print partner's UK facility (Prodigi) for UK and most EU
+        addresses, and from their US facility for North American and rest-of-world addresses,
+        whichever route is cheaper and faster for the destination.
+      </p>
+
+      <h2>Tracking</h2>
+      <p>
+        You receive a dispatch email with a tracking link once your order leaves the print facility.
+        Tracking detail varies by carrier — for international shipments tracking sometimes pauses
+        between systems, this is normal.
+      </p>
+
+      <h2>Customs and import duty</h2>
+      <p>
+        For deliveries outside the UK and EU you may be charged import duty, taxes or handling fees
+        by your country's customs service. These are payable by you and are not included in the
+        price you pay us. We declare the actual value of the goods on the customs label.
+      </p>
+
+      <h2>Lost or missing parcels</h2>
+      <p>
+        If your parcel has not arrived within the upper end of the delivery estimate (10 working
+        days UK, 25 working days international), email
+        <a href="mailto:hello@oddlywiredco.com">hello@oddlywiredco.com</a> with your order number.
+        We will investigate with the carrier and replace or refund per our
+        <a href="/legal/returns">returns policy</a>.
+      </p>
+
+      <h2>Incorrect address</h2>
+      <p>
+        Please check your delivery address carefully at checkout. Items returned to sender because
+        of an incorrect or incomplete address can be reshipped at your cost; if you do not respond
+        to our reshipment email within 14 days we cannot refund the order.
+      </p>
+
+      <p class="back"><a href="/">← Back to OddlyWiredCo</a></p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .legal { max-width: 720px; }
+  .legal .meta { margin-bottom: 8px; }
+  .legal h1 { margin-bottom: 12px; }
+  .legal .effective {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    opacity: 0.6;
+    margin-bottom: 36px;
+  }
+  .legal h2 {
+    font-family: var(--font-mono);
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 32px;
+    margin-bottom: 12px;
+    color: var(--owc-ink);
+  }
+  .legal p, .legal li {
+    font-family: var(--font-body);
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 12px;
+  }
+  .legal ul { margin: 4px 0 12px 24px; }
+  .legal a {
+    color: var(--owc-ink);
+    border-bottom: 1px solid var(--owc-pulse);
+    text-decoration: none;
+  }
+  .legal a:hover { background: var(--owc-pulse); }
+  .legal .back {
+    margin-top: 48px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+  }
+  .legal .back a { border-bottom: none; }
+</style>

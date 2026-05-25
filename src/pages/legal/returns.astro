@@ -1,0 +1,121 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const TRADER_NAME = '{{TRADER_NAME}}';
+const LAUNCH_DATE = '2026-05-27';
+---
+<BaseLayout
+  title="Returns & Refunds | OddlyWiredCo"
+  description="Returns policy for OddlyWiredCo: made-to-order goods are exempt from buyer's remorse returns, but we replace or refund any item that arrives defective, damaged, wrong or lost in transit."
+>
+  <section class="fold light">
+    <div class="container legal">
+      <p class="meta">Legal · Returns &amp; Refunds</p>
+      <h1 class="h-mono lg">Returns &amp; Refunds</h1>
+      <p class="effective">Effective {LAUNCH_DATE}. Last updated {LAUNCH_DATE}.</p>
+
+      <h2>Made-to-order</h2>
+      <p>
+        Every OddlyWiredCo journal, mug and sticker is produced specifically for you once you order.
+        Under the <em>Consumer Contracts Regulations 2013</em>, Regulation 28(1)(b), goods that are
+        made to a consumer's specification or clearly personalised are exempt from the standard
+        14-day right to cancel. We therefore cannot accept returns simply because you change your
+        mind after ordering.
+      </p>
+
+      <h2>When we will replace or refund</h2>
+      <p>
+        Your statutory rights under the Consumer Rights Act 2015 are protected. We will replace
+        or refund (at our option) in the following situations:
+      </p>
+      <ol>
+        <li><strong>Defective on arrival</strong> — printing fault, binding problem, manufacturing defect.</li>
+        <li><strong>Damaged in transit</strong> — visible damage to the item or to its packaging on delivery.</li>
+        <li><strong>Wrong item received</strong> — a different design, size or product from what you ordered.</li>
+        <li><strong>Lost in transit</strong> — your order has not arrived within 21 working days (UK) or 30 working days (international) from the dispatch confirmation.</li>
+      </ol>
+
+      <h2>How to report a problem</h2>
+      <p>Email <a href="mailto:hello@oddlywiredco.com">hello@oddlywiredco.com</a> within <strong>14 days of delivery</strong> (or, for lost items, after the relevant transit window above) with:</p>
+      <ul>
+        <li>Your order number (in the format <code>cs_…</code> from your confirmation email)</li>
+        <li>A description of the problem</li>
+        <li>For defects or damage: clear photos of the item and the packaging</li>
+      </ul>
+      <p>We respond within 2 working days and we will not ask you to return defective items in most cases.</p>
+
+      <h2>Refund timing</h2>
+      <p>
+        Where a refund is agreed, we issue it to your original payment method via Stripe within
+        2 working days of approval. The refund typically appears in your account within 5–10
+        working days depending on your bank.
+      </p>
+
+      <h2>What we do not cover</h2>
+      <ul>
+        <li>Buyer's remorse / changed your mind (see "Made-to-order" above)</li>
+        <li>Damage caused after delivery (drops, spills, wear)</li>
+        <li>Colour variation within the production tolerances of the print supplier</li>
+        <li>Delays caused by customs clearance on international orders</li>
+      </ul>
+
+      <h2>Statutory rights</h2>
+      <p>
+        Nothing in this policy affects your statutory rights under the Consumer Rights Act 2015,
+        the Consumer Contracts Regulations 2013, or any other applicable consumer protection law.
+      </p>
+
+      <p>Trader: {TRADER_NAME} trading as OddlyWiredCo. Full terms: <a href="/legal/terms">terms of sale</a>.</p>
+
+      <p class="back"><a href="/">← Back to OddlyWiredCo</a></p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .legal { max-width: 720px; }
+  .legal .meta { margin-bottom: 8px; }
+  .legal h1 { margin-bottom: 12px; }
+  .legal .effective {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    opacity: 0.6;
+    margin-bottom: 36px;
+  }
+  .legal h2 {
+    font-family: var(--font-mono);
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 32px;
+    margin-bottom: 12px;
+    color: var(--owc-ink);
+  }
+  .legal p, .legal li {
+    font-family: var(--font-body);
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 12px;
+  }
+  .legal ul, .legal ol { margin: 4px 0 12px 24px; }
+  .legal code {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    background: rgba(76, 226, 193, 0.15);
+    padding: 1px 5px;
+    border-radius: 3px;
+  }
+  .legal a {
+    color: var(--owc-ink);
+    border-bottom: 1px solid var(--owc-pulse);
+    text-decoration: none;
+  }
+  .legal a:hover { background: var(--owc-pulse); }
+  .legal .back {
+    margin-top: 48px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+  }
+  .legal .back a { border-bottom: none; }
+</style>
