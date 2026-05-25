@@ -33,6 +33,9 @@ const canonical = new URL(Astro.url.pathname, Astro.site).toString();
   <meta name="twitter:description" content={description}>
   <meta name="twitter:image" content={new URL(ogImage, Astro.site).toString()}>
 
+  <!-- Pinterest domain verification -->
+  <meta name="p:domain_verify" content="a9c244f0238a6891d5efbffd5990cd6f">
+
   <!-- Inter + Space Mono via Google Fonts (only external dep — OK for v1) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
