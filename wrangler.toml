@@ -8,3 +8,12 @@ custom_domains = ["oddlywiredco.com"]
 binding = "DB"
 database_name = "oddlywiredco-newsletter"
 database_id = "a55ef1cc-0551-42f6-843b-546547a4c48c"
+
+[[queues.producers]]
+queue = "review-emails"
+binding = "REVIEW_EMAILS_QUEUE"
+
+[[queues.consumers]]
+queue = "review-emails"
+max_batch_size = 10
+max_batch_timeout = 30
