@@ -1,0 +1,61 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { env } from 'cloudflare:workers';
+import { findProductBySlug } from '../../../types/product';
+import { getAllPublishedReviewsForSlug, getReviewCountAndAverage } from '../../../lib/reviews';
+
+const { category, slug } = Astro.params;
+if (!category || !slug) return new Response('not found', { status: 404 });
+const product = findProductBySlug(slug, category);
+if (!product) return new Response('not found', { status: 404 });
+
+const DB = (env as any).DB;
+const reviews = DB ? await getAllPublishedReviewsForSlug(DB, product.slug) : [];
+const { count, avg } = DB ? await getReviewCountAndAverage(DB, product.slug) : { count: 0, avg: 0 };
+
+function stars(r: number) { return '★'.repeat(r) + '☆'.repeat(5 - r); }
+function relDate(s: number) {
+  const d = Math.floor(Date.now() / 1000) - s;
+  if (d < 86400) return 'today';
+  if (d < 86400 * 30) return `${Math.floor(d / 86400)}d ago`;
+  return `${Math.floor(d / (86400 * 30))}mo ago`;
+}
+---
+<BaseLayout title={`reviews — ${product.title}`} description={`All ${count} reviews for ${product.title}.`}>
+  <section class="fold light">
+    <div class="container">
+      <div class="meta">all reviews</div>
+      <h1 class="h-mono lg">{product.title}.</h1>
+      <p class="aggregate">
+        <span class="stars">{stars(Math.round(avg))}</span>
+        <span>{avg.toFixed(1)} / 5</span>
+        <span>from {count} brains</span>
+      </p>
+      <ul class="reviews-list">
+        {reviews.map((r) => (
+          <li class="review">
+            <div class="review-head">
+              <span class="stars small">{stars(r.rating)}</span>
+              <span class="name">{r.reviewer_name}</span>
+              <span class="date">{relDate(r.created_at)}</span>
+            </div>
+            <p>{r.body}</p>
+          </li>
+        ))}
+      </ul>
+      <a href={`/${product.category}/${product.slug}`} class="button outline">back to {product.title} →</a>
+    </div>
+  </section>
+
+  <style>
+    .meta { font-family: var(--font-mono); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; opacity: 0.55; margin-bottom: 18px; }
+    .aggregate { display: flex; gap: 16px; align-items: baseline; font-family: var(--font-mono); margin-bottom: 32px; }
+    .stars { color: var(--owc-pulse); font-size: 22px; }
+    .stars.small { font-size: 14px; }
+    .reviews-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 24px; margin-bottom: 40px; }
+    .review { padding-left: 18px; border-left: 2px solid rgba(14,14,17,0.1); }
+    .review-head { display: flex; gap: 12px; align-items: baseline; font-family: var(--font-mono); font-size: 12px; margin-bottom: 6px; }
+    .name { font-weight: 700; }
+    .date { opacity: 0.5; }
+  </style>
+</BaseLayout>

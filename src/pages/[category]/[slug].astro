@@ -6,6 +6,7 @@ import JournalDetails from '../../components/details/JournalDetails.astro';
 import ApparelDetails from '../../components/details/ApparelDetails.astro';
 import AccessoryDetails from '../../components/details/AccessoryDetails.astro';
 import DigitalDetails from '../../components/details/DigitalDetails.astro';
+import ReviewsFold from '../../components/ReviewsFold.astro';
 
 const { category, slug } = Astro.params;
 if (!category || !slug) return new Response('not found', { status: 404 });
@@ -144,6 +145,8 @@ const backLink = BACK_LINK_COPY[product.category] ?? { href: '/', label: '← ba
       <a href={backLink.href} class="pf-back">{backLink.label}</a>
     </div>
   </section>
+
+  <ReviewsFold product={product} />
 
 </BaseLayout>
 
