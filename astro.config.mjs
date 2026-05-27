@@ -8,6 +8,11 @@ export default defineConfig({
   adapter: cloudflare({
     platformProxy: { enabled: true },
   }),
-  integrations: [mdx(), sitemap()],
+  integrations: [
+    mdx(),
+    sitemap({
+      filter: (page) => !page.includes('/checkout/'),
+    }),
+  ],
   site: 'https://oddlywiredco.com',
 });
