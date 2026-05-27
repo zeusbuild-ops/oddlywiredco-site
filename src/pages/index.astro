@@ -70,22 +70,6 @@ import NewsletterForm from '../components/NewsletterForm.astro';
     </div>
   </section>
 
-  <!-- Fold 6: Footer (Bone) -->
-  <footer class="fold light footer-fold">
-    <div class="container">
-      <Squiggle variant="sine" width="200px"/>
-      <Wordmark size="md" variant="dark"/>
-      <ul class="footer-links">
-        <li><span>Etsy (coming soon)</span></li>
-        <li><span>TikTok (coming soon)</span></li>
-        <li><span>Pinterest (coming soon)</span></li>
-        <li><span>Instagram (coming soon)</span></li>
-      </ul>
-      <p class="copyright">© 2026 OddlyWiredCo</p>
-      <p class="easter-egg">made with executive dysfunction</p>
-    </div>
-  </footer>
-
   <style>
     .hero-fold { min-height: 92vh; display: flex; align-items: center; }
     .hero-fold .container { display: flex; flex-direction: column; gap: 28px; }
@@ -96,12 +80,5 @@ import NewsletterForm from '../components/NewsletterForm.astro';
     .coming-sub { font-family: var(--font-mono); font-size: 14px; opacity: 0.65; margin-top: 14px; color: var(--owc-bone); }
     .about-body { font-size: 21px; line-height: 1.5; max-width: 640px; margin-bottom: 24px; }
     .newsletter-sub { opacity: 0.7; margin-bottom: 32px; font-size: 16px; }
-    .footer-fold { padding-top: 64px; padding-bottom: 64px; }
-    .footer-fold .container { display: flex; flex-direction: column; gap: 24px; align-items: flex-start; }
-    .footer-links { display: flex; gap: 24px; flex-wrap: wrap; font-family: var(--font-mono); font-size: 13px; text-transform: uppercase; letter-spacing: 1.5px; }
-    .footer-links a:hover { color: var(--owc-pulse); }
-    .footer-links span { opacity: 0.4; }
-    .copyright { font-family: var(--font-mono); font-size: 12px; opacity: 0.5; }
-    .easter-egg { font-family: var(--font-mono); font-size: 10px; opacity: 0.3; text-transform: uppercase; letter-spacing: 2px; }
   </style>
 </BaseLayout>

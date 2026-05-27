@@ -1,5 +1,7 @@
 ---
 import '../styles/global.css';
+import SiteNav from '../components/SiteNav.astro';
+import SiteFooter from '../components/SiteFooter.astro';
 
 interface Props {
   title: string;
@@ -42,6 +44,8 @@ const canonical = new URL(Astro.url.pathname, Astro.site).toString();
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
+  <SiteNav />
   <slot />
+  <SiteFooter />
 </body>
 </html>
