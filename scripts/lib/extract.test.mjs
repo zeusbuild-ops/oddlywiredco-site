@@ -179,17 +179,17 @@ test('extractWhatsInside returns all bullets', () => {
   assert.ok(result.length >= 3, `expected >= 3 bullets, got ${result.length}`);
 });
 
-test('extractFAQ returns array of {q, a} objects', () => {
+test('extractFAQ returns array of { question, answer } objects', () => {
   const result = extractFAQ(SAMPLE_DESCRIPTION);
   assert.equal(result.length, 3);
-  assert.equal(result[0].q, 'Is this lined or blank?');
-  assert.match(result[0].a, /Blank\. Lines feel like another rule/);
+  assert.equal(result[0].question, 'Is this lined or blank?');
+  assert.match(result[0].answer, /Blank\. Lines feel like another rule/);
 });
 
 test('extractFAQ strips supplier names from answers', () => {
   const result = extractFAQ(SAMPLE_DESCRIPTION);
   for (const item of result) {
-    assert.doesNotMatch(item.a, /prodigi/i, `FAQ answer should not mention Prodigi: ${item.a}`);
+    assert.doesNotMatch(item.answer, /prodigi/i, `FAQ answer should not mention Prodigi: ${item.answer}`);
   }
 });
 

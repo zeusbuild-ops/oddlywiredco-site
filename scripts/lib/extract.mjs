@@ -130,8 +130,8 @@ export function extractWhatsInside(description) {
 }
 
 /**
- * Parse the FAQ section into {q, a} objects.
- * Q is any line ending in "?", A is the next non-blank non-Q line(s).
+ * Parse the FAQ section into { question, answer } objects.
+ * question is any line ending in "?", answer is the next non-blank non-question line(s).
  */
 export function extractFAQ(description) {
   if (!description) return [];
@@ -141,15 +141,15 @@ export function extractFAQ(description) {
   const out = [];
   for (let i = 0; i < lines.length; i++) {
     if (lines[i].endsWith('?')) {
-      const q = lines[i];
+      const question = lines[i];
       const aParts = [];
       for (let j = i + 1; j < lines.length; j++) {
         if (lines[j].endsWith('?')) break;
         aParts.push(lines[j]);
         i = j;
       }
-      const a = stripSupplierNames(aParts.join(' '));
-      if (a) out.push({ q, a });
+      const answer = stripSupplierNames(aParts.join(' '));
+      if (answer) out.push({ question, answer });
     }
   }
   return out;

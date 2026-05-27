@@ -71,10 +71,10 @@ const crossSell = (product.crossSellSlugs || [])
         <details class="pf-faq">
           <summary>a few common questions</summary>
           <div class="pf-faq-body">
-            {product.faq.map((qa: { q: string; a: string }) => (
+            {product.faq.map((qa: { question: string; answer: string }) => (
               <div class="pf-faq-item">
-                <p class="pf-faq-q">{qa.q}</p>
-                <p class="pf-faq-a">{qa.a}</p>
+                <p class="pf-faq-q">{qa.question}</p>
+                <p class="pf-faq-a">{qa.answer}</p>
               </div>
             ))}
           </div>
