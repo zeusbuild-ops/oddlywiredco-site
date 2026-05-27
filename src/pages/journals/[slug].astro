@@ -1,76 +1,123 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProductCard from '../../components/ProductCard.astro';
 import products from '../../data/products.json';
 
 const { slug } = Astro.params;
 const product = (products as any[]).find((p) => p.slug === slug);
+if (!product) return Astro.redirect('/404');
 
-if (!product) {
-  return Astro.redirect('/404');
-}
-
-const displayTitle = String(product.title).split('|')[0].trim();
 const priceFormatted = new Intl.NumberFormat('en-GB', {
-  style: 'currency',
-  currency: 'GBP',
-}).format(product.price_cents / 100);
-const seoTitle = `${displayTitle} · OddlyWiredCo`;
-const seoDescription = String(product.description || '').replace(/<[^>]*>/g, '').slice(0, 158);
----
-<BaseLayout title={seoTitle} description={seoDescription} ogImage={product.hero_image}>
-  <section class="fold light product-fold">
-    <div class="container">
-      <div class="meta">&gt; the catalogue / {product.product_type.replace(/-/g, ' ')}</div>
+  style: 'currency', currency: 'GBP',
+}).format(product.priceCents / 100);
 
-      <div class="product-grid">
-        <div class="product-gallery">
-          <img src={product.hero_image} alt={displayTitle} class="hero-image" loading="eager" fetchpriority="high" />
-          {product.gallery.length > 1 && (
-            <div class="thumbnails">
-              {product.gallery.slice(1).map((src: string) => (
-                <img src={src} alt="" class="thumb" loading="lazy" />
+const seoTitle = `${product.hook} · OddlyWiredCo`;
+const seoDescription = (product.whyParagraph || product.hook).slice(0, 158);
+
+// Resolve cross-sell slugs to full product objects
+const crossSell = (product.crossSellSlugs || [])
+  .map((s: string) => (products as any[]).find((p) => p.slug === s))
+  .filter(Boolean);
+---
+<BaseLayout title={seoTitle} description={seoDescription} ogImage={product.heroImage}>
+
+  <!-- Fold 1: Hero (Bone) -->
+  <section class="fold light pf-hero">
+    <div class="container">
+      <div class="meta">{product.category} / {product.descriptor}</div>
+      <div class="pf-hero-grid">
+        <div class="pf-gallery">
+          <img src={product.heroImage} alt={product.hook} class="pf-hero-image" loading="eager" fetchpriority="high"/>
+          {product.gallery && product.gallery.length > 1 && (
+            <div class="pf-thumbs">
+              {product.gallery.slice(1, 4).map((src: string) => (
+                <img src={src} alt="" class="pf-thumb" loading="lazy"/>
               ))}
             </div>
           )}
         </div>
-
-        <div class="product-info">
-          <h1 class="h-mono md">{displayTitle}</h1>
-          <p class="price">{priceFormatted}</p>
-
-          <form id="checkout-form" data-price-id={product.stripe_price_id} data-slug={product.slug}>
-            <button type="submit" class="button signal" id="buy-btn">
-              buy now →
-            </button>
+        <div class="pf-info">
+          <h1 class="pf-hook h-mono">{product.hook}</h1>
+          <p class="pf-descriptor">{product.descriptor}</p>
+          <p class="pf-price">{priceFormatted}</p>
+          <form id="checkout-form" data-price-id={product.stripePriceId} data-slug={product.slug}>
+            <button type="submit" class="button signal" id="buy-btn">buy now →</button>
           </form>
-
-          <p class="fulfilment">
-            <span>UK printed. Made-to-order via Printify.</span>
-            <br>
-            <span class="fulfilment-detail">Ships in 3–5 business days. Payment by Stripe.</span>
-          </p>
-
-          <details class="product-description">
-            <summary>full description</summary>
-            <div set:html={product.description} />
-          </details>
-
-          <p class="tags">
-            {product.tags.slice(0, 6).map((t: string) => (
-              <span class="tag">{t}</span>
-            ))}
-          </p>
+          <ul class="pf-keypoints">
+            {product.keypoints.map((kp: string) => <li>{kp}</li>)}
+          </ul>
+          <p class="pf-ships">ships in 3–5 business days · secure checkout via stripe</p>
         </div>
       </div>
-
-      <p class="back-link"><a href="/#stuff">← back to the catalogue</a></p>
     </div>
   </section>
+
+  <!-- Fold 2: The Why (Ink) -->
+  <section class="fold dark pf-why">
+    <div class="container">
+      <div class="meta">why this one exists</div>
+      <p class="pf-why-body">{product.whyParagraph}</p>
+    </div>
+  </section>
+
+  <!-- Fold 3: What's Inside + FAQ (Bone) -->
+  <section class="fold light pf-inside">
+    <div class="container">
+      <div class="meta">what's inside</div>
+      <ul class="pf-inside-list">
+        {product.whatsInside.map((item: string) => <li>{item}</li>)}
+      </ul>
+      {product.faq && product.faq.length > 0 && (
+        <details class="pf-faq">
+          <summary>a few common questions</summary>
+          <div class="pf-faq-body">
+            {product.faq.map((qa: { q: string; a: string }) => (
+              <div class="pf-faq-item">
+                <p class="pf-faq-q">{qa.q}</p>
+                <p class="pf-faq-a">{qa.a}</p>
+              </div>
+            ))}
+          </div>
+        </details>
+      )}
+    </div>
+  </section>
+
+  <!-- Fold 4: Cross-sell + tags + back (Ink) -->
+  <section class="fold dark pf-more">
+    <div class="container">
+      {crossSell.length > 0 && (
+        <>
+          <div class="meta">other journals for the same brain</div>
+          <div class="pf-cross-grid">
+            {crossSell.map((p: any) => (
+              <ProductCard
+                slug={p.slug}
+                hook={p.hook}
+                descriptor={p.descriptor}
+                heroImage={p.heroImage}
+                priceCents={p.priceCents}
+                category={p.category}
+              />
+            ))}
+          </div>
+        </>
+      )}
+      <div class="pf-tags">
+        {(product.tags || []).slice(0, 6).map((t: string) => (
+          <span class="pf-tag">{t}</span>
+        ))}
+      </div>
+      <a href="/journals" class="pf-back">← back to all journals</a>
+    </div>
+  </section>
+
 </BaseLayout>
 
 <style>
-  .product-fold { padding-top: 80px; }
-  .product-grid {
+  /* Hero */
+  .pf-hero { padding-top: 60px; padding-bottom: 60px; }
+  .pf-hero-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 48px;
@@ -78,56 +125,106 @@ const seoDescription = String(product.description || '').replace(/<[^>]*>/g, '')
     align-items: start;
   }
   @media (max-width: 768px) {
-    .product-grid { grid-template-columns: 1fr; gap: 28px; }
+    .pf-hero-grid { grid-template-columns: 1fr; gap: 28px; }
   }
-  .product-gallery .hero-image {
+  .pf-hero-image {
     width: 100%;
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 1;
     object-fit: cover;
-    border-radius: 4px;
-    background: var(--owc-ink-05, #ebe6dc);
+    border-radius: 6px;
+    background: rgba(14, 14, 17, 0.04);
   }
-  .thumbnails {
+  .pf-thumbs {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 8px;
     margin-top: 8px;
   }
-  .thumb {
+  .pf-thumb {
     width: 100%;
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 1;
     object-fit: cover;
-    border-radius: 3px;
-    background: var(--owc-ink-05, #ebe6dc);
+    border-radius: 4px;
+    background: rgba(14, 14, 17, 0.04);
   }
-  .product-info h1 {
-    margin-bottom: 12px;
-    color: var(--owc-ink, #0E0E11);
+  .pf-hook {
+    font-size: clamp(32px, 5vw, 56px);
+    line-height: 1.05;
+    letter-spacing: -1px;
+    margin: 16px 0 4px;
+    color: var(--owc-ink);
   }
-  .price {
+  .pf-descriptor {
     font-family: var(--font-mono);
-    font-size: 28px;
+    font-size: 13px;
+    opacity: 0.6;
+    margin-bottom: 22px;
+  }
+  .pf-price {
+    font-family: var(--font-mono);
+    font-size: 26px;
     font-weight: 700;
-    color: var(--owc-ink, #0E0E11);
-    margin-bottom: 24px;
+    margin-bottom: 18px;
   }
-  #checkout-form { margin-bottom: 20px; }
+  #buy-btn { margin-bottom: 22px; }
   #buy-btn:disabled { opacity: 0.6; cursor: wait; }
-  .fulfilment {
-    font-size: 14px;
-    color: var(--owc-ink, #0E0E11);
-    opacity: 0.75;
-    line-height: 1.5;
-    margin-bottom: 24px;
+  .pf-keypoints {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 18px;
   }
-  .fulfilment-detail { font-size: 12px; opacity: 0.7; }
-  .product-description {
-    margin: 24px 0;
-    padding: 16px;
+  .pf-keypoints li {
+    font-size: 14px;
+    line-height: 1.5;
+    padding: 4px 0 4px 20px;
+    position: relative;
+  }
+  .pf-keypoints li::before {
+    content: '—'; position: absolute; left: 0; color: var(--owc-pulse);
+  }
+  .pf-ships {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    opacity: 0.6;
+  }
+
+  /* Why */
+  .pf-why-body {
+    font-size: 18px;
+    line-height: 1.55;
+    max-width: 580px;
+    margin-top: 14px;
+    opacity: 0.92;
+  }
+
+  /* Inside */
+  .pf-inside-list {
+    list-style: none;
+    padding: 0;
+    margin: 18px 0 0;
+    columns: 2;
+    column-gap: 32px;
+  }
+  @media (max-width: 768px) {
+    .pf-inside-list { columns: 1; }
+  }
+  .pf-inside-list li {
+    font-size: 14px;
+    line-height: 1.5;
+    padding: 5px 0 5px 18px;
+    position: relative;
+    break-inside: avoid;
+  }
+  .pf-inside-list li::before {
+    content: '—'; position: absolute; left: 0; color: var(--owc-pulse);
+  }
+  .pf-faq {
+    margin-top: 24px;
+    padding: 14px 18px;
     background: rgba(14, 14, 17, 0.04);
     border-radius: 4px;
   }
-  .product-description summary {
+  .pf-faq summary {
     cursor: pointer;
     font-family: var(--font-mono);
     font-size: 12px;
@@ -135,36 +232,45 @@ const seoDescription = String(product.description || '').replace(/<[^>]*>/g, '')
     letter-spacing: 1.5px;
     font-weight: 700;
   }
-  .product-description > div {
+  .pf-faq-body { margin-top: 14px; }
+  .pf-faq-item { margin-bottom: 14px; }
+  .pf-faq-q { font-family: var(--font-mono); font-size: 13px; font-weight: 700; margin: 0 0 4px; }
+  .pf-faq-a { font-size: 14px; line-height: 1.55; opacity: 0.85; margin: 0; }
+
+  /* Cross-sell + footer */
+  .pf-cross-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
     margin-top: 14px;
-    font-size: 14px;
-    line-height: 1.6;
+    margin-bottom: 28px;
   }
-  .product-description :global(ul) { padding-left: 22px; margin: 8px 0; }
-  .product-description :global(li) { margin-bottom: 4px; }
-  .tags { margin: 16px 0; }
-  .tag {
+  @media (max-width: 768px) {
+    .pf-cross-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  .pf-tags { margin: 18px 0 16px; }
+  .pf-tag {
     display: inline-block;
     font-family: var(--font-mono);
-    font-size: 11px;
+    font-size: 10px;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 1.2px;
     padding: 4px 8px;
-    background: rgba(14, 14, 17, 0.06);
+    background: rgba(244, 239, 230, 0.08);
     border-radius: 3px;
-    margin-right: 6px;
-    margin-bottom: 6px;
-    color: var(--owc-ink, #0E0E11);
+    margin-right: 5px;
+    margin-bottom: 5px;
     opacity: 0.7;
   }
-  .back-link {
-    margin-top: 48px;
+  .pf-back {
+    display: inline-block;
+    margin-top: 12px;
     font-family: var(--font-mono);
     font-size: 12px;
     letter-spacing: 1.5px;
+    opacity: 0.7;
   }
-  .back-link a { color: var(--owc-ink, #0E0E11); opacity: 0.7; }
-  .back-link a:hover { opacity: 1; }
+  .pf-back:hover { opacity: 1; }
 </style>
 
 <script>
