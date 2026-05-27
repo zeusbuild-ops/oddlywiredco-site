@@ -1,0 +1,41 @@
+---
+interface Props {
+  category: 'apparel' | 'accessories' | 'digital';
+  hook: string;
+  comingSoon?: boolean;
+}
+const { category, hook, comingSoon = true } = Astro.props;
+const ICONS: Record<string, string> = {
+  apparel: '👕',
+  accessories: '☕',
+  digital: '⬇',
+};
+---
+<a href={`/${category}`} class="teaser-card">
+  <span class="icon" aria-hidden="true">{ICONS[category]}</span>
+  <h3 class="cat">{category}</h3>
+  <p class="hook">{hook}</p>
+  {comingSoon && <span class="tag">coming soon</span>}
+</a>
+
+<style>
+  .teaser-card {
+    display: flex; flex-direction: column; gap: 8px;
+    padding: 24px; background: var(--owc-ink); color: var(--owc-bone);
+    text-decoration: none; border-radius: 10px;
+    transition: transform 200ms ease;
+  }
+  .teaser-card:hover { transform: translateY(-3px); }
+  .icon { font-size: 32px; }
+  .cat { font-family: var(--font-mono); font-size: 18px; text-transform: lowercase; margin: 0; }
+  .hook { font-size: 14px; opacity: 0.85; margin: 0; }
+  .tag {
+    align-self: flex-start; margin-top: 6px;
+    font-family: var(--font-mono); font-size: 10px; text-transform: uppercase;
+    letter-spacing: 2px; padding: 3px 8px; border: 1px solid var(--owc-pulse);
+    color: var(--owc-pulse); border-radius: 2px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .teaser-card:hover { transform: none; }
+  }
+</style>

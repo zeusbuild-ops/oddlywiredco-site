@@ -1,0 +1,33 @@
+---
+import NewsletterForm from './NewsletterForm.astro';
+---
+<section class="fold dark about-news">
+  <div class="container split">
+    <div class="about-half">
+      <div class="meta">05a / who's behind this</div>
+      <p class="about-body">
+        Oddlywired is an ADHD brand made by an ADHD person.
+        Every product comes from a moment I needed someone else to have named for me.
+      </p>
+      <a href="/about" class="button outline">more about us →</a>
+    </div>
+    <div class="news-half">
+      <div class="meta">05b / stay in the loop</div>
+      <h2 class="h-mono md">get the next thing first.</h2>
+      <p class="newsletter-sub">no spam, no schedule, just a heads-up when something new lands.</p>
+      <NewsletterForm />
+    </div>
+  </div>
+</section>
+
+<style>
+  .about-news { padding: 96px 0; }
+  .split { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+  .meta { font-family: var(--font-mono); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; opacity: 0.55; margin-bottom: 18px; color: var(--owc-bone); }
+  .about-body { font-size: 19px; line-height: 1.5; max-width: 480px; margin-bottom: 24px; color: var(--owc-bone); }
+  .newsletter-sub { opacity: 0.7; margin-bottom: 24px; font-size: 15px; color: var(--owc-bone); }
+  .h-mono.md { font-family: var(--font-mono); font-size: 28px; font-weight: 700; line-height: 1.15; margin: 0 0 16px; color: var(--owc-bone); }
+  @media (max-width: 768px) {
+    .split { grid-template-columns: 1fr; gap: 56px; }
+  }
+</style>
