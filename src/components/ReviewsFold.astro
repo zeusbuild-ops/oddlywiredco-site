@@ -1,0 +1,84 @@
+---
+import { env } from 'cloudflare:workers';
+import { getPublishedReviewsForSlug, getReviewCountAndAverage } from '../lib/reviews';
+import type { Product } from '../types/product';
+
+interface Props { product: Product }
+const { product } = Astro.props;
+
+const DB = (env as any).DB;
+
+let count = 0;
+let avg = 0;
+let reviews: Array<{ id: string; rating: number; body: string; reviewer_name: string; created_at: number }> = [];
+
+if (DB) {
+  const agg = await getReviewCountAndAverage(DB, product.slug);
+  count = agg.count;
+  avg = agg.avg;
+  if (count >= 5) {
+    reviews = await getPublishedReviewsForSlug(DB, product.slug, 5);
+  }
+}
+
+const showFold = count >= 5;
+
+function relativeDate(unixSeconds: number): string {
+  const diff = Math.floor(Date.now() / 1000) - unixSeconds;
+  if (diff < 86400) return 'today';
+  if (diff < 86400 * 7) return `${Math.floor(diff / 86400)}d ago`;
+  if (diff < 86400 * 30) return `${Math.floor(diff / (86400 * 7))}w ago`;
+  if (diff < 86400 * 365) return `${Math.floor(diff / (86400 * 30))}mo ago`;
+  return `${Math.floor(diff / (86400 * 365))}y ago`;
+}
+
+function stars(rating: number): string {
+  return '★'.repeat(rating) + '☆'.repeat(5 - rating);
+}
+---
+{showFold && (
+  <section class="reviews-fold light">
+    <div class="container">
+      <div class="meta">reviews</div>
+      <p class="aggregate">
+        <span class="stars">{stars(Math.round(avg))}</span>
+        <span class="avg">{avg.toFixed(1)} / 5</span>
+        <span class="count">from {count} {count === 1 ? 'brain' : 'brains'}</span>
+      </p>
+      <ul class="reviews-list">
+        {reviews.map((r) => (
+          <li class="review">
+            <div class="review-head">
+              <span class="stars small">{stars(r.rating)}</span>
+              <span class="name">{r.reviewer_name}</span>
+              <span class="date">{relativeDate(r.created_at)}</span>
+            </div>
+            <p class="body">{r.body}</p>
+          </li>
+        ))}
+      </ul>
+      {count > 5 && (
+        <a href={`/${product.category}/${product.slug}/reviews`} class="see-all">
+          see all {count} reviews →
+        </a>
+      )}
+    </div>
+  </section>
+)}
+
+<style>
+  .reviews-fold { padding: 80px 0; background: var(--owc-bone); color: var(--owc-ink); }
+  .meta { font-family: var(--font-mono); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; opacity: 0.55; margin-bottom: 14px; }
+  .aggregate { display: flex; gap: 16px; align-items: baseline; font-family: var(--font-mono); margin-bottom: 32px; }
+  .stars { color: var(--owc-pulse); font-size: 22px; }
+  .stars.small { font-size: 14px; }
+  .avg { font-size: 18px; font-weight: 700; }
+  .count { font-size: 13px; opacity: 0.65; }
+  .reviews-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 24px; }
+  .review { padding-left: 18px; border-left: 2px solid rgba(14,14,17,0.1); }
+  .review-head { display: flex; gap: 12px; align-items: baseline; font-family: var(--font-mono); font-size: 12px; margin-bottom: 6px; }
+  .review .name { font-weight: 700; }
+  .review .date { opacity: 0.5; }
+  .review .body { margin: 0; font-size: 15px; }
+  .see-all { display: inline-block; margin-top: 28px; font-family: var(--font-mono); font-size: 13px; text-transform: uppercase; letter-spacing: 1.5px; }
+</style>
