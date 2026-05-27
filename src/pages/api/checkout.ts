@@ -27,7 +27,7 @@ export const POST: APIRoute = async ({ request }) => {
     return json({ error: 'missing price_id or slug' }, 400);
   }
 
-  const product = (products as any[]).find((p) => p.slug === slug && p.stripe_price_id === price_id);
+  const product = (products as any[]).find((p) => p.slug === slug && p.stripePriceId === price_id);
   if (!product) {
     return json({ error: 'product not found' }, 404);
   }
@@ -36,7 +36,7 @@ export const POST: APIRoute = async ({ request }) => {
 
   const form = new URLSearchParams();
   form.set('mode', 'payment');
-  form.set('line_items[0][price]', product.stripe_price_id);
+  form.set('line_items[0][price]', product.stripePriceId);
   form.set('line_items[0][quantity]', '1');
   form.set('success_url', `${origin}/checkout/success?session_id={CHECKOUT_SESSION_ID}`);
   form.set('cancel_url', `${origin}/journals/${product.slug}`);
@@ -46,10 +46,11 @@ export const POST: APIRoute = async ({ request }) => {
   });
   form.set('payment_method_types[0]', 'card');
   // Metadata duplicated on the session so the webhook has full context without a second lookup
+  // Note: metadata keys stay snake_case because the webhook reads them as Stripe payload — don't change.
   form.set('metadata[slug]', product.slug);
-  form.set('metadata[printify_shop_id]', String(product.printify_shop_id));
-  form.set('metadata[printify_product_id]', product.printify_product_id);
-  form.set('metadata[printify_variant_id]', String(product.printify_variant_id));
+  form.set('metadata[printify_shop_id]', String(product.printifyShopId));
+  form.set('metadata[printify_product_id]', product.printifyProductId);
+  form.set('metadata[printify_variant_id]', String(product.printifyVariantId));
 
   const res = await fetch('https://api.stripe.com/v1/checkout/sessions', {
     method: 'POST',
