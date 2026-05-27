@@ -62,3 +62,89 @@ export function stripSupplierNames(text) {
   }
   return out.replace(/\s+/g, ' ').replace(/\s+([.,])/g, '$1').trim();
 }
+
+/**
+ * Find a section by header (case-insensitive, allows whitespace + colons).
+ * Returns the text between the header and the next blank line / next ALL CAPS line / "—".
+ */
+function findSection(text, header) {
+  const headerPattern = new RegExp(`^\\s*${header}\\s*:?\\s*$`, 'im');
+  const headerMatch = text.match(headerPattern);
+  if (!headerMatch) return '';
+  const start = headerMatch.index + headerMatch[0].length;
+  const rest = text.slice(start);
+  // Stop at next ALL CAPS section header (>= 3 chars), or "—" divider, or end of string
+  const endMatch = rest.match(/\n\s*(?:[A-Z][A-Z\s']{2,}|—|---)\s*$|\n\s*[A-Z][A-Z\s']{2,}:?\s*\n/m);
+  return endMatch ? rest.slice(0, endMatch.index).trim() : rest.trim();
+}
+
+/**
+ * Get the brand-voice "why this exists" paragraph for a product.
+ * Lowercased, supplier-stripped, single paragraph.
+ */
+export function extractWhy(description) {
+  if (!description) return 'made for the brain that wired this way.';
+  const section = findSection(description, 'THE WHY');
+  if (!section) return 'made for the brain that wired this way.';
+  return stripSupplierNames(section.toLowerCase());
+}
+
+function parseBullets(sectionText) {
+  return sectionText
+    .split('\n')
+    .map((l) => l.trim())
+    .filter((l) => l.startsWith('•'))
+    .map((l) => stripSupplierNames(l.replace(/^•\s*/, '')))
+    .filter((l) => l.length > 0)
+    .map((l) => l.charAt(0).toLowerCase() + l.slice(1)); // lowercase first letter for brand voice
+}
+
+/**
+ * Get the first 4 "WHAT'S INSIDE" bullets, for the hero fold.
+ */
+export function extractKeypoints(description) {
+  if (!description) return [];
+  const section = findSection(description, "WHAT'S INSIDE");
+  return parseBullets(section).slice(0, 4);
+}
+
+/**
+ * Get all "WHAT'S INSIDE" bullets, plus the gift-cue line, for fold 3.
+ */
+export function extractWhatsInside(description) {
+  if (!description) return [];
+  const section = findSection(description, "WHAT'S INSIDE");
+  const bullets = parseBullets(section);
+  // Add gift cue if FAQ mentions gift-ready
+  if (/gift-ready/i.test(description)) {
+    bullets.push('cover speaks for itself — no outer branding on the journal');
+    bullets.push('lands looking like a journal, not a parcel from a brand');
+  }
+  return bullets;
+}
+
+/**
+ * Parse the FAQ section into {q, a} objects.
+ * Q is any line ending in "?", A is the next non-blank non-Q line(s).
+ */
+export function extractFAQ(description) {
+  if (!description) return [];
+  const section = findSection(description, 'FAQ');
+  if (!section) return [];
+  const lines = section.split('\n').map((l) => l.trim()).filter((l) => l.length > 0);
+  const out = [];
+  for (let i = 0; i < lines.length; i++) {
+    if (lines[i].endsWith('?')) {
+      const q = lines[i];
+      const aParts = [];
+      for (let j = i + 1; j < lines.length; j++) {
+        if (lines[j].endsWith('?')) break;
+        aParts.push(lines[j]);
+        i = j;
+      }
+      const a = stripSupplierNames(aParts.join(' '));
+      if (a) out.push({ q, a });
+    }
+  }
+  return out;
+}
