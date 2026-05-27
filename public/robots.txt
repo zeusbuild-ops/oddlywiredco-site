@@ -1,5 +1,7 @@
 User-agent: *
 Allow: /
 Disallow: /api/
+Disallow: /reviews/submit
+Disallow: /reviews/thanks
 
 Sitemap: https://oddlywiredco.com/sitemap-index.xml

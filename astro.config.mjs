@@ -11,7 +11,13 @@ export default defineConfig({
   integrations: [
     mdx(),
     sitemap({
-      filter: (page) => !page.includes('/checkout/'),
+      filter: (page) => {
+        if (page.includes('/checkout/')) return false;
+        if (page.includes('/reviews/submit')) return false;
+        if (page.includes('/reviews/thanks')) return false;
+        if (page.match(/\/[a-z]+\/[a-z0-9-]+\/reviews$/)) return false;
+        return true;
+      },
     }),
   ],
   site: 'https://oddlywiredco.com',
