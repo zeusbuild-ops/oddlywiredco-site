@@ -32,6 +32,19 @@ const mapping = JSON.parse(
 );
 
 // First pass: build each product with extracted fields + category
+// Optional: image URL rewrite map produced by mirror-printify-images-to-r2.py.
+// Maps Printify CDN URLs to media.oddlywiredco.com R2 URLs so the rendered site
+// never serves customers an images-api.printify.com URL.
+const mirrorFile = resolve(SITE_ROOT, 'src/data/image-mirror.json');
+const imageMirror = existsSync(mirrorFile) ? JSON.parse(readFileSync(mirrorFile, 'utf8')) : {};
+if (Object.keys(imageMirror).length === 0) {
+  console.warn('NOTE: src/data/image-mirror.json missing or empty — image URLs will fall back to Printify CDN. Run scripts/mirror-printify-images-to-r2.py first.');
+} else {
+  console.log(`using image mirror with ${Object.keys(imageMirror).length} URL rewrites`);
+}
+
+const rewriteImageUrl = (src) => imageMirror[src] ?? src;
+
 const products = mapping.map((p) => {
   const cloneFile = resolve(BUILD_DIR, `phase-2-mirror/clone-${p.printify_etsy_product_id}.json`);
   if (!existsSync(cloneFile)) {
@@ -40,7 +53,7 @@ const products = mapping.map((p) => {
   const clone = existsSync(cloneFile) ? JSON.parse(readFileSync(cloneFile, 'utf8')) : {};
   const description = clone.description ?? '';
 
-  const images = (clone.images ?? []).map((i) => i.src);
+  const images = (clone.images ?? []).map((i) => rewriteImageUrl(i.src));
   const heroImage = images.find((src) => src) ?? '';
   const gallery = images.slice(0, 4);
 
