@@ -1,0 +1,3 @@
+STRIPE_SECRET_KEY=rk_live_xxx_or_sk_test_xxx
+STRIPE_WEBHOOK_SECRET=whsec_xxx
+PRINTIFY_TOKEN=eyJ...

@@ -1,0 +1,73 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const sessionId = Astro.url.searchParams.get('session_id') || '';
+const shortId = sessionId.slice(-8);
+---
+<BaseLayout
+  title="order received · OddlyWiredCo"
+  description="Your order has been received. We're sending it to print now."
+>
+  <section class="fold dark success-fold">
+    <div class="container">
+      <div class="meta">&gt; order received</div>
+      <h1 class="h-mono lg">nice. your brain<br>made a choice.</h1>
+      <p class="success-body">
+        Payment confirmed. Your order is heading to print now.
+      </p>
+      <ul class="success-steps">
+        <li><strong>1.</strong> Confirmation email lands in your inbox within a few minutes.</li>
+        <li><strong>2.</strong> Item printed by our UK supplier and shipped in 3–5 business days.</li>
+        <li><strong>3.</strong> Tracking email when it leaves the warehouse.</li>
+      </ul>
+      {shortId && (
+        <p class="ref">reference: <code>{shortId}</code></p>
+      )}
+      <a href="/" class="button outline">back to the shop →</a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .success-fold { min-height: 80vh; }
+  .success-fold h1 { margin: 24px 0; }
+  .success-body {
+    font-family: var(--font-body);
+    font-size: 18px;
+    margin-bottom: 32px;
+    opacity: 0.85;
+  }
+  .success-steps {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 32px;
+    max-width: 540px;
+  }
+  .success-steps li {
+    font-family: var(--font-body);
+    font-size: 15px;
+    margin-bottom: 14px;
+    padding-left: 4px;
+    line-height: 1.5;
+    opacity: 0.85;
+  }
+  .success-steps strong {
+    color: var(--owc-pulse);
+    font-family: var(--font-mono);
+    margin-right: 8px;
+  }
+  .ref {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0.6;
+    margin-bottom: 24px;
+  }
+  .ref code {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 4px 8px;
+    border-radius: 3px;
+    color: var(--owc-pulse);
+  }
+</style>

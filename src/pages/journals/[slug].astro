@@ -1,0 +1,197 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import products from '../../data/products.json';
+
+const { slug } = Astro.params;
+const product = (products as any[]).find((p) => p.slug === slug);
+
+if (!product) {
+  return Astro.redirect('/404');
+}
+
+const displayTitle = String(product.title).split('|')[0].trim();
+const priceFormatted = new Intl.NumberFormat('en-GB', {
+  style: 'currency',
+  currency: 'GBP',
+}).format(product.price_cents / 100);
+const seoTitle = `${displayTitle} · OddlyWiredCo`;
+const seoDescription = String(product.description || '').replace(/<[^>]*>/g, '').slice(0, 158);
+---
+<BaseLayout title={seoTitle} description={seoDescription} ogImage={product.hero_image}>
+  <section class="fold light product-fold">
+    <div class="container">
+      <div class="meta">&gt; the catalogue / {product.product_type.replace(/-/g, ' ')}</div>
+
+      <div class="product-grid">
+        <div class="product-gallery">
+          <img src={product.hero_image} alt={displayTitle} class="hero-image" loading="eager" fetchpriority="high" />
+          {product.gallery.length > 1 && (
+            <div class="thumbnails">
+              {product.gallery.slice(1).map((src: string) => (
+                <img src={src} alt="" class="thumb" loading="lazy" />
+              ))}
+            </div>
+          )}
+        </div>
+
+        <div class="product-info">
+          <h1 class="h-mono md">{displayTitle}</h1>
+          <p class="price">{priceFormatted}</p>
+
+          <form id="checkout-form" data-price-id={product.stripe_price_id} data-slug={product.slug}>
+            <button type="submit" class="button signal" id="buy-btn">
+              buy now →
+            </button>
+          </form>
+
+          <p class="fulfilment">
+            <span>UK printed. Made-to-order via Printify.</span>
+            <br>
+            <span class="fulfilment-detail">Ships in 3–5 business days. Payment by Stripe.</span>
+          </p>
+
+          <details class="product-description">
+            <summary>full description</summary>
+            <div set:html={product.description} />
+          </details>
+
+          <p class="tags">
+            {product.tags.slice(0, 6).map((t: string) => (
+              <span class="tag">{t}</span>
+            ))}
+          </p>
+        </div>
+      </div>
+
+      <p class="back-link"><a href="/#stuff">← back to the catalogue</a></p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .product-fold { padding-top: 80px; }
+  .product-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    margin-top: 24px;
+    align-items: start;
+  }
+  @media (max-width: 768px) {
+    .product-grid { grid-template-columns: 1fr; gap: 28px; }
+  }
+  .product-gallery .hero-image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 4px;
+    background: var(--owc-ink-05, #ebe6dc);
+  }
+  .thumbnails {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-top: 8px;
+  }
+  .thumb {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 3px;
+    background: var(--owc-ink-05, #ebe6dc);
+  }
+  .product-info h1 {
+    margin-bottom: 12px;
+    color: var(--owc-ink, #0E0E11);
+  }
+  .price {
+    font-family: var(--font-mono);
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--owc-ink, #0E0E11);
+    margin-bottom: 24px;
+  }
+  #checkout-form { margin-bottom: 20px; }
+  #buy-btn:disabled { opacity: 0.6; cursor: wait; }
+  .fulfilment {
+    font-size: 14px;
+    color: var(--owc-ink, #0E0E11);
+    opacity: 0.75;
+    line-height: 1.5;
+    margin-bottom: 24px;
+  }
+  .fulfilment-detail { font-size: 12px; opacity: 0.7; }
+  .product-description {
+    margin: 24px 0;
+    padding: 16px;
+    background: rgba(14, 14, 17, 0.04);
+    border-radius: 4px;
+  }
+  .product-description summary {
+    cursor: pointer;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+  }
+  .product-description > div {
+    margin-top: 14px;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .product-description :global(ul) { padding-left: 22px; margin: 8px 0; }
+  .product-description :global(li) { margin-bottom: 4px; }
+  .tags { margin: 16px 0; }
+  .tag {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 4px 8px;
+    background: rgba(14, 14, 17, 0.06);
+    border-radius: 3px;
+    margin-right: 6px;
+    margin-bottom: 6px;
+    color: var(--owc-ink, #0E0E11);
+    opacity: 0.7;
+  }
+  .back-link {
+    margin-top: 48px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 1.5px;
+  }
+  .back-link a { color: var(--owc-ink, #0E0E11); opacity: 0.7; }
+  .back-link a:hover { opacity: 1; }
+</style>
+
+<script>
+  const form = document.getElementById('checkout-form') as HTMLFormElement;
+  const btn = document.getElementById('buy-btn') as HTMLButtonElement;
+  if (form && btn) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const priceId = form.dataset.priceId;
+      const slug = form.dataset.slug;
+      btn.disabled = true;
+      btn.textContent = 'redirecting…';
+      try {
+        const res = await fetch('/api/checkout', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ price_id: priceId, slug }),
+        });
+        if (!res.ok) throw new Error('checkout failed');
+        const { url } = await res.json();
+        if (!url) throw new Error('no url returned');
+        window.location.href = url;
+      } catch (err) {
+        btn.disabled = false;
+        btn.textContent = 'try again';
+        console.error(err);
+      }
+    });
+  }
+</script>
