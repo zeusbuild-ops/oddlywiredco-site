@@ -1,0 +1,128 @@
+---
+import Wordmark from './Wordmark.astro';
+const pathname = Astro.url.pathname;
+const links = [
+  { label: 'journals',    href: '/journals' },
+  { label: 'apparel',     href: '/apparel' },
+  { label: 'accessories', href: '/accessories' },
+  { label: 'digital',     href: '/digital' },
+  { label: 'about',       href: '/about' },
+];
+function isActive(href: string) {
+  if (href === '/journals') return pathname.startsWith('/journals');
+  if (href === '/apparel') return pathname.startsWith('/apparel');
+  if (href === '/accessories') return pathname.startsWith('/accessories');
+  if (href === '/digital') return pathname.startsWith('/digital');
+  if (href === '/about') return pathname === '/about';
+  return false;
+}
+---
+<nav class="site-nav" aria-label="Primary" data-state="full">
+  <a href="/" class="brand" aria-label="OddlyWiredCo home">
+    <Wordmark size="sm" variant="darkmode" />
+  </a>
+  <ul class="links desktop">
+    {links.map(l => (
+      <li>
+        <a href={l.href} class:list={[{ active: isActive(l.href) }]}
+           aria-current={isActive(l.href) ? 'page' : undefined}>
+          {l.label}
+        </a>
+      </li>
+    ))}
+  </ul>
+  <button class="hamburger" aria-label="open menu" aria-expanded="false" aria-controls="mobile-drawer">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div id="mobile-drawer" class="mobile-drawer" hidden>
+  <ul>
+    {links.map(l => (
+      <li><a href={l.href} class:list={[{ active: isActive(l.href) }]}>{l.label}</a></li>
+    ))}
+  </ul>
+</div>
+<div id="nav-sentinel" aria-hidden="true"></div>
+
+<script>
+  const nav = document.querySelector('.site-nav');
+  const sentinel = document.getElementById('nav-sentinel');
+  if (nav && sentinel) {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        nav.setAttribute('data-state', entry.isIntersecting ? 'full' : 'compact');
+      },
+      { threshold: 0 }
+    );
+    observer.observe(sentinel);
+  }
+  const ham = document.querySelector('.hamburger');
+  const drawer = document.getElementById('mobile-drawer');
+  ham?.addEventListener('click', () => {
+    const isOpen = ham.getAttribute('aria-expanded') === 'true';
+    ham.setAttribute('aria-expanded', String(!isOpen));
+    drawer?.toggleAttribute('hidden', isOpen);
+  });
+  drawer?.addEventListener('click', (e) => {
+    if ((e.target as HTMLElement).tagName === 'A') {
+      drawer.setAttribute('hidden', '');
+      ham?.setAttribute('aria-expanded', 'false');
+    }
+  });
+</script>
+
+<style>
+  .site-nav {
+    position: sticky; top: 0; z-index: 50;
+    display: flex; align-items: center; justify-content: space-between;
+    background: var(--owc-ink); color: var(--owc-bone);
+    padding: 0 24px;
+    height: 64px;
+    font-family: var(--font-mono);
+    transition: height 200ms ease, padding 200ms ease;
+  }
+  .site-nav[data-state="compact"] { height: 40px; }
+  .site-nav[data-state="compact"] .links a,
+  .site-nav[data-state="compact"] .brand { font-size: 11px; }
+  .brand { color: inherit; text-decoration: none; }
+  .links { list-style: none; display: flex; gap: 22px; padding: 0; margin: 0; }
+  .links a {
+    color: inherit; text-decoration: none; font-size: 13px;
+    text-transform: uppercase; letter-spacing: 1.5px;
+    position: relative; padding: 4px 2px;
+  }
+  .links a::after {
+    content: ''; position: absolute; left: 0; right: 0; bottom: -2px;
+    height: 2px; background: var(--owc-pulse);
+    transform: scaleX(0); transform-origin: left;
+    transition: transform 200ms ease;
+  }
+  .links a:hover::after, .links a.active::after { transform: scaleX(1); }
+  .links a:focus-visible { outline: 2px solid var(--owc-pulse); outline-offset: 4px; border-radius: 2px; }
+  .hamburger {
+    display: none;
+    background: none; border: 0; cursor: pointer;
+    padding: 8px; gap: 4px; flex-direction: column;
+  }
+  .hamburger span { display: block; width: 22px; height: 2px; background: var(--owc-bone); }
+  .mobile-drawer {
+    position: fixed; top: 64px; left: 0; right: 0;
+    background: var(--owc-ink); color: var(--owc-bone);
+    padding: 24px; z-index: 49;
+  }
+  .mobile-drawer[hidden] { display: none; }
+  .mobile-drawer ul { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 16px; }
+  .mobile-drawer a {
+    color: inherit; text-decoration: none;
+    font-family: var(--font-mono); font-size: 18px; text-transform: uppercase;
+    min-height: 44px; display: flex; align-items: center;
+  }
+  @media (max-width: 640px) {
+    .links.desktop { display: none; }
+    .hamburger { display: flex; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .site-nav { transition: none; }
+    .links a::after { transition: none; }
+  }
+</style>
