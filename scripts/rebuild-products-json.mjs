@@ -4,7 +4,7 @@
  * Printify + Stripe build artifacts.
  *
  * Usage:    node scripts/rebuild-products-json.mjs
- * Env:      OWC_BUILD_DIR  Default: ../OddlyWiredCo/.claude/worktrees/beautiful-meitner-fc86ff/build
+ * Env:      OWC_BUILD_DIR  Default: ../OddlyWiredCo/build  (root, not a worktree)
  */
 
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
@@ -19,7 +19,27 @@ import {
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const SITE_ROOT = resolve(__dirname, '..');
 const BUILD_DIR = process.env.OWC_BUILD_DIR
-  ?? resolve(SITE_ROOT, '..', 'OddlyWiredCo/.claude/worktrees/beautiful-meitner-fc86ff/build');
+  ?? resolve(SITE_ROOT, '..', 'OddlyWiredCo/build');
+
+// Maps Printify-blueprint format to coarse product type.
+// Add entries here when new product formats land (e.g. tshirt-unisex → apparel).
+const PRODUCT_FORMAT_TO_TYPE = {
+  'hardback-journal-a5': 'journal',
+  // future formats:
+  // 'softback-journal-a5': 'journal',
+  // 'mug-11oz':           'accessory',
+  // 'tshirt-unisex':      'apparel',
+};
+
+// Type-specific defaults applied when the upstream mapping has no per-product
+// source for these fields. Keyed by productFormat.
+const FORMAT_DEFAULTS = {
+  'hardback-journal-a5': {
+    blankPages: 96,
+    trimSize: '5.2" × 7.4" (13 × 19 cm)',
+    binding: 'hardback',
+  },
+};
 
 console.log(`reading build artifacts from: ${BUILD_DIR}`);
 if (!existsSync(BUILD_DIR)) {
@@ -68,14 +88,24 @@ const products = mapping.map((p) => {
         !/lands looking like a journal/.test(b)
       );
 
+  const productFormat = p.product_type;
+  const productType = PRODUCT_FORMAT_TO_TYPE[productFormat];
+  if (!productType) {
+    throw new Error(`unknown productFormat "${productFormat}" for slug "${p.slug}" — add it to PRODUCT_FORMAT_TO_TYPE`);
+  }
+  const formatDefaults = FORMAT_DEFAULTS[productFormat] ?? {};
+
   return {
     slug: p.slug,
     title: p.title,
     hook: extractHook(p.title),
-    descriptor: extractDescriptor(p.product_type),
+    descriptor: extractDescriptor(productFormat),
     priceCents: p.price_cents,
     currency: 'GBP',
     category,
+    productType,
+    productFormat,
+    ...formatDefaults,
     heroImage,
     gallery,
     whyParagraph: extractWhy(description),
@@ -83,7 +113,6 @@ const products = mapping.map((p) => {
     whatsInside: whatsInsideFiltered,
     faq: extractFAQ(description),
     tags: p.tags ?? [],
-    productType: p.product_type,
     stripePriceId: p.stripe_price_id,
     stripeProductId: p.stripe_product_id,
     // Server-only fulfilment IDs (used by webhook, never sent to client)
