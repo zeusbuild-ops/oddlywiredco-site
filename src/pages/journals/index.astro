@@ -1,68 +1,17 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import ProductCard from '../../components/ProductCard.astro';
-import products from '../../data/products.json';
+import CategoryGrid from '../../components/CategoryGrid.astro';
+import { allProducts } from '../../types/product';
 
-const journals = (products as any[]).filter((p) => p.category === 'journals');
+const journals = allProducts.filter(p => p.category === 'journals');
 ---
 <BaseLayout
-  title="journals · OddlyWiredCo"
-  description="hardback journals for the brain that wired this way. 96 blank pages. UK printed. one cover for every kind of chaos."
+  title="ADHD journals — 30 designs · OddlyWiredCo"
+  description="30 hardback journals for ADHD brains. UK-printed. Each one names a moment nobody else does."
 >
-  <section class="fold light cat-hero">
-    <div class="container">
-      <div class="meta">the catalogue / journals</div>
-      <h1 class="h-mono lg cat-title">one cover for<br>every kind of chaos.</h1>
-      <p class="cat-sub">{journals.length} hardback journals · UK printed · 96 blank pages each · £19</p>
-    </div>
-  </section>
-
-  <section class="fold dark cat-grid-fold">
-    <div class="container">
-      <div class="cat-grid">
-        {journals.map((p: any) => (
-          <ProductCard
-            slug={p.slug}
-            hook={p.hook}
-            descriptor={p.descriptor}
-            heroImage={p.heroImage}
-            priceCents={p.priceCents}
-            category={p.category}
-          />
-        ))}
-      </div>
-      <a href="/" class="cat-back">← back to home</a>
-    </div>
-  </section>
+  <CategoryGrid
+    products={journals}
+    heading="all 30 journals."
+    eyebrow="the catalogue"
+  />
 </BaseLayout>
-
-<style>
-  .cat-hero { padding-bottom: 32px; }
-  .cat-title { margin: 18px 0 16px; }
-  .cat-sub {
-    font-family: var(--font-mono);
-    font-size: 14px;
-    opacity: 0.7;
-  }
-  .cat-grid-fold { padding-top: 48px; padding-bottom: 64px; }
-  .cat-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 18px;
-  }
-  @media (max-width: 1000px) {
-    .cat-grid { grid-template-columns: repeat(3, 1fr); }
-  }
-  @media (max-width: 700px) {
-    .cat-grid { grid-template-columns: repeat(2, 1fr); }
-  }
-  .cat-back {
-    display: inline-block;
-    margin-top: 36px;
-    font-family: var(--font-mono);
-    font-size: 12px;
-    letter-spacing: 1.5px;
-    opacity: 0.7;
-  }
-  .cat-back:hover { opacity: 1; }
-</style>
