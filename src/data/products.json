@@ -2,9 +2,47 @@
   {
     "slug": "47-tabs-all-journal",
     "title": "ADHD Tabs Open Journal | 47 tabs. all important. all... | AuDHD Notebook Gift",
-    "price_cents": 1900,
+    "hook": "47 tabs. all important.",
+    "descriptor": "hardback journal · A5 · 96 blank pages",
+    "priceCents": 1900,
     "currency": "GBP",
-    "description": "you're in the right corner. of the internet. A hardback journal for ADHD brains who think differently.\n\nWHAT'S INSIDE\n\u2022 Hardback journal, 5.2\" \u00d7 7.4\" (\u2248 13 \u00d7 19 cm)\n\u2022 96 blank pages (use it however your brain wants \u2014 no lines, no rules, no judgement)\n\u2022 Wraparound printed cover in brand v2 chrome\n\u2022 Printed and hardbound by Prodigi UK on behalf of OddlyWiredCo\n\nTHE WHY\nThis journal lives in the tabs open corner of the OddlyWiredCo lineup. The cover says what your brain has been trying to say. The blank pages are for everything underneath.\n\nFAQ\nIs this lined or blank?\nBlank. Lines feel like another rule to break. Bring your own.\n\nWhere does it ship from?\nPrinted and shipped from Prodigi UK. Royal Mail in the UK, DHL/USPS/locals everywhere else.\n\nIs it gift-ready?\nThe cover speaks for itself. We don't include outer branding on the journal, so it lands in the hands of the recipient looking like a journal, not a parcel from a brand.\n\n\u2014\n\nCover artwork is produced using AI-assisted design tools and finalised by the maker.\n\nPrinted and shipped by Prodigi UK on behalf of OddlyWiredCo (sole proprietor).",
+    "category": "journals",
+    "heroImage": "https://images-api.printify.com/mockup/6a14d48f45ee82bb49090adf/107225/103157/adhd-tabs-open-journal-47-tabs-all-important-all-audhd-notebook-gift.jpg?camera_label=front",
+    "gallery": [
+      "https://images-api.printify.com/mockup/6a14d48f45ee82bb49090adf/107225/103157/adhd-tabs-open-journal-47-tabs-all-important-all-audhd-notebook-gift.jpg?camera_label=front",
+      "https://images-api.printify.com/mockup/6a14d48f45ee82bb49090adf/107225/103180/adhd-tabs-open-journal-47-tabs-all-important-all-audhd-notebook-gift.jpg?camera_label=back",
+      "https://images-api.printify.com/mockup/6a14d48f45ee82bb49090adf/107225/103183/adhd-tabs-open-journal-47-tabs-all-important-all-audhd-notebook-gift.jpg?camera_label=opened",
+      "https://images-api.printify.com/mockup/6a14d48f45ee82bb49090adf/107225/103184/adhd-tabs-open-journal-47-tabs-all-important-all-audhd-notebook-gift.jpg?camera_label=context-1-front"
+    ],
+    "whyParagraph": "this journal lives in the tabs open corner of the oddlywiredco lineup. the cover says what your brain has been trying to say. the blank pages are for everything underneath.",
+    "keypoints": [
+      "hardback journal, 5.2\" × 7.4\" (≈ 13 × 19 cm)",
+      "96 blank pages (use it however your brain wants — no lines, no rules, no judgement)",
+      "wraparound printed cover in brand v2 chrome",
+      "printed and hardbound"
+    ],
+    "whatsInside": [
+      "hardback journal, 5.2\" × 7.4\" (≈ 13 × 19 cm)",
+      "96 blank pages (use it however your brain wants — no lines, no rules, no judgement)",
+      "wraparound printed cover in brand v2 chrome",
+      "printed and hardbound",
+      "cover speaks for itself — no outer branding on the journal",
+      "lands looking like a journal, not a parcel from a brand"
+    ],
+    "faq": [
+      {
+        "q": "Is this lined or blank?",
+        "a": "Blank. Lines feel like another rule to break. Bring your own."
+      },
+      {
+        "q": "Where does it ship from?",
+        "a": "Printed and shipped from. Royal Mail in the UK, DHL/USPS/locals everywhere else."
+      },
+      {
+        "q": "Is it gift-ready?",
+        "a": "The cover speaks for itself. We don't include outer branding on the journal, so it lands in the hands of the recipient looking like a journal, not a parcel from a brand."
+      }
+    ],
     "tags": [
       "adhd journal",
       "audhd journal",
@@ -20,28 +58,65 @@
       "adhd identity gift",
       "late diagnosed gift"
     ],
-    "product_type": "hardback-journal-a5",
-    "hero_image": "https://images-api.printify.com/mockup/6a14d48f45ee82bb49090adf/107225/103157/adhd-tabs-open-journal-47-tabs-all-important-all-audhd-notebook-gift.jpg?camera_label=front",
-    "gallery": [
-      "https://images-api.printify.com/mockup/6a14d48f45ee82bb49090adf/107225/103157/adhd-tabs-open-journal-47-tabs-all-important-all-audhd-notebook-gift.jpg?camera_label=front",
-      "https://images-api.printify.com/mockup/6a14d48f45ee82bb49090adf/107225/103180/adhd-tabs-open-journal-47-tabs-all-important-all-audhd-notebook-gift.jpg?camera_label=back",
-      "https://images-api.printify.com/mockup/6a14d48f45ee82bb49090adf/107225/103183/adhd-tabs-open-journal-47-tabs-all-important-all-audhd-notebook-gift.jpg?camera_label=opened",
-      "https://images-api.printify.com/mockup/6a14d48f45ee82bb49090adf/107225/103184/adhd-tabs-open-journal-47-tabs-all-important-all-audhd-notebook-gift.jpg?camera_label=context-1-front"
-    ],
-    "stripe_price_id": "price_1Tb7a90d1X3moMIs5PxsemEZ",
-    "stripe_product_id": "prod_UaIAzN97Gm9yfy",
-    "printify_shop_id": 27681461,
-    "printify_product_id": "6a14d48f45ee82bb49090adf",
-    "printify_variant_id": 107225,
-    "printify_blueprint_id": 1481,
-    "printify_provider_id": 69
+    "productType": "hardback-journal-a5",
+    "stripePriceId": "price_1Tb7a90d1X3moMIs5PxsemEZ",
+    "stripeProductId": "prod_UaIAzN97Gm9yfy",
+    "printifyShopId": 27681461,
+    "printifyProductId": "6a14d48f45ee82bb49090adf",
+    "printifyVariantId": 107225,
+    "printifyBlueprintId": 1481,
+    "printifyProviderId": 69,
+    "crossSellSlugs": [
+      "mask-costs-more-journal",
+      "rest-strategy-journal",
+      "you-remember-planning-journal",
+      "dopamine-before-discipline-journal"
+    ]
   },
   {
     "slug": "audhd-survival-kit-journal",
     "title": "ADHD Audhd Journal | audhd survival kit, contents: | AuDHD Notebook Gift",
-    "price_cents": 1900,
+    "hook": "audhd survival kit, contents:",
+    "descriptor": "hardback journal · A5 · 96 blank pages",
+    "priceCents": 1900,
     "currency": "GBP",
-    "description": "noise blockers. fidgets. a way home. A hardback journal for ADHD brains who think differently.\n\nWHAT'S INSIDE\n\u2022 Hardback journal, 5.2\" \u00d7 7.4\" (\u2248 13 \u00d7 19 cm)\n\u2022 96 blank pages (use it however your brain wants \u2014 no lines, no rules, no judgement)\n\u2022 Wraparound printed cover in brand v2 chrome\n\u2022 Printed and hardbound by Prodigi UK on behalf of OddlyWiredCo\n\nTHE WHY\nThis journal lives in the audhd corner of the OddlyWiredCo lineup. The cover says what your brain has been trying to say. The blank pages are for everything underneath.\n\nFAQ\nIs this lined or blank?\nBlank. Lines feel like another rule to break. Bring your own.\n\nWhere does it ship from?\nPrinted and shipped from Prodigi UK. Royal Mail in the UK, DHL/USPS/locals everywhere else.\n\nIs it gift-ready?\nThe cover speaks for itself. We don't include outer branding on the journal, so it lands in the hands of the recipient looking like a journal, not a parcel from a brand.\n\n\u2014\n\nCover artwork is produced using AI-assisted design tools and finalised by the maker.\n\nPrinted and shipped by Prodigi UK on behalf of OddlyWiredCo (sole proprietor).",
+    "category": "journals",
+    "heroImage": "https://images-api.printify.com/mockup/6a14d4b7cb8516b5720c5d8c/107225/103157/adhd-audhd-journal-audhd-survival-kit-contents-audhd-notebook-gift.jpg?camera_label=front",
+    "gallery": [
+      "https://images-api.printify.com/mockup/6a14d4b7cb8516b5720c5d8c/107225/103157/adhd-audhd-journal-audhd-survival-kit-contents-audhd-notebook-gift.jpg?camera_label=front",
+      "https://images-api.printify.com/mockup/6a14d4b7cb8516b5720c5d8c/107225/103180/adhd-audhd-journal-audhd-survival-kit-contents-audhd-notebook-gift.jpg?camera_label=back",
+      "https://images-api.printify.com/mockup/6a14d4b7cb8516b5720c5d8c/107225/103183/adhd-audhd-journal-audhd-survival-kit-contents-audhd-notebook-gift.jpg?camera_label=opened",
+      "https://images-api.printify.com/mockup/6a14d4b7cb8516b5720c5d8c/107225/103184/adhd-audhd-journal-audhd-survival-kit-contents-audhd-notebook-gift.jpg?camera_label=context-1-front"
+    ],
+    "whyParagraph": "this journal lives in the audhd corner of the oddlywiredco lineup. the cover says what your brain has been trying to say. the blank pages are for everything underneath.",
+    "keypoints": [
+      "hardback journal, 5.2\" × 7.4\" (≈ 13 × 19 cm)",
+      "96 blank pages (use it however your brain wants — no lines, no rules, no judgement)",
+      "wraparound printed cover in brand v2 chrome",
+      "printed and hardbound"
+    ],
+    "whatsInside": [
+      "hardback journal, 5.2\" × 7.4\" (≈ 13 × 19 cm)",
+      "96 blank pages (use it however your brain wants — no lines, no rules, no judgement)",
+      "wraparound printed cover in brand v2 chrome",
+      "printed and hardbound",
+      "cover speaks for itself — no outer branding on the journal",
+      "lands looking like a journal, not a parcel from a brand"
+    ],
+    "faq": [
+      {
+        "q": "Is this lined or blank?",
+        "a": "Blank. Lines feel like another rule to break. Bring your own."
+      },
+      {
+        "q": "Where does it ship from?",
+        "a": "Printed and shipped from. Royal Mail in the UK, DHL/USPS/locals everywhere else."
+      },
+      {
+        "q": "Is it gift-ready?",
+        "a": "The cover speaks for itself. We don't include outer branding on the journal, so it lands in the hands of the recipient looking like a journal, not a parcel from a brand."
+      }
+    ],
     "tags": [
       "adhd journal",
       "audhd journal",
@@ -57,28 +132,65 @@
       "late diagnosed gift",
       "adhd diary"
     ],
-    "product_type": "hardback-journal-a5",
-    "hero_image": "https://images-api.printify.com/mockup/6a14d4b7cb8516b5720c5d8c/107225/103157/adhd-audhd-journal-audhd-survival-kit-contents-audhd-notebook-gift.jpg?camera_label=front",
-    "gallery": [
-      "https://images-api.printify.com/mockup/6a14d4b7cb8516b5720c5d8c/107225/103157/adhd-audhd-journal-audhd-survival-kit-contents-audhd-notebook-gift.jpg?camera_label=front",
-      "https://images-api.printify.com/mockup/6a14d4b7cb8516b5720c5d8c/107225/103180/adhd-audhd-journal-audhd-survival-kit-contents-audhd-notebook-gift.jpg?camera_label=back",
-      "https://images-api.printify.com/mockup/6a14d4b7cb8516b5720c5d8c/107225/103183/adhd-audhd-journal-audhd-survival-kit-contents-audhd-notebook-gift.jpg?camera_label=opened",
-      "https://images-api.printify.com/mockup/6a14d4b7cb8516b5720c5d8c/107225/103184/adhd-audhd-journal-audhd-survival-kit-contents-audhd-notebook-gift.jpg?camera_label=context-1-front"
-    ],
-    "stripe_price_id": "price_1Tb7aA0d1X3moMIsqh6jcoVm",
-    "stripe_product_id": "prod_UaIAcNrpC8ZIKP",
-    "printify_shop_id": 27681461,
-    "printify_product_id": "6a14d4b7cb8516b5720c5d8c",
-    "printify_variant_id": 107225,
-    "printify_blueprint_id": 1481,
-    "printify_provider_id": 69
+    "productType": "hardback-journal-a5",
+    "stripePriceId": "price_1Tb7aA0d1X3moMIsqh6jcoVm",
+    "stripeProductId": "prod_UaIAcNrpC8ZIKP",
+    "printifyShopId": 27681461,
+    "printifyProductId": "6a14d4b7cb8516b5720c5d8c",
+    "printifyVariantId": 107225,
+    "printifyBlueprintId": 1481,
+    "printifyProviderId": 69,
+    "crossSellSlugs": [
+      "out-sight-out-journal",
+      "quiet-note-past-journal",
+      "rejection-sensitivity-real-journal",
+      "draft-text-complete-journal"
+    ]
   },
   {
     "slug": "chaos-feature-journal",
     "title": "ADHD Chaos Feature Journal | the chaos is a feature | AuDHD Notebook Gift",
-    "price_cents": 1900,
+    "hook": "the chaos is a feature",
+    "descriptor": "hardback journal · A5 · 96 blank pages",
+    "priceCents": 1900,
     "currency": "GBP",
-    "description": "not a bug. not yours to fix. A hardback journal for ADHD brains who think differently.\n\nWHAT'S INSIDE\n\u2022 Hardback journal, 5.2\" \u00d7 7.4\" (\u2248 13 \u00d7 19 cm)\n\u2022 96 blank pages (use it however your brain wants \u2014 no lines, no rules, no judgement)\n\u2022 Wraparound printed cover in brand v2 chrome\n\u2022 Printed and hardbound by Prodigi UK on behalf of OddlyWiredCo\n\nTHE WHY\nThis journal lives in the chaos feature corner of the OddlyWiredCo lineup. The cover says what your brain has been trying to say. The blank pages are for everything underneath.\n\nFAQ\nIs this lined or blank?\nBlank. Lines feel like another rule to break. Bring your own.\n\nWhere does it ship from?\nPrinted and shipped from Prodigi UK. Royal Mail in the UK, DHL/USPS/locals everywhere else.\n\nIs it gift-ready?\nThe cover speaks for itself. We don't include outer branding on the journal, so it lands in the hands of the recipient looking like a journal, not a parcel from a brand.\n\n\u2014\n\nCover artwork is produced using AI-assisted design tools and finalised by the maker.\n\nPrinted and shipped by Prodigi UK on behalf of OddlyWiredCo (sole proprietor).",
+    "category": "journals",
+    "heroImage": "https://images-api.printify.com/mockup/6a14d4bd44d3fef4d805f026/107225/103157/adhd-chaos-feature-journal-the-chaos-is-a-feature-audhd-notebook-gift.jpg?camera_label=front",
+    "gallery": [
+      "https://images-api.printify.com/mockup/6a14d4bd44d3fef4d805f026/107225/103157/adhd-chaos-feature-journal-the-chaos-is-a-feature-audhd-notebook-gift.jpg?camera_label=front",
+      "https://images-api.printify.com/mockup/6a14d4bd44d3fef4d805f026/107225/103180/adhd-chaos-feature-journal-the-chaos-is-a-feature-audhd-notebook-gift.jpg?camera_label=back",
+      "https://images-api.printify.com/mockup/6a14d4bd44d3fef4d805f026/107225/103183/adhd-chaos-feature-journal-the-chaos-is-a-feature-audhd-notebook-gift.jpg?camera_label=opened",
+      "https://images-api.printify.com/mockup/6a14d4bd44d3fef4d805f026/107225/103184/adhd-chaos-feature-journal-the-chaos-is-a-feature-audhd-notebook-gift.jpg?camera_label=context-1-front"
+    ],
+    "whyParagraph": "this journal lives in the chaos feature corner of the oddlywiredco lineup. the cover says what your brain has been trying to say. the blank pages are for everything underneath.",
+    "keypoints": [
+      "hardback journal, 5.2\" × 7.4\" (≈ 13 × 19 cm)",
+      "96 blank pages (use it however your brain wants — no lines, no rules, no judgement)",
+      "wraparound printed cover in brand v2 chrome",
+      "printed and hardbound"
+    ],
+    "whatsInside": [
+      "hardback journal, 5.2\" × 7.4\" (≈ 13 × 19 cm)",
+      "96 blank pages (use it however your brain wants — no lines, no rules, no judgement)",
+      "wraparound printed cover in brand v2 chrome",
+      "printed and hardbound",
+      "cover speaks for itself — no outer branding on the journal",
+      "lands looking like a journal, not a parcel from a brand"
+    ],
+    "faq": [
+      {
+        "q": "Is this lined or blank?",
+        "a": "Blank. Lines feel like another rule to break. Bring your own."
+      },
+      {
+        "q": "Where does it ship from?",
+        "a": "Printed and shipped from. Royal Mail in the UK, DHL/USPS/locals everywhere else."
+      },
+      {
+        "q": "Is it gift-ready?",
+        "a": "The cover speaks for itself. We don't include outer branding on the journal, so it lands in the hands of the recipient looking like a journal, not a parcel from a brand."
+      }
+    ],
     "tags": [
       "adhd journal",
       "audhd journal",
@@ -94,28 +206,65 @@
       "adhd identity gift",
       "late diagnosed gift"
     ],
-    "product_type": "hardback-journal-a5",
-    "hero_image": "https://images-api.printify.com/mockup/6a14d4bd44d3fef4d805f026/107225/103157/adhd-chaos-feature-journal-the-chaos-is-a-feature-audhd-notebook-gift.jpg?camera_label=front",
-    "gallery": [
-      "https://images-api.printify.com/mockup/6a14d4bd44d3fef4d805f026/107225/103157/adhd-chaos-feature-journal-the-chaos-is-a-feature-audhd-notebook-gift.jpg?camera_label=front",
-      "https://images-api.printify.com/mockup/6a14d4bd44d3fef4d805f026/107225/103180/adhd-chaos-feature-journal-the-chaos-is-a-feature-audhd-notebook-gift.jpg?camera_label=back",
-      "https://images-api.printify.com/mockup/6a14d4bd44d3fef4d805f026/107225/103183/adhd-chaos-feature-journal-the-chaos-is-a-feature-audhd-notebook-gift.jpg?camera_label=opened",
-      "https://images-api.printify.com/mockup/6a14d4bd44d3fef4d805f026/107225/103184/adhd-chaos-feature-journal-the-chaos-is-a-feature-audhd-notebook-gift.jpg?camera_label=context-1-front"
-    ],
-    "stripe_price_id": "price_1Tb7aA0d1X3moMIssbdfJmx3",
-    "stripe_product_id": "prod_UaIAEDym2WTbvl",
-    "printify_shop_id": 27681461,
-    "printify_product_id": "6a14d4bd44d3fef4d805f026",
-    "printify_variant_id": 107225,
-    "printify_blueprint_id": 1481,
-    "printify_provider_id": 69
+    "productType": "hardback-journal-a5",
+    "stripePriceId": "price_1Tb7aA0d1X3moMIssbdfJmx3",
+    "stripeProductId": "prod_UaIAEDym2WTbvl",
+    "printifyShopId": 27681461,
+    "printifyProductId": "6a14d4bd44d3fef4d805f026",
+    "printifyVariantId": 107225,
+    "printifyBlueprintId": 1481,
+    "printifyProviderId": 69,
+    "crossSellSlugs": [
+      "draft-text-complete-journal",
+      "rest-strategy-journal",
+      "small-wins-still-journal",
+      "you-found-out-journal"
+    ]
   },
   {
     "slug": "do-list-owes-journal",
     "title": "ADHD Reframes Journal | the to-do list owes you not... | AuDHD Notebook Gift",
-    "price_cents": 1900,
+    "hook": "the to-do list owes you",
+    "descriptor": "hardback journal · A5 · 96 blank pages",
+    "priceCents": 1900,
     "currency": "GBP",
-    "description": "the list works for you. not the other way. A hardback journal for ADHD brains who think differently.\n\nWHAT'S INSIDE\n\u2022 Hardback journal, 5.2\" \u00d7 7.4\" (\u2248 13 \u00d7 19 cm)\n\u2022 96 blank pages (use it however your brain wants \u2014 no lines, no rules, no judgement)\n\u2022 Wraparound printed cover in brand v2 chrome\n\u2022 Printed and hardbound by Prodigi UK on behalf of OddlyWiredCo\n\nTHE WHY\nThis journal lives in the reframes corner of the OddlyWiredCo lineup. The cover says what your brain has been trying to say. The blank pages are for everything underneath.\n\nFAQ\nIs this lined or blank?\nBlank. Lines feel like another rule to break. Bring your own.\n\nWhere does it ship from?\nPrinted and shipped from Prodigi UK. Royal Mail in the UK, DHL/USPS/locals everywhere else.\n\nIs it gift-ready?\nThe cover speaks for itself. We don't include outer branding on the journal, so it lands in the hands of the recipient looking like a journal, not a parcel from a brand.\n\n\u2014\n\nCover artwork is produced using AI-assisted design tools and finalised by the maker.\n\nPrinted and shipped by Prodigi UK on behalf of OddlyWiredCo (sole proprietor).",
+    "category": "journals",
+    "heroImage": "https://images-api.printify.com/mockup/6a14d4c244d3fef4d805f02c/107225/103157/adhd-reframes-journal-the-to-do-list-owes-you-not-audhd-notebook-gift.jpg?camera_label=front",
+    "gallery": [
+      "https://images-api.printify.com/mockup/6a14d4c244d3fef4d805f02c/107225/103157/adhd-reframes-journal-the-to-do-list-owes-you-not-audhd-notebook-gift.jpg?camera_label=front",
+      "https://images-api.printify.com/mockup/6a14d4c244d3fef4d805f02c/107225/103180/adhd-reframes-journal-the-to-do-list-owes-you-not-audhd-notebook-gift.jpg?camera_label=back",
+      "https://images-api.printify.com/mockup/6a14d4c244d3fef4d805f02c/107225/103183/adhd-reframes-journal-the-to-do-list-owes-you-not-audhd-notebook-gift.jpg?camera_label=opened",
+      "https://images-api.printify.com/mockup/6a14d4c244d3fef4d805f02c/107225/103184/adhd-reframes-journal-the-to-do-list-owes-you-not-audhd-notebook-gift.jpg?camera_label=context-1-front"
+    ],
+    "whyParagraph": "this journal lives in the reframes corner of the oddlywiredco lineup. the cover says what your brain has been trying to say. the blank pages are for everything underneath.",
+    "keypoints": [
+      "hardback journal, 5.2\" × 7.4\" (≈ 13 × 19 cm)",
+      "96 blank pages (use it however your brain wants — no lines, no rules, no judgement)",
+      "wraparound printed cover in brand v2 chrome",
+      "printed and hardbound"
+    ],
+    "whatsInside": [
+      "hardback journal, 5.2\" × 7.4\" (≈ 13 × 19 cm)",
+      "96 blank pages (use it however your brain wants — no lines, no rules, no judgement)",
+      "wraparound printed cover in brand v2 chrome",
+      "printed and hardbound",
+      "cover speaks for itself — no outer branding on the journal",
+      "lands looking like a journal, not a parcel from a brand"
+    ],
+    "faq": [
+      {
+        "q": "Is this lined or blank?",
+        "a": "Blank. Lines feel like another rule to break. Bring your own."
+      },
+      {
+        "q": "Where does it ship from?",
+        "a": "Printed and shipped from. Royal Mail in the UK, DHL/USPS/locals everywhere else."
+      },
+      {
+        "q": "Is it gift-ready?",
+        "a": "The cover speaks for itself. We don't include outer branding on the journal, so it lands in the hands of the recipient looking like a journal, not a parcel from a brand."
+      }
+    ],
     "tags": [
       "adhd journal",
       "audhd journal",
@@ -131,28 +280,65 @@
       "adhd identity gift",
       "late diagnosed gift"
     ],
-    "product_type": "hardback-journal-a5",
-    "hero_image": "https://images-api.printify.com/mockup/6a14d4c244d3fef4d805f02c/107225/103157/adhd-reframes-journal-the-to-do-list-owes-you-not-audhd-notebook-gift.jpg?camera_label=front",
-    "gallery": [
-      "https://images-api.printify.com/mockup/6a14d4c244d3fef4d805f02c/107225/103157/adhd-reframes-journal-the-to-do-list-owes-you-not-audhd-notebook-gift.jpg?camera_label=front",
-      "https://images-api.printify.com/mockup/6a14d4c244d3fef4d805f02c/107225/103180/adhd-reframes-journal-the-to-do-list-owes-you-not-audhd-notebook-gift.jpg?camera_label=back",
-      "https://images-api.printify.com/mockup/6a14d4c244d3fef4d805f02c/107225/103183/adhd-reframes-journal-the-to-do-list-owes-you-not-audhd-notebook-gift.jpg?camera_label=opened",
-      "https://images-api.printify.com/mockup/6a14d4c244d3fef4d805f02c/107225/103184/adhd-reframes-journal-the-to-do-list-owes-you-not-audhd-notebook-gift.jpg?camera_label=context-1-front"
-    ],
-    "stripe_price_id": "price_1Tb7aB0d1X3moMIsGoL9H2FW",
-    "stripe_product_id": "prod_UaIAF0K28xSfH4",
-    "printify_shop_id": 27681461,
-    "printify_product_id": "6a14d4c244d3fef4d805f02c",
-    "printify_variant_id": 107225,
-    "printify_blueprint_id": 1481,
-    "printify_provider_id": 69
+    "productType": "hardback-journal-a5",
+    "stripePriceId": "price_1Tb7aB0d1X3moMIsGoL9H2FW",
+    "stripeProductId": "prod_UaIAF0K28xSfH4",
+    "printifyShopId": 27681461,
+    "printifyProductId": "6a14d4c244d3fef4d805f02c",
+    "printifyVariantId": 107225,
+    "printifyBlueprintId": 1481,
+    "printifyProviderId": 69,
+    "crossSellSlugs": [
+      "audhd-survival-kit-journal",
+      "small-wins-still-journal",
+      "neurodivergent-broken-journal",
+      "unread-email-not-journal"
+    ]
   },
   {
     "slug": "doorway-memory-wipe-journal",
     "title": "ADHD Object Permanence Journal | the doorway is a memory wipe | AuDHD Notebook Gift",
-    "price_cents": 1900,
+    "hook": "the doorway is a memory wipe",
+    "descriptor": "hardback journal · A5 · 96 blank pages",
+    "priceCents": 1900,
     "currency": "GBP",
-    "description": "science cannot save you. neither can the doorway. A hardback journal for ADHD brains who think differently.\n\nWHAT'S INSIDE\n\u2022 Hardback journal, 5.2\" \u00d7 7.4\" (\u2248 13 \u00d7 19 cm)\n\u2022 96 blank pages (use it however your brain wants \u2014 no lines, no rules, no judgement)\n\u2022 Wraparound printed cover in brand v2 chrome\n\u2022 Printed and hardbound by Prodigi UK on behalf of OddlyWiredCo\n\nTHE WHY\nThis journal lives in the object permanence corner of the OddlyWiredCo lineup. The cover says what your brain has been trying to say. The blank pages are for everything underneath.\n\nFAQ\nIs this lined or blank?\nBlank. Lines feel like another rule to break. Bring your own.\n\nWhere does it ship from?\nPrinted and shipped from Prodigi UK. Royal Mail in the UK, DHL/USPS/locals everywhere else.\n\nIs it gift-ready?\nThe cover speaks for itself. We don't include outer branding on the journal, so it lands in the hands of the recipient looking like a journal, not a parcel from a brand.\n\n\u2014\n\nCover artwork is produced using AI-assisted design tools and finalised by the maker.\n\nPrinted and shipped by Prodigi UK on behalf of OddlyWiredCo (sole proprietor).",
+    "category": "journals",
+    "heroImage": "https://images-api.printify.com/mockup/6a14d4c815f6f0f8f709d173/107225/103157/adhd-object-permanence-journal-the-doorway-is-a-memory-wipe-audhd-notebook-gift.jpg?camera_label=front",
+    "gallery": [
+      "https://images-api.printify.com/mockup/6a14d4c815f6f0f8f709d173/107225/103157/adhd-object-permanence-journal-the-doorway-is-a-memory-wipe-audhd-notebook-gift.jpg?camera_label=front",
+      "https://images-api.printify.com/mockup/6a14d4c815f6f0f8f709d173/107225/103180/adhd-object-permanence-journal-the-doorway-is-a-memory-wipe-audhd-notebook-gift.jpg?camera_label=back",
+      "https://images-api.printify.com/mockup/6a14d4c815f6f0f8f709d173/107225/103183/adhd-object-permanence-journal-the-doorway-is-a-memory-wipe-audhd-notebook-gift.jpg?camera_label=opened",
+      "https://images-api.printify.com/mockup/6a14d4c815f6f0f8f709d173/107225/103184/adhd-object-permanence-journal-the-doorway-is-a-memory-wipe-audhd-notebook-gift.jpg?camera_label=context-1-front"
+    ],
+    "whyParagraph": "this journal lives in the object permanence corner of the oddlywiredco lineup. the cover says what your brain has been trying to say. the blank pages are for everything underneath.",
+    "keypoints": [
+      "hardback journal, 5.2\" × 7.4\" (≈ 13 × 19 cm)",
+      "96 blank pages (use it however your brain wants — no lines, no rules, no judgement)",
+      "wraparound printed cover in brand v2 chrome",
+      "printed and hardbound"
+    ],
+    "whatsInside": [
+      "hardback journal, 5.2\" × 7.4\" (≈ 13 × 19 cm)",
+      "96 blank pages (use it however your brain wants — no lines, no rules, no judgement)",
+      "wraparound printed cover in brand v2 chrome",
+      "printed and hardbound",
+      "cover speaks for itself — no outer branding on the journal",
+      "lands looking like a journal, not a parcel from a brand"
+    ],
+    "faq": [
+      {
+        "q": "Is this lined or blank?",
+        "a": "Blank. Lines feel like another rule to break. Bring your own."
+      },
+      {
+        "q": "Where does it ship from?",
+        "a": "Printed and shipped from. Royal Mail in the UK, DHL/USPS/locals everywhere else."
+      },
+      {
+        "q": "Is it gift-ready?",
+        "a": "The cover speaks for itself. We don't include outer branding on the journal, so it lands in the hands of the recipient looking like a journal, not a parcel from a brand."
+      }
+    ],
     "tags": [
       "adhd journal",
       "audhd journal",
@@ -168,28 +354,65 @@
       "adhd identity gift",
       "late diagnosed gift"
     ],
-    "product_type": "hardback-journal-a5",
-    "hero_image": "https://images-api.printify.com/mockup/6a14d4c815f6f0f8f709d173/107225/103157/adhd-object-permanence-journal-the-doorway-is-a-memory-wipe-audhd-notebook-gift.jpg?camera_label=front",
-    "gallery": [
-      "https://images-api.printify.com/mockup/6a14d4c815f6f0f8f709d173/107225/103157/adhd-object-permanence-journal-the-doorway-is-a-memory-wipe-audhd-notebook-gift.jpg?camera_label=front",
-      "https://images-api.printify.com/mockup/6a14d4c815f6f0f8f709d173/107225/103180/adhd-object-permanence-journal-the-doorway-is-a-memory-wipe-audhd-notebook-gift.jpg?camera_label=back",
-      "https://images-api.printify.com/mockup/6a14d4c815f6f0f8f709d173/107225/103183/adhd-object-permanence-journal-the-doorway-is-a-memory-wipe-audhd-notebook-gift.jpg?camera_label=opened",
-      "https://images-api.printify.com/mockup/6a14d4c815f6f0f8f709d173/107225/103184/adhd-object-permanence-journal-the-doorway-is-a-memory-wipe-audhd-notebook-gift.jpg?camera_label=context-1-front"
-    ],
-    "stripe_price_id": "price_1Tb7aC0d1X3moMIsca8oyDxd",
-    "stripe_product_id": "prod_UaIA9ASkmM1GkI",
-    "printify_shop_id": 27681461,
-    "printify_product_id": "6a14d4c815f6f0f8f709d173",
-    "printify_variant_id": 107225,
-    "printify_blueprint_id": 1481,
-    "printify_provider_id": 69
+    "productType": "hardback-journal-a5",
+    "stripePriceId": "price_1Tb7aC0d1X3moMIsca8oyDxd",
+    "stripeProductId": "prod_UaIA9ASkmM1GkI",
+    "printifyShopId": 27681461,
+    "printifyProductId": "6a14d4c815f6f0f8f709d173",
+    "printifyVariantId": 107225,
+    "printifyBlueprintId": 1481,
+    "printifyProviderId": 69,
+    "crossSellSlugs": [
+      "unread-email-not-journal",
+      "rejection-sensitivity-real-journal",
+      "your-meltdown-was-journal",
+      "started-finished-post-journal"
+    ]
   },
   {
     "slug": "dopamine-before-discipline-journal",
     "title": "ADHD Dopamine Journal | dopamine before discipline | AuDHD Notebook Gift",
-    "price_cents": 1900,
+    "hook": "dopamine before discipline",
+    "descriptor": "hardback journal · A5 · 96 blank pages",
+    "priceCents": 1900,
     "currency": "GBP",
-    "description": "lead with the reward. discipline follows. A hardback journal for ADHD brains who think differently.\n\nWHAT'S INSIDE\n\u2022 Hardback journal, 5.2\" \u00d7 7.4\" (\u2248 13 \u00d7 19 cm)\n\u2022 96 blank pages (use it however your brain wants \u2014 no lines, no rules, no judgement)\n\u2022 Wraparound printed cover in brand v2 chrome\n\u2022 Printed and hardbound by Prodigi UK on behalf of OddlyWiredCo\n\nTHE WHY\nThis journal lives in the dopamine corner of the OddlyWiredCo lineup. The cover says what your brain has been trying to say. The blank pages are for everything underneath.\n\nFAQ\nIs this lined or blank?\nBlank. Lines feel like another rule to break. Bring your own.\n\nWhere does it ship from?\nPrinted and shipped from Prodigi UK. Royal Mail in the UK, DHL/USPS/locals everywhere else.\n\nIs it gift-ready?\nThe cover speaks for itself. We don't include outer branding on the journal, so it lands in the hands of the recipient looking like a journal, not a parcel from a brand.\n\n\u2014\n\nCover artwork is produced using AI-assisted design tools and finalised by the maker.\n\nPrinted and shipped by Prodigi UK on behalf of OddlyWiredCo (sole proprietor).",
+    "category": "journals",
+    "heroImage": "https://images-api.printify.com/mockup/6a14d4d1e03909eefe0456d8/107225/103157/adhd-dopamine-journal-dopamine-before-discipline-audhd-notebook-gift.jpg?camera_label=front",
+    "gallery": [
+      "https://images-api.printify.com/mockup/6a14d4d1e03909eefe0456d8/107225/103157/adhd-dopamine-journal-dopamine-before-discipline-audhd-notebook-gift.jpg?camera_label=front",
+      "https://images-api.printify.com/mockup/6a14d4d1e03909eefe0456d8/107225/103180/adhd-dopamine-journal-dopamine-before-discipline-audhd-notebook-gift.jpg?camera_label=back",
+      "https://images-api.printify.com/mockup/6a14d4d1e03909eefe0456d8/107225/103183/adhd-dopamine-journal-dopamine-before-discipline-audhd-notebook-gift.jpg?camera_label=opened",
+      "https://images-api.printify.com/mockup/6a14d4d1e03909eefe0456d8/107225/103184/adhd-dopamine-journal-dopamine-before-discipline-audhd-notebook-gift.jpg?camera_label=context-1-front"
+    ],
+    "whyParagraph": "this journal lives in the dopamine corner of the oddlywiredco lineup. the cover says what your brain has been trying to say. the blank pages are for everything underneath.",
+    "keypoints": [
+      "hardback journal, 5.2\" × 7.4\" (≈ 13 × 19 cm)",
+      "96 blank pages (use it however your brain wants — no lines, no rules, no judgement)",
+      "wraparound printed cover in brand v2 chrome",
+      "printed and hardbound"
+    ],
+    "whatsInside": [
+      "hardback journal, 5.2\" × 7.4\" (≈ 13 × 19 cm)",
+      "96 blank pages (use it however your brain wants — no lines, no rules, no judgement)",
+      "wraparound printed cover in brand v2 chrome",
+      "printed and hardbound",
+      "cover speaks for itself — no outer branding on the journal",
+      "lands looking like a journal, not a parcel from a brand"
+    ],
+    "faq": [
+      {
+        "q": "Is this lined or blank?",
+        "a": "Blank. Lines feel like another rule to break. Bring your own."
+      },
+      {
+        "q": "Where does it ship from?",
+        "a": "Printed and shipped from. Royal Mail in the UK, DHL/USPS/locals everywhere else."
+      },
+      {
+        "q": "Is it gift-ready?",
+        "a": "The cover speaks for itself. We don't include outer branding on the journal, so it lands in the hands of the recipient looking like a journal, not a parcel from a brand."
+      }
+    ],
     "tags": [
       "adhd journal",
       "audhd journal",
@@ -205,28 +428,65 @@
       "adhd identity gift",
       "late diagnosed gift"
     ],
-    "product_type": "hardback-journal-a5",
-    "hero_image": "https://images-api.printify.com/mockup/6a14d4d1e03909eefe0456d8/107225/103157/adhd-dopamine-journal-dopamine-before-discipline-audhd-notebook-gift.jpg?camera_label=front",
-    "gallery": [
-      "https://images-api.printify.com/mockup/6a14d4d1e03909eefe0456d8/107225/103157/adhd-dopamine-journal-dopamine-before-discipline-audhd-notebook-gift.jpg?camera_label=front",
-      "https://images-api.printify.com/mockup/6a14d4d1e03909eefe0456d8/107225/103180/adhd-dopamine-journal-dopamine-before-discipline-audhd-notebook-gift.jpg?camera_label=back",
-      "https://images-api.printify.com/mockup/6a14d4d1e03909eefe0456d8/107225/103183/adhd-dopamine-journal-dopamine-before-discipline-audhd-notebook-gift.jpg?camera_label=opened",
-      "https://images-api.printify.com/mockup/6a14d4d1e03909eefe0456d8/107225/103184/adhd-dopamine-journal-dopamine-before-discipline-audhd-notebook-gift.jpg?camera_label=context-1-front"
-    ],
-    "stripe_price_id": "price_1Tb7aD0d1X3moMIslyqXzz7K",
-    "stripe_product_id": "prod_UaIAgoX3lcEXUZ",
-    "printify_shop_id": 27681461,
-    "printify_product_id": "6a14d4d1e03909eefe0456d8",
-    "printify_variant_id": 107225,
-    "printify_blueprint_id": 1481,
-    "printify_provider_id": 69
+    "productType": "hardback-journal-a5",
+    "stripePriceId": "price_1Tb7aD0d1X3moMIslyqXzz7K",
+    "stripeProductId": "prod_UaIAgoX3lcEXUZ",
+    "printifyShopId": 27681461,
+    "printifyProductId": "6a14d4d1e03909eefe0456d8",
+    "printifyVariantId": 107225,
+    "printifyBlueprintId": 1481,
+    "printifyProviderId": 69,
+    "crossSellSlugs": [
+      "you-remember-planning-journal",
+      "one-mug-four-journal",
+      "you-re-allowed-journal",
+      "chaos-feature-journal"
+    ]
   },
   {
     "slug": "draft-text-complete-journal",
     "title": "ADHD Time Blindness Journal | a draft text is a complete... | AuDHD Notebook Gift",
-    "price_cents": 1900,
+    "hook": "a draft text is a",
+    "descriptor": "hardback journal · A5 · 96 blank pages",
+    "priceCents": 1900,
     "currency": "GBP",
-    "description": "the message exists. in some sense, sent. A hardback journal for ADHD brains who think differently.\n\nWHAT'S INSIDE\n\u2022 Hardback journal, 5.2\" \u00d7 7.4\" (\u2248 13 \u00d7 19 cm)\n\u2022 96 blank pages (use it however your brain wants \u2014 no lines, no rules, no judgement)\n\u2022 Wraparound printed cover in brand v2 chrome\n\u2022 Printed and hardbound by Prodigi UK on behalf of OddlyWiredCo\n\nTHE WHY\nThis journal lives in the time blindness corner of the OddlyWiredCo lineup. The cover says what your brain has been trying to say. The blank pages are for everything underneath.\n\nFAQ\nIs this lined or blank?\nBlank. Lines feel like another rule to break. Bring your own.\n\nWhere does it ship from?\nPrinted and shipped from Prodigi UK. Royal Mail in the UK, DHL/USPS/locals everywhere else.\n\nIs it gift-ready?\nThe cover speaks for itself. We don't include outer branding on the journal, so it lands in the hands of the recipient looking like a journal, not a parcel from a brand.\n\n\u2014\n\nCover artwork is produced using AI-assisted design tools and finalised by the maker.\n\nPrinted and shipped by Prodigi UK on behalf of OddlyWiredCo (sole proprietor).",
+    "category": "journals",
+    "heroImage": "https://images-api.printify.com/mockup/6a14d4db9260e7b63e08d7fb/107225/103157/adhd-time-blindness-journal-a-draft-text-is-a-complete-audhd-notebook-gift.jpg?camera_label=front",
+    "gallery": [
+      "https://images-api.printify.com/mockup/6a14d4db9260e7b63e08d7fb/107225/103157/adhd-time-blindness-journal-a-draft-text-is-a-complete-audhd-notebook-gift.jpg?camera_label=front",
+      "https://images-api.printify.com/mockup/6a14d4db9260e7b63e08d7fb/107225/103180/adhd-time-blindness-journal-a-draft-text-is-a-complete-audhd-notebook-gift.jpg?camera_label=back",
+      "https://images-api.printify.com/mockup/6a14d4db9260e7b63e08d7fb/107225/103183/adhd-time-blindness-journal-a-draft-text-is-a-complete-audhd-notebook-gift.jpg?camera_label=opened",
+      "https://images-api.printify.com/mockup/6a14d4db9260e7b63e08d7fb/107225/103184/adhd-time-blindness-journal-a-draft-text-is-a-complete-audhd-notebook-gift.jpg?camera_label=context-1-front"
+    ],
+    "whyParagraph": "this journal lives in the time blindness corner of the oddlywiredco lineup. the cover says what your brain has been trying to say. the blank pages are for everything underneath.",
+    "keypoints": [
+      "hardback journal, 5.2\" × 7.4\" (≈ 13 × 19 cm)",
+      "96 blank pages (use it however your brain wants — no lines, no rules, no judgement)",
+      "wraparound printed cover in brand v2 chrome",
+      "printed and hardbound"
+    ],
+    "whatsInside": [
+      "hardback journal, 5.2\" × 7.4\" (≈ 13 × 19 cm)",
+      "96 blank pages (use it however your brain wants — no lines, no rules, no judgement)",
+      "wraparound printed cover in brand v2 chrome",
+      "printed and hardbound",
+      "cover speaks for itself — no outer branding on the journal",
+      "lands looking like a journal, not a parcel from a brand"
+    ],
+    "faq": [
+      {
+        "q": "Is this lined or blank?",
+        "a": "Blank. Lines feel like another rule to break. Bring your own."
+      },
+      {
+        "q": "Where does it ship from?",
+        "a": "Printed and shipped from. Royal Mail in the UK, DHL/USPS/locals everywhere else."
+      },
+      {
+        "q": "Is it gift-ready?",
+        "a": "The cover speaks for itself. We don't include outer branding on the journal, so it lands in the hands of the recipient looking like a journal, not a parcel from a brand."
+      }
+    ],
     "tags": [
       "adhd journal",
       "audhd journal",
@@ -242,65 +502,65 @@
       "adhd identity gift",
       "late diagnosed gift"
     ],
-    "product_type": "hardback-journal-a5",
-    "hero_image": "https://images-api.printify.com/mockup/6a14d4db9260e7b63e08d7fb/107225/103157/adhd-time-blindness-journal-a-draft-text-is-a-complete-audhd-notebook-gift.jpg?camera_label=front",
-    "gallery": [
-      "https://images-api.printify.com/mockup/6a14d4db9260e7b63e08d7fb/107225/103157/adhd-time-blindness-journal-a-draft-text-is-a-complete-audhd-notebook-gift.jpg?camera_label=front",
-      "https://images-api.printify.com/mockup/6a14d4db9260e7b63e08d7fb/107225/103180/adhd-time-blindness-journal-a-draft-text-is-a-complete-audhd-notebook-gift.jpg?camera_label=back",
-      "https://images-api.printify.com/mockup/6a14d4db9260e7b63e08d7fb/107225/103183/adhd-time-blindness-journal-a-draft-text-is-a-complete-audhd-notebook-gift.jpg?camera_label=opened",
-      "https://images-api.printify.com/mockup/6a14d4db9260e7b63e08d7fb/107225/103184/adhd-time-blindness-journal-a-draft-text-is-a-complete-audhd-notebook-gift.jpg?camera_label=context-1-front"
-    ],
-    "stripe_price_id": "price_1Tb7aE0d1X3moMIsGrFeBCEg",
-    "stripe_product_id": "prod_UaIA9aPQX64tC8",
-    "printify_shop_id": 27681461,
-    "printify_product_id": "6a14d4db9260e7b63e08d7fb",
-    "printify_variant_id": 107225,
-    "printify_blueprint_id": 1481,
-    "printify_provider_id": 69
+    "productType": "hardback-journal-a5",
+    "stripePriceId": "price_1Tb7aE0d1X3moMIsGrFeBCEg",
+    "stripeProductId": "prod_UaIA9aPQX64tC8",
+    "printifyShopId": 27681461,
+    "printifyProductId": "6a14d4db9260e7b63e08d7fb",
+    "printifyVariantId": 107225,
+    "printifyBlueprintId": 1481,
+    "printifyProviderId": 69,
+    "crossSellSlugs": [
+      "neurodivergent-broken-journal",
+      "you-found-out-journal",
+      "mask-costs-more-journal",
+      "your-3am-brain-journal"
+    ]
   },
   {
     "slug": "hyperfocus-not-superpower-journal",
     "title": "ADHD Hyperfocus Journal | hyperfocus is not a superpo... | AuDHD Notebook Gift",
-    "price_cents": 1900,
+    "hook": "hyperfocus is not a",
+    "descriptor": "hardback journal · A5 · 96 blank pages",
+    "priceCents": 1900,
     "currency": "GBP",
-    "description": "budget. accordingly. A hardback journal for ADHD brains who think differently.\n\nWHAT'S INSIDE\n\u2022 Hardback journal, 5.2\" \u00d7 7.4\" (\u2248 13 \u00d7 19 cm)\n\u2022 96 blank pages (use it however your brain wants \u2014 no lines, no rules, no judgement)\n\u2022 Wraparound printed cover in brand v2 chrome\n\u2022 Printed and hardbound by Prodigi UK on behalf of OddlyWiredCo\n\nTHE WHY\nThis journal lives in the hyperfocus corner of the OddlyWiredCo lineup. The cover says what your brain has been trying to say. The blank pages are for everything underneath.\n\nFAQ\nIs this lined or blank?\nBlank. Lines feel like another rule to break. Bring your own.\n\nWhere does it ship from?\nPrinted and shipped from Prodigi UK. Royal Mail in the UK, DHL/USPS/locals everywhere else.\n\nIs it gift-ready?\nThe cover speaks for itself. We don't include outer branding on the journal, so it lands in the hands of the recipient looking like a journal, not a parcel from a brand.\n\n\u2014\n\nCover artwork is produced using AI-assisted design tools and finalised by the maker.\n\nPrinted and shipped by Prodigi UK on behalf of OddlyWiredCo (sole proprietor).",
-    "tags": [
-      "adhd journal",
-      "audhd journal",
-      "neurodivergent journal",
-      "hardback journal",
-      "adhd gift",
-      "hyperfocus gift",
-      "hyperfocus journal",
-      "adhd planner",
-      "adhd notebook",
-      "neurodivergent gift",
-      "nd journal",
-      "adhd identity gift",
-      "late diagnosed gift"
-    ],
-    "product_type": "hardback-journal-a5",
-    "hero_image": "https://images-api.printify.com/mockup/6a14d4e36a1f38751c087b94/107225/103157/adhd-hyperfocus-journal-hyperfocus-is-not-a-superpo-audhd-notebook-gift.jpg?camera_label=front",
+    "category": "journals",
+    "heroImage": "https://images-api.printify.com/mockup/6a14d4e36a1f38751c087b94/107225/103157/adhd-hyperfocus-journal-hyperfocus-is-not-a-superpo-audhd-notebook-gift.jpg?camera_label=front",
     "gallery": [
       "https://images-api.printify.com/mockup/6a14d4e36a1f38751c087b94/107225/103157/adhd-hyperfocus-journal-hyperfocus-is-not-a-superpo-audhd-notebook-gift.jpg?camera_label=front",
       "https://images-api.printify.com/mockup/6a14d4e36a1f38751c087b94/107225/103180/adhd-hyperfocus-journal-hyperfocus-is-not-a-superpo-audhd-notebook-gift.jpg?camera_label=back",
       "https://images-api.printify.com/mockup/6a14d4e36a1f38751c087b94/107225/103183/adhd-hyperfocus-journal-hyperfocus-is-not-a-superpo-audhd-notebook-gift.jpg?camera_label=opened",
       "https://images-api.printify.com/mockup/6a14d4e36a1f38751c087b94/107225/103184/adhd-hyperfocus-journal-hyperfocus-is-not-a-superpo-audhd-notebook-gift.jpg?camera_label=context-1-front"
     ],
-    "stripe_price_id": "price_1Tb7aF0d1X3moMIsw1o2dyiz",
-    "stripe_product_id": "prod_UaIAbVXFdMGWqq",
-    "printify_shop_id": 27681461,
-    "printify_product_id": "6a14d4e36a1f38751c087b94",
-    "printify_variant_id": 107225,
-    "printify_blueprint_id": 1481,
-    "printify_provider_id": 69
-  },
-  {
-    "slug": "hyperfocus-tax-annual-journal",
-    "title": "ADHD Hyperfocus Journal | the hyperfocus tax: an annu... | AuDHD Notebook Gift",
-    "price_cents": 1900,
-    "currency": "GBP",
-    "description": "abandoned hobbies: 7. lessons learned: arguable. A hardback journal for ADHD brains who think differently.\n\nWHAT'S INSIDE\n\u2022 Hardback journal, 5.2\" \u00d7 7.4\" (\u2248 13 \u00d7 19 cm)\n\u2022 96 blank pages (use it however your brain wants \u2014 no lines, no rules, no judgement)\n\u2022 Wraparound printed cover in brand v2 chrome\n\u2022 Printed and hardbound by Prodigi UK on behalf of OddlyWiredCo\n\nTHE WHY\nThis journal lives in the hyperfocus corner of the OddlyWiredCo lineup. The cover says what your brain has been trying to say. The blank pages are for everything underneath.\n\nFAQ\nIs this lined or blank?\nBlank. Lines feel like another rule to break. Bring your own.\n\nWhere does it ship from?\nPrinted and shipped from Prodigi UK. Royal Mail in the UK, DHL/USPS/locals everywhere else.\n\nIs it gift-ready?\nThe cover speaks for itself. We don't include outer branding on the journal, so it lands in the hands of the recipient looking like a journal, not a parcel from a brand.\n\n\u2014\n\nCover artwork is produced using AI-assisted design tools and finalised by the maker.\n\nPrinted and shipped by Prodigi UK on behalf of OddlyWiredCo (sole proprietor).",
+    "whyParagraph": "this journal lives in the hyperfocus corner of the oddlywiredco lineup. the cover says what your brain has been trying to say. the blank pages are for everything underneath.",
+    "keypoints": [
+      "hardback journal, 5.2\" × 7.4\" (≈ 13 × 19 cm)",
+      "96 blank pages (use it however your brain wants — no lines, no rules, no judgement)",
+      "wraparound printed cover in brand v2 chrome",
+      "printed and hardbound"
+    ],
+    "whatsInside": [
+      "hardback journal, 5.2\" × 7.4\" (≈ 13 × 19 cm)",
+      "96 blank pages (use it however your brain wants — no lines, no rules, no judgement)",
+      "wraparound printed cover in brand v2 chrome",
+      "printed and hardbound",
+      "cover speaks for itself — no outer branding on the journal",
+      "lands looking like a journal, not a parcel from a brand"
+    ],
+    "faq": [
+      {
+        "q": "Is this lined or blank?",
+        "a": "Blank. Lines feel like another rule to break. Bring your own."
+      },
+      {
+        "q": "Where does it ship from?",
+        "a": "Printed and shipped from. Royal Mail in the UK, DHL/USPS/locals everywhere else."
+      },
+      {
+        "q": "Is it gift-ready?",
+        "a": "The cover speaks for itself. We don't include outer branding on the journal, so it lands in the hands of the recipient looking like a journal, not a parcel from a brand."
+      }
+    ],
     "tags": [
       "adhd journal",
       "audhd journal",
@@ -316,28 +576,139 @@
       "adhd identity gift",
       "late diagnosed gift"
     ],
-    "product_type": "hardback-journal-a5",
-    "hero_image": "https://images-api.printify.com/mockup/6a14d4ec45ee82bb49090b74/107225/103157/adhd-hyperfocus-journal-the-hyperfocus-tax-an-annu-audhd-notebook-gift.jpg?camera_label=front",
+    "productType": "hardback-journal-a5",
+    "stripePriceId": "price_1Tb7aF0d1X3moMIsw1o2dyiz",
+    "stripeProductId": "prod_UaIAbVXFdMGWqq",
+    "printifyShopId": 27681461,
+    "printifyProductId": "6a14d4e36a1f38751c087b94",
+    "printifyVariantId": 107225,
+    "printifyBlueprintId": 1481,
+    "printifyProviderId": 69,
+    "crossSellSlugs": [
+      "out-sight-out-journal",
+      "doorway-memory-wipe-journal",
+      "unread-email-not-journal",
+      "quiet-note-past-journal"
+    ]
+  },
+  {
+    "slug": "hyperfocus-tax-annual-journal",
+    "title": "ADHD Hyperfocus Journal | the hyperfocus tax: an annu... | AuDHD Notebook Gift",
+    "hook": "the hyperfocus tax: an",
+    "descriptor": "hardback journal · A5 · 96 blank pages",
+    "priceCents": 1900,
+    "currency": "GBP",
+    "category": "journals",
+    "heroImage": "https://images-api.printify.com/mockup/6a14d4ec45ee82bb49090b74/107225/103157/adhd-hyperfocus-journal-the-hyperfocus-tax-an-annu-audhd-notebook-gift.jpg?camera_label=front",
     "gallery": [
       "https://images-api.printify.com/mockup/6a14d4ec45ee82bb49090b74/107225/103157/adhd-hyperfocus-journal-the-hyperfocus-tax-an-annu-audhd-notebook-gift.jpg?camera_label=front",
       "https://images-api.printify.com/mockup/6a14d4ec45ee82bb49090b74/107225/103180/adhd-hyperfocus-journal-the-hyperfocus-tax-an-annu-audhd-notebook-gift.jpg?camera_label=back",
       "https://images-api.printify.com/mockup/6a14d4ec45ee82bb49090b74/107225/103183/adhd-hyperfocus-journal-the-hyperfocus-tax-an-annu-audhd-notebook-gift.jpg?camera_label=opened",
       "https://images-api.printify.com/mockup/6a14d4ec45ee82bb49090b74/107225/103184/adhd-hyperfocus-journal-the-hyperfocus-tax-an-annu-audhd-notebook-gift.jpg?camera_label=context-1-front"
     ],
-    "stripe_price_id": "price_1Tb7aG0d1X3moMIsV4zGGEVe",
-    "stripe_product_id": "prod_UaIA2HZxccvNDO",
-    "printify_shop_id": 27681461,
-    "printify_product_id": "6a14d4ec45ee82bb49090b74",
-    "printify_variant_id": 107225,
-    "printify_blueprint_id": 1481,
-    "printify_provider_id": 69
+    "whyParagraph": "this journal lives in the hyperfocus corner of the oddlywiredco lineup. the cover says what your brain has been trying to say. the blank pages are for everything underneath.",
+    "keypoints": [
+      "hardback journal, 5.2\" × 7.4\" (≈ 13 × 19 cm)",
+      "96 blank pages (use it however your brain wants — no lines, no rules, no judgement)",
+      "wraparound printed cover in brand v2 chrome",
+      "printed and hardbound"
+    ],
+    "whatsInside": [
+      "hardback journal, 5.2\" × 7.4\" (≈ 13 × 19 cm)",
+      "96 blank pages (use it however your brain wants — no lines, no rules, no judgement)",
+      "wraparound printed cover in brand v2 chrome",
+      "printed and hardbound",
+      "cover speaks for itself — no outer branding on the journal",
+      "lands looking like a journal, not a parcel from a brand"
+    ],
+    "faq": [
+      {
+        "q": "Is this lined or blank?",
+        "a": "Blank. Lines feel like another rule to break. Bring your own."
+      },
+      {
+        "q": "Where does it ship from?",
+        "a": "Printed and shipped from. Royal Mail in the UK, DHL/USPS/locals everywhere else."
+      },
+      {
+        "q": "Is it gift-ready?",
+        "a": "The cover speaks for itself. We don't include outer branding on the journal, so it lands in the hands of the recipient looking like a journal, not a parcel from a brand."
+      }
+    ],
+    "tags": [
+      "adhd journal",
+      "audhd journal",
+      "neurodivergent journal",
+      "hardback journal",
+      "adhd gift",
+      "hyperfocus gift",
+      "hyperfocus journal",
+      "adhd planner",
+      "adhd notebook",
+      "neurodivergent gift",
+      "nd journal",
+      "adhd identity gift",
+      "late diagnosed gift"
+    ],
+    "productType": "hardback-journal-a5",
+    "stripePriceId": "price_1Tb7aG0d1X3moMIsV4zGGEVe",
+    "stripeProductId": "prod_UaIA2HZxccvNDO",
+    "printifyShopId": 27681461,
+    "printifyProductId": "6a14d4ec45ee82bb49090b74",
+    "printifyVariantId": 107225,
+    "printifyBlueprintId": 1481,
+    "printifyProviderId": 69,
+    "crossSellSlugs": [
+      "you-re-allowed-journal",
+      "wired-different-rhythm-journal",
+      "hyperfocus-not-superpower-journal",
+      "out-sight-out-journal"
+    ]
   },
   {
     "slug": "lazy-lazy-word-journal",
     "title": "ADHD Reframes Journal | lazy is the lazy word for it | AuDHD Notebook Gift",
-    "price_cents": 1900,
+    "hook": "lazy is the lazy word for it",
+    "descriptor": "hardback journal · A5 · 96 blank pages",
+    "priceCents": 1900,
     "currency": "GBP",
-    "description": "say executive dysfunction. say burnout. A hardback journal for ADHD brains who think differently.\n\nWHAT'S INSIDE\n\u2022 Hardback journal, 5.2\" \u00d7 7.4\" (\u2248 13 \u00d7 19 cm)\n\u2022 96 blank pages (use it however your brain wants \u2014 no lines, no rules, no judgement)\n\u2022 Wraparound printed cover in brand v2 chrome\n\u2022 Printed and hardbound by Prodigi UK on behalf of OddlyWiredCo\n\nTHE WHY\nThis journal lives in the reframes corner of the OddlyWiredCo lineup. The cover says what your brain has been trying to say. The blank pages are for everything underneath.\n\nFAQ\nIs this lined or blank?\nBlank. Lines feel like another rule to break. Bring your own.\n\nWhere does it ship from?\nPrinted and shipped from Prodigi UK. Royal Mail in the UK, DHL/USPS/locals everywhere else.\n\nIs it gift-ready?\nThe cover speaks for itself. We don't include outer branding on the journal, so it lands in the hands of the recipient looking like a journal, not a parcel from a brand.\n\n\u2014\n\nCover artwork is produced using AI-assisted design tools and finalised by the maker.\n\nPrinted and shipped by Prodigi UK on behalf of OddlyWiredCo (sole proprietor).",
+    "category": "journals",
+    "heroImage": "https://images-api.printify.com/mockup/6a14d4f603068d0225041aea/107225/103157/adhd-reframes-journal-lazy-is-the-lazy-word-for-it-audhd-notebook-gift.jpg?camera_label=front",
+    "gallery": [
+      "https://images-api.printify.com/mockup/6a14d4f603068d0225041aea/107225/103157/adhd-reframes-journal-lazy-is-the-lazy-word-for-it-audhd-notebook-gift.jpg?camera_label=front",
+      "https://images-api.printify.com/mockup/6a14d4f603068d0225041aea/107225/103180/adhd-reframes-journal-lazy-is-the-lazy-word-for-it-audhd-notebook-gift.jpg?camera_label=back",
+      "https://images-api.printify.com/mockup/6a14d4f603068d0225041aea/107225/103183/adhd-reframes-journal-lazy-is-the-lazy-word-for-it-audhd-notebook-gift.jpg?camera_label=opened",
+      "https://images-api.printify.com/mockup/6a14d4f603068d0225041aea/107225/103184/adhd-reframes-journal-lazy-is-the-lazy-word-for-it-audhd-notebook-gift.jpg?camera_label=context-1-front"
+    ],
+    "whyParagraph": "this journal lives in the reframes corner of the oddlywiredco lineup. the cover says what your brain has been trying to say. the blank pages are for everything underneath.",
+    "keypoints": [
+      "hardback journal, 5.2\" × 7.4\" (≈ 13 × 19 cm)",
+      "96 blank pages (use it however your brain wants — no lines, no rules, no judgement)",
+      "wraparound printed cover in brand v2 chrome",
+      "printed and hardbound"
+    ],
+    "whatsInside": [
+      "hardback journal, 5.2\" × 7.4\" (≈ 13 × 19 cm)",
+      "96 blank pages (use it however your brain wants — no lines, no rules, no judgement)",
+      "wraparound printed cover in brand v2 chrome",
+      "printed and hardbound",
+      "cover speaks for itself — no outer branding on the journal",
+      "lands looking like a journal, not a parcel from a brand"
+    ],
+    "faq": [
+      {
+        "q": "Is this lined or blank?",
+        "a": "Blank. Lines feel like another rule to break. Bring your own."
+      },
+      {
+        "q": "Where does it ship from?",
+        "a": "Printed and shipped from. Royal Mail in the UK, DHL/USPS/locals everywhere else."
+      },
+      {
+        "q": "Is it gift-ready?",
+        "a": "The cover speaks for itself. We don't include outer branding on the journal, so it lands in the hands of the recipient looking like a journal, not a parcel from a brand."
+      }
+    ],
     "tags": [
       "adhd journal",
       "audhd journal",
@@ -353,28 +724,65 @@
       "adhd identity gift",
       "late diagnosed gift"
     ],
-    "product_type": "hardback-journal-a5",
-    "hero_image": "https://images-api.printify.com/mockup/6a14d4f603068d0225041aea/107225/103157/adhd-reframes-journal-lazy-is-the-lazy-word-for-it-audhd-notebook-gift.jpg?camera_label=front",
-    "gallery": [
-      "https://images-api.printify.com/mockup/6a14d4f603068d0225041aea/107225/103157/adhd-reframes-journal-lazy-is-the-lazy-word-for-it-audhd-notebook-gift.jpg?camera_label=front",
-      "https://images-api.printify.com/mockup/6a14d4f603068d0225041aea/107225/103180/adhd-reframes-journal-lazy-is-the-lazy-word-for-it-audhd-notebook-gift.jpg?camera_label=back",
-      "https://images-api.printify.com/mockup/6a14d4f603068d0225041aea/107225/103183/adhd-reframes-journal-lazy-is-the-lazy-word-for-it-audhd-notebook-gift.jpg?camera_label=opened",
-      "https://images-api.printify.com/mockup/6a14d4f603068d0225041aea/107225/103184/adhd-reframes-journal-lazy-is-the-lazy-word-for-it-audhd-notebook-gift.jpg?camera_label=context-1-front"
-    ],
-    "stripe_price_id": "price_1Tb7aH0d1X3moMIs06eE3jjX",
-    "stripe_product_id": "prod_UaIA2LVdHPnghz",
-    "printify_shop_id": 27681461,
-    "printify_product_id": "6a14d4f603068d0225041aea",
-    "printify_variant_id": 107225,
-    "printify_blueprint_id": 1481,
-    "printify_provider_id": 69
+    "productType": "hardback-journal-a5",
+    "stripePriceId": "price_1Tb7aH0d1X3moMIs06eE3jjX",
+    "stripeProductId": "prod_UaIA2LVdHPnghz",
+    "printifyShopId": 27681461,
+    "printifyProductId": "6a14d4f603068d0225041aea",
+    "printifyVariantId": 107225,
+    "printifyBlueprintId": 1481,
+    "printifyProviderId": 69,
+    "crossSellSlugs": [
+      "audhd-survival-kit-journal",
+      "you-found-out-journal",
+      "you-re-allowed-journal",
+      "quiet-note-past-journal"
+    ]
   },
   {
     "slug": "mask-costs-more-journal",
     "title": "ADHD Masking Journal | the mask costs more than yo... | AuDHD Notebook Gift",
-    "price_cents": 1900,
+    "hook": "the mask costs more than",
+    "descriptor": "hardback journal · A5 · 96 blank pages",
+    "priceCents": 1900,
     "currency": "GBP",
-    "description": "they invoice. you later. A hardback journal for ADHD brains who think differently.\n\nWHAT'S INSIDE\n\u2022 Hardback journal, 5.2\" \u00d7 7.4\" (\u2248 13 \u00d7 19 cm)\n\u2022 96 blank pages (use it however your brain wants \u2014 no lines, no rules, no judgement)\n\u2022 Wraparound printed cover in brand v2 chrome\n\u2022 Printed and hardbound by Prodigi UK on behalf of OddlyWiredCo\n\nTHE WHY\nThis journal lives in the masking corner of the OddlyWiredCo lineup. The cover says what your brain has been trying to say. The blank pages are for everything underneath.\n\nFAQ\nIs this lined or blank?\nBlank. Lines feel like another rule to break. Bring your own.\n\nWhere does it ship from?\nPrinted and shipped from Prodigi UK. Royal Mail in the UK, DHL/USPS/locals everywhere else.\n\nIs it gift-ready?\nThe cover speaks for itself. We don't include outer branding on the journal, so it lands in the hands of the recipient looking like a journal, not a parcel from a brand.\n\n\u2014\n\nCover artwork is produced using AI-assisted design tools and finalised by the maker.\n\nPrinted and shipped by Prodigi UK on behalf of OddlyWiredCo (sole proprietor).",
+    "category": "journals",
+    "heroImage": "https://images-api.printify.com/mockup/6a14d4ff44d3fef4d805f08e/107225/103157/adhd-masking-journal-the-mask-costs-more-than-yo-audhd-notebook-gift.jpg?camera_label=front",
+    "gallery": [
+      "https://images-api.printify.com/mockup/6a14d4ff44d3fef4d805f08e/107225/103157/adhd-masking-journal-the-mask-costs-more-than-yo-audhd-notebook-gift.jpg?camera_label=front",
+      "https://images-api.printify.com/mockup/6a14d4ff44d3fef4d805f08e/107225/103180/adhd-masking-journal-the-mask-costs-more-than-yo-audhd-notebook-gift.jpg?camera_label=back",
+      "https://images-api.printify.com/mockup/6a14d4ff44d3fef4d805f08e/107225/103183/adhd-masking-journal-the-mask-costs-more-than-yo-audhd-notebook-gift.jpg?camera_label=opened",
+      "https://images-api.printify.com/mockup/6a14d4ff44d3fef4d805f08e/107225/103184/adhd-masking-journal-the-mask-costs-more-than-yo-audhd-notebook-gift.jpg?camera_label=context-1-front"
+    ],
+    "whyParagraph": "this journal lives in the masking corner of the oddlywiredco lineup. the cover says what your brain has been trying to say. the blank pages are for everything underneath.",
+    "keypoints": [
+      "hardback journal, 5.2\" × 7.4\" (≈ 13 × 19 cm)",
+      "96 blank pages (use it however your brain wants — no lines, no rules, no judgement)",
+      "wraparound printed cover in brand v2 chrome",
+      "printed and hardbound"
+    ],
+    "whatsInside": [
+      "hardback journal, 5.2\" × 7.4\" (≈ 13 × 19 cm)",
+      "96 blank pages (use it however your brain wants — no lines, no rules, no judgement)",
+      "wraparound printed cover in brand v2 chrome",
+      "printed and hardbound",
+      "cover speaks for itself — no outer branding on the journal",
+      "lands looking like a journal, not a parcel from a brand"
+    ],
+    "faq": [
+      {
+        "q": "Is this lined or blank?",
+        "a": "Blank. Lines feel like another rule to break. Bring your own."
+      },
+      {
+        "q": "Where does it ship from?",
+        "a": "Printed and shipped from. Royal Mail in the UK, DHL/USPS/locals everywhere else."
+      },
+      {
+        "q": "Is it gift-ready?",
+        "a": "The cover speaks for itself. We don't include outer branding on the journal, so it lands in the hands of the recipient looking like a journal, not a parcel from a brand."
+      }
+    ],
     "tags": [
       "adhd journal",
       "audhd journal",
@@ -390,28 +798,65 @@
       "adhd identity gift",
       "late diagnosed gift"
     ],
-    "product_type": "hardback-journal-a5",
-    "hero_image": "https://images-api.printify.com/mockup/6a14d4ff44d3fef4d805f08e/107225/103157/adhd-masking-journal-the-mask-costs-more-than-yo-audhd-notebook-gift.jpg?camera_label=front",
-    "gallery": [
-      "https://images-api.printify.com/mockup/6a14d4ff44d3fef4d805f08e/107225/103157/adhd-masking-journal-the-mask-costs-more-than-yo-audhd-notebook-gift.jpg?camera_label=front",
-      "https://images-api.printify.com/mockup/6a14d4ff44d3fef4d805f08e/107225/103180/adhd-masking-journal-the-mask-costs-more-than-yo-audhd-notebook-gift.jpg?camera_label=back",
-      "https://images-api.printify.com/mockup/6a14d4ff44d3fef4d805f08e/107225/103183/adhd-masking-journal-the-mask-costs-more-than-yo-audhd-notebook-gift.jpg?camera_label=opened",
-      "https://images-api.printify.com/mockup/6a14d4ff44d3fef4d805f08e/107225/103184/adhd-masking-journal-the-mask-costs-more-than-yo-audhd-notebook-gift.jpg?camera_label=context-1-front"
-    ],
-    "stripe_price_id": "price_1Tb7aI0d1X3moMIsYSIWWwr4",
-    "stripe_product_id": "prod_UaIAysmQUgDZFu",
-    "printify_shop_id": 27681461,
-    "printify_product_id": "6a14d4ff44d3fef4d805f08e",
-    "printify_variant_id": 107225,
-    "printify_blueprint_id": 1481,
-    "printify_provider_id": 69
+    "productType": "hardback-journal-a5",
+    "stripePriceId": "price_1Tb7aI0d1X3moMIsYSIWWwr4",
+    "stripeProductId": "prod_UaIAysmQUgDZFu",
+    "printifyShopId": 27681461,
+    "printifyProductId": "6a14d4ff44d3fef4d805f08e",
+    "printifyVariantId": 107225,
+    "printifyBlueprintId": 1481,
+    "printifyProviderId": 69,
+    "crossSellSlugs": [
+      "lazy-lazy-word-journal",
+      "unread-email-not-journal",
+      "audhd-survival-kit-journal",
+      "dopamine-before-discipline-journal"
+    ]
   },
   {
     "slug": "monday-you-and-journal",
     "title": "ADHD Executive Function Journal | monday-you and tuesday-you... | AuDHD Notebook Gift",
-    "price_cents": 1900,
+    "hook": "monday-you and",
+    "descriptor": "hardback journal · A5 · 96 blank pages",
+    "priceCents": 1900,
     "currency": "GBP",
-    "description": "they share a calendar. not a brain. A hardback journal for ADHD brains who think differently.\n\nWHAT'S INSIDE\n\u2022 Hardback journal, 5.2\" \u00d7 7.4\" (\u2248 13 \u00d7 19 cm)\n\u2022 96 blank pages (use it however your brain wants \u2014 no lines, no rules, no judgement)\n\u2022 Wraparound printed cover in brand v2 chrome\n\u2022 Printed and hardbound by Prodigi UK on behalf of OddlyWiredCo\n\nTHE WHY\nThis journal lives in the executive function corner of the OddlyWiredCo lineup. The cover says what your brain has been trying to say. The blank pages are for everything underneath.\n\nFAQ\nIs this lined or blank?\nBlank. Lines feel like another rule to break. Bring your own.\n\nWhere does it ship from?\nPrinted and shipped from Prodigi UK. Royal Mail in the UK, DHL/USPS/locals everywhere else.\n\nIs it gift-ready?\nThe cover speaks for itself. We don't include outer branding on the journal, so it lands in the hands of the recipient looking like a journal, not a parcel from a brand.\n\n\u2014\n\nCover artwork is produced using AI-assisted design tools and finalised by the maker.\n\nPrinted and shipped by Prodigi UK on behalf of OddlyWiredCo (sole proprietor).",
+    "category": "journals",
+    "heroImage": "https://images-api.printify.com/mockup/6a14d50945ee82bb49090ba9/107225/103157/adhd-executive-function-journal-monday-you-and-tuesday-you-audhd-notebook-gift.jpg?camera_label=front",
+    "gallery": [
+      "https://images-api.printify.com/mockup/6a14d50945ee82bb49090ba9/107225/103157/adhd-executive-function-journal-monday-you-and-tuesday-you-audhd-notebook-gift.jpg?camera_label=front",
+      "https://images-api.printify.com/mockup/6a14d50945ee82bb49090ba9/107225/103180/adhd-executive-function-journal-monday-you-and-tuesday-you-audhd-notebook-gift.jpg?camera_label=back",
+      "https://images-api.printify.com/mockup/6a14d50945ee82bb49090ba9/107225/103183/adhd-executive-function-journal-monday-you-and-tuesday-you-audhd-notebook-gift.jpg?camera_label=opened",
+      "https://images-api.printify.com/mockup/6a14d50945ee82bb49090ba9/107225/103184/adhd-executive-function-journal-monday-you-and-tuesday-you-audhd-notebook-gift.jpg?camera_label=context-1-front"
+    ],
+    "whyParagraph": "this journal lives in the executive function corner of the oddlywiredco lineup. the cover says what your brain has been trying to say. the blank pages are for everything underneath.",
+    "keypoints": [
+      "hardback journal, 5.2\" × 7.4\" (≈ 13 × 19 cm)",
+      "96 blank pages (use it however your brain wants — no lines, no rules, no judgement)",
+      "wraparound printed cover in brand v2 chrome",
+      "printed and hardbound"
+    ],
+    "whatsInside": [
+      "hardback journal, 5.2\" × 7.4\" (≈ 13 × 19 cm)",
+      "96 blank pages (use it however your brain wants — no lines, no rules, no judgement)",
+      "wraparound printed cover in brand v2 chrome",
+      "printed and hardbound",
+      "cover speaks for itself — no outer branding on the journal",
+      "lands looking like a journal, not a parcel from a brand"
+    ],
+    "faq": [
+      {
+        "q": "Is this lined or blank?",
+        "a": "Blank. Lines feel like another rule to break. Bring your own."
+      },
+      {
+        "q": "Where does it ship from?",
+        "a": "Printed and shipped from. Royal Mail in the UK, DHL/USPS/locals everywhere else."
+      },
+      {
+        "q": "Is it gift-ready?",
+        "a": "The cover speaks for itself. We don't include outer branding on the journal, so it lands in the hands of the recipient looking like a journal, not a parcel from a brand."
+      }
+    ],
     "tags": [
       "adhd journal",
       "audhd journal",
@@ -427,28 +872,65 @@
       "adhd identity gift",
       "late diagnosed gift"
     ],
-    "product_type": "hardback-journal-a5",
-    "hero_image": "https://images-api.printify.com/mockup/6a14d50945ee82bb49090ba9/107225/103157/adhd-executive-function-journal-monday-you-and-tuesday-you-audhd-notebook-gift.jpg?camera_label=front",
-    "gallery": [
-      "https://images-api.printify.com/mockup/6a14d50945ee82bb49090ba9/107225/103157/adhd-executive-function-journal-monday-you-and-tuesday-you-audhd-notebook-gift.jpg?camera_label=front",
-      "https://images-api.printify.com/mockup/6a14d50945ee82bb49090ba9/107225/103180/adhd-executive-function-journal-monday-you-and-tuesday-you-audhd-notebook-gift.jpg?camera_label=back",
-      "https://images-api.printify.com/mockup/6a14d50945ee82bb49090ba9/107225/103183/adhd-executive-function-journal-monday-you-and-tuesday-you-audhd-notebook-gift.jpg?camera_label=opened",
-      "https://images-api.printify.com/mockup/6a14d50945ee82bb49090ba9/107225/103184/adhd-executive-function-journal-monday-you-and-tuesday-you-audhd-notebook-gift.jpg?camera_label=context-1-front"
-    ],
-    "stripe_price_id": "price_1Tb7aJ0d1X3moMIsJWeFAgg5",
-    "stripe_product_id": "prod_UaIA6etYNa83en",
-    "printify_shop_id": 27681461,
-    "printify_product_id": "6a14d50945ee82bb49090ba9",
-    "printify_variant_id": 107225,
-    "printify_blueprint_id": 1481,
-    "printify_provider_id": 69
+    "productType": "hardback-journal-a5",
+    "stripePriceId": "price_1Tb7aJ0d1X3moMIsJWeFAgg5",
+    "stripeProductId": "prod_UaIA6etYNa83en",
+    "printifyShopId": 27681461,
+    "printifyProductId": "6a14d50945ee82bb49090ba9",
+    "printifyVariantId": 107225,
+    "printifyBlueprintId": 1481,
+    "printifyProviderId": 69,
+    "crossSellSlugs": [
+      "hyperfocus-not-superpower-journal",
+      "your-meltdown-was-journal",
+      "audhd-survival-kit-journal",
+      "small-wins-still-journal"
+    ]
   },
   {
     "slug": "neurodivergent-broken-journal",
-    "title": "ADHD Late Dx Journal | neurodivergent \u2260 broken | AuDHD Notebook Gift",
-    "price_cents": 1900,
+    "title": "ADHD Late Dx Journal | neurodivergent ≠ broken | AuDHD Notebook Gift",
+    "hook": "neurodivergent ≠ broken",
+    "descriptor": "hardback journal · A5 · 96 blank pages",
+    "priceCents": 1900,
     "currency": "GBP",
-    "description": "the wiring is different. not damaged. A hardback journal for ADHD brains who think differently.\n\nWHAT'S INSIDE\n\u2022 Hardback journal, 5.2\" \u00d7 7.4\" (\u2248 13 \u00d7 19 cm)\n\u2022 96 blank pages (use it however your brain wants \u2014 no lines, no rules, no judgement)\n\u2022 Wraparound printed cover in brand v2 chrome\n\u2022 Printed and hardbound by Prodigi UK on behalf of OddlyWiredCo\n\nTHE WHY\nThis journal lives in the late dx corner of the OddlyWiredCo lineup. The cover says what your brain has been trying to say. The blank pages are for everything underneath.\n\nFAQ\nIs this lined or blank?\nBlank. Lines feel like another rule to break. Bring your own.\n\nWhere does it ship from?\nPrinted and shipped from Prodigi UK. Royal Mail in the UK, DHL/USPS/locals everywhere else.\n\nIs it gift-ready?\nThe cover speaks for itself. We don't include outer branding on the journal, so it lands in the hands of the recipient looking like a journal, not a parcel from a brand.\n\n\u2014\n\nCover artwork is produced using AI-assisted design tools and finalised by the maker.\n\nPrinted and shipped by Prodigi UK on behalf of OddlyWiredCo (sole proprietor).",
+    "category": "journals",
+    "heroImage": "https://images-api.printify.com/mockup/6a14d51044d3fef4d805f0a1/107225/103157/adhd-late-dx-journal-neurodivergent-broken-audhd-notebook-gift.jpg?camera_label=front",
+    "gallery": [
+      "https://images-api.printify.com/mockup/6a14d51044d3fef4d805f0a1/107225/103157/adhd-late-dx-journal-neurodivergent-broken-audhd-notebook-gift.jpg?camera_label=front",
+      "https://images-api.printify.com/mockup/6a14d51044d3fef4d805f0a1/107225/103180/adhd-late-dx-journal-neurodivergent-broken-audhd-notebook-gift.jpg?camera_label=back",
+      "https://images-api.printify.com/mockup/6a14d51044d3fef4d805f0a1/107225/103183/adhd-late-dx-journal-neurodivergent-broken-audhd-notebook-gift.jpg?camera_label=opened",
+      "https://images-api.printify.com/mockup/6a14d51044d3fef4d805f0a1/107225/103184/adhd-late-dx-journal-neurodivergent-broken-audhd-notebook-gift.jpg?camera_label=context-1-front"
+    ],
+    "whyParagraph": "this journal lives in the late dx corner of the oddlywiredco lineup. the cover says what your brain has been trying to say. the blank pages are for everything underneath.",
+    "keypoints": [
+      "hardback journal, 5.2\" × 7.4\" (≈ 13 × 19 cm)",
+      "96 blank pages (use it however your brain wants — no lines, no rules, no judgement)",
+      "wraparound printed cover in brand v2 chrome",
+      "printed and hardbound"
+    ],
+    "whatsInside": [
+      "hardback journal, 5.2\" × 7.4\" (≈ 13 × 19 cm)",
+      "96 blank pages (use it however your brain wants — no lines, no rules, no judgement)",
+      "wraparound printed cover in brand v2 chrome",
+      "printed and hardbound",
+      "cover speaks for itself — no outer branding on the journal",
+      "lands looking like a journal, not a parcel from a brand"
+    ],
+    "faq": [
+      {
+        "q": "Is this lined or blank?",
+        "a": "Blank. Lines feel like another rule to break. Bring your own."
+      },
+      {
+        "q": "Where does it ship from?",
+        "a": "Printed and shipped from. Royal Mail in the UK, DHL/USPS/locals everywhere else."
+      },
+      {
+        "q": "Is it gift-ready?",
+        "a": "The cover speaks for itself. We don't include outer branding on the journal, so it lands in the hands of the recipient looking like a journal, not a parcel from a brand."
+      }
+    ],
     "tags": [
       "adhd journal",
       "audhd journal",
@@ -464,28 +946,65 @@
       "adhd identity gift",
       "late diagnosed gift"
     ],
-    "product_type": "hardback-journal-a5",
-    "hero_image": "https://images-api.printify.com/mockup/6a14d51044d3fef4d805f0a1/107225/103157/adhd-late-dx-journal-neurodivergent-broken-audhd-notebook-gift.jpg?camera_label=front",
-    "gallery": [
-      "https://images-api.printify.com/mockup/6a14d51044d3fef4d805f0a1/107225/103157/adhd-late-dx-journal-neurodivergent-broken-audhd-notebook-gift.jpg?camera_label=front",
-      "https://images-api.printify.com/mockup/6a14d51044d3fef4d805f0a1/107225/103180/adhd-late-dx-journal-neurodivergent-broken-audhd-notebook-gift.jpg?camera_label=back",
-      "https://images-api.printify.com/mockup/6a14d51044d3fef4d805f0a1/107225/103183/adhd-late-dx-journal-neurodivergent-broken-audhd-notebook-gift.jpg?camera_label=opened",
-      "https://images-api.printify.com/mockup/6a14d51044d3fef4d805f0a1/107225/103184/adhd-late-dx-journal-neurodivergent-broken-audhd-notebook-gift.jpg?camera_label=context-1-front"
-    ],
-    "stripe_price_id": "price_1Tb7aJ0d1X3moMIsaOWmvcwz",
-    "stripe_product_id": "prod_UaIAnHJ8VRd60U",
-    "printify_shop_id": 27681461,
-    "printify_product_id": "6a14d51044d3fef4d805f0a1",
-    "printify_variant_id": 107225,
-    "printify_blueprint_id": 1481,
-    "printify_provider_id": 69
+    "productType": "hardback-journal-a5",
+    "stripePriceId": "price_1Tb7aJ0d1X3moMIsaOWmvcwz",
+    "stripeProductId": "prod_UaIAnHJ8VRd60U",
+    "printifyShopId": 27681461,
+    "printifyProductId": "6a14d51044d3fef4d805f0a1",
+    "printifyVariantId": 107225,
+    "printifyBlueprintId": 1481,
+    "printifyProviderId": 69,
+    "crossSellSlugs": [
+      "wired-different-rhythm-journal",
+      "lazy-lazy-word-journal",
+      "audhd-survival-kit-journal",
+      "47-tabs-all-journal"
+    ]
   },
   {
     "slug": "one-mug-four-journal",
     "title": "ADHD Cleaning Journal | one mug. four hours. zero c... | AuDHD Notebook Gift",
-    "price_cents": 1900,
+    "hook": "one mug. four hours. zero",
+    "descriptor": "hardback journal · A5 · 96 blank pages",
+    "priceCents": 1900,
     "currency": "GBP",
-    "description": "the brain has moved on. the dishes have not. A hardback journal for ADHD brains who think differently.\n\nWHAT'S INSIDE\n\u2022 Hardback journal, 5.2\" \u00d7 7.4\" (\u2248 13 \u00d7 19 cm)\n\u2022 96 blank pages (use it however your brain wants \u2014 no lines, no rules, no judgement)\n\u2022 Wraparound printed cover in brand v2 chrome\n\u2022 Printed and hardbound by Prodigi UK on behalf of OddlyWiredCo\n\nTHE WHY\nThis journal lives in the cleaning corner of the OddlyWiredCo lineup. The cover says what your brain has been trying to say. The blank pages are for everything underneath.\n\nFAQ\nIs this lined or blank?\nBlank. Lines feel like another rule to break. Bring your own.\n\nWhere does it ship from?\nPrinted and shipped from Prodigi UK. Royal Mail in the UK, DHL/USPS/locals everywhere else.\n\nIs it gift-ready?\nThe cover speaks for itself. We don't include outer branding on the journal, so it lands in the hands of the recipient looking like a journal, not a parcel from a brand.\n\n\u2014\n\nCover artwork is produced using AI-assisted design tools and finalised by the maker.\n\nPrinted and shipped by Prodigi UK on behalf of OddlyWiredCo (sole proprietor).",
+    "category": "journals",
+    "heroImage": "https://images-api.printify.com/mockup/6a14d51a01960a72e9069a95/107225/103157/adhd-cleaning-journal-one-mug-four-hours-zero-c-audhd-notebook-gift.jpg?camera_label=front",
+    "gallery": [
+      "https://images-api.printify.com/mockup/6a14d51a01960a72e9069a95/107225/103157/adhd-cleaning-journal-one-mug-four-hours-zero-c-audhd-notebook-gift.jpg?camera_label=front",
+      "https://images-api.printify.com/mockup/6a14d51a01960a72e9069a95/107225/103180/adhd-cleaning-journal-one-mug-four-hours-zero-c-audhd-notebook-gift.jpg?camera_label=back",
+      "https://images-api.printify.com/mockup/6a14d51a01960a72e9069a95/107225/103183/adhd-cleaning-journal-one-mug-four-hours-zero-c-audhd-notebook-gift.jpg?camera_label=opened",
+      "https://images-api.printify.com/mockup/6a14d51a01960a72e9069a95/107225/103184/adhd-cleaning-journal-one-mug-four-hours-zero-c-audhd-notebook-gift.jpg?camera_label=context-1-front"
+    ],
+    "whyParagraph": "this journal lives in the cleaning corner of the oddlywiredco lineup. the cover says what your brain has been trying to say. the blank pages are for everything underneath.",
+    "keypoints": [
+      "hardback journal, 5.2\" × 7.4\" (≈ 13 × 19 cm)",
+      "96 blank pages (use it however your brain wants — no lines, no rules, no judgement)",
+      "wraparound printed cover in brand v2 chrome",
+      "printed and hardbound"
+    ],
+    "whatsInside": [
+      "hardback journal, 5.2\" × 7.4\" (≈ 13 × 19 cm)",
+      "96 blank pages (use it however your brain wants — no lines, no rules, no judgement)",
+      "wraparound printed cover in brand v2 chrome",
+      "printed and hardbound",
+      "cover speaks for itself — no outer branding on the journal",
+      "lands looking like a journal, not a parcel from a brand"
+    ],
+    "faq": [
+      {
+        "q": "Is this lined or blank?",
+        "a": "Blank. Lines feel like another rule to break. Bring your own."
+      },
+      {
+        "q": "Where does it ship from?",
+        "a": "Printed and shipped from. Royal Mail in the UK, DHL/USPS/locals everywhere else."
+      },
+      {
+        "q": "Is it gift-ready?",
+        "a": "The cover speaks for itself. We don't include outer branding on the journal, so it lands in the hands of the recipient looking like a journal, not a parcel from a brand."
+      }
+    ],
     "tags": [
       "adhd journal",
       "audhd journal",
@@ -501,28 +1020,65 @@
       "adhd identity gift",
       "late diagnosed gift"
     ],
-    "product_type": "hardback-journal-a5",
-    "hero_image": "https://images-api.printify.com/mockup/6a14d51a01960a72e9069a95/107225/103157/adhd-cleaning-journal-one-mug-four-hours-zero-c-audhd-notebook-gift.jpg?camera_label=front",
-    "gallery": [
-      "https://images-api.printify.com/mockup/6a14d51a01960a72e9069a95/107225/103157/adhd-cleaning-journal-one-mug-four-hours-zero-c-audhd-notebook-gift.jpg?camera_label=front",
-      "https://images-api.printify.com/mockup/6a14d51a01960a72e9069a95/107225/103180/adhd-cleaning-journal-one-mug-four-hours-zero-c-audhd-notebook-gift.jpg?camera_label=back",
-      "https://images-api.printify.com/mockup/6a14d51a01960a72e9069a95/107225/103183/adhd-cleaning-journal-one-mug-four-hours-zero-c-audhd-notebook-gift.jpg?camera_label=opened",
-      "https://images-api.printify.com/mockup/6a14d51a01960a72e9069a95/107225/103184/adhd-cleaning-journal-one-mug-four-hours-zero-c-audhd-notebook-gift.jpg?camera_label=context-1-front"
-    ],
-    "stripe_price_id": "price_1Tb7aK0d1X3moMIsOVVJ5EEt",
-    "stripe_product_id": "prod_UaIAMHhm5n5FHa",
-    "printify_shop_id": 27681461,
-    "printify_product_id": "6a14d51a01960a72e9069a95",
-    "printify_variant_id": 107225,
-    "printify_blueprint_id": 1481,
-    "printify_provider_id": 69
+    "productType": "hardback-journal-a5",
+    "stripePriceId": "price_1Tb7aK0d1X3moMIsOVVJ5EEt",
+    "stripeProductId": "prod_UaIAMHhm5n5FHa",
+    "printifyShopId": 27681461,
+    "printifyProductId": "6a14d51a01960a72e9069a95",
+    "printifyVariantId": 107225,
+    "printifyBlueprintId": 1481,
+    "printifyProviderId": 69,
+    "crossSellSlugs": [
+      "reminder-fired-brain-journal",
+      "hyperfocus-not-superpower-journal",
+      "audhd-survival-kit-journal",
+      "small-wins-still-journal"
+    ]
   },
   {
     "slug": "out-sight-out-journal",
     "title": "ADHD Object Permanence Journal | out of sight, out of brain | AuDHD Notebook Gift",
-    "price_cents": 1900,
+    "hook": "out of sight, out of brain",
+    "descriptor": "hardback journal · A5 · 96 blank pages",
+    "priceCents": 1900,
     "currency": "GBP",
-    "description": "if it lives in a drawer,. it doesn't live. A hardback journal for ADHD brains who think differently.\n\nWHAT'S INSIDE\n\u2022 Hardback journal, 5.2\" \u00d7 7.4\" (\u2248 13 \u00d7 19 cm)\n\u2022 96 blank pages (use it however your brain wants \u2014 no lines, no rules, no judgement)\n\u2022 Wraparound printed cover in brand v2 chrome\n\u2022 Printed and hardbound by Prodigi UK on behalf of OddlyWiredCo\n\nTHE WHY\nThis journal lives in the object permanence corner of the OddlyWiredCo lineup. The cover says what your brain has been trying to say. The blank pages are for everything underneath.\n\nFAQ\nIs this lined or blank?\nBlank. Lines feel like another rule to break. Bring your own.\n\nWhere does it ship from?\nPrinted and shipped from Prodigi UK. Royal Mail in the UK, DHL/USPS/locals everywhere else.\n\nIs it gift-ready?\nThe cover speaks for itself. We don't include outer branding on the journal, so it lands in the hands of the recipient looking like a journal, not a parcel from a brand.\n\n\u2014\n\nCover artwork is produced using AI-assisted design tools and finalised by the maker.\n\nPrinted and shipped by Prodigi UK on behalf of OddlyWiredCo (sole proprietor).",
+    "category": "journals",
+    "heroImage": "https://images-api.printify.com/mockup/6a14d520cb8516b5720c5e1c/107225/103157/adhd-object-permanence-journal-out-of-sight-out-of-brain-audhd-notebook-gift.jpg?camera_label=front",
+    "gallery": [
+      "https://images-api.printify.com/mockup/6a14d520cb8516b5720c5e1c/107225/103157/adhd-object-permanence-journal-out-of-sight-out-of-brain-audhd-notebook-gift.jpg?camera_label=front",
+      "https://images-api.printify.com/mockup/6a14d520cb8516b5720c5e1c/107225/103180/adhd-object-permanence-journal-out-of-sight-out-of-brain-audhd-notebook-gift.jpg?camera_label=back",
+      "https://images-api.printify.com/mockup/6a14d520cb8516b5720c5e1c/107225/103183/adhd-object-permanence-journal-out-of-sight-out-of-brain-audhd-notebook-gift.jpg?camera_label=opened",
+      "https://images-api.printify.com/mockup/6a14d520cb8516b5720c5e1c/107225/103184/adhd-object-permanence-journal-out-of-sight-out-of-brain-audhd-notebook-gift.jpg?camera_label=context-1-front"
+    ],
+    "whyParagraph": "this journal lives in the object permanence corner of the oddlywiredco lineup. the cover says what your brain has been trying to say. the blank pages are for everything underneath.",
+    "keypoints": [
+      "hardback journal, 5.2\" × 7.4\" (≈ 13 × 19 cm)",
+      "96 blank pages (use it however your brain wants — no lines, no rules, no judgement)",
+      "wraparound printed cover in brand v2 chrome",
+      "printed and hardbound"
+    ],
+    "whatsInside": [
+      "hardback journal, 5.2\" × 7.4\" (≈ 13 × 19 cm)",
+      "96 blank pages (use it however your brain wants — no lines, no rules, no judgement)",
+      "wraparound printed cover in brand v2 chrome",
+      "printed and hardbound",
+      "cover speaks for itself — no outer branding on the journal",
+      "lands looking like a journal, not a parcel from a brand"
+    ],
+    "faq": [
+      {
+        "q": "Is this lined or blank?",
+        "a": "Blank. Lines feel like another rule to break. Bring your own."
+      },
+      {
+        "q": "Where does it ship from?",
+        "a": "Printed and shipped from. Royal Mail in the UK, DHL/USPS/locals everywhere else."
+      },
+      {
+        "q": "Is it gift-ready?",
+        "a": "The cover speaks for itself. We don't include outer branding on the journal, so it lands in the hands of the recipient looking like a journal, not a parcel from a brand."
+      }
+    ],
     "tags": [
       "adhd journal",
       "audhd journal",
@@ -538,28 +1094,65 @@
       "adhd identity gift",
       "late diagnosed gift"
     ],
-    "product_type": "hardback-journal-a5",
-    "hero_image": "https://images-api.printify.com/mockup/6a14d520cb8516b5720c5e1c/107225/103157/adhd-object-permanence-journal-out-of-sight-out-of-brain-audhd-notebook-gift.jpg?camera_label=front",
-    "gallery": [
-      "https://images-api.printify.com/mockup/6a14d520cb8516b5720c5e1c/107225/103157/adhd-object-permanence-journal-out-of-sight-out-of-brain-audhd-notebook-gift.jpg?camera_label=front",
-      "https://images-api.printify.com/mockup/6a14d520cb8516b5720c5e1c/107225/103180/adhd-object-permanence-journal-out-of-sight-out-of-brain-audhd-notebook-gift.jpg?camera_label=back",
-      "https://images-api.printify.com/mockup/6a14d520cb8516b5720c5e1c/107225/103183/adhd-object-permanence-journal-out-of-sight-out-of-brain-audhd-notebook-gift.jpg?camera_label=opened",
-      "https://images-api.printify.com/mockup/6a14d520cb8516b5720c5e1c/107225/103184/adhd-object-permanence-journal-out-of-sight-out-of-brain-audhd-notebook-gift.jpg?camera_label=context-1-front"
-    ],
-    "stripe_price_id": "price_1Tb7aL0d1X3moMIs6VAuRsO9",
-    "stripe_product_id": "prod_UaIAqQvsRy1jkV",
-    "printify_shop_id": 27681461,
-    "printify_product_id": "6a14d520cb8516b5720c5e1c",
-    "printify_variant_id": 107225,
-    "printify_blueprint_id": 1481,
-    "printify_provider_id": 69
+    "productType": "hardback-journal-a5",
+    "stripePriceId": "price_1Tb7aL0d1X3moMIs6VAuRsO9",
+    "stripeProductId": "prod_UaIAqQvsRy1jkV",
+    "printifyShopId": 27681461,
+    "printifyProductId": "6a14d520cb8516b5720c5e1c",
+    "printifyVariantId": 107225,
+    "printifyBlueprintId": 1481,
+    "printifyProviderId": 69,
+    "crossSellSlugs": [
+      "you-re-allowed-journal",
+      "you-found-out-journal",
+      "47-tabs-all-journal",
+      "monday-you-and-journal"
+    ]
   },
   {
     "slug": "quiet-note-past-journal",
     "title": "ADHD Late Dx Journal | a quiet note for past you | AuDHD Notebook Gift",
-    "price_cents": 1900,
+    "hook": "a quiet note for past you",
+    "descriptor": "hardback journal · A5 · 96 blank pages",
+    "priceCents": 1900,
     "currency": "GBP",
-    "description": "she wasn't lazy. she was undiagnosed. A hardback journal for ADHD brains who think differently.\n\nWHAT'S INSIDE\n\u2022 Hardback journal, 5.2\" \u00d7 7.4\" (\u2248 13 \u00d7 19 cm)\n\u2022 96 blank pages (use it however your brain wants \u2014 no lines, no rules, no judgement)\n\u2022 Wraparound printed cover in brand v2 chrome\n\u2022 Printed and hardbound by Prodigi UK on behalf of OddlyWiredCo\n\nTHE WHY\nThis journal lives in the late dx corner of the OddlyWiredCo lineup. The cover says what your brain has been trying to say. The blank pages are for everything underneath.\n\nFAQ\nIs this lined or blank?\nBlank. Lines feel like another rule to break. Bring your own.\n\nWhere does it ship from?\nPrinted and shipped from Prodigi UK. Royal Mail in the UK, DHL/USPS/locals everywhere else.\n\nIs it gift-ready?\nThe cover speaks for itself. We don't include outer branding on the journal, so it lands in the hands of the recipient looking like a journal, not a parcel from a brand.\n\n\u2014\n\nCover artwork is produced using AI-assisted design tools and finalised by the maker.\n\nPrinted and shipped by Prodigi UK on behalf of OddlyWiredCo (sole proprietor).",
+    "category": "journals",
+    "heroImage": "https://images-api.printify.com/mockup/6a14d52a15f6f0f8f709d1e7/107225/103157/adhd-late-dx-journal-a-quiet-note-for-past-you-audhd-notebook-gift.jpg?camera_label=front",
+    "gallery": [
+      "https://images-api.printify.com/mockup/6a14d52a15f6f0f8f709d1e7/107225/103157/adhd-late-dx-journal-a-quiet-note-for-past-you-audhd-notebook-gift.jpg?camera_label=front",
+      "https://images-api.printify.com/mockup/6a14d52a15f6f0f8f709d1e7/107225/103180/adhd-late-dx-journal-a-quiet-note-for-past-you-audhd-notebook-gift.jpg?camera_label=back",
+      "https://images-api.printify.com/mockup/6a14d52a15f6f0f8f709d1e7/107225/103183/adhd-late-dx-journal-a-quiet-note-for-past-you-audhd-notebook-gift.jpg?camera_label=opened",
+      "https://images-api.printify.com/mockup/6a14d52a15f6f0f8f709d1e7/107225/103184/adhd-late-dx-journal-a-quiet-note-for-past-you-audhd-notebook-gift.jpg?camera_label=context-1-front"
+    ],
+    "whyParagraph": "this journal lives in the late dx corner of the oddlywiredco lineup. the cover says what your brain has been trying to say. the blank pages are for everything underneath.",
+    "keypoints": [
+      "hardback journal, 5.2\" × 7.4\" (≈ 13 × 19 cm)",
+      "96 blank pages (use it however your brain wants — no lines, no rules, no judgement)",
+      "wraparound printed cover in brand v2 chrome",
+      "printed and hardbound"
+    ],
+    "whatsInside": [
+      "hardback journal, 5.2\" × 7.4\" (≈ 13 × 19 cm)",
+      "96 blank pages (use it however your brain wants — no lines, no rules, no judgement)",
+      "wraparound printed cover in brand v2 chrome",
+      "printed and hardbound",
+      "cover speaks for itself — no outer branding on the journal",
+      "lands looking like a journal, not a parcel from a brand"
+    ],
+    "faq": [
+      {
+        "q": "Is this lined or blank?",
+        "a": "Blank. Lines feel like another rule to break. Bring your own."
+      },
+      {
+        "q": "Where does it ship from?",
+        "a": "Printed and shipped from. Royal Mail in the UK, DHL/USPS/locals everywhere else."
+      },
+      {
+        "q": "Is it gift-ready?",
+        "a": "The cover speaks for itself. We don't include outer branding on the journal, so it lands in the hands of the recipient looking like a journal, not a parcel from a brand."
+      }
+    ],
     "tags": [
       "adhd journal",
       "audhd journal",
@@ -575,28 +1168,65 @@
       "adhd identity gift",
       "late diagnosed gift"
     ],
-    "product_type": "hardback-journal-a5",
-    "hero_image": "https://images-api.printify.com/mockup/6a14d52a15f6f0f8f709d1e7/107225/103157/adhd-late-dx-journal-a-quiet-note-for-past-you-audhd-notebook-gift.jpg?camera_label=front",
-    "gallery": [
-      "https://images-api.printify.com/mockup/6a14d52a15f6f0f8f709d1e7/107225/103157/adhd-late-dx-journal-a-quiet-note-for-past-you-audhd-notebook-gift.jpg?camera_label=front",
-      "https://images-api.printify.com/mockup/6a14d52a15f6f0f8f709d1e7/107225/103180/adhd-late-dx-journal-a-quiet-note-for-past-you-audhd-notebook-gift.jpg?camera_label=back",
-      "https://images-api.printify.com/mockup/6a14d52a15f6f0f8f709d1e7/107225/103183/adhd-late-dx-journal-a-quiet-note-for-past-you-audhd-notebook-gift.jpg?camera_label=opened",
-      "https://images-api.printify.com/mockup/6a14d52a15f6f0f8f709d1e7/107225/103184/adhd-late-dx-journal-a-quiet-note-for-past-you-audhd-notebook-gift.jpg?camera_label=context-1-front"
-    ],
-    "stripe_price_id": "price_1Tb7aM0d1X3moMIsyhS8I00N",
-    "stripe_product_id": "prod_UaIAk5Udoud6K1",
-    "printify_shop_id": 27681461,
-    "printify_product_id": "6a14d52a15f6f0f8f709d1e7",
-    "printify_variant_id": 107225,
-    "printify_blueprint_id": 1481,
-    "printify_provider_id": 69
+    "productType": "hardback-journal-a5",
+    "stripePriceId": "price_1Tb7aM0d1X3moMIsyhS8I00N",
+    "stripeProductId": "prod_UaIAk5Udoud6K1",
+    "printifyShopId": 27681461,
+    "printifyProductId": "6a14d52a15f6f0f8f709d1e7",
+    "printifyVariantId": 107225,
+    "printifyBlueprintId": 1481,
+    "printifyProviderId": 69,
+    "crossSellSlugs": [
+      "47-tabs-all-journal",
+      "your-3am-brain-journal",
+      "your-meltdown-was-journal",
+      "you-remember-planning-journal"
+    ]
   },
   {
     "slug": "rejection-sensitivity-real-journal",
     "title": "ADHD Rsd Journal | rejection sensitivity is a... | AuDHD Notebook Gift",
-    "price_cents": 1900,
+    "hook": "rejection sensitivity is",
+    "descriptor": "hardback journal · A5 · 96 blank pages",
+    "priceCents": 1900,
     "currency": "GBP",
-    "description": "you're allowed. to feel things big. A hardback journal for ADHD brains who think differently.\n\nWHAT'S INSIDE\n\u2022 Hardback journal, 5.2\" \u00d7 7.4\" (\u2248 13 \u00d7 19 cm)\n\u2022 96 blank pages (use it however your brain wants \u2014 no lines, no rules, no judgement)\n\u2022 Wraparound printed cover in brand v2 chrome\n\u2022 Printed and hardbound by Prodigi UK on behalf of OddlyWiredCo\n\nTHE WHY\nThis journal lives in the rsd corner of the OddlyWiredCo lineup. The cover says what your brain has been trying to say. The blank pages are for everything underneath.\n\nFAQ\nIs this lined or blank?\nBlank. Lines feel like another rule to break. Bring your own.\n\nWhere does it ship from?\nPrinted and shipped from Prodigi UK. Royal Mail in the UK, DHL/USPS/locals everywhere else.\n\nIs it gift-ready?\nThe cover speaks for itself. We don't include outer branding on the journal, so it lands in the hands of the recipient looking like a journal, not a parcel from a brand.\n\n\u2014\n\nCover artwork is produced using AI-assisted design tools and finalised by the maker.\n\nPrinted and shipped by Prodigi UK on behalf of OddlyWiredCo (sole proprietor).",
+    "category": "journals",
+    "heroImage": "https://images-api.printify.com/mockup/6a14d5328a98a37122058f66/107225/103157/adhd-rsd-journal-rejection-sensitivity-is-a-audhd-notebook-gift.jpg?camera_label=front",
+    "gallery": [
+      "https://images-api.printify.com/mockup/6a14d5328a98a37122058f66/107225/103157/adhd-rsd-journal-rejection-sensitivity-is-a-audhd-notebook-gift.jpg?camera_label=front",
+      "https://images-api.printify.com/mockup/6a14d5328a98a37122058f66/107225/103180/adhd-rsd-journal-rejection-sensitivity-is-a-audhd-notebook-gift.jpg?camera_label=back",
+      "https://images-api.printify.com/mockup/6a14d5328a98a37122058f66/107225/103183/adhd-rsd-journal-rejection-sensitivity-is-a-audhd-notebook-gift.jpg?camera_label=opened",
+      "https://images-api.printify.com/mockup/6a14d5328a98a37122058f66/107225/103184/adhd-rsd-journal-rejection-sensitivity-is-a-audhd-notebook-gift.jpg?camera_label=context-1-front"
+    ],
+    "whyParagraph": "this journal lives in the rsd corner of the oddlywiredco lineup. the cover says what your brain has been trying to say. the blank pages are for everything underneath.",
+    "keypoints": [
+      "hardback journal, 5.2\" × 7.4\" (≈ 13 × 19 cm)",
+      "96 blank pages (use it however your brain wants — no lines, no rules, no judgement)",
+      "wraparound printed cover in brand v2 chrome",
+      "printed and hardbound"
+    ],
+    "whatsInside": [
+      "hardback journal, 5.2\" × 7.4\" (≈ 13 × 19 cm)",
+      "96 blank pages (use it however your brain wants — no lines, no rules, no judgement)",
+      "wraparound printed cover in brand v2 chrome",
+      "printed and hardbound",
+      "cover speaks for itself — no outer branding on the journal",
+      "lands looking like a journal, not a parcel from a brand"
+    ],
+    "faq": [
+      {
+        "q": "Is this lined or blank?",
+        "a": "Blank. Lines feel like another rule to break. Bring your own."
+      },
+      {
+        "q": "Where does it ship from?",
+        "a": "Printed and shipped from. Royal Mail in the UK, DHL/USPS/locals everywhere else."
+      },
+      {
+        "q": "Is it gift-ready?",
+        "a": "The cover speaks for itself. We don't include outer branding on the journal, so it lands in the hands of the recipient looking like a journal, not a parcel from a brand."
+      }
+    ],
     "tags": [
       "adhd journal",
       "audhd journal",
@@ -612,28 +1242,65 @@
       "adhd identity gift",
       "late diagnosed gift"
     ],
-    "product_type": "hardback-journal-a5",
-    "hero_image": "https://images-api.printify.com/mockup/6a14d5328a98a37122058f66/107225/103157/adhd-rsd-journal-rejection-sensitivity-is-a-audhd-notebook-gift.jpg?camera_label=front",
-    "gallery": [
-      "https://images-api.printify.com/mockup/6a14d5328a98a37122058f66/107225/103157/adhd-rsd-journal-rejection-sensitivity-is-a-audhd-notebook-gift.jpg?camera_label=front",
-      "https://images-api.printify.com/mockup/6a14d5328a98a37122058f66/107225/103180/adhd-rsd-journal-rejection-sensitivity-is-a-audhd-notebook-gift.jpg?camera_label=back",
-      "https://images-api.printify.com/mockup/6a14d5328a98a37122058f66/107225/103183/adhd-rsd-journal-rejection-sensitivity-is-a-audhd-notebook-gift.jpg?camera_label=opened",
-      "https://images-api.printify.com/mockup/6a14d5328a98a37122058f66/107225/103184/adhd-rsd-journal-rejection-sensitivity-is-a-audhd-notebook-gift.jpg?camera_label=context-1-front"
-    ],
-    "stripe_price_id": "price_1Tb7aN0d1X3moMIsX6XjAVQH",
-    "stripe_product_id": "prod_UaIAA7AQwH4z07",
-    "printify_shop_id": 27681461,
-    "printify_product_id": "6a14d5328a98a37122058f66",
-    "printify_variant_id": 107225,
-    "printify_blueprint_id": 1481,
-    "printify_provider_id": 69
+    "productType": "hardback-journal-a5",
+    "stripePriceId": "price_1Tb7aN0d1X3moMIsX6XjAVQH",
+    "stripeProductId": "prod_UaIAA7AQwH4z07",
+    "printifyShopId": 27681461,
+    "printifyProductId": "6a14d5328a98a37122058f66",
+    "printifyVariantId": 107225,
+    "printifyBlueprintId": 1481,
+    "printifyProviderId": 69,
+    "crossSellSlugs": [
+      "you-found-out-journal",
+      "47-tabs-all-journal",
+      "monday-you-and-journal",
+      "unread-email-not-journal"
+    ]
   },
   {
     "slug": "reminder-fired-brain-journal",
     "title": "ADHD Time Blindness Journal | the reminder fired. the bra... | AuDHD Notebook Gift",
-    "price_cents": 1900,
+    "hook": "the reminder fired. the",
+    "descriptor": "hardback journal · A5 · 96 blank pages",
+    "priceCents": 1900,
     "currency": "GBP",
-    "description": "the system worked. the human did not. A hardback journal for ADHD brains who think differently.\n\nWHAT'S INSIDE\n\u2022 Hardback journal, 5.2\" \u00d7 7.4\" (\u2248 13 \u00d7 19 cm)\n\u2022 96 blank pages (use it however your brain wants \u2014 no lines, no rules, no judgement)\n\u2022 Wraparound printed cover in brand v2 chrome\n\u2022 Printed and hardbound by Prodigi UK on behalf of OddlyWiredCo\n\nTHE WHY\nThis journal lives in the time blindness corner of the OddlyWiredCo lineup. The cover says what your brain has been trying to say. The blank pages are for everything underneath.\n\nFAQ\nIs this lined or blank?\nBlank. Lines feel like another rule to break. Bring your own.\n\nWhere does it ship from?\nPrinted and shipped from Prodigi UK. Royal Mail in the UK, DHL/USPS/locals everywhere else.\n\nIs it gift-ready?\nThe cover speaks for itself. We don't include outer branding on the journal, so it lands in the hands of the recipient looking like a journal, not a parcel from a brand.\n\n\u2014\n\nCover artwork is produced using AI-assisted design tools and finalised by the maker.\n\nPrinted and shipped by Prodigi UK on behalf of OddlyWiredCo (sole proprietor).",
+    "category": "journals",
+    "heroImage": "https://images-api.printify.com/mockup/6a14d53944d3fef4d805f0bb/107225/103157/adhd-time-blindness-journal-the-reminder-fired-the-bra-audhd-notebook-gift.jpg?camera_label=front",
+    "gallery": [
+      "https://images-api.printify.com/mockup/6a14d53944d3fef4d805f0bb/107225/103157/adhd-time-blindness-journal-the-reminder-fired-the-bra-audhd-notebook-gift.jpg?camera_label=front",
+      "https://images-api.printify.com/mockup/6a14d53944d3fef4d805f0bb/107225/103180/adhd-time-blindness-journal-the-reminder-fired-the-bra-audhd-notebook-gift.jpg?camera_label=back",
+      "https://images-api.printify.com/mockup/6a14d53944d3fef4d805f0bb/107225/103183/adhd-time-blindness-journal-the-reminder-fired-the-bra-audhd-notebook-gift.jpg?camera_label=opened",
+      "https://images-api.printify.com/mockup/6a14d53944d3fef4d805f0bb/107225/103184/adhd-time-blindness-journal-the-reminder-fired-the-bra-audhd-notebook-gift.jpg?camera_label=context-1-front"
+    ],
+    "whyParagraph": "this journal lives in the time blindness corner of the oddlywiredco lineup. the cover says what your brain has been trying to say. the blank pages are for everything underneath.",
+    "keypoints": [
+      "hardback journal, 5.2\" × 7.4\" (≈ 13 × 19 cm)",
+      "96 blank pages (use it however your brain wants — no lines, no rules, no judgement)",
+      "wraparound printed cover in brand v2 chrome",
+      "printed and hardbound"
+    ],
+    "whatsInside": [
+      "hardback journal, 5.2\" × 7.4\" (≈ 13 × 19 cm)",
+      "96 blank pages (use it however your brain wants — no lines, no rules, no judgement)",
+      "wraparound printed cover in brand v2 chrome",
+      "printed and hardbound",
+      "cover speaks for itself — no outer branding on the journal",
+      "lands looking like a journal, not a parcel from a brand"
+    ],
+    "faq": [
+      {
+        "q": "Is this lined or blank?",
+        "a": "Blank. Lines feel like another rule to break. Bring your own."
+      },
+      {
+        "q": "Where does it ship from?",
+        "a": "Printed and shipped from. Royal Mail in the UK, DHL/USPS/locals everywhere else."
+      },
+      {
+        "q": "Is it gift-ready?",
+        "a": "The cover speaks for itself. We don't include outer branding on the journal, so it lands in the hands of the recipient looking like a journal, not a parcel from a brand."
+      }
+    ],
     "tags": [
       "adhd journal",
       "audhd journal",
@@ -649,28 +1316,65 @@
       "adhd identity gift",
       "late diagnosed gift"
     ],
-    "product_type": "hardback-journal-a5",
-    "hero_image": "https://images-api.printify.com/mockup/6a14d53944d3fef4d805f0bb/107225/103157/adhd-time-blindness-journal-the-reminder-fired-the-bra-audhd-notebook-gift.jpg?camera_label=front",
-    "gallery": [
-      "https://images-api.printify.com/mockup/6a14d53944d3fef4d805f0bb/107225/103157/adhd-time-blindness-journal-the-reminder-fired-the-bra-audhd-notebook-gift.jpg?camera_label=front",
-      "https://images-api.printify.com/mockup/6a14d53944d3fef4d805f0bb/107225/103180/adhd-time-blindness-journal-the-reminder-fired-the-bra-audhd-notebook-gift.jpg?camera_label=back",
-      "https://images-api.printify.com/mockup/6a14d53944d3fef4d805f0bb/107225/103183/adhd-time-blindness-journal-the-reminder-fired-the-bra-audhd-notebook-gift.jpg?camera_label=opened",
-      "https://images-api.printify.com/mockup/6a14d53944d3fef4d805f0bb/107225/103184/adhd-time-blindness-journal-the-reminder-fired-the-bra-audhd-notebook-gift.jpg?camera_label=context-1-front"
-    ],
-    "stripe_price_id": "price_1Tb7aO0d1X3moMIsBwvkcbJc",
-    "stripe_product_id": "prod_UaIAs4eO2cj6bH",
-    "printify_shop_id": 27681461,
-    "printify_product_id": "6a14d53944d3fef4d805f0bb",
-    "printify_variant_id": 107225,
-    "printify_blueprint_id": 1481,
-    "printify_provider_id": 69
+    "productType": "hardback-journal-a5",
+    "stripePriceId": "price_1Tb7aO0d1X3moMIsBwvkcbJc",
+    "stripeProductId": "prod_UaIAs4eO2cj6bH",
+    "printifyShopId": 27681461,
+    "printifyProductId": "6a14d53944d3fef4d805f0bb",
+    "printifyVariantId": 107225,
+    "printifyBlueprintId": 1481,
+    "printifyProviderId": 69,
+    "crossSellSlugs": [
+      "your-3am-brain-journal",
+      "your-meltdown-was-journal",
+      "rest-strategy-journal",
+      "rejection-sensitivity-real-journal"
+    ]
   },
   {
     "slug": "rest-strategy-journal",
     "title": "ADHD Reframes Journal | rest is a strategy | AuDHD Notebook Gift",
-    "price_cents": 1900,
+    "hook": "rest is a strategy",
+    "descriptor": "hardback journal · A5 · 96 blank pages",
+    "priceCents": 1900,
     "currency": "GBP",
-    "description": "not a reward. not a failure. A hardback journal for ADHD brains who think differently.\n\nWHAT'S INSIDE\n\u2022 Hardback journal, 5.2\" \u00d7 7.4\" (\u2248 13 \u00d7 19 cm)\n\u2022 96 blank pages (use it however your brain wants \u2014 no lines, no rules, no judgement)\n\u2022 Wraparound printed cover in brand v2 chrome\n\u2022 Printed and hardbound by Prodigi UK on behalf of OddlyWiredCo\n\nTHE WHY\nThis journal lives in the reframes corner of the OddlyWiredCo lineup. The cover says what your brain has been trying to say. The blank pages are for everything underneath.\n\nFAQ\nIs this lined or blank?\nBlank. Lines feel like another rule to break. Bring your own.\n\nWhere does it ship from?\nPrinted and shipped from Prodigi UK. Royal Mail in the UK, DHL/USPS/locals everywhere else.\n\nIs it gift-ready?\nThe cover speaks for itself. We don't include outer branding on the journal, so it lands in the hands of the recipient looking like a journal, not a parcel from a brand.\n\n\u2014\n\nCover artwork is produced using AI-assisted design tools and finalised by the maker.\n\nPrinted and shipped by Prodigi UK on behalf of OddlyWiredCo (sole proprietor).",
+    "category": "journals",
+    "heroImage": "https://images-api.printify.com/mockup/6a14d5439260e7b63e08d859/107225/103157/adhd-reframes-journal-rest-is-a-strategy-audhd-notebook-gift.jpg?camera_label=front",
+    "gallery": [
+      "https://images-api.printify.com/mockup/6a14d5439260e7b63e08d859/107225/103157/adhd-reframes-journal-rest-is-a-strategy-audhd-notebook-gift.jpg?camera_label=front",
+      "https://images-api.printify.com/mockup/6a14d5439260e7b63e08d859/107225/103180/adhd-reframes-journal-rest-is-a-strategy-audhd-notebook-gift.jpg?camera_label=back",
+      "https://images-api.printify.com/mockup/6a14d5439260e7b63e08d859/107225/103183/adhd-reframes-journal-rest-is-a-strategy-audhd-notebook-gift.jpg?camera_label=opened",
+      "https://images-api.printify.com/mockup/6a14d5439260e7b63e08d859/107225/103184/adhd-reframes-journal-rest-is-a-strategy-audhd-notebook-gift.jpg?camera_label=context-1-front"
+    ],
+    "whyParagraph": "this journal lives in the reframes corner of the oddlywiredco lineup. the cover says what your brain has been trying to say. the blank pages are for everything underneath.",
+    "keypoints": [
+      "hardback journal, 5.2\" × 7.4\" (≈ 13 × 19 cm)",
+      "96 blank pages (use it however your brain wants — no lines, no rules, no judgement)",
+      "wraparound printed cover in brand v2 chrome",
+      "printed and hardbound"
+    ],
+    "whatsInside": [
+      "hardback journal, 5.2\" × 7.4\" (≈ 13 × 19 cm)",
+      "96 blank pages (use it however your brain wants — no lines, no rules, no judgement)",
+      "wraparound printed cover in brand v2 chrome",
+      "printed and hardbound",
+      "cover speaks for itself — no outer branding on the journal",
+      "lands looking like a journal, not a parcel from a brand"
+    ],
+    "faq": [
+      {
+        "q": "Is this lined or blank?",
+        "a": "Blank. Lines feel like another rule to break. Bring your own."
+      },
+      {
+        "q": "Where does it ship from?",
+        "a": "Printed and shipped from. Royal Mail in the UK, DHL/USPS/locals everywhere else."
+      },
+      {
+        "q": "Is it gift-ready?",
+        "a": "The cover speaks for itself. We don't include outer branding on the journal, so it lands in the hands of the recipient looking like a journal, not a parcel from a brand."
+      }
+    ],
     "tags": [
       "adhd journal",
       "audhd journal",
@@ -686,28 +1390,65 @@
       "adhd identity gift",
       "late diagnosed gift"
     ],
-    "product_type": "hardback-journal-a5",
-    "hero_image": "https://images-api.printify.com/mockup/6a14d5439260e7b63e08d859/107225/103157/adhd-reframes-journal-rest-is-a-strategy-audhd-notebook-gift.jpg?camera_label=front",
-    "gallery": [
-      "https://images-api.printify.com/mockup/6a14d5439260e7b63e08d859/107225/103157/adhd-reframes-journal-rest-is-a-strategy-audhd-notebook-gift.jpg?camera_label=front",
-      "https://images-api.printify.com/mockup/6a14d5439260e7b63e08d859/107225/103180/adhd-reframes-journal-rest-is-a-strategy-audhd-notebook-gift.jpg?camera_label=back",
-      "https://images-api.printify.com/mockup/6a14d5439260e7b63e08d859/107225/103183/adhd-reframes-journal-rest-is-a-strategy-audhd-notebook-gift.jpg?camera_label=opened",
-      "https://images-api.printify.com/mockup/6a14d5439260e7b63e08d859/107225/103184/adhd-reframes-journal-rest-is-a-strategy-audhd-notebook-gift.jpg?camera_label=context-1-front"
-    ],
-    "stripe_price_id": "price_1Tb7aP0d1X3moMIsf7tozsWC",
-    "stripe_product_id": "prod_UaIAeJ1XudHOc2",
-    "printify_shop_id": 27681461,
-    "printify_product_id": "6a14d5439260e7b63e08d859",
-    "printify_variant_id": 107225,
-    "printify_blueprint_id": 1481,
-    "printify_provider_id": 69
+    "productType": "hardback-journal-a5",
+    "stripePriceId": "price_1Tb7aP0d1X3moMIsf7tozsWC",
+    "stripeProductId": "prod_UaIAeJ1XudHOc2",
+    "printifyShopId": 27681461,
+    "printifyProductId": "6a14d5439260e7b63e08d859",
+    "printifyVariantId": 107225,
+    "printifyBlueprintId": 1481,
+    "printifyProviderId": 69,
+    "crossSellSlugs": [
+      "hyperfocus-tax-annual-journal",
+      "doorway-memory-wipe-journal",
+      "unread-email-not-journal",
+      "you-found-out-journal"
+    ]
   },
   {
     "slug": "small-wins-still-journal",
     "title": "ADHD Wins Journal | small wins still count as wins | AuDHD Notebook Gift",
-    "price_cents": 1900,
+    "hook": "small wins still count as wins",
+    "descriptor": "hardback journal · A5 · 96 blank pages",
+    "priceCents": 1900,
     "currency": "GBP",
-    "description": "the shower was a battle. you won it. A hardback journal for ADHD brains who think differently.\n\nWHAT'S INSIDE\n\u2022 Hardback journal, 5.2\" \u00d7 7.4\" (\u2248 13 \u00d7 19 cm)\n\u2022 96 blank pages (use it however your brain wants \u2014 no lines, no rules, no judgement)\n\u2022 Wraparound printed cover in brand v2 chrome\n\u2022 Printed and hardbound by Prodigi UK on behalf of OddlyWiredCo\n\nTHE WHY\nThis journal lives in the wins corner of the OddlyWiredCo lineup. The cover says what your brain has been trying to say. The blank pages are for everything underneath.\n\nFAQ\nIs this lined or blank?\nBlank. Lines feel like another rule to break. Bring your own.\n\nWhere does it ship from?\nPrinted and shipped from Prodigi UK. Royal Mail in the UK, DHL/USPS/locals everywhere else.\n\nIs it gift-ready?\nThe cover speaks for itself. We don't include outer branding on the journal, so it lands in the hands of the recipient looking like a journal, not a parcel from a brand.\n\n\u2014\n\nCover artwork is produced using AI-assisted design tools and finalised by the maker.\n\nPrinted and shipped by Prodigi UK on behalf of OddlyWiredCo (sole proprietor).",
+    "category": "journals",
+    "heroImage": "https://images-api.printify.com/mockup/6a14d54d45ee82bb49090bd2/107225/103157/adhd-wins-journal-small-wins-still-count-as-wins-audhd-notebook-gift.jpg?camera_label=front",
+    "gallery": [
+      "https://images-api.printify.com/mockup/6a14d54d45ee82bb49090bd2/107225/103157/adhd-wins-journal-small-wins-still-count-as-wins-audhd-notebook-gift.jpg?camera_label=front",
+      "https://images-api.printify.com/mockup/6a14d54d45ee82bb49090bd2/107225/103180/adhd-wins-journal-small-wins-still-count-as-wins-audhd-notebook-gift.jpg?camera_label=back",
+      "https://images-api.printify.com/mockup/6a14d54d45ee82bb49090bd2/107225/103183/adhd-wins-journal-small-wins-still-count-as-wins-audhd-notebook-gift.jpg?camera_label=opened",
+      "https://images-api.printify.com/mockup/6a14d54d45ee82bb49090bd2/107225/103184/adhd-wins-journal-small-wins-still-count-as-wins-audhd-notebook-gift.jpg?camera_label=context-1-front"
+    ],
+    "whyParagraph": "this journal lives in the wins corner of the oddlywiredco lineup. the cover says what your brain has been trying to say. the blank pages are for everything underneath.",
+    "keypoints": [
+      "hardback journal, 5.2\" × 7.4\" (≈ 13 × 19 cm)",
+      "96 blank pages (use it however your brain wants — no lines, no rules, no judgement)",
+      "wraparound printed cover in brand v2 chrome",
+      "printed and hardbound"
+    ],
+    "whatsInside": [
+      "hardback journal, 5.2\" × 7.4\" (≈ 13 × 19 cm)",
+      "96 blank pages (use it however your brain wants — no lines, no rules, no judgement)",
+      "wraparound printed cover in brand v2 chrome",
+      "printed and hardbound",
+      "cover speaks for itself — no outer branding on the journal",
+      "lands looking like a journal, not a parcel from a brand"
+    ],
+    "faq": [
+      {
+        "q": "Is this lined or blank?",
+        "a": "Blank. Lines feel like another rule to break. Bring your own."
+      },
+      {
+        "q": "Where does it ship from?",
+        "a": "Printed and shipped from. Royal Mail in the UK, DHL/USPS/locals everywhere else."
+      },
+      {
+        "q": "Is it gift-ready?",
+        "a": "The cover speaks for itself. We don't include outer branding on the journal, so it lands in the hands of the recipient looking like a journal, not a parcel from a brand."
+      }
+    ],
     "tags": [
       "adhd journal",
       "audhd journal",
@@ -723,28 +1464,65 @@
       "adhd identity gift",
       "late diagnosed gift"
     ],
-    "product_type": "hardback-journal-a5",
-    "hero_image": "https://images-api.printify.com/mockup/6a14d54d45ee82bb49090bd2/107225/103157/adhd-wins-journal-small-wins-still-count-as-wins-audhd-notebook-gift.jpg?camera_label=front",
-    "gallery": [
-      "https://images-api.printify.com/mockup/6a14d54d45ee82bb49090bd2/107225/103157/adhd-wins-journal-small-wins-still-count-as-wins-audhd-notebook-gift.jpg?camera_label=front",
-      "https://images-api.printify.com/mockup/6a14d54d45ee82bb49090bd2/107225/103180/adhd-wins-journal-small-wins-still-count-as-wins-audhd-notebook-gift.jpg?camera_label=back",
-      "https://images-api.printify.com/mockup/6a14d54d45ee82bb49090bd2/107225/103183/adhd-wins-journal-small-wins-still-count-as-wins-audhd-notebook-gift.jpg?camera_label=opened",
-      "https://images-api.printify.com/mockup/6a14d54d45ee82bb49090bd2/107225/103184/adhd-wins-journal-small-wins-still-count-as-wins-audhd-notebook-gift.jpg?camera_label=context-1-front"
-    ],
-    "stripe_price_id": "price_1Tb7aQ0d1X3moMIstBrxaNGH",
-    "stripe_product_id": "prod_UaIAaayVvlxyqG",
-    "printify_shop_id": 27681461,
-    "printify_product_id": "6a14d54d45ee82bb49090bd2",
-    "printify_variant_id": 107225,
-    "printify_blueprint_id": 1481,
-    "printify_provider_id": 69
+    "productType": "hardback-journal-a5",
+    "stripePriceId": "price_1Tb7aQ0d1X3moMIstBrxaNGH",
+    "stripeProductId": "prod_UaIAaayVvlxyqG",
+    "printifyShopId": 27681461,
+    "printifyProductId": "6a14d54d45ee82bb49090bd2",
+    "printifyVariantId": 107225,
+    "printifyBlueprintId": 1481,
+    "printifyProviderId": 69,
+    "crossSellSlugs": [
+      "you-can-be-journal",
+      "started-finished-post-journal",
+      "mask-costs-more-journal",
+      "your-meltdown-was-journal"
+    ]
   },
   {
     "slug": "started-finished-post-journal",
-    "title": "ADHD Executive Dysfunction Journal | started \u2260 finished. that's... | AuDHD Notebook Gift",
-    "price_cents": 1900,
+    "title": "ADHD Executive Dysfunction Journal | started ≠ finished. that's... | AuDHD Notebook Gift",
+    "hook": "started ≠ finished.",
+    "descriptor": "hardback journal · A5 · 96 blank pages",
+    "priceCents": 1900,
     "currency": "GBP",
-    "description": "the middle is the boss fight. you live there. A hardback journal for ADHD brains who think differently.\n\nWHAT'S INSIDE\n\u2022 Hardback journal, 5.2\" \u00d7 7.4\" (\u2248 13 \u00d7 19 cm)\n\u2022 96 blank pages (use it however your brain wants \u2014 no lines, no rules, no judgement)\n\u2022 Wraparound printed cover in brand v2 chrome\n\u2022 Printed and hardbound by Prodigi UK on behalf of OddlyWiredCo\n\nTHE WHY\nThis journal lives in the executive dysfunction corner of the OddlyWiredCo lineup. The cover says what your brain has been trying to say. The blank pages are for everything underneath.\n\nFAQ\nIs this lined or blank?\nBlank. Lines feel like another rule to break. Bring your own.\n\nWhere does it ship from?\nPrinted and shipped from Prodigi UK. Royal Mail in the UK, DHL/USPS/locals everywhere else.\n\nIs it gift-ready?\nThe cover speaks for itself. We don't include outer branding on the journal, so it lands in the hands of the recipient looking like a journal, not a parcel from a brand.\n\n\u2014\n\nCover artwork is produced using AI-assisted design tools and finalised by the maker.\n\nPrinted and shipped by Prodigi UK on behalf of OddlyWiredCo (sole proprietor).",
+    "category": "journals",
+    "heroImage": "https://images-api.printify.com/mockup/6a14d55545ee82bb49090bd6/107225/103157/adhd-executive-dysfunction-journal-started-finished-thats-audhd-notebook-gift.jpg?camera_label=front",
+    "gallery": [
+      "https://images-api.printify.com/mockup/6a14d55545ee82bb49090bd6/107225/103157/adhd-executive-dysfunction-journal-started-finished-thats-audhd-notebook-gift.jpg?camera_label=front",
+      "https://images-api.printify.com/mockup/6a14d55545ee82bb49090bd6/107225/103180/adhd-executive-dysfunction-journal-started-finished-thats-audhd-notebook-gift.jpg?camera_label=back",
+      "https://images-api.printify.com/mockup/6a14d55545ee82bb49090bd6/107225/103183/adhd-executive-dysfunction-journal-started-finished-thats-audhd-notebook-gift.jpg?camera_label=opened",
+      "https://images-api.printify.com/mockup/6a14d55545ee82bb49090bd6/107225/103184/adhd-executive-dysfunction-journal-started-finished-thats-audhd-notebook-gift.jpg?camera_label=context-1-front"
+    ],
+    "whyParagraph": "this journal lives in the executive dysfunction corner of the oddlywiredco lineup. the cover says what your brain has been trying to say. the blank pages are for everything underneath.",
+    "keypoints": [
+      "hardback journal, 5.2\" × 7.4\" (≈ 13 × 19 cm)",
+      "96 blank pages (use it however your brain wants — no lines, no rules, no judgement)",
+      "wraparound printed cover in brand v2 chrome",
+      "printed and hardbound"
+    ],
+    "whatsInside": [
+      "hardback journal, 5.2\" × 7.4\" (≈ 13 × 19 cm)",
+      "96 blank pages (use it however your brain wants — no lines, no rules, no judgement)",
+      "wraparound printed cover in brand v2 chrome",
+      "printed and hardbound",
+      "cover speaks for itself — no outer branding on the journal",
+      "lands looking like a journal, not a parcel from a brand"
+    ],
+    "faq": [
+      {
+        "q": "Is this lined or blank?",
+        "a": "Blank. Lines feel like another rule to break. Bring your own."
+      },
+      {
+        "q": "Where does it ship from?",
+        "a": "Printed and shipped from. Royal Mail in the UK, DHL/USPS/locals everywhere else."
+      },
+      {
+        "q": "Is it gift-ready?",
+        "a": "The cover speaks for itself. We don't include outer branding on the journal, so it lands in the hands of the recipient looking like a journal, not a parcel from a brand."
+      }
+    ],
     "tags": [
       "adhd journal",
       "audhd journal",
@@ -760,28 +1538,65 @@
       "adhd identity gift",
       "late diagnosed gift"
     ],
-    "product_type": "hardback-journal-a5",
-    "hero_image": "https://images-api.printify.com/mockup/6a14d55545ee82bb49090bd6/107225/103157/adhd-executive-dysfunction-journal-started-finished-thats-audhd-notebook-gift.jpg?camera_label=front",
-    "gallery": [
-      "https://images-api.printify.com/mockup/6a14d55545ee82bb49090bd6/107225/103157/adhd-executive-dysfunction-journal-started-finished-thats-audhd-notebook-gift.jpg?camera_label=front",
-      "https://images-api.printify.com/mockup/6a14d55545ee82bb49090bd6/107225/103180/adhd-executive-dysfunction-journal-started-finished-thats-audhd-notebook-gift.jpg?camera_label=back",
-      "https://images-api.printify.com/mockup/6a14d55545ee82bb49090bd6/107225/103183/adhd-executive-dysfunction-journal-started-finished-thats-audhd-notebook-gift.jpg?camera_label=opened",
-      "https://images-api.printify.com/mockup/6a14d55545ee82bb49090bd6/107225/103184/adhd-executive-dysfunction-journal-started-finished-thats-audhd-notebook-gift.jpg?camera_label=context-1-front"
-    ],
-    "stripe_price_id": "price_1Tb7aR0d1X3moMIs4cZCYDo3",
-    "stripe_product_id": "prod_UaIA2JUxjEC8wN",
-    "printify_shop_id": 27681461,
-    "printify_product_id": "6a14d55545ee82bb49090bd6",
-    "printify_variant_id": 107225,
-    "printify_blueprint_id": 1481,
-    "printify_provider_id": 69
+    "productType": "hardback-journal-a5",
+    "stripePriceId": "price_1Tb7aR0d1X3moMIs4cZCYDo3",
+    "stripeProductId": "prod_UaIA2JUxjEC8wN",
+    "printifyShopId": 27681461,
+    "printifyProductId": "6a14d55545ee82bb49090bd6",
+    "printifyVariantId": 107225,
+    "printifyBlueprintId": 1481,
+    "printifyProviderId": 69,
+    "crossSellSlugs": [
+      "lazy-lazy-word-journal",
+      "doorway-memory-wipe-journal",
+      "chaos-feature-journal",
+      "47-tabs-all-journal"
+    ]
   },
   {
     "slug": "you-can-be-journal",
     "title": "ADHD Time Blindness Journal | you can be late and still b... | AuDHD Notebook Gift",
-    "price_cents": 1900,
+    "hook": "you can be late and still",
+    "descriptor": "mug 11oz",
+    "priceCents": 1900,
     "currency": "GBP",
-    "description": "it isn't a moral failing. it's wiring. A hardback journal for ADHD brains who think differently.\n\nWHAT'S INSIDE\n\u2022 Hardback journal, 5.2\" \u00d7 7.4\" (\u2248 13 \u00d7 19 cm)\n\u2022 96 blank pages (use it however your brain wants \u2014 no lines, no rules, no judgement)\n\u2022 Wraparound printed cover in brand v2 chrome\n\u2022 Printed and hardbound by Prodigi UK on behalf of OddlyWiredCo\n\nTHE WHY\nThis journal lives in the time blindness corner of the OddlyWiredCo lineup. The cover says what your brain has been trying to say. The blank pages are for everything underneath.\n\nFAQ\nIs this lined or blank?\nBlank. Lines feel like another rule to break. Bring your own.\n\nWhere does it ship from?\nPrinted and shipped from Prodigi UK. Royal Mail in the UK, DHL/USPS/locals everywhere else.\n\nIs it gift-ready?\nThe cover speaks for itself. We don't include outer branding on the journal, so it lands in the hands of the recipient looking like a journal, not a parcel from a brand.\n\n\u2014\n\nCover artwork is produced using AI-assisted design tools and finalised by the maker.\n\nPrinted and shipped by Prodigi UK on behalf of OddlyWiredCo (sole proprietor).",
+    "category": "journals",
+    "heroImage": "https://images-api.printify.com/mockup/6a14d55c8a98a37122058f77/107225/103157/adhd-time-blindness-journal-you-can-be-late-and-still-b-audhd-notebook-gift.jpg?camera_label=front",
+    "gallery": [
+      "https://images-api.printify.com/mockup/6a14d55c8a98a37122058f77/107225/103157/adhd-time-blindness-journal-you-can-be-late-and-still-b-audhd-notebook-gift.jpg?camera_label=front",
+      "https://images-api.printify.com/mockup/6a14d55c8a98a37122058f77/107225/103180/adhd-time-blindness-journal-you-can-be-late-and-still-b-audhd-notebook-gift.jpg?camera_label=back",
+      "https://images-api.printify.com/mockup/6a14d55c8a98a37122058f77/107225/103183/adhd-time-blindness-journal-you-can-be-late-and-still-b-audhd-notebook-gift.jpg?camera_label=opened",
+      "https://images-api.printify.com/mockup/6a14d55c8a98a37122058f77/107225/103184/adhd-time-blindness-journal-you-can-be-late-and-still-b-audhd-notebook-gift.jpg?camera_label=context-1-front"
+    ],
+    "whyParagraph": "this journal lives in the time blindness corner of the oddlywiredco lineup. the cover says what your brain has been trying to say. the blank pages are for everything underneath.",
+    "keypoints": [
+      "hardback journal, 5.2\" × 7.4\" (≈ 13 × 19 cm)",
+      "96 blank pages (use it however your brain wants — no lines, no rules, no judgement)",
+      "wraparound printed cover in brand v2 chrome",
+      "printed and hardbound"
+    ],
+    "whatsInside": [
+      "hardback journal, 5.2\" × 7.4\" (≈ 13 × 19 cm)",
+      "96 blank pages (use it however your brain wants — no lines, no rules, no judgement)",
+      "wraparound printed cover in brand v2 chrome",
+      "printed and hardbound",
+      "cover speaks for itself — no outer branding on the journal",
+      "lands looking like a journal, not a parcel from a brand"
+    ],
+    "faq": [
+      {
+        "q": "Is this lined or blank?",
+        "a": "Blank. Lines feel like another rule to break. Bring your own."
+      },
+      {
+        "q": "Where does it ship from?",
+        "a": "Printed and shipped from. Royal Mail in the UK, DHL/USPS/locals everywhere else."
+      },
+      {
+        "q": "Is it gift-ready?",
+        "a": "The cover speaks for itself. We don't include outer branding on the journal, so it lands in the hands of the recipient looking like a journal, not a parcel from a brand."
+      }
+    ],
     "tags": [
       "adhd journal",
       "audhd journal",
@@ -797,28 +1612,65 @@
       "adhd identity gift",
       "late diagnosed gift"
     ],
-    "product_type": "mug-11oz",
-    "hero_image": "https://images-api.printify.com/mockup/6a14d55c8a98a37122058f77/107225/103157/adhd-time-blindness-journal-you-can-be-late-and-still-b-audhd-notebook-gift.jpg?camera_label=front",
-    "gallery": [
-      "https://images-api.printify.com/mockup/6a14d55c8a98a37122058f77/107225/103157/adhd-time-blindness-journal-you-can-be-late-and-still-b-audhd-notebook-gift.jpg?camera_label=front",
-      "https://images-api.printify.com/mockup/6a14d55c8a98a37122058f77/107225/103180/adhd-time-blindness-journal-you-can-be-late-and-still-b-audhd-notebook-gift.jpg?camera_label=back",
-      "https://images-api.printify.com/mockup/6a14d55c8a98a37122058f77/107225/103183/adhd-time-blindness-journal-you-can-be-late-and-still-b-audhd-notebook-gift.jpg?camera_label=opened",
-      "https://images-api.printify.com/mockup/6a14d55c8a98a37122058f77/107225/103184/adhd-time-blindness-journal-you-can-be-late-and-still-b-audhd-notebook-gift.jpg?camera_label=context-1-front"
-    ],
-    "stripe_price_id": "price_1Tb7aR0d1X3moMIszOURNmKr",
-    "stripe_product_id": "prod_UaIAm2WamEOrOY",
-    "printify_shop_id": 27681461,
-    "printify_product_id": "6a14d55c8a98a37122058f77",
-    "printify_variant_id": 107225,
-    "printify_blueprint_id": 1481,
-    "printify_provider_id": 69
+    "productType": "mug-11oz",
+    "stripePriceId": "price_1Tb7aR0d1X3moMIszOURNmKr",
+    "stripeProductId": "prod_UaIAm2WamEOrOY",
+    "printifyShopId": 27681461,
+    "printifyProductId": "6a14d55c8a98a37122058f77",
+    "printifyVariantId": 107225,
+    "printifyBlueprintId": 1481,
+    "printifyProviderId": 69,
+    "crossSellSlugs": [
+      "you-remember-planning-journal",
+      "rejection-sensitivity-real-journal",
+      "one-mug-four-journal",
+      "reminder-fired-brain-journal"
+    ]
   },
   {
     "slug": "unread-email-not-journal",
     "title": "ADHD Inbox Journal | an unread email is not a mo... | AuDHD Notebook Gift",
-    "price_cents": 1900,
+    "hook": "an unread email is not a",
+    "descriptor": "hardback journal · A5 · 96 blank pages",
+    "priceCents": 1900,
     "currency": "GBP",
-    "description": "the email will keep. so will you. A hardback journal for ADHD brains who think differently.\n\nWHAT'S INSIDE\n\u2022 Hardback journal, 5.2\" \u00d7 7.4\" (\u2248 13 \u00d7 19 cm)\n\u2022 96 blank pages (use it however your brain wants \u2014 no lines, no rules, no judgement)\n\u2022 Wraparound printed cover in brand v2 chrome\n\u2022 Printed and hardbound by Prodigi UK on behalf of OddlyWiredCo\n\nTHE WHY\nThis journal lives in the inbox corner of the OddlyWiredCo lineup. The cover says what your brain has been trying to say. The blank pages are for everything underneath.\n\nFAQ\nIs this lined or blank?\nBlank. Lines feel like another rule to break. Bring your own.\n\nWhere does it ship from?\nPrinted and shipped from Prodigi UK. Royal Mail in the UK, DHL/USPS/locals everywhere else.\n\nIs it gift-ready?\nThe cover speaks for itself. We don't include outer branding on the journal, so it lands in the hands of the recipient looking like a journal, not a parcel from a brand.\n\n\u2014\n\nCover artwork is produced using AI-assisted design tools and finalised by the maker.\n\nPrinted and shipped by Prodigi UK on behalf of OddlyWiredCo (sole proprietor).",
+    "category": "journals",
+    "heroImage": "https://images-api.printify.com/mockup/6a14d563cb8516b5720c5e3a/107225/103157/adhd-inbox-journal-an-unread-email-is-not-a-mo-audhd-notebook-gift.jpg?camera_label=front",
+    "gallery": [
+      "https://images-api.printify.com/mockup/6a14d563cb8516b5720c5e3a/107225/103157/adhd-inbox-journal-an-unread-email-is-not-a-mo-audhd-notebook-gift.jpg?camera_label=front",
+      "https://images-api.printify.com/mockup/6a14d563cb8516b5720c5e3a/107225/103180/adhd-inbox-journal-an-unread-email-is-not-a-mo-audhd-notebook-gift.jpg?camera_label=back",
+      "https://images-api.printify.com/mockup/6a14d563cb8516b5720c5e3a/107225/103183/adhd-inbox-journal-an-unread-email-is-not-a-mo-audhd-notebook-gift.jpg?camera_label=opened",
+      "https://images-api.printify.com/mockup/6a14d563cb8516b5720c5e3a/107225/103184/adhd-inbox-journal-an-unread-email-is-not-a-mo-audhd-notebook-gift.jpg?camera_label=context-1-front"
+    ],
+    "whyParagraph": "this journal lives in the inbox corner of the oddlywiredco lineup. the cover says what your brain has been trying to say. the blank pages are for everything underneath.",
+    "keypoints": [
+      "hardback journal, 5.2\" × 7.4\" (≈ 13 × 19 cm)",
+      "96 blank pages (use it however your brain wants — no lines, no rules, no judgement)",
+      "wraparound printed cover in brand v2 chrome",
+      "printed and hardbound"
+    ],
+    "whatsInside": [
+      "hardback journal, 5.2\" × 7.4\" (≈ 13 × 19 cm)",
+      "96 blank pages (use it however your brain wants — no lines, no rules, no judgement)",
+      "wraparound printed cover in brand v2 chrome",
+      "printed and hardbound",
+      "cover speaks for itself — no outer branding on the journal",
+      "lands looking like a journal, not a parcel from a brand"
+    ],
+    "faq": [
+      {
+        "q": "Is this lined or blank?",
+        "a": "Blank. Lines feel like another rule to break. Bring your own."
+      },
+      {
+        "q": "Where does it ship from?",
+        "a": "Printed and shipped from. Royal Mail in the UK, DHL/USPS/locals everywhere else."
+      },
+      {
+        "q": "Is it gift-ready?",
+        "a": "The cover speaks for itself. We don't include outer branding on the journal, so it lands in the hands of the recipient looking like a journal, not a parcel from a brand."
+      }
+    ],
     "tags": [
       "adhd journal",
       "audhd journal",
@@ -834,28 +1686,65 @@
       "adhd identity gift",
       "late diagnosed gift"
     ],
-    "product_type": "hardback-journal-a5",
-    "hero_image": "https://images-api.printify.com/mockup/6a14d563cb8516b5720c5e3a/107225/103157/adhd-inbox-journal-an-unread-email-is-not-a-mo-audhd-notebook-gift.jpg?camera_label=front",
-    "gallery": [
-      "https://images-api.printify.com/mockup/6a14d563cb8516b5720c5e3a/107225/103157/adhd-inbox-journal-an-unread-email-is-not-a-mo-audhd-notebook-gift.jpg?camera_label=front",
-      "https://images-api.printify.com/mockup/6a14d563cb8516b5720c5e3a/107225/103180/adhd-inbox-journal-an-unread-email-is-not-a-mo-audhd-notebook-gift.jpg?camera_label=back",
-      "https://images-api.printify.com/mockup/6a14d563cb8516b5720c5e3a/107225/103183/adhd-inbox-journal-an-unread-email-is-not-a-mo-audhd-notebook-gift.jpg?camera_label=opened",
-      "https://images-api.printify.com/mockup/6a14d563cb8516b5720c5e3a/107225/103184/adhd-inbox-journal-an-unread-email-is-not-a-mo-audhd-notebook-gift.jpg?camera_label=context-1-front"
-    ],
-    "stripe_price_id": "price_1Tb7aS0d1X3moMIsyxqrihUm",
-    "stripe_product_id": "prod_UaIAWwUFDiayED",
-    "printify_shop_id": 27681461,
-    "printify_product_id": "6a14d563cb8516b5720c5e3a",
-    "printify_variant_id": 107225,
-    "printify_blueprint_id": 1481,
-    "printify_provider_id": 69
+    "productType": "hardback-journal-a5",
+    "stripePriceId": "price_1Tb7aS0d1X3moMIsyxqrihUm",
+    "stripeProductId": "prod_UaIAWwUFDiayED",
+    "printifyShopId": 27681461,
+    "printifyProductId": "6a14d563cb8516b5720c5e3a",
+    "printifyVariantId": 107225,
+    "printifyBlueprintId": 1481,
+    "printifyProviderId": 69,
+    "crossSellSlugs": [
+      "audhd-survival-kit-journal",
+      "wired-different-rhythm-journal",
+      "started-finished-post-journal",
+      "draft-text-complete-journal"
+    ]
   },
   {
     "slug": "wired-different-rhythm-journal",
     "title": "ADHD Late Dx Journal | wired for a different rhythm | AuDHD Notebook Gift",
-    "price_cents": 1900,
+    "hook": "wired for a different rhythm",
+    "descriptor": "hardback journal · A5 · 96 blank pages",
+    "priceCents": 1900,
     "currency": "GBP",
-    "description": "not slower. not lesser. find yours. A hardback journal for ADHD brains who think differently.\n\nWHAT'S INSIDE\n\u2022 Hardback journal, 5.2\" \u00d7 7.4\" (\u2248 13 \u00d7 19 cm)\n\u2022 96 blank pages (use it however your brain wants \u2014 no lines, no rules, no judgement)\n\u2022 Wraparound printed cover in brand v2 chrome\n\u2022 Printed and hardbound by Prodigi UK on behalf of OddlyWiredCo\n\nTHE WHY\nThis journal lives in the late dx corner of the OddlyWiredCo lineup. The cover says what your brain has been trying to say. The blank pages are for everything underneath.\n\nFAQ\nIs this lined or blank?\nBlank. Lines feel like another rule to break. Bring your own.\n\nWhere does it ship from?\nPrinted and shipped from Prodigi UK. Royal Mail in the UK, DHL/USPS/locals everywhere else.\n\nIs it gift-ready?\nThe cover speaks for itself. We don't include outer branding on the journal, so it lands in the hands of the recipient looking like a journal, not a parcel from a brand.\n\n\u2014\n\nCover artwork is produced using AI-assisted design tools and finalised by the maker.\n\nPrinted and shipped by Prodigi UK on behalf of OddlyWiredCo (sole proprietor).",
+    "category": "journals",
+    "heroImage": "https://images-api.printify.com/mockup/6a14d56955cf9d0e0701480b/107225/103157/adhd-late-dx-journal-wired-for-a-different-rhythm-audhd-notebook-gift.jpg?camera_label=front",
+    "gallery": [
+      "https://images-api.printify.com/mockup/6a14d56955cf9d0e0701480b/107225/103157/adhd-late-dx-journal-wired-for-a-different-rhythm-audhd-notebook-gift.jpg?camera_label=front",
+      "https://images-api.printify.com/mockup/6a14d56955cf9d0e0701480b/107225/103180/adhd-late-dx-journal-wired-for-a-different-rhythm-audhd-notebook-gift.jpg?camera_label=back",
+      "https://images-api.printify.com/mockup/6a14d56955cf9d0e0701480b/107225/103183/adhd-late-dx-journal-wired-for-a-different-rhythm-audhd-notebook-gift.jpg?camera_label=opened",
+      "https://images-api.printify.com/mockup/6a14d56955cf9d0e0701480b/107225/103184/adhd-late-dx-journal-wired-for-a-different-rhythm-audhd-notebook-gift.jpg?camera_label=context-1-front"
+    ],
+    "whyParagraph": "this journal lives in the late dx corner of the oddlywiredco lineup. the cover says what your brain has been trying to say. the blank pages are for everything underneath.",
+    "keypoints": [
+      "hardback journal, 5.2\" × 7.4\" (≈ 13 × 19 cm)",
+      "96 blank pages (use it however your brain wants — no lines, no rules, no judgement)",
+      "wraparound printed cover in brand v2 chrome",
+      "printed and hardbound"
+    ],
+    "whatsInside": [
+      "hardback journal, 5.2\" × 7.4\" (≈ 13 × 19 cm)",
+      "96 blank pages (use it however your brain wants — no lines, no rules, no judgement)",
+      "wraparound printed cover in brand v2 chrome",
+      "printed and hardbound",
+      "cover speaks for itself — no outer branding on the journal",
+      "lands looking like a journal, not a parcel from a brand"
+    ],
+    "faq": [
+      {
+        "q": "Is this lined or blank?",
+        "a": "Blank. Lines feel like another rule to break. Bring your own."
+      },
+      {
+        "q": "Where does it ship from?",
+        "a": "Printed and shipped from. Royal Mail in the UK, DHL/USPS/locals everywhere else."
+      },
+      {
+        "q": "Is it gift-ready?",
+        "a": "The cover speaks for itself. We don't include outer branding on the journal, so it lands in the hands of the recipient looking like a journal, not a parcel from a brand."
+      }
+    ],
     "tags": [
       "adhd journal",
       "audhd journal",
@@ -871,28 +1760,65 @@
       "adhd identity gift",
       "late diagnosed gift"
     ],
-    "product_type": "hardback-journal-a5",
-    "hero_image": "https://images-api.printify.com/mockup/6a14d56955cf9d0e0701480b/107225/103157/adhd-late-dx-journal-wired-for-a-different-rhythm-audhd-notebook-gift.jpg?camera_label=front",
-    "gallery": [
-      "https://images-api.printify.com/mockup/6a14d56955cf9d0e0701480b/107225/103157/adhd-late-dx-journal-wired-for-a-different-rhythm-audhd-notebook-gift.jpg?camera_label=front",
-      "https://images-api.printify.com/mockup/6a14d56955cf9d0e0701480b/107225/103180/adhd-late-dx-journal-wired-for-a-different-rhythm-audhd-notebook-gift.jpg?camera_label=back",
-      "https://images-api.printify.com/mockup/6a14d56955cf9d0e0701480b/107225/103183/adhd-late-dx-journal-wired-for-a-different-rhythm-audhd-notebook-gift.jpg?camera_label=opened",
-      "https://images-api.printify.com/mockup/6a14d56955cf9d0e0701480b/107225/103184/adhd-late-dx-journal-wired-for-a-different-rhythm-audhd-notebook-gift.jpg?camera_label=context-1-front"
-    ],
-    "stripe_price_id": "price_1Tb7aT0d1X3moMIs7pg7la7e",
-    "stripe_product_id": "prod_UaIAxDURlwg3U0",
-    "printify_shop_id": 27681461,
-    "printify_product_id": "6a14d56955cf9d0e0701480b",
-    "printify_variant_id": 107225,
-    "printify_blueprint_id": 1481,
-    "printify_provider_id": 69
+    "productType": "hardback-journal-a5",
+    "stripePriceId": "price_1Tb7aT0d1X3moMIs7pg7la7e",
+    "stripeProductId": "prod_UaIAxDURlwg3U0",
+    "printifyShopId": 27681461,
+    "printifyProductId": "6a14d56955cf9d0e0701480b",
+    "printifyVariantId": 107225,
+    "printifyBlueprintId": 1481,
+    "printifyProviderId": 69,
+    "crossSellSlugs": [
+      "you-can-be-journal",
+      "small-wins-still-journal",
+      "one-mug-four-journal",
+      "your-meltdown-was-journal"
+    ]
   },
   {
     "slug": "you-didn-lose-journal",
     "title": "ADHD Object Permanence Journal | you didn't lose it. you par... | AuDHD Notebook Gift",
-    "price_cents": 1900,
+    "hook": "you didn't lose it. you",
+    "descriptor": "hardback journal · A5 · 96 blank pages",
+    "priceCents": 1900,
     "currency": "GBP",
-    "description": "the brain had a reason. the reason is gone. A hardback journal for ADHD brains who think differently.\n\nWHAT'S INSIDE\n\u2022 Hardback journal, 5.2\" \u00d7 7.4\" (\u2248 13 \u00d7 19 cm)\n\u2022 96 blank pages (use it however your brain wants \u2014 no lines, no rules, no judgement)\n\u2022 Wraparound printed cover in brand v2 chrome\n\u2022 Printed and hardbound by Prodigi UK on behalf of OddlyWiredCo\n\nTHE WHY\nThis journal lives in the object permanence corner of the OddlyWiredCo lineup. The cover says what your brain has been trying to say. The blank pages are for everything underneath.\n\nFAQ\nIs this lined or blank?\nBlank. Lines feel like another rule to break. Bring your own.\n\nWhere does it ship from?\nPrinted and shipped from Prodigi UK. Royal Mail in the UK, DHL/USPS/locals everywhere else.\n\nIs it gift-ready?\nThe cover speaks for itself. We don't include outer branding on the journal, so it lands in the hands of the recipient looking like a journal, not a parcel from a brand.\n\n\u2014\n\nCover artwork is produced using AI-assisted design tools and finalised by the maker.\n\nPrinted and shipped by Prodigi UK on behalf of OddlyWiredCo (sole proprietor).",
+    "category": "journals",
+    "heroImage": "https://images-api.printify.com/mockup/6a14d570cb8516b5720c5e40/107225/103157/adhd-object-permanence-journal-you-didnt-lose-it-you-par-audhd-notebook-gift.jpg?camera_label=front",
+    "gallery": [
+      "https://images-api.printify.com/mockup/6a14d570cb8516b5720c5e40/107225/103157/adhd-object-permanence-journal-you-didnt-lose-it-you-par-audhd-notebook-gift.jpg?camera_label=front",
+      "https://images-api.printify.com/mockup/6a14d570cb8516b5720c5e40/107225/103180/adhd-object-permanence-journal-you-didnt-lose-it-you-par-audhd-notebook-gift.jpg?camera_label=back",
+      "https://images-api.printify.com/mockup/6a14d570cb8516b5720c5e40/107225/103183/adhd-object-permanence-journal-you-didnt-lose-it-you-par-audhd-notebook-gift.jpg?camera_label=opened",
+      "https://images-api.printify.com/mockup/6a14d570cb8516b5720c5e40/107225/103184/adhd-object-permanence-journal-you-didnt-lose-it-you-par-audhd-notebook-gift.jpg?camera_label=context-1-front"
+    ],
+    "whyParagraph": "this journal lives in the object permanence corner of the oddlywiredco lineup. the cover says what your brain has been trying to say. the blank pages are for everything underneath.",
+    "keypoints": [
+      "hardback journal, 5.2\" × 7.4\" (≈ 13 × 19 cm)",
+      "96 blank pages (use it however your brain wants — no lines, no rules, no judgement)",
+      "wraparound printed cover in brand v2 chrome",
+      "printed and hardbound"
+    ],
+    "whatsInside": [
+      "hardback journal, 5.2\" × 7.4\" (≈ 13 × 19 cm)",
+      "96 blank pages (use it however your brain wants — no lines, no rules, no judgement)",
+      "wraparound printed cover in brand v2 chrome",
+      "printed and hardbound",
+      "cover speaks for itself — no outer branding on the journal",
+      "lands looking like a journal, not a parcel from a brand"
+    ],
+    "faq": [
+      {
+        "q": "Is this lined or blank?",
+        "a": "Blank. Lines feel like another rule to break. Bring your own."
+      },
+      {
+        "q": "Where does it ship from?",
+        "a": "Printed and shipped from. Royal Mail in the UK, DHL/USPS/locals everywhere else."
+      },
+      {
+        "q": "Is it gift-ready?",
+        "a": "The cover speaks for itself. We don't include outer branding on the journal, so it lands in the hands of the recipient looking like a journal, not a parcel from a brand."
+      }
+    ],
     "tags": [
       "adhd journal",
       "audhd journal",
@@ -908,28 +1834,65 @@
       "adhd identity gift",
       "late diagnosed gift"
     ],
-    "product_type": "hardback-journal-a5",
-    "hero_image": "https://images-api.printify.com/mockup/6a14d570cb8516b5720c5e40/107225/103157/adhd-object-permanence-journal-you-didnt-lose-it-you-par-audhd-notebook-gift.jpg?camera_label=front",
-    "gallery": [
-      "https://images-api.printify.com/mockup/6a14d570cb8516b5720c5e40/107225/103157/adhd-object-permanence-journal-you-didnt-lose-it-you-par-audhd-notebook-gift.jpg?camera_label=front",
-      "https://images-api.printify.com/mockup/6a14d570cb8516b5720c5e40/107225/103180/adhd-object-permanence-journal-you-didnt-lose-it-you-par-audhd-notebook-gift.jpg?camera_label=back",
-      "https://images-api.printify.com/mockup/6a14d570cb8516b5720c5e40/107225/103183/adhd-object-permanence-journal-you-didnt-lose-it-you-par-audhd-notebook-gift.jpg?camera_label=opened",
-      "https://images-api.printify.com/mockup/6a14d570cb8516b5720c5e40/107225/103184/adhd-object-permanence-journal-you-didnt-lose-it-you-par-audhd-notebook-gift.jpg?camera_label=context-1-front"
-    ],
-    "stripe_price_id": "price_1Tb7aU0d1X3moMIsE1VJXpTT",
-    "stripe_product_id": "prod_UaIA4qAQi2flSG",
-    "printify_shop_id": 27681461,
-    "printify_product_id": "6a14d570cb8516b5720c5e40",
-    "printify_variant_id": 107225,
-    "printify_blueprint_id": 1481,
-    "printify_provider_id": 69
+    "productType": "hardback-journal-a5",
+    "stripePriceId": "price_1Tb7aU0d1X3moMIsE1VJXpTT",
+    "stripeProductId": "prod_UaIA4qAQi2flSG",
+    "printifyShopId": 27681461,
+    "printifyProductId": "6a14d570cb8516b5720c5e40",
+    "printifyVariantId": 107225,
+    "printifyBlueprintId": 1481,
+    "printifyProviderId": 69,
+    "crossSellSlugs": [
+      "neurodivergent-broken-journal",
+      "your-3am-brain-journal",
+      "started-finished-post-journal",
+      "you-can-be-journal"
+    ]
   },
   {
     "slug": "you-found-out-journal",
     "title": "ADHD Late Dx Journal | you found out late. you're... | AuDHD Notebook Gift",
-    "price_cents": 1900,
+    "hook": "you found out late.",
+    "descriptor": "hardback journal · A5 · 96 blank pages",
+    "priceCents": 1900,
     "currency": "GBP",
-    "description": "both of those things. are allowed. A hardback journal for ADHD brains who think differently.\n\nWHAT'S INSIDE\n\u2022 Hardback journal, 5.2\" \u00d7 7.4\" (\u2248 13 \u00d7 19 cm)\n\u2022 96 blank pages (use it however your brain wants \u2014 no lines, no rules, no judgement)\n\u2022 Wraparound printed cover in brand v2 chrome\n\u2022 Printed and hardbound by Prodigi UK on behalf of OddlyWiredCo\n\nTHE WHY\nThis journal lives in the late dx corner of the OddlyWiredCo lineup. The cover says what your brain has been trying to say. The blank pages are for everything underneath.\n\nFAQ\nIs this lined or blank?\nBlank. Lines feel like another rule to break. Bring your own.\n\nWhere does it ship from?\nPrinted and shipped from Prodigi UK. Royal Mail in the UK, DHL/USPS/locals everywhere else.\n\nIs it gift-ready?\nThe cover speaks for itself. We don't include outer branding on the journal, so it lands in the hands of the recipient looking like a journal, not a parcel from a brand.\n\n\u2014\n\nCover artwork is produced using AI-assisted design tools and finalised by the maker.\n\nPrinted and shipped by Prodigi UK on behalf of OddlyWiredCo (sole proprietor).",
+    "category": "journals",
+    "heroImage": "https://images-api.printify.com/mockup/6a14d576a3121035a2079a66/107225/103157/adhd-late-dx-journal-you-found-out-late-youre-audhd-notebook-gift.jpg?camera_label=front",
+    "gallery": [
+      "https://images-api.printify.com/mockup/6a14d576a3121035a2079a66/107225/103157/adhd-late-dx-journal-you-found-out-late-youre-audhd-notebook-gift.jpg?camera_label=front",
+      "https://images-api.printify.com/mockup/6a14d576a3121035a2079a66/107225/103180/adhd-late-dx-journal-you-found-out-late-youre-audhd-notebook-gift.jpg?camera_label=back",
+      "https://images-api.printify.com/mockup/6a14d576a3121035a2079a66/107225/103183/adhd-late-dx-journal-you-found-out-late-youre-audhd-notebook-gift.jpg?camera_label=opened",
+      "https://images-api.printify.com/mockup/6a14d576a3121035a2079a66/107225/103184/adhd-late-dx-journal-you-found-out-late-youre-audhd-notebook-gift.jpg?camera_label=context-1-front"
+    ],
+    "whyParagraph": "this journal lives in the late dx corner of the oddlywiredco lineup. the cover says what your brain has been trying to say. the blank pages are for everything underneath.",
+    "keypoints": [
+      "hardback journal, 5.2\" × 7.4\" (≈ 13 × 19 cm)",
+      "96 blank pages (use it however your brain wants — no lines, no rules, no judgement)",
+      "wraparound printed cover in brand v2 chrome",
+      "printed and hardbound"
+    ],
+    "whatsInside": [
+      "hardback journal, 5.2\" × 7.4\" (≈ 13 × 19 cm)",
+      "96 blank pages (use it however your brain wants — no lines, no rules, no judgement)",
+      "wraparound printed cover in brand v2 chrome",
+      "printed and hardbound",
+      "cover speaks for itself — no outer branding on the journal",
+      "lands looking like a journal, not a parcel from a brand"
+    ],
+    "faq": [
+      {
+        "q": "Is this lined or blank?",
+        "a": "Blank. Lines feel like another rule to break. Bring your own."
+      },
+      {
+        "q": "Where does it ship from?",
+        "a": "Printed and shipped from. Royal Mail in the UK, DHL/USPS/locals everywhere else."
+      },
+      {
+        "q": "Is it gift-ready?",
+        "a": "The cover speaks for itself. We don't include outer branding on the journal, so it lands in the hands of the recipient looking like a journal, not a parcel from a brand."
+      }
+    ],
     "tags": [
       "adhd journal",
       "audhd journal",
@@ -945,28 +1908,65 @@
       "adhd identity gift",
       "late diagnosed gift"
     ],
-    "product_type": "hardback-journal-a5",
-    "hero_image": "https://images-api.printify.com/mockup/6a14d576a3121035a2079a66/107225/103157/adhd-late-dx-journal-you-found-out-late-youre-audhd-notebook-gift.jpg?camera_label=front",
-    "gallery": [
-      "https://images-api.printify.com/mockup/6a14d576a3121035a2079a66/107225/103157/adhd-late-dx-journal-you-found-out-late-youre-audhd-notebook-gift.jpg?camera_label=front",
-      "https://images-api.printify.com/mockup/6a14d576a3121035a2079a66/107225/103180/adhd-late-dx-journal-you-found-out-late-youre-audhd-notebook-gift.jpg?camera_label=back",
-      "https://images-api.printify.com/mockup/6a14d576a3121035a2079a66/107225/103183/adhd-late-dx-journal-you-found-out-late-youre-audhd-notebook-gift.jpg?camera_label=opened",
-      "https://images-api.printify.com/mockup/6a14d576a3121035a2079a66/107225/103184/adhd-late-dx-journal-you-found-out-late-youre-audhd-notebook-gift.jpg?camera_label=context-1-front"
-    ],
-    "stripe_price_id": "price_1Tb7aV0d1X3moMIsLGBy6KEM",
-    "stripe_product_id": "prod_UaIAZxsuaG5I6Z",
-    "printify_shop_id": 27681461,
-    "printify_product_id": "6a14d576a3121035a2079a66",
-    "printify_variant_id": 107225,
-    "printify_blueprint_id": 1481,
-    "printify_provider_id": 69
+    "productType": "hardback-journal-a5",
+    "stripePriceId": "price_1Tb7aV0d1X3moMIsLGBy6KEM",
+    "stripeProductId": "prod_UaIAZxsuaG5I6Z",
+    "printifyShopId": 27681461,
+    "printifyProductId": "6a14d576a3121035a2079a66",
+    "printifyVariantId": 107225,
+    "printifyBlueprintId": 1481,
+    "printifyProviderId": 69,
+    "crossSellSlugs": [
+      "monday-you-and-journal",
+      "you-didn-lose-journal",
+      "rejection-sensitivity-real-journal",
+      "hyperfocus-tax-annual-journal"
+    ]
   },
   {
     "slug": "you-re-allowed-journal",
     "title": "ADHD Reframes Journal | you're allowed to be uneven | AuDHD Notebook Gift",
-    "price_cents": 1900,
+    "hook": "you're allowed to be uneven",
+    "descriptor": "hardback journal · A5 · 96 blank pages",
+    "priceCents": 1900,
     "currency": "GBP",
-    "description": "brilliant on monday. unrecognisable on tuesday. A hardback journal for ADHD brains who think differently.\n\nWHAT'S INSIDE\n\u2022 Hardback journal, 5.2\" \u00d7 7.4\" (\u2248 13 \u00d7 19 cm)\n\u2022 96 blank pages (use it however your brain wants \u2014 no lines, no rules, no judgement)\n\u2022 Wraparound printed cover in brand v2 chrome\n\u2022 Printed and hardbound by Prodigi UK on behalf of OddlyWiredCo\n\nTHE WHY\nThis journal lives in the reframes corner of the OddlyWiredCo lineup. The cover says what your brain has been trying to say. The blank pages are for everything underneath.\n\nFAQ\nIs this lined or blank?\nBlank. Lines feel like another rule to break. Bring your own.\n\nWhere does it ship from?\nPrinted and shipped from Prodigi UK. Royal Mail in the UK, DHL/USPS/locals everywhere else.\n\nIs it gift-ready?\nThe cover speaks for itself. We don't include outer branding on the journal, so it lands in the hands of the recipient looking like a journal, not a parcel from a brand.\n\n\u2014\n\nCover artwork is produced using AI-assisted design tools and finalised by the maker.\n\nPrinted and shipped by Prodigi UK on behalf of OddlyWiredCo (sole proprietor).",
+    "category": "journals",
+    "heroImage": "https://images-api.printify.com/mockup/6a14d57d9c498e0c3a035964/107225/103157/adhd-reframes-journal-youre-allowed-to-be-uneven-audhd-notebook-gift.jpg?camera_label=front",
+    "gallery": [
+      "https://images-api.printify.com/mockup/6a14d57d9c498e0c3a035964/107225/103157/adhd-reframes-journal-youre-allowed-to-be-uneven-audhd-notebook-gift.jpg?camera_label=front",
+      "https://images-api.printify.com/mockup/6a14d57d9c498e0c3a035964/107225/103180/adhd-reframes-journal-youre-allowed-to-be-uneven-audhd-notebook-gift.jpg?camera_label=back",
+      "https://images-api.printify.com/mockup/6a14d57d9c498e0c3a035964/107225/103183/adhd-reframes-journal-youre-allowed-to-be-uneven-audhd-notebook-gift.jpg?camera_label=opened",
+      "https://images-api.printify.com/mockup/6a14d57d9c498e0c3a035964/107225/103184/adhd-reframes-journal-youre-allowed-to-be-uneven-audhd-notebook-gift.jpg?camera_label=context-1-front"
+    ],
+    "whyParagraph": "this journal lives in the reframes corner of the oddlywiredco lineup. the cover says what your brain has been trying to say. the blank pages are for everything underneath.",
+    "keypoints": [
+      "hardback journal, 5.2\" × 7.4\" (≈ 13 × 19 cm)",
+      "96 blank pages (use it however your brain wants — no lines, no rules, no judgement)",
+      "wraparound printed cover in brand v2 chrome",
+      "printed and hardbound"
+    ],
+    "whatsInside": [
+      "hardback journal, 5.2\" × 7.4\" (≈ 13 × 19 cm)",
+      "96 blank pages (use it however your brain wants — no lines, no rules, no judgement)",
+      "wraparound printed cover in brand v2 chrome",
+      "printed and hardbound",
+      "cover speaks for itself — no outer branding on the journal",
+      "lands looking like a journal, not a parcel from a brand"
+    ],
+    "faq": [
+      {
+        "q": "Is this lined or blank?",
+        "a": "Blank. Lines feel like another rule to break. Bring your own."
+      },
+      {
+        "q": "Where does it ship from?",
+        "a": "Printed and shipped from. Royal Mail in the UK, DHL/USPS/locals everywhere else."
+      },
+      {
+        "q": "Is it gift-ready?",
+        "a": "The cover speaks for itself. We don't include outer branding on the journal, so it lands in the hands of the recipient looking like a journal, not a parcel from a brand."
+      }
+    ],
     "tags": [
       "adhd journal",
       "audhd journal",
@@ -982,28 +1982,65 @@
       "adhd identity gift",
       "late diagnosed gift"
     ],
-    "product_type": "hardback-journal-a5",
-    "hero_image": "https://images-api.printify.com/mockup/6a14d57d9c498e0c3a035964/107225/103157/adhd-reframes-journal-youre-allowed-to-be-uneven-audhd-notebook-gift.jpg?camera_label=front",
-    "gallery": [
-      "https://images-api.printify.com/mockup/6a14d57d9c498e0c3a035964/107225/103157/adhd-reframes-journal-youre-allowed-to-be-uneven-audhd-notebook-gift.jpg?camera_label=front",
-      "https://images-api.printify.com/mockup/6a14d57d9c498e0c3a035964/107225/103180/adhd-reframes-journal-youre-allowed-to-be-uneven-audhd-notebook-gift.jpg?camera_label=back",
-      "https://images-api.printify.com/mockup/6a14d57d9c498e0c3a035964/107225/103183/adhd-reframes-journal-youre-allowed-to-be-uneven-audhd-notebook-gift.jpg?camera_label=opened",
-      "https://images-api.printify.com/mockup/6a14d57d9c498e0c3a035964/107225/103184/adhd-reframes-journal-youre-allowed-to-be-uneven-audhd-notebook-gift.jpg?camera_label=context-1-front"
-    ],
-    "stripe_price_id": "price_1Tb7aW0d1X3moMIsKI3wOZqn",
-    "stripe_product_id": "prod_UaIAKVUXVkiS2D",
-    "printify_shop_id": 27681461,
-    "printify_product_id": "6a14d57d9c498e0c3a035964",
-    "printify_variant_id": 107225,
-    "printify_blueprint_id": 1481,
-    "printify_provider_id": 69
+    "productType": "hardback-journal-a5",
+    "stripePriceId": "price_1Tb7aW0d1X3moMIsKI3wOZqn",
+    "stripeProductId": "prod_UaIAKVUXVkiS2D",
+    "printifyShopId": 27681461,
+    "printifyProductId": "6a14d57d9c498e0c3a035964",
+    "printifyVariantId": 107225,
+    "printifyBlueprintId": 1481,
+    "printifyProviderId": 69,
+    "crossSellSlugs": [
+      "hyperfocus-tax-annual-journal",
+      "rest-strategy-journal",
+      "unread-email-not-journal",
+      "one-mug-four-journal"
+    ]
   },
   {
     "slug": "you-remember-planning-journal",
     "title": "ADHD Time Blindness Journal | you remember planning it. t... | AuDHD Notebook Gift",
-    "price_cents": 1900,
+    "hook": "you remember planning it.",
+    "descriptor": "hardback journal · A5 · 96 blank pages",
+    "priceCents": 1900,
     "currency": "GBP",
-    "description": "forgive. the gap. A hardback journal for ADHD brains who think differently.\n\nWHAT'S INSIDE\n\u2022 Hardback journal, 5.2\" \u00d7 7.4\" (\u2248 13 \u00d7 19 cm)\n\u2022 96 blank pages (use it however your brain wants \u2014 no lines, no rules, no judgement)\n\u2022 Wraparound printed cover in brand v2 chrome\n\u2022 Printed and hardbound by Prodigi UK on behalf of OddlyWiredCo\n\nTHE WHY\nThis journal lives in the time blindness corner of the OddlyWiredCo lineup. The cover says what your brain has been trying to say. The blank pages are for everything underneath.\n\nFAQ\nIs this lined or blank?\nBlank. Lines feel like another rule to break. Bring your own.\n\nWhere does it ship from?\nPrinted and shipped from Prodigi UK. Royal Mail in the UK, DHL/USPS/locals everywhere else.\n\nIs it gift-ready?\nThe cover speaks for itself. We don't include outer branding on the journal, so it lands in the hands of the recipient looking like a journal, not a parcel from a brand.\n\n\u2014\n\nCover artwork is produced using AI-assisted design tools and finalised by the maker.\n\nPrinted and shipped by Prodigi UK on behalf of OddlyWiredCo (sole proprietor).",
+    "category": "journals",
+    "heroImage": "https://images-api.printify.com/mockup/6a14d58255cf9d0e0701481b/107225/103157/adhd-time-blindness-journal-you-remember-planning-it-t-audhd-notebook-gift.jpg?camera_label=front",
+    "gallery": [
+      "https://images-api.printify.com/mockup/6a14d58255cf9d0e0701481b/107225/103157/adhd-time-blindness-journal-you-remember-planning-it-t-audhd-notebook-gift.jpg?camera_label=front",
+      "https://images-api.printify.com/mockup/6a14d58255cf9d0e0701481b/107225/103180/adhd-time-blindness-journal-you-remember-planning-it-t-audhd-notebook-gift.jpg?camera_label=back",
+      "https://images-api.printify.com/mockup/6a14d58255cf9d0e0701481b/107225/103183/adhd-time-blindness-journal-you-remember-planning-it-t-audhd-notebook-gift.jpg?camera_label=opened",
+      "https://images-api.printify.com/mockup/6a14d58255cf9d0e0701481b/107225/103184/adhd-time-blindness-journal-you-remember-planning-it-t-audhd-notebook-gift.jpg?camera_label=context-1-front"
+    ],
+    "whyParagraph": "this journal lives in the time blindness corner of the oddlywiredco lineup. the cover says what your brain has been trying to say. the blank pages are for everything underneath.",
+    "keypoints": [
+      "hardback journal, 5.2\" × 7.4\" (≈ 13 × 19 cm)",
+      "96 blank pages (use it however your brain wants — no lines, no rules, no judgement)",
+      "wraparound printed cover in brand v2 chrome",
+      "printed and hardbound"
+    ],
+    "whatsInside": [
+      "hardback journal, 5.2\" × 7.4\" (≈ 13 × 19 cm)",
+      "96 blank pages (use it however your brain wants — no lines, no rules, no judgement)",
+      "wraparound printed cover in brand v2 chrome",
+      "printed and hardbound",
+      "cover speaks for itself — no outer branding on the journal",
+      "lands looking like a journal, not a parcel from a brand"
+    ],
+    "faq": [
+      {
+        "q": "Is this lined or blank?",
+        "a": "Blank. Lines feel like another rule to break. Bring your own."
+      },
+      {
+        "q": "Where does it ship from?",
+        "a": "Printed and shipped from. Royal Mail in the UK, DHL/USPS/locals everywhere else."
+      },
+      {
+        "q": "Is it gift-ready?",
+        "a": "The cover speaks for itself. We don't include outer branding on the journal, so it lands in the hands of the recipient looking like a journal, not a parcel from a brand."
+      }
+    ],
     "tags": [
       "adhd journal",
       "audhd journal",
@@ -1019,28 +2056,65 @@
       "adhd identity gift",
       "late diagnosed gift"
     ],
-    "product_type": "hardback-journal-a5",
-    "hero_image": "https://images-api.printify.com/mockup/6a14d58255cf9d0e0701481b/107225/103157/adhd-time-blindness-journal-you-remember-planning-it-t-audhd-notebook-gift.jpg?camera_label=front",
-    "gallery": [
-      "https://images-api.printify.com/mockup/6a14d58255cf9d0e0701481b/107225/103157/adhd-time-blindness-journal-you-remember-planning-it-t-audhd-notebook-gift.jpg?camera_label=front",
-      "https://images-api.printify.com/mockup/6a14d58255cf9d0e0701481b/107225/103180/adhd-time-blindness-journal-you-remember-planning-it-t-audhd-notebook-gift.jpg?camera_label=back",
-      "https://images-api.printify.com/mockup/6a14d58255cf9d0e0701481b/107225/103183/adhd-time-blindness-journal-you-remember-planning-it-t-audhd-notebook-gift.jpg?camera_label=opened",
-      "https://images-api.printify.com/mockup/6a14d58255cf9d0e0701481b/107225/103184/adhd-time-blindness-journal-you-remember-planning-it-t-audhd-notebook-gift.jpg?camera_label=context-1-front"
-    ],
-    "stripe_price_id": "price_1Tb7aX0d1X3moMIssituaMNy",
-    "stripe_product_id": "prod_UaIAllzEfZwwev",
-    "printify_shop_id": 27681461,
-    "printify_product_id": "6a14d58255cf9d0e0701481b",
-    "printify_variant_id": 107225,
-    "printify_blueprint_id": 1481,
-    "printify_provider_id": 69
+    "productType": "hardback-journal-a5",
+    "stripePriceId": "price_1Tb7aX0d1X3moMIssituaMNy",
+    "stripeProductId": "prod_UaIAllzEfZwwev",
+    "printifyShopId": 27681461,
+    "printifyProductId": "6a14d58255cf9d0e0701481b",
+    "printifyVariantId": 107225,
+    "printifyBlueprintId": 1481,
+    "printifyProviderId": 69,
+    "crossSellSlugs": [
+      "one-mug-four-journal",
+      "your-meltdown-was-journal",
+      "quiet-note-past-journal",
+      "your-3am-brain-journal"
+    ]
   },
   {
     "slug": "your-3am-brain-journal",
     "title": "ADHD Hyperfocus Journal | your 3am brain is not your... | AuDHD Notebook Gift",
-    "price_cents": 1900,
+    "hook": "your 3am brain is not",
+    "descriptor": "hardback journal · A5 · 96 blank pages",
+    "priceCents": 1900,
     "currency": "GBP",
-    "description": "just save the tab. don't send the email. A hardback journal for ADHD brains who think differently.\n\nWHAT'S INSIDE\n\u2022 Hardback journal, 5.2\" \u00d7 7.4\" (\u2248 13 \u00d7 19 cm)\n\u2022 96 blank pages (use it however your brain wants \u2014 no lines, no rules, no judgement)\n\u2022 Wraparound printed cover in brand v2 chrome\n\u2022 Printed and hardbound by Prodigi UK on behalf of OddlyWiredCo\n\nTHE WHY\nThis journal lives in the hyperfocus corner of the OddlyWiredCo lineup. The cover says what your brain has been trying to say. The blank pages are for everything underneath.\n\nFAQ\nIs this lined or blank?\nBlank. Lines feel like another rule to break. Bring your own.\n\nWhere does it ship from?\nPrinted and shipped from Prodigi UK. Royal Mail in the UK, DHL/USPS/locals everywhere else.\n\nIs it gift-ready?\nThe cover speaks for itself. We don't include outer branding on the journal, so it lands in the hands of the recipient looking like a journal, not a parcel from a brand.\n\n\u2014\n\nCover artwork is produced using AI-assisted design tools and finalised by the maker.\n\nPrinted and shipped by Prodigi UK on behalf of OddlyWiredCo (sole proprietor).",
+    "category": "journals",
+    "heroImage": "https://images-api.printify.com/mockup/6a14d589de93eb77130704b3/107225/103157/adhd-hyperfocus-journal-your-3am-brain-is-not-your-audhd-notebook-gift.jpg?camera_label=front",
+    "gallery": [
+      "https://images-api.printify.com/mockup/6a14d589de93eb77130704b3/107225/103157/adhd-hyperfocus-journal-your-3am-brain-is-not-your-audhd-notebook-gift.jpg?camera_label=front",
+      "https://images-api.printify.com/mockup/6a14d589de93eb77130704b3/107225/103180/adhd-hyperfocus-journal-your-3am-brain-is-not-your-audhd-notebook-gift.jpg?camera_label=back",
+      "https://images-api.printify.com/mockup/6a14d589de93eb77130704b3/107225/103183/adhd-hyperfocus-journal-your-3am-brain-is-not-your-audhd-notebook-gift.jpg?camera_label=opened",
+      "https://images-api.printify.com/mockup/6a14d589de93eb77130704b3/107225/103184/adhd-hyperfocus-journal-your-3am-brain-is-not-your-audhd-notebook-gift.jpg?camera_label=context-1-front"
+    ],
+    "whyParagraph": "this journal lives in the hyperfocus corner of the oddlywiredco lineup. the cover says what your brain has been trying to say. the blank pages are for everything underneath.",
+    "keypoints": [
+      "hardback journal, 5.2\" × 7.4\" (≈ 13 × 19 cm)",
+      "96 blank pages (use it however your brain wants — no lines, no rules, no judgement)",
+      "wraparound printed cover in brand v2 chrome",
+      "printed and hardbound"
+    ],
+    "whatsInside": [
+      "hardback journal, 5.2\" × 7.4\" (≈ 13 × 19 cm)",
+      "96 blank pages (use it however your brain wants — no lines, no rules, no judgement)",
+      "wraparound printed cover in brand v2 chrome",
+      "printed and hardbound",
+      "cover speaks for itself — no outer branding on the journal",
+      "lands looking like a journal, not a parcel from a brand"
+    ],
+    "faq": [
+      {
+        "q": "Is this lined or blank?",
+        "a": "Blank. Lines feel like another rule to break. Bring your own."
+      },
+      {
+        "q": "Where does it ship from?",
+        "a": "Printed and shipped from. Royal Mail in the UK, DHL/USPS/locals everywhere else."
+      },
+      {
+        "q": "Is it gift-ready?",
+        "a": "The cover speaks for itself. We don't include outer branding on the journal, so it lands in the hands of the recipient looking like a journal, not a parcel from a brand."
+      }
+    ],
     "tags": [
       "adhd journal",
       "audhd journal",
@@ -1056,28 +2130,65 @@
       "adhd identity gift",
       "late diagnosed gift"
     ],
-    "product_type": "hardback-journal-a5",
-    "hero_image": "https://images-api.printify.com/mockup/6a14d589de93eb77130704b3/107225/103157/adhd-hyperfocus-journal-your-3am-brain-is-not-your-audhd-notebook-gift.jpg?camera_label=front",
-    "gallery": [
-      "https://images-api.printify.com/mockup/6a14d589de93eb77130704b3/107225/103157/adhd-hyperfocus-journal-your-3am-brain-is-not-your-audhd-notebook-gift.jpg?camera_label=front",
-      "https://images-api.printify.com/mockup/6a14d589de93eb77130704b3/107225/103180/adhd-hyperfocus-journal-your-3am-brain-is-not-your-audhd-notebook-gift.jpg?camera_label=back",
-      "https://images-api.printify.com/mockup/6a14d589de93eb77130704b3/107225/103183/adhd-hyperfocus-journal-your-3am-brain-is-not-your-audhd-notebook-gift.jpg?camera_label=opened",
-      "https://images-api.printify.com/mockup/6a14d589de93eb77130704b3/107225/103184/adhd-hyperfocus-journal-your-3am-brain-is-not-your-audhd-notebook-gift.jpg?camera_label=context-1-front"
-    ],
-    "stripe_price_id": "price_1Tb7aX0d1X3moMIsfoDYpGzq",
-    "stripe_product_id": "prod_UaIAWDlCkuXuaj",
-    "printify_shop_id": 27681461,
-    "printify_product_id": "6a14d589de93eb77130704b3",
-    "printify_variant_id": 107225,
-    "printify_blueprint_id": 1481,
-    "printify_provider_id": 69
+    "productType": "hardback-journal-a5",
+    "stripePriceId": "price_1Tb7aX0d1X3moMIsfoDYpGzq",
+    "stripeProductId": "prod_UaIAWDlCkuXuaj",
+    "printifyShopId": 27681461,
+    "printifyProductId": "6a14d589de93eb77130704b3",
+    "printifyVariantId": 107225,
+    "printifyBlueprintId": 1481,
+    "printifyProviderId": 69,
+    "crossSellSlugs": [
+      "rejection-sensitivity-real-journal",
+      "your-meltdown-was-journal",
+      "you-remember-planning-journal",
+      "quiet-note-past-journal"
+    ]
   },
   {
     "slug": "your-meltdown-was-journal",
     "title": "ADHD Reframes Journal | your meltdown was data | AuDHD Notebook Gift",
-    "price_cents": 1900,
+    "hook": "your meltdown was data",
+    "descriptor": "hardback journal · A5 · 96 blank pages",
+    "priceCents": 1900,
     "currency": "GBP",
-    "description": "not a personality flaw. a data point. A hardback journal for ADHD brains who think differently.\n\nWHAT'S INSIDE\n\u2022 Hardback journal, 5.2\" \u00d7 7.4\" (\u2248 13 \u00d7 19 cm)\n\u2022 96 blank pages (use it however your brain wants \u2014 no lines, no rules, no judgement)\n\u2022 Wraparound printed cover in brand v2 chrome\n\u2022 Printed and hardbound by Prodigi UK on behalf of OddlyWiredCo\n\nTHE WHY\nThis journal lives in the reframes corner of the OddlyWiredCo lineup. The cover says what your brain has been trying to say. The blank pages are for everything underneath.\n\nFAQ\nIs this lined or blank?\nBlank. Lines feel like another rule to break. Bring your own.\n\nWhere does it ship from?\nPrinted and shipped from Prodigi UK. Royal Mail in the UK, DHL/USPS/locals everywhere else.\n\nIs it gift-ready?\nThe cover speaks for itself. We don't include outer branding on the journal, so it lands in the hands of the recipient looking like a journal, not a parcel from a brand.\n\n\u2014\n\nCover artwork is produced using AI-assisted design tools and finalised by the maker.\n\nPrinted and shipped by Prodigi UK on behalf of OddlyWiredCo (sole proprietor).",
+    "category": "journals",
+    "heroImage": "https://images-api.printify.com/mockup/6a14d59044d3fef4d805f0dc/107225/103157/adhd-reframes-journal-your-meltdown-was-data-audhd-notebook-gift.jpg?camera_label=front",
+    "gallery": [
+      "https://images-api.printify.com/mockup/6a14d59044d3fef4d805f0dc/107225/103157/adhd-reframes-journal-your-meltdown-was-data-audhd-notebook-gift.jpg?camera_label=front",
+      "https://images-api.printify.com/mockup/6a14d59044d3fef4d805f0dc/107225/103180/adhd-reframes-journal-your-meltdown-was-data-audhd-notebook-gift.jpg?camera_label=back",
+      "https://images-api.printify.com/mockup/6a14d59044d3fef4d805f0dc/107225/103183/adhd-reframes-journal-your-meltdown-was-data-audhd-notebook-gift.jpg?camera_label=opened",
+      "https://images-api.printify.com/mockup/6a14d59044d3fef4d805f0dc/107225/103184/adhd-reframes-journal-your-meltdown-was-data-audhd-notebook-gift.jpg?camera_label=context-1-front"
+    ],
+    "whyParagraph": "this journal lives in the reframes corner of the oddlywiredco lineup. the cover says what your brain has been trying to say. the blank pages are for everything underneath.",
+    "keypoints": [
+      "hardback journal, 5.2\" × 7.4\" (≈ 13 × 19 cm)",
+      "96 blank pages (use it however your brain wants — no lines, no rules, no judgement)",
+      "wraparound printed cover in brand v2 chrome",
+      "printed and hardbound"
+    ],
+    "whatsInside": [
+      "hardback journal, 5.2\" × 7.4\" (≈ 13 × 19 cm)",
+      "96 blank pages (use it however your brain wants — no lines, no rules, no judgement)",
+      "wraparound printed cover in brand v2 chrome",
+      "printed and hardbound",
+      "cover speaks for itself — no outer branding on the journal",
+      "lands looking like a journal, not a parcel from a brand"
+    ],
+    "faq": [
+      {
+        "q": "Is this lined or blank?",
+        "a": "Blank. Lines feel like another rule to break. Bring your own."
+      },
+      {
+        "q": "Where does it ship from?",
+        "a": "Printed and shipped from. Royal Mail in the UK, DHL/USPS/locals everywhere else."
+      },
+      {
+        "q": "Is it gift-ready?",
+        "a": "The cover speaks for itself. We don't include outer branding on the journal, so it lands in the hands of the recipient looking like a journal, not a parcel from a brand."
+      }
+    ],
     "tags": [
       "adhd journal",
       "audhd journal",
@@ -1093,20 +2204,19 @@
       "adhd identity gift",
       "late diagnosed gift"
     ],
-    "product_type": "hardback-journal-a5",
-    "hero_image": "https://images-api.printify.com/mockup/6a14d59044d3fef4d805f0dc/107225/103157/adhd-reframes-journal-your-meltdown-was-data-audhd-notebook-gift.jpg?camera_label=front",
-    "gallery": [
-      "https://images-api.printify.com/mockup/6a14d59044d3fef4d805f0dc/107225/103157/adhd-reframes-journal-your-meltdown-was-data-audhd-notebook-gift.jpg?camera_label=front",
-      "https://images-api.printify.com/mockup/6a14d59044d3fef4d805f0dc/107225/103180/adhd-reframes-journal-your-meltdown-was-data-audhd-notebook-gift.jpg?camera_label=back",
-      "https://images-api.printify.com/mockup/6a14d59044d3fef4d805f0dc/107225/103183/adhd-reframes-journal-your-meltdown-was-data-audhd-notebook-gift.jpg?camera_label=opened",
-      "https://images-api.printify.com/mockup/6a14d59044d3fef4d805f0dc/107225/103184/adhd-reframes-journal-your-meltdown-was-data-audhd-notebook-gift.jpg?camera_label=context-1-front"
-    ],
-    "stripe_price_id": "price_1Tb7aY0d1X3moMIstmwY95K0",
-    "stripe_product_id": "prod_UaIAVDmrzfX6An",
-    "printify_shop_id": 27681461,
-    "printify_product_id": "6a14d59044d3fef4d805f0dc",
-    "printify_variant_id": 107225,
-    "printify_blueprint_id": 1481,
-    "printify_provider_id": 69
+    "productType": "hardback-journal-a5",
+    "stripePriceId": "price_1Tb7aY0d1X3moMIstmwY95K0",
+    "stripeProductId": "prod_UaIAVDmrzfX6An",
+    "printifyShopId": 27681461,
+    "printifyProductId": "6a14d59044d3fef4d805f0dc",
+    "printifyVariantId": 107225,
+    "printifyBlueprintId": 1481,
+    "printifyProviderId": 69,
+    "crossSellSlugs": [
+      "reminder-fired-brain-journal",
+      "rejection-sensitivity-real-journal",
+      "you-found-out-journal",
+      "you-didn-lose-journal"
+    ]
   }
 ]
