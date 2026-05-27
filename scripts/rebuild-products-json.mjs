@@ -11,7 +11,7 @@
  *                  Default: ../OddlyWiredCo/.claude/worktrees/beautiful-meitner-fc86ff/build
  */
 
-import { readFileSync, writeFileSync, readdirSync } from 'node:fs';
+import { readFileSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { extractHook } from './lib/extract.mjs';
