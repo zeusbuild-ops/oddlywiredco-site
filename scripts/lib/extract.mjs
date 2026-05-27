@@ -40,9 +40,12 @@ export function extractDescriptor(productType) {
 // occurrences ("Printify ships..." at start of line/string) get matched too.
 // Note: we deliberately keep "Made-to-order" / "Printed and shipped" intact —
 // those are customer-facing phrases; we only strip the supplier-name half.
+// The "from Prodigi UK" pattern MUST come before the standalone "Prodigi"
+// pattern, otherwise "shipped from Prodigi UK" leaves a malformed orphan "from".
 const SUPPLIER_PATTERNS = [
   /(?:^|\s+)via\s+printify\b/gi,
   /(?:^|\s+)by\s+prodigi(?:\s+uk)?(?:\s+on behalf of\s+oddlywiredco)?/gi,
+  /(?:^|\s+)from\s+prodigi(?:\s+uk)?\b/gi,
   /(?:^|\s+)on behalf of\s+oddlywiredco\b/gi,
   /(?:^|\s+)sold\s+by\s+oddlywiredco\b/gi,
   /(?:^|\s+)prodigi(?:\s+uk)?\b/gi,
@@ -96,7 +99,10 @@ function parseBullets(sectionText) {
     .filter((l) => l.startsWith('•'))
     .map((l) => stripSupplierNames(l.replace(/^•\s*/, '')))
     .filter((l) => l.length > 0)
-    .map((l) => l.charAt(0).toLowerCase() + l.slice(1)); // lowercase first letter for brand voice
+    // Drop orphan supplier stubs that, after stripping, are nothing but
+    // "printed and shipped/hardbound" with no remaining content.
+    .filter((l) => !/^printed and (?:shipped|hardbound)\.?\s*$/i.test(l))
+    .map((l) => l.charAt(0).toLowerCase() + l.slice(1));
 }
 
 /**

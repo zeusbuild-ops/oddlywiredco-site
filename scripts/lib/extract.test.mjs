@@ -90,6 +90,20 @@ test('stripSupplierNames handles punctuation-adjacent Printify', () => {
   );
 });
 
+test('stripSupplierNames "shipped from Prodigi UK" leaves no orphan "from"', () => {
+  assert.equal(
+    stripSupplierNames('Printed and shipped from Prodigi UK. Royal Mail in the UK, DHL/USPS elsewhere.'),
+    'Printed and shipped. Royal Mail in the UK, DHL/USPS elsewhere.'
+  );
+});
+
+test('stripSupplierNames "printed and hardbound by Prodigi UK on behalf of OddlyWiredCo" → "Printed and hardbound"', () => {
+  assert.equal(
+    stripSupplierNames('Printed and hardbound by Prodigi UK on behalf of OddlyWiredCo'),
+    'Printed and hardbound'
+  );
+});
+
 import { extractWhy, extractKeypoints, extractWhatsInside, extractFAQ } from './extract.mjs';
 
 const SAMPLE_DESCRIPTION = `you're in the right corner. of the internet. A hardback journal for ADHD brains who think differently.
@@ -126,11 +140,14 @@ test('extractWhy returns fallback if THE WHY section missing', () => {
   assert.equal(extractWhy('no sections here at all'), 'made for the brain that wired this way.');
 });
 
-test('extractKeypoints returns first 4 WHAT\'S INSIDE bullets', () => {
+test('extractKeypoints returns up to first 4 real WHAT\'S INSIDE bullets', () => {
+  // SAMPLE has 4 raw bullets; bullet 4 is supplier-only ("Printed and hardbound
+  // by Prodigi UK...") which becomes orphan after stripping and is dropped.
   const result = extractKeypoints(SAMPLE_DESCRIPTION);
-  assert.equal(result.length, 4);
+  assert.equal(result.length, 3);
   assert.match(result[0], /hardback journal/i);
   assert.match(result[1], /96 blank pages/i);
+  assert.match(result[2], /wraparound printed cover/i);
 });
 
 test('extractKeypoints lowercases first letter of each bullet for brand voice', () => {
@@ -146,6 +163,15 @@ test('extractKeypoints strips supplier names from bullet text', () => {
     assert.doesNotMatch(kp, /prodigi/i, `keypoint should not mention Prodigi: ${kp}`);
     assert.doesNotMatch(kp, /printify/i, `keypoint should not mention Printify: ${kp}`);
   }
+});
+
+test('extractKeypoints drops orphan "printed and hardbound" stub (sample has it as bullet 4)', () => {
+  const result = extractKeypoints(SAMPLE_DESCRIPTION);
+  for (const kp of result) {
+    assert.doesNotMatch(kp, /^printed and (?:shipped|hardbound)\.?\s*$/i, `orphan supplier stub leaked: "${kp}"`);
+  }
+  // After dropping the orphan, sample should have exactly 3 real keypoints
+  assert.equal(result.length, 3, `expected 3 real keypoints after dropping orphan, got ${result.length}: ${JSON.stringify(result)}`);
 });
 
 test('extractWhatsInside returns all bullets', () => {
