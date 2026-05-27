@@ -148,3 +148,67 @@ export function extractFAQ(description) {
   }
   return out;
 }
+
+// Rules are tested in order; first match wins.
+// Slug-based rules run before useType rules so journal slugs route to /journals
+// even if product_type would otherwise classify them elsewhere.
+// Word-boundary matching (\b) is used on product_type tokens so compound types
+// like "enamel-mug-11oz" or "embroidered-cap" hit the apparel/accessories rules.
+const CATEGORY_RULES = [
+  { match: /-journal$|-journal-/, category: 'journals' },
+  { match: /journal/, category: 'journals', useType: true },
+  { match: /\b(hoodie|tee|cap|jumper|sweatshirt)\b/, category: 'apparel', useType: true },
+  { match: /\b(mug|tote|pin|lanyard|bottle)\b|sticker-pack/, category: 'accessories', useType: true },
+  { match: /\b(pdf|notion|digital|printable)\b/, category: 'digital', useType: true },
+];
+
+/**
+ * Determine which top-level category a product belongs to.
+ * Inspects slug first, then product_type. Defaults to 'journals'.
+ */
+export function resolveCategory(slug, productType) {
+  for (const rule of CATEGORY_RULES) {
+    const target = rule.useType ? (productType || '') : slug;
+    if (rule.match.test(target)) return rule.category;
+  }
+  return 'journals';
+}
+
+/**
+ * Stable hash of a string → unsigned 32-bit int.
+ * Used to deterministically pick cross-sell products per slug.
+ */
+function hashString(s) {
+  let h = 2166136261;
+  for (let i = 0; i < s.length; i++) {
+    h ^= s.charCodeAt(i);
+    h = Math.imul(h, 16777619);
+  }
+  return h >>> 0;
+}
+
+/**
+ * Pick 4 cross-sell slugs for a given product.
+ * Same-category first; tops up from any other category if < 4 in same category.
+ * Deterministic per slug — same input always returns same output.
+ */
+export function pickCrossSell(currentSlug, allProducts) {
+  const current = allProducts.find((p) => p.slug === currentSlug);
+  if (!current) return [];
+  const sameCategory = allProducts.filter(
+    (p) => p.slug !== currentSlug && p.category === current.category
+  );
+  const otherCategory = allProducts.filter(
+    (p) => p.slug !== currentSlug && p.category !== current.category
+  );
+  const ordered = [...sortByHash(sameCategory, currentSlug), ...sortByHash(otherCategory, currentSlug)];
+  return ordered.slice(0, 4).map((p) => p.slug);
+}
+
+function sortByHash(products, seed) {
+  return [...products].sort((a, b) => {
+    const ha = hashString(seed + ':' + a.slug);
+    const hb = hashString(seed + ':' + b.slug);
+    return ha - hb;
+  });
+}

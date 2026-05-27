@@ -170,3 +170,70 @@ test('extractFAQ strips supplier names from answers', () => {
 test('extractFAQ returns empty array if no FAQ section', () => {
   assert.deepEqual(extractFAQ('no FAQ section'), []);
 });
+
+import { resolveCategory, pickCrossSell } from './extract.mjs';
+
+test('resolveCategory returns "journals" for any -journal slug', () => {
+  assert.equal(resolveCategory('47-tabs-all-journal', 'hardback-journal-a5'), 'journals');
+  assert.equal(resolveCategory('chaos-feature-journal', 'softback-journal-a5'), 'journals');
+});
+
+test('resolveCategory routes apparel product types', () => {
+  assert.equal(resolveCategory('any-slug', 'hoodie-unisex'), 'apparel');
+  assert.equal(resolveCategory('any-slug', 'embroidered-cap'), 'apparel');
+  assert.equal(resolveCategory('any-slug', 'tee-unisex'), 'apparel');
+});
+
+test('resolveCategory routes accessories', () => {
+  assert.equal(resolveCategory('any-slug', 'enamel-mug-11oz'), 'accessories');
+  assert.equal(resolveCategory('any-slug', 'tote-bag'), 'accessories');
+  assert.equal(resolveCategory('any-slug', 'enamel-pin'), 'accessories');
+});
+
+test('resolveCategory routes digital', () => {
+  assert.equal(resolveCategory('any-slug', 'pdf-printable'), 'digital');
+  assert.equal(resolveCategory('any-slug', 'notion-template'), 'digital');
+});
+
+test('resolveCategory falls back to journals for unknown types', () => {
+  assert.equal(resolveCategory('mystery', 'totally-new-thing'), 'journals');
+});
+
+test('pickCrossSell returns 4 deterministic same-category products', () => {
+  const all = [
+    { slug: 'a', category: 'journals' },
+    { slug: 'b', category: 'journals' },
+    { slug: 'c', category: 'journals' },
+    { slug: 'd', category: 'journals' },
+    { slug: 'e', category: 'journals' },
+    { slug: 'f', category: 'apparel' },
+  ];
+  const result = pickCrossSell('a', all);
+  assert.equal(result.length, 4);
+  assert.ok(!result.includes('a'), 'should not cross-sell self');
+  assert.ok(!result.includes('f'), 'should not cross-sell different category');
+});
+
+test('pickCrossSell is stable (same input → same output)', () => {
+  const all = [
+    { slug: 'a', category: 'journals' }, { slug: 'b', category: 'journals' },
+    { slug: 'c', category: 'journals' }, { slug: 'd', category: 'journals' },
+    { slug: 'e', category: 'journals' }, { slug: 'g', category: 'journals' },
+  ];
+  const a = pickCrossSell('a', all);
+  const b = pickCrossSell('a', all);
+  assert.deepEqual(a, b);
+});
+
+test('pickCrossSell tops up from other categories if same-category has < 4', () => {
+  const all = [
+    { slug: 'a', category: 'journals' },
+    { slug: 'b', category: 'journals' },
+    { slug: 'c', category: 'apparel' },
+    { slug: 'd', category: 'apparel' },
+    { slug: 'e', category: 'accessories' },
+  ];
+  const result = pickCrossSell('a', all);
+  assert.equal(result.length, 4);
+  assert.ok(result.includes('b'), 'should include other journal');
+});
