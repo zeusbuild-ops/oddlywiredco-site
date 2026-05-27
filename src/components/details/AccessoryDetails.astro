@@ -1,0 +1,21 @@
+---
+import type { AccessoryProduct } from '../../types/product';
+interface Props { product: AccessoryProduct }
+const { product } = Astro.props;
+---
+<section class="details-fold light">
+  <div class="container">
+    <div class="meta">the details</div>
+    <h2 class="h-mono lg">{product.capacity}.<br>{product.material}.</h2>
+    <ul class="care-list">
+      {product.careNotes.map((note) => <li>{note}</li>)}
+    </ul>
+  </div>
+</section>
+
+<style>
+  .details-fold { padding: 80px 0; background: var(--owc-bone); color: var(--owc-ink); }
+  .meta { font-family: var(--font-mono); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; opacity: 0.55; margin-bottom: 18px; }
+  .h-mono.lg { font-family: var(--font-mono); font-size: clamp(28px, 4vw, 38px); font-weight: 700; line-height: 1.15; margin: 0 0 24px; }
+  .care-list { padding-left: 22px; display: flex; flex-direction: column; gap: 6px; font-size: 15px; max-width: 540px; }
+</style>

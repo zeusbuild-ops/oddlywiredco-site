@@ -1,0 +1,31 @@
+---
+import type { ApparelProduct } from '../../types/product';
+interface Props { product: ApparelProduct }
+const { product } = Astro.props;
+---
+<section class="details-fold light">
+  <div class="container">
+    <div class="meta">the details</div>
+    <h2 class="h-mono lg">{product.material}.<br>{product.fitNote}.</h2>
+    <table class="size-table">
+      <thead><tr><th>size</th><th>state</th></tr></thead>
+      <tbody>
+        {product.sizes.map((s) => (
+          <tr class={`stock-${s.stockState}`}>
+            <td>{s.name}</td>
+            <td>{s.stockState.replace('-', ' ')}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<style>
+  .details-fold { padding: 80px 0; background: var(--owc-bone); color: var(--owc-ink); }
+  .meta { font-family: var(--font-mono); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; opacity: 0.55; margin-bottom: 18px; }
+  .h-mono.lg { font-family: var(--font-mono); font-size: clamp(28px, 4vw, 38px); font-weight: 700; line-height: 1.15; margin: 0 0 24px; }
+  .size-table { font-family: var(--font-mono); font-size: 14px; border-collapse: collapse; }
+  .size-table th, .size-table td { padding: 8px 18px 8px 0; text-align: left; }
+  .size-table tr.stock-sold-out td { opacity: 0.4; text-decoration: line-through; }
+</style>

@@ -1,0 +1,23 @@
+---
+import type { JournalProduct } from '../../types/product';
+interface Props { product: JournalProduct }
+const { product } = Astro.props;
+---
+<section class="details-fold light">
+  <div class="container">
+    <div class="meta">what's inside</div>
+    <h2 class="h-mono lg">{product.blankPages} pages.<br>no lines, no rules, no judgement.</h2>
+    <ul class="whats-inside-list">
+      {product.whatsInside.map((item) => <li>{item}</li>)}
+    </ul>
+    <p class="trim">{product.trimSize} · {product.binding} cover</p>
+  </div>
+</section>
+
+<style>
+  .details-fold { padding: 80px 0; background: var(--owc-bone); color: var(--owc-ink); }
+  .meta { font-family: var(--font-mono); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; opacity: 0.55; margin-bottom: 18px; }
+  .h-mono.lg { font-family: var(--font-mono); font-size: clamp(28px, 4vw, 38px); font-weight: 700; line-height: 1.15; margin: 0 0 24px; }
+  .whats-inside-list { padding-left: 22px; display: flex; flex-direction: column; gap: 8px; max-width: 560px; font-size: 16px; }
+  .trim { font-family: var(--font-mono); font-size: 13px; opacity: 0.65; margin-top: 24px; }
+</style>
