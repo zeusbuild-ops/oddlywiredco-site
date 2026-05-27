@@ -1,0 +1,303 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProductCard from '../../components/ProductCard.astro';
+import { findProductBySlug, allProducts } from '../../types/product';
+import JournalDetails from '../../components/details/JournalDetails.astro';
+import ApparelDetails from '../../components/details/ApparelDetails.astro';
+import AccessoryDetails from '../../components/details/AccessoryDetails.astro';
+import DigitalDetails from '../../components/details/DigitalDetails.astro';
+
+const { category, slug } = Astro.params;
+if (!category || !slug) return new Response('not found', { status: 404 });
+const product = findProductBySlug(slug, category);
+if (!product) return new Response('not found', { status: 404 });
+
+const priceFormatted = new Intl.NumberFormat('en-GB', {
+  style: 'currency', currency: 'GBP',
+}).format(product.priceCents / 100);
+
+const seoTitle = `${product.hook} · OddlyWiredCo`;
+const seoDescription = (product.whyParagraph || product.hook).slice(0, 158);
+
+// Same-category-first cross-sell with cross-category fill
+const sameCategoryPool = allProducts.filter(
+  (p) => p.category === product.category && p.slug !== product.slug
+);
+const otherCategoryPool = allProducts.filter(
+  (p) => p.category !== product.category
+);
+const fromExplicit = (product.crossSellSlugs || [])
+  .map((s) => allProducts.find((p) => p.slug === s && p.slug !== product.slug))
+  .filter((p): p is NonNullable<typeof p> => Boolean(p));
+const crossSell: typeof allProducts = [...fromExplicit];
+for (const p of [...sameCategoryPool, ...otherCategoryPool]) {
+  if (crossSell.length >= 3) break;
+  if (!crossSell.includes(p)) crossSell.push(p);
+}
+const crossSellFinal = crossSell.slice(0, 3);
+
+const CROSS_SELL_COPY: Record<string, string> = {
+  journal:   'other journals for the same brain',
+  apparel:   'other things to wear for the same brain',
+  accessory: 'other things to hold for the same brain',
+  digital:   'other downloads for the same brain',
+};
+const crossSellHeading = CROSS_SELL_COPY[product.productType] ?? 'other things for the same brain';
+
+const BACK_LINK_COPY: Record<string, { href: string; label: string }> = {
+  journals:    { href: '/journals',    label: '← back to all journals' },
+  apparel:     { href: '/apparel',     label: '← back to all apparel' },
+  accessories: { href: '/accessories', label: '← back to all accessories' },
+  digital:     { href: '/digital',     label: '← back to all downloads' },
+};
+const backLink = BACK_LINK_COPY[product.category] ?? { href: '/', label: '← back' };
+---
+<BaseLayout title={seoTitle} description={seoDescription} ogImage={product.heroImage}>
+
+  <!-- Fold 1: Hero (Bone) -->
+  <section class="fold light pf-hero">
+    <div class="container">
+      <div class="meta">{product.category} / {product.descriptor}</div>
+      <div class="pf-hero-grid">
+        <div class="pf-gallery">
+          <img src={product.heroImage} alt={product.hook} class="pf-hero-image" loading="eager" fetchpriority="high"/>
+          {product.gallery && product.gallery.length > 1 && (
+            <div class="pf-thumbs">
+              {product.gallery.slice(1, 4).map((src: string) => (
+                <img src={src} alt="" class="pf-thumb" loading="lazy"/>
+              ))}
+            </div>
+          )}
+        </div>
+        <div class="pf-info">
+          <h1 class="pf-hook h-mono">{product.hook}</h1>
+          <p class="pf-descriptor">{product.descriptor}</p>
+          <p class="pf-price">{priceFormatted}</p>
+          <form id="checkout-form" data-price-id={product.stripePriceId} data-slug={product.slug}>
+            <button type="submit" class="button signal" id="buy-btn">buy now →</button>
+          </form>
+          <ul class="pf-keypoints">
+            {product.keypoints.map((kp: string) => <li>{kp}</li>)}
+          </ul>
+          <p class="pf-ships">ships in 3–5 business days · secure checkout via stripe</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fold 2: The Why (Ink) -->
+  <section class="fold dark pf-why">
+    <div class="container">
+      <div class="meta">why this one exists</div>
+      <p class="pf-why-body">{product.whyParagraph}</p>
+    </div>
+  </section>
+
+  <!-- Fold 3: Details — productType-discriminated -->
+  {product.productType === 'journal'   && <JournalDetails product={product} />}
+  {product.productType === 'apparel'   && <ApparelDetails product={product} />}
+  {product.productType === 'accessory' && <AccessoryDetails product={product} />}
+  {product.productType === 'digital'   && <DigitalDetails product={product} />}
+
+  <!-- Fold 4: FAQ (Bone) -->
+  {product.faq && product.faq.length > 0 && (
+    <section class="fold light pf-faq-fold">
+      <div class="container">
+        <div class="meta">a few common questions</div>
+        <div class="pf-faq-body">
+          {product.faq.map((qa: { question: string; answer: string }) => (
+            <div class="pf-faq-item">
+              <p class="pf-faq-q">{qa.question}</p>
+              <p class="pf-faq-a">{qa.answer}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- Fold 5: Cross-sell + tags + back (Ink) -->
+  <section class="fold dark pf-more">
+    <div class="container">
+      {crossSellFinal.length > 0 && (
+        <>
+          <div class="meta">{crossSellHeading}</div>
+          <div class="pf-cross-grid">
+            {crossSellFinal.map((p) => (
+              <ProductCard
+                slug={p.slug}
+                hook={p.hook}
+                descriptor={p.descriptor}
+                heroImage={p.heroImage}
+                priceCents={p.priceCents}
+                category={p.category}
+              />
+            ))}
+          </div>
+        </>
+      )}
+      <div class="pf-tags">
+        {(product.tags || []).slice(0, 6).map((t: string) => (
+          <span class="pf-tag">{t}</span>
+        ))}
+      </div>
+      <a href={backLink.href} class="pf-back">{backLink.label}</a>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  /* Hero */
+  .pf-hero { padding-top: 60px; padding-bottom: 60px; }
+  .pf-hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    margin-top: 24px;
+    align-items: start;
+  }
+  @media (max-width: 768px) {
+    .pf-hero-grid { grid-template-columns: 1fr; gap: 28px; }
+  }
+  .pf-hero-image {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 6px;
+    background: rgba(14, 14, 17, 0.04);
+  }
+  .pf-thumbs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-top: 8px;
+  }
+  .pf-thumb {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 4px;
+    background: rgba(14, 14, 17, 0.04);
+  }
+  .pf-hook {
+    font-size: clamp(32px, 5vw, 56px);
+    line-height: 1.05;
+    letter-spacing: -1px;
+    margin: 16px 0 4px;
+    color: var(--owc-ink);
+  }
+  .pf-descriptor {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    opacity: 0.6;
+    margin-bottom: 22px;
+  }
+  .pf-price {
+    font-family: var(--font-mono);
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 18px;
+  }
+  #buy-btn { margin-bottom: 22px; }
+  #buy-btn:disabled { opacity: 0.6; cursor: wait; }
+  .pf-keypoints {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 18px;
+  }
+  .pf-keypoints li {
+    font-size: 14px;
+    line-height: 1.5;
+    padding: 4px 0 4px 20px;
+    position: relative;
+  }
+  .pf-keypoints li::before {
+    content: '—'; position: absolute; left: 0; color: var(--owc-pulse);
+  }
+  .pf-ships {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    opacity: 0.6;
+  }
+
+  /* Why */
+  .pf-why-body {
+    font-size: 18px;
+    line-height: 1.55;
+    max-width: 580px;
+    margin-top: 14px;
+    opacity: 0.92;
+  }
+
+  /* FAQ */
+  .pf-faq-fold { padding: 60px 0; }
+  .pf-faq-body { margin-top: 18px; max-width: 720px; }
+  .pf-faq-item { margin-bottom: 18px; }
+  .pf-faq-q { font-family: var(--font-mono); font-size: 13px; font-weight: 700; margin: 0 0 4px; }
+  .pf-faq-a { font-size: 14px; line-height: 1.55; opacity: 0.85; margin: 0; }
+
+  /* Cross-sell + footer */
+  .pf-cross-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 14px;
+    margin-bottom: 28px;
+  }
+  @media (max-width: 768px) {
+    .pf-cross-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  .pf-tags { margin: 18px 0 16px; }
+  .pf-tag {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    padding: 4px 8px;
+    background: rgba(244, 239, 230, 0.08);
+    border-radius: 3px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    opacity: 0.7;
+  }
+  .pf-back {
+    display: inline-block;
+    margin-top: 12px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    opacity: 0.7;
+  }
+  .pf-back:hover { opacity: 1; }
+</style>
+
+<script>
+  const form = document.getElementById('checkout-form') as HTMLFormElement;
+  const btn = document.getElementById('buy-btn') as HTMLButtonElement;
+  if (form && btn) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const priceId = form.dataset.priceId;
+      const slug = form.dataset.slug;
+      btn.disabled = true;
+      btn.textContent = 'redirecting…';
+      try {
+        const res = await fetch('/api/checkout', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ price_id: priceId, slug }),
+        });
+        if (!res.ok) throw new Error('checkout failed');
+        const { url } = await res.json();
+        if (!url) throw new Error('no url returned');
+        window.location.href = url;
+      } catch (err) {
+        btn.disabled = false;
+        btn.textContent = 'try again';
+        console.error(err);
+      }
+    });
+  }
+</script>
