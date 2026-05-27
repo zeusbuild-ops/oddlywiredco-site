@@ -3,13 +3,21 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Wordmark from '../components/Wordmark.astro';
 import Squiggle from '../components/Squiggle.astro';
 import CursorTypeHero from '../components/CursorTypeHero.astro';
-import NewsletterForm from '../components/NewsletterForm.astro';
+import ProductCard from '../components/ProductCard.astro';
+import CategoryTeaserCard from '../components/CategoryTeaserCard.astro';
+import AboutNewsletterFold from '../components/AboutNewsletterFold.astro';
+import { allProducts } from '../types/product';
+
+// Featured-3 picker — flag-driven with alphabetical fallback
+const flagged = allProducts.filter(p => p.featured);
+const alphabetical = [...allProducts].sort((a, b) => a.slug.localeCompare(b.slug));
+const featured = [...flagged, ...alphabetical.filter(p => !flagged.includes(p))].slice(0, 3);
 ---
 <BaseLayout
   title="OddlyWiredCo — your brain isn't broken, it's just oddly wired"
   description="An ADHD brand for the moments nobody else names. Mugs, journals, prints made by an ADHD person for ADHD/AuDHD brains. UK-printed."
 >
-  <!-- Fold 1: Hero (Ink) -->
+  <!-- Fold 1: Hero (Ink) — unchanged from existing -->
   <section class="fold dark hero-fold">
     <div class="container">
       <div class="meta">oddlywiredco · est. 2026</div>
@@ -17,11 +25,11 @@ import NewsletterForm from '../components/NewsletterForm.astro';
       <Squiggle variant="sine" width="100%"/>
       <CursorTypeHero lines={["your brain isn't broken.", "it's just oddly wired."]}/>
       <p class="hero-sub">the chaos is a feature.</p>
-      <a href="#stuff" class="button">see the stuff →</a>
+      <a href="#stuff" class="button">see the journals →</a>
     </div>
   </section>
 
-  <!-- Fold 2: Who this is for (Bone) -->
+  <!-- Fold 2: Who this is for (Bone) — unchanged from existing -->
   <section class="fold light">
     <div class="container">
       <div class="meta">02 / who this is for</div>
@@ -35,40 +43,44 @@ import NewsletterForm from '../components/NewsletterForm.astro';
     </div>
   </section>
 
-  <!-- Fold 3: Coming soon (Ink) -->
-  <section class="fold dark" id="stuff">
+  <!-- Fold 3: Catalogue (Ink) — REWRITTEN -->
+  <section class="fold dark catalogue-fold" id="stuff">
     <div class="container">
       <div class="meta">03 / the catalogue</div>
-      <h2 class="h-mono lg">took the whole shop<br>apart.</h2>
-      <Squiggle variant="zigzag" width="50%"/>
-      <p class="coming-body">
-        couldn't unsee what was wrong with the first batch. coming back when it's right.
-      </p>
-      <p class="coming-sub">newsletter below if you want first dibs.</p>
+      <h2 class="h-mono lg">30 journals.<br>each one a moment<br>nobody else named.</h2>
+      <div class="featured-grid">
+        {featured.map((p) => (
+          <ProductCard
+            slug={p.slug}
+            hook={p.hook}
+            descriptor={p.descriptor}
+            heroImage={p.heroImage}
+            priceCents={p.priceCents}
+            category={p.category}
+          />
+        ))}
+      </div>
+      <a href="/journals" class="button">see all 30 →</a>
     </div>
   </section>
 
-  <!-- Fold 4: About teaser (Bone) -->
-  <section class="fold light">
+  <!-- Fold 4: What's coming (Bone) — NEW -->
+  <section class="fold light coming-fold">
     <div class="container">
-      <div class="meta">04 / who's behind this</div>
-      <p class="about-body">
-        Oddlywired is an ADHD brand made by an ADHD person.
-        Every product comes from a moment I needed someone else to have named for me.
-      </p>
-      <a href="/about" class="button outline">more about us →</a>
+      <div class="meta">04 / what's coming</div>
+      <h2 class="h-mono lg">more, slowly.<br>when we get it right.</h2>
+      <div class="teaser-grid">
+        <CategoryTeaserCard category="apparel"     hook="t-shirts + hoodies for brains that don't sit still" />
+        <CategoryTeaserCard category="accessories" hook="mugs + things to hold while the world re-loads" />
+        <CategoryTeaserCard category="digital"     hook="printable + fillable. instant download, no shipping." />
+      </div>
     </div>
   </section>
 
-  <!-- Fold 5: Newsletter (Ink) -->
-  <section class="fold dark">
-    <div class="container">
-      <div class="meta">05 / stay in the loop</div>
-      <h2 class="h-mono md">get the next thing first.</h2>
-      <p class="newsletter-sub">no spam, no schedule, just a heads-up when something new lands.</p>
-      <NewsletterForm/>
-    </div>
-  </section>
+  <!-- Fold 5: About + Newsletter (Ink) — MERGED -->
+  <AboutNewsletterFold />
+
+  <!-- Footer rendered by BaseLayout (SiteFooter component) -->
 
   <style>
     .hero-fold { min-height: 92vh; display: flex; align-items: center; }
@@ -76,9 +88,13 @@ import NewsletterForm from '../components/NewsletterForm.astro';
     .hero-sub { color: var(--owc-bone); opacity: 0.65; font-family: var(--font-mono); font-size: 14px; }
     .who-list { display: flex; flex-direction: column; gap: 16px; margin: 24px 0; font-family: var(--font-mono); font-size: clamp(24px, 4vw, 36px); font-weight: 700; }
     .who-arrow { font-family: var(--font-mono); font-size: 18px; color: var(--owc-signal); margin-top: 24px; }
-    .coming-body { font-size: 21px; line-height: 1.5; max-width: 560px; margin-top: 28px; color: var(--owc-bone); }
-    .coming-sub { font-family: var(--font-mono); font-size: 14px; opacity: 0.65; margin-top: 14px; color: var(--owc-bone); }
-    .about-body { font-size: 21px; line-height: 1.5; max-width: 640px; margin-bottom: 24px; }
-    .newsletter-sub { opacity: 0.7; margin-bottom: 32px; font-size: 16px; }
+    .catalogue-fold .featured-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin: 36px 0; }
+    .coming-fold .teaser-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 36px; }
+    @media (max-width: 900px) {
+      .catalogue-fold .featured-grid, .coming-fold .teaser-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 560px) {
+      .catalogue-fold .featured-grid, .coming-fold .teaser-grid { grid-template-columns: 1fr; }
+    }
   </style>
 </BaseLayout>
