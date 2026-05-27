@@ -1,0 +1,115 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { env } from 'cloudflare:workers';
+import { getValidToken, insertReview, consumeToken } from '../../lib/reviews';
+import { allProducts } from '../../types/product';
+
+const url = new URL(Astro.request.url);
+const token = url.searchParams.get('token');
+const isPost = Astro.request.method === 'POST';
+
+const DB = (env as any).DB;
+
+let error: string | null = null;
+let tokenRow = (DB && token) ? await getValidToken(DB, token) : null;
+
+if (!token || !tokenRow) {
+  error = 'this link is invalid, used, or expired.';
+}
+
+const product = tokenRow
+  ? allProducts.find((p) => p.slug === tokenRow.product_slug)
+  : null;
+
+if (isPost && tokenRow && product && DB) {
+  const form = await Astro.request.formData();
+  const honeypot = (form.get('website') as string) || '';
+  const name = ((form.get('name') as string) || '').trim();
+  const body = ((form.get('body') as string) || '').trim();
+  const ratingStr = (form.get('rating') as string) || '';
+  const rating = parseInt(ratingStr, 10);
+
+  if (honeypot.length > 0) {
+    error = 'submission rejected.';
+  } else if (!name || name.length > 60) {
+    error = 'name must be 1-60 characters.';
+  } else if (body.length < 50 || body.length > 1000) {
+    error = 'review must be 50-1000 characters.';
+  } else if (!Number.isInteger(rating) || rating < 1 || rating > 5) {
+    error = 'rating must be 1-5.';
+  } else {
+    const id = crypto.randomUUID().replace(/-/g, '').slice(0, 21);
+    try {
+      await insertReview(DB, {
+        id,
+        product_slug: tokenRow.product_slug,
+        stripe_payment_intent_id: tokenRow.stripe_payment_intent_id,
+        rating,
+        body,
+        reviewer_name: name,
+      });
+      await consumeToken(DB, tokenRow.token);
+      return Astro.redirect('/reviews/thanks');
+    } catch (e) {
+      const msg = (e as Error).message;
+      if (msg.includes('UNIQUE constraint failed')) {
+        error = 'a review for this purchase has already been submitted.';
+      } else {
+        error = 'something went wrong. please try again.';
+      }
+    }
+  }
+}
+---
+<BaseLayout title="leave a review — OddlyWiredCo" description="Share your brain's take on what you bought.">
+  <section class="fold light">
+    <div class="container" style="max-width:540px;">
+      <div class="meta">leave a review</div>
+      {error && <p class="error">{error}</p>}
+      {tokenRow && product && (
+        <form method="POST">
+          <p class="prompt">you bought <strong>{product.title}</strong>. how did it land?</p>
+
+          <label>
+            rating
+            <div class="rating-row">
+              {[1, 2, 3, 4, 5].map((n) => (
+                <label class="star-label">
+                  <input type="radio" name="rating" value={n} required /> {n}
+                </label>
+              ))}
+            </div>
+          </label>
+
+          <label>
+            your first name
+            <input type="text" name="name" maxlength="60" required />
+          </label>
+
+          <label>
+            review (50-1000 chars)
+            <textarea name="body" rows="6" minlength="50" maxlength="1000" required></textarea>
+          </label>
+
+          <label class="hp" aria-hidden="true" style="position:absolute;left:-9999px;">
+            do not fill: <input type="text" name="website" tabindex="-1" autocomplete="off" />
+          </label>
+
+          <button type="submit" class="button">send it →</button>
+        </form>
+      )}
+    </div>
+  </section>
+
+  <style>
+    .meta { font-family: var(--font-mono); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; opacity: 0.55; margin-bottom: 18px; }
+    .error { background: rgba(255,92,92,0.12); border-left: 3px solid var(--owc-signal); padding: 12px 14px; border-radius: 4px; margin-bottom: 18px; }
+    .prompt { font-size: 18px; line-height: 1.5; margin-bottom: 28px; }
+    form { display: flex; flex-direction: column; gap: 18px; }
+    label { display: flex; flex-direction: column; gap: 6px; font-family: var(--font-mono); font-size: 13px; text-transform: uppercase; letter-spacing: 1.5px; opacity: 0.85; }
+    input[type="text"], textarea { padding: 10px 12px; border: 1px solid rgba(14,14,17,0.2); border-radius: 4px; font-family: inherit; font-size: 15px; background: var(--owc-bone); color: var(--owc-ink); }
+    textarea { resize: vertical; }
+    .rating-row { display: flex; gap: 14px; font-family: inherit; font-size: 14px; opacity: 1; text-transform: none; letter-spacing: 0; }
+    .star-label { flex-direction: row; align-items: center; gap: 4px; opacity: 1; font-family: inherit; text-transform: none; letter-spacing: 0; font-size: 14px; }
+  </style>
+</BaseLayout>
