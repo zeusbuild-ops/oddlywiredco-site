@@ -18,9 +18,7 @@ function isActive(href: string) {
 }
 ---
 <nav class="site-nav" aria-label="Primary" data-state="full">
-  <a href="/" class="brand" aria-label="OddlyWiredCo home">
-    <Wordmark size="sm" variant="darkmode" />
-  </a>
+  <div class="brand"><Wordmark size="sm" variant="darkmode" /></div>
   <ul class="links desktop">
     {links.map(l => (
       <li>
