@@ -73,7 +73,8 @@
       "rest-strategy-journal",
       "you-remember-planning-journal",
       "dopamine-before-discipline-journal"
-    ]
+    ],
+    "featured": true
   },
   {
     "slug": "audhd-survival-kit-journal",
@@ -149,7 +150,8 @@
       "quiet-note-past-journal",
       "rejection-sensitivity-real-journal",
       "draft-text-complete-journal"
-    ]
+    ],
+    "featured": true
   },
   {
     "slug": "chaos-feature-journal",
@@ -2201,7 +2203,8 @@
       "your-meltdown-was-journal",
       "you-remember-planning-journal",
       "quiet-note-past-journal"
-    ]
+    ],
+    "featured": true
   },
   {
     "slug": "your-meltdown-was-journal",
