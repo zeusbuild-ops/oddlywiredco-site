@@ -50,7 +50,42 @@ test('stripSupplierNames removes Prodigi mentions', () => {
   assert.equal(stripSupplierNames(input), 'Printed and shipped');
 });
 
-test('stripSupplierNames is idempotent', () => {
+test('stripSupplierNames is idempotent on clean input', () => {
   const clean = 'UK printed, made to order';
   assert.equal(stripSupplierNames(clean), clean);
+});
+
+test('stripSupplierNames is idempotent on matched input (run twice = same output)', () => {
+  const dirty = 'Made-to-order via Printify in the UK';
+  const once = stripSupplierNames(dirty);
+  const twice = stripSupplierNames(once);
+  assert.equal(twice, once);
+});
+
+test('stripSupplierNames removes sentence-leading Printify', () => {
+  assert.equal(
+    stripSupplierNames('Printify ships this to you in 3 days.'),
+    'ships this to you in 3 days.'
+  );
+});
+
+test('stripSupplierNames removes sentence-leading Prodigi', () => {
+  assert.equal(
+    stripSupplierNames('Prodigi UK handles fulfilment for us.'),
+    'handles fulfilment for us.'
+  );
+});
+
+test('stripSupplierNames removes "Sold by OddlyWiredCo" supplier-of-record leak', () => {
+  assert.equal(
+    stripSupplierNames('Sold by OddlyWiredCo (sole proprietor).'),
+    '.'
+  );
+});
+
+test('stripSupplierNames handles punctuation-adjacent Printify', () => {
+  assert.equal(
+    stripSupplierNames('Fast shipping via Printify, our UK supplier.'),
+    'Fast shipping, our UK supplier.'
+  );
 });

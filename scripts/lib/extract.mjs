@@ -35,10 +35,18 @@ export function extractDescriptor(productType) {
   return productType.replace(/-/g, ' ');
 }
 
+// Order matters: more specific (multi-word) patterns first so they consume
+// before the standalone fallbacks fire. Each uses `(?:^|\s+)` so sentence-leading
+// occurrences ("Printify ships..." at start of line/string) get matched too.
+// Note: we deliberately keep "Made-to-order" / "Printed and shipped" intact —
+// those are customer-facing phrases; we only strip the supplier-name half.
 const SUPPLIER_PATTERNS = [
-  /\s+via\s+printify\b/gi,
-  /\s+by\s+prodigi(?:\s+uk)?(?:\s+on behalf of\s+oddlywiredco)?/gi,
-  /\s+on behalf of\s+oddlywiredco\b/gi,
+  /(?:^|\s+)via\s+printify\b/gi,
+  /(?:^|\s+)by\s+prodigi(?:\s+uk)?(?:\s+on behalf of\s+oddlywiredco)?/gi,
+  /(?:^|\s+)on behalf of\s+oddlywiredco\b/gi,
+  /(?:^|\s+)sold\s+by\s+oddlywiredco\b/gi,
+  /(?:^|\s+)prodigi(?:\s+uk)?\b/gi,
+  /(?:^|\s+)printify\b/gi,
   /\s*\(sole proprietor\)\s*/gi,
 ];
 
