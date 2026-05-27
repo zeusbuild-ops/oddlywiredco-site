@@ -11,9 +11,13 @@ const isPost = Astro.request.method === 'POST';
 const DB = (env as any).DB;
 
 let error: string | null = null;
-let tokenRow = (DB && token) ? await getValidToken(DB, token) : null;
-
-if (!token || !tokenRow) {
+if (!DB) {
+  return new Response('reviews unavailable: DB not bound', { status: 503 });
+}
+const tokenRow = token ? await getValidToken(DB, token) : null;
+if (!token) {
+  error = 'this link is missing a token.';
+} else if (!tokenRow) {
   error = 'this link is invalid, used, or expired.';
 }
 
@@ -53,6 +57,9 @@ if (isPost && tokenRow && product && DB) {
     } catch (e) {
       const msg = (e as Error).message;
       if (msg.includes('UNIQUE constraint failed')) {
+        // Burn the token — the underlying purchase has already been reviewed,
+        // so this token has done its job and shouldn't keep stranding the user.
+        await consumeToken(DB, tokenRow.token);
         error = 'a review for this purchase has already been submitted.';
       } else {
         error = 'something went wrong. please try again.';
