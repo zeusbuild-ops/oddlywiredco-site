@@ -1,10 +1,18 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ComingSoonFold from '../../components/ComingSoonFold.astro';
+import CategoryGrid from '../../components/CategoryGrid.astro';
+import { allProducts } from '../../types/product';
+
+const items = allProducts.filter(p => p.category === 'digital');
+const isLive = items.length > 0;
 ---
 <BaseLayout
-  title="digital · coming soon · OddlyWiredCo"
-  description="notion templates, printable planners, dopamine-menu PDFs. coming when they're worth your inbox."
+  title={isLive ? "ADHD printables — OddlyWiredCo" : "Digital downloads coming soon — OddlyWiredCo"}
+  description={isLive ? "Printable + fillable PDFs. Instant download, no shipping." : "Digital downloads coming. Newsletter below for first dibs."}
 >
-  <ComingSoonFold category="digital"/>
+  {isLive
+    ? <CategoryGrid products={items} heading="digital." eyebrow="01 / the catalogue" />
+    : <ComingSoonFold category="digital" />
+  }
 </BaseLayout>

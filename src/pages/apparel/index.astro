@@ -1,10 +1,18 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ComingSoonFold from '../../components/ComingSoonFold.astro';
+import CategoryGrid from '../../components/CategoryGrid.astro';
+import { allProducts } from '../../types/product';
+
+const items = allProducts.filter(p => p.category === 'apparel');
+const isLive = items.length > 0;
 ---
 <BaseLayout
-  title="apparel · coming soon · OddlyWiredCo"
-  description="hoodies, caps, tees made for the brain that wired this way. coming when the fabric is right."
+  title={isLive ? "ADHD apparel — OddlyWiredCo" : "Apparel coming soon — OddlyWiredCo"}
+  description={isLive ? "T-shirts, hoodies, and more for brains that don't sit still." : "Apparel is coming. Newsletter below for first dibs."}
 >
-  <ComingSoonFold category="apparel"/>
+  {isLive
+    ? <CategoryGrid products={items} heading="apparel." eyebrow="01 / the catalogue" />
+    : <ComingSoonFold category="apparel" />
+  }
 </BaseLayout>
