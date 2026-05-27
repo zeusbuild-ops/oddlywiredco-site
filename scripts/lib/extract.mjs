@@ -26,13 +26,13 @@ const DESCRIPTORS = {
 };
 
 /**
- * Build the customer-facing descriptor subtitle from a product_type slug.
- * Falls back to humanised hyphenated string for unknown types.
+ * Build the customer-facing descriptor subtitle from a productFormat slug.
+ * Falls back to humanised hyphenated string for unknown formats.
  */
-export function extractDescriptor(productType) {
-  if (!productType) return '';
-  if (DESCRIPTORS[productType]) return DESCRIPTORS[productType];
-  return productType.replace(/-/g, ' ');
+export function extractDescriptor(productFormat) {
+  if (!productFormat) return '';
+  if (DESCRIPTORS[productFormat]) return DESCRIPTORS[productFormat];
+  return productFormat.replace(/-/g, ' ');
 }
 
 // Order matters: more specific (multi-word) patterns first so they consume
@@ -170,11 +170,11 @@ const CATEGORY_RULES = [
 
 /**
  * Determine which top-level category a product belongs to.
- * Inspects slug first, then product_type. Defaults to 'journals'.
+ * Inspects slug first, then productFormat. Defaults to 'journals'.
  */
-export function resolveCategory(slug, productType) {
+export function resolveCategory(slug, productFormat) {
   for (const rule of CATEGORY_RULES) {
-    const target = rule.useType ? (productType || '') : slug;
+    const target = rule.useType ? (productFormat || '') : slug;
     if (rule.match.test(target)) return rule.category;
   }
   return 'journals';

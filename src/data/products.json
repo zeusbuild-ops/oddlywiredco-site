@@ -1,5 +1,8 @@
 [
   {
+    "blankPages": 96,
+    "trimSize": "5.2\" × 7.4\" (13 × 19 cm)",
+    "binding": "hardback",
     "slug": "47-tabs-all-journal",
     "title": "ADHD Tabs Open Journal | 47 tabs. all important. all... | AuDHD Notebook Gift",
     "hook": "47 tabs. all important.",
@@ -56,7 +59,6 @@
       "adhd identity gift",
       "late diagnosed gift"
     ],
-    "productType": "hardback-journal-a5",
     "stripePriceId": "price_1Tb7a90d1X3moMIs5PxsemEZ",
     "stripeProductId": "prod_UaIAzN97Gm9yfy",
     "printifyShopId": 27681461,
@@ -69,9 +71,14 @@
       "rest-strategy-journal",
       "you-remember-planning-journal",
       "dopamine-before-discipline-journal"
-    ]
+    ],
+    "productType": "journal",
+    "productFormat": "hardback-journal-a5"
   },
   {
+    "blankPages": 96,
+    "trimSize": "5.2\" × 7.4\" (13 × 19 cm)",
+    "binding": "hardback",
     "slug": "audhd-survival-kit-journal",
     "title": "ADHD Audhd Journal | audhd survival kit, contents: | AuDHD Notebook Gift",
     "hook": "audhd survival kit, contents:",
@@ -128,7 +135,6 @@
       "late diagnosed gift",
       "adhd diary"
     ],
-    "productType": "hardback-journal-a5",
     "stripePriceId": "price_1Tb7aA0d1X3moMIsqh6jcoVm",
     "stripeProductId": "prod_UaIAcNrpC8ZIKP",
     "printifyShopId": 27681461,
@@ -141,9 +147,14 @@
       "quiet-note-past-journal",
       "rejection-sensitivity-real-journal",
       "draft-text-complete-journal"
-    ]
+    ],
+    "productType": "journal",
+    "productFormat": "hardback-journal-a5"
   },
   {
+    "blankPages": 96,
+    "trimSize": "5.2\" × 7.4\" (13 × 19 cm)",
+    "binding": "hardback",
     "slug": "chaos-feature-journal",
     "title": "ADHD Chaos Feature Journal | the chaos is a feature | AuDHD Notebook Gift",
     "hook": "the chaos is a feature",
@@ -200,7 +211,6 @@
       "adhd identity gift",
       "late diagnosed gift"
     ],
-    "productType": "hardback-journal-a5",
     "stripePriceId": "price_1Tb7aA0d1X3moMIssbdfJmx3",
     "stripeProductId": "prod_UaIAEDym2WTbvl",
     "printifyShopId": 27681461,
@@ -213,9 +223,14 @@
       "rest-strategy-journal",
       "small-wins-still-journal",
       "you-found-out-journal"
-    ]
+    ],
+    "productType": "journal",
+    "productFormat": "hardback-journal-a5"
   },
   {
+    "blankPages": 96,
+    "trimSize": "5.2\" × 7.4\" (13 × 19 cm)",
+    "binding": "hardback",
     "slug": "do-list-owes-journal",
     "title": "ADHD Reframes Journal | the to-do list owes you not... | AuDHD Notebook Gift",
     "hook": "the to-do list owes you",
@@ -272,7 +287,6 @@
       "adhd identity gift",
       "late diagnosed gift"
     ],
-    "productType": "hardback-journal-a5",
     "stripePriceId": "price_1Tb7aB0d1X3moMIsGoL9H2FW",
     "stripeProductId": "prod_UaIAF0K28xSfH4",
     "printifyShopId": 27681461,
@@ -285,9 +299,14 @@
       "small-wins-still-journal",
       "neurodivergent-broken-journal",
       "unread-email-not-journal"
-    ]
+    ],
+    "productType": "journal",
+    "productFormat": "hardback-journal-a5"
   },
   {
+    "blankPages": 96,
+    "trimSize": "5.2\" × 7.4\" (13 × 19 cm)",
+    "binding": "hardback",
     "slug": "doorway-memory-wipe-journal",
     "title": "ADHD Object Permanence Journal | the doorway is a memory wipe | AuDHD Notebook Gift",
     "hook": "the doorway is a memory wipe",
@@ -344,7 +363,6 @@
       "adhd identity gift",
       "late diagnosed gift"
     ],
-    "productType": "hardback-journal-a5",
     "stripePriceId": "price_1Tb7aC0d1X3moMIsca8oyDxd",
     "stripeProductId": "prod_UaIA9ASkmM1GkI",
     "printifyShopId": 27681461,
@@ -357,9 +375,14 @@
       "rejection-sensitivity-real-journal",
       "your-meltdown-was-journal",
       "started-finished-post-journal"
-    ]
+    ],
+    "productType": "journal",
+    "productFormat": "hardback-journal-a5"
   },
   {
+    "blankPages": 96,
+    "trimSize": "5.2\" × 7.4\" (13 × 19 cm)",
+    "binding": "hardback",
     "slug": "dopamine-before-discipline-journal",
     "title": "ADHD Dopamine Journal | dopamine before discipline | AuDHD Notebook Gift",
     "hook": "dopamine before discipline",
@@ -416,7 +439,6 @@
       "adhd identity gift",
       "late diagnosed gift"
     ],
-    "productType": "hardback-journal-a5",
     "stripePriceId": "price_1Tb7aD0d1X3moMIslyqXzz7K",
     "stripeProductId": "prod_UaIAgoX3lcEXUZ",
     "printifyShopId": 27681461,
@@ -429,9 +451,14 @@
       "one-mug-four-journal",
       "you-re-allowed-journal",
       "chaos-feature-journal"
-    ]
+    ],
+    "productType": "journal",
+    "productFormat": "hardback-journal-a5"
   },
   {
+    "blankPages": 96,
+    "trimSize": "5.2\" × 7.4\" (13 × 19 cm)",
+    "binding": "hardback",
     "slug": "draft-text-complete-journal",
     "title": "ADHD Time Blindness Journal | a draft text is a complete... | AuDHD Notebook Gift",
     "hook": "a draft text is a",
@@ -488,7 +515,6 @@
       "adhd identity gift",
       "late diagnosed gift"
     ],
-    "productType": "hardback-journal-a5",
     "stripePriceId": "price_1Tb7aE0d1X3moMIsGrFeBCEg",
     "stripeProductId": "prod_UaIA9aPQX64tC8",
     "printifyShopId": 27681461,
@@ -501,9 +527,14 @@
       "you-found-out-journal",
       "mask-costs-more-journal",
       "your-3am-brain-journal"
-    ]
+    ],
+    "productType": "journal",
+    "productFormat": "hardback-journal-a5"
   },
   {
+    "blankPages": 96,
+    "trimSize": "5.2\" × 7.4\" (13 × 19 cm)",
+    "binding": "hardback",
     "slug": "hyperfocus-not-superpower-journal",
     "title": "ADHD Hyperfocus Journal | hyperfocus is not a superpo... | AuDHD Notebook Gift",
     "hook": "hyperfocus is not a",
@@ -560,7 +591,6 @@
       "adhd identity gift",
       "late diagnosed gift"
     ],
-    "productType": "hardback-journal-a5",
     "stripePriceId": "price_1Tb7aF0d1X3moMIsw1o2dyiz",
     "stripeProductId": "prod_UaIAbVXFdMGWqq",
     "printifyShopId": 27681461,
@@ -573,9 +603,14 @@
       "doorway-memory-wipe-journal",
       "unread-email-not-journal",
       "quiet-note-past-journal"
-    ]
+    ],
+    "productType": "journal",
+    "productFormat": "hardback-journal-a5"
   },
   {
+    "blankPages": 96,
+    "trimSize": "5.2\" × 7.4\" (13 × 19 cm)",
+    "binding": "hardback",
     "slug": "hyperfocus-tax-annual-journal",
     "title": "ADHD Hyperfocus Journal | the hyperfocus tax: an annu... | AuDHD Notebook Gift",
     "hook": "the hyperfocus tax: an",
@@ -632,7 +667,6 @@
       "adhd identity gift",
       "late diagnosed gift"
     ],
-    "productType": "hardback-journal-a5",
     "stripePriceId": "price_1Tb7aG0d1X3moMIsV4zGGEVe",
     "stripeProductId": "prod_UaIA2HZxccvNDO",
     "printifyShopId": 27681461,
@@ -645,9 +679,14 @@
       "wired-different-rhythm-journal",
       "hyperfocus-not-superpower-journal",
       "out-sight-out-journal"
-    ]
+    ],
+    "productType": "journal",
+    "productFormat": "hardback-journal-a5"
   },
   {
+    "blankPages": 96,
+    "trimSize": "5.2\" × 7.4\" (13 × 19 cm)",
+    "binding": "hardback",
     "slug": "lazy-lazy-word-journal",
     "title": "ADHD Reframes Journal | lazy is the lazy word for it | AuDHD Notebook Gift",
     "hook": "lazy is the lazy word for it",
@@ -704,7 +743,6 @@
       "adhd identity gift",
       "late diagnosed gift"
     ],
-    "productType": "hardback-journal-a5",
     "stripePriceId": "price_1Tb7aH0d1X3moMIs06eE3jjX",
     "stripeProductId": "prod_UaIA2LVdHPnghz",
     "printifyShopId": 27681461,
@@ -717,9 +755,14 @@
       "you-found-out-journal",
       "you-re-allowed-journal",
       "quiet-note-past-journal"
-    ]
+    ],
+    "productType": "journal",
+    "productFormat": "hardback-journal-a5"
   },
   {
+    "blankPages": 96,
+    "trimSize": "5.2\" × 7.4\" (13 × 19 cm)",
+    "binding": "hardback",
     "slug": "mask-costs-more-journal",
     "title": "ADHD Masking Journal | the mask costs more than yo... | AuDHD Notebook Gift",
     "hook": "the mask costs more than",
@@ -776,7 +819,6 @@
       "adhd identity gift",
       "late diagnosed gift"
     ],
-    "productType": "hardback-journal-a5",
     "stripePriceId": "price_1Tb7aI0d1X3moMIsYSIWWwr4",
     "stripeProductId": "prod_UaIAysmQUgDZFu",
     "printifyShopId": 27681461,
@@ -789,9 +831,14 @@
       "unread-email-not-journal",
       "audhd-survival-kit-journal",
       "dopamine-before-discipline-journal"
-    ]
+    ],
+    "productType": "journal",
+    "productFormat": "hardback-journal-a5"
   },
   {
+    "blankPages": 96,
+    "trimSize": "5.2\" × 7.4\" (13 × 19 cm)",
+    "binding": "hardback",
     "slug": "monday-you-and-journal",
     "title": "ADHD Executive Function Journal | monday-you and tuesday-you... | AuDHD Notebook Gift",
     "hook": "monday-you and",
@@ -848,7 +895,6 @@
       "adhd identity gift",
       "late diagnosed gift"
     ],
-    "productType": "hardback-journal-a5",
     "stripePriceId": "price_1Tb7aJ0d1X3moMIsJWeFAgg5",
     "stripeProductId": "prod_UaIA6etYNa83en",
     "printifyShopId": 27681461,
@@ -861,9 +907,14 @@
       "your-meltdown-was-journal",
       "audhd-survival-kit-journal",
       "small-wins-still-journal"
-    ]
+    ],
+    "productType": "journal",
+    "productFormat": "hardback-journal-a5"
   },
   {
+    "blankPages": 96,
+    "trimSize": "5.2\" × 7.4\" (13 × 19 cm)",
+    "binding": "hardback",
     "slug": "neurodivergent-broken-journal",
     "title": "ADHD Late Dx Journal | neurodivergent ≠ broken | AuDHD Notebook Gift",
     "hook": "neurodivergent ≠ broken",
@@ -920,7 +971,6 @@
       "adhd identity gift",
       "late diagnosed gift"
     ],
-    "productType": "hardback-journal-a5",
     "stripePriceId": "price_1Tb7aJ0d1X3moMIsaOWmvcwz",
     "stripeProductId": "prod_UaIAnHJ8VRd60U",
     "printifyShopId": 27681461,
@@ -933,9 +983,14 @@
       "lazy-lazy-word-journal",
       "audhd-survival-kit-journal",
       "47-tabs-all-journal"
-    ]
+    ],
+    "productType": "journal",
+    "productFormat": "hardback-journal-a5"
   },
   {
+    "blankPages": 96,
+    "trimSize": "5.2\" × 7.4\" (13 × 19 cm)",
+    "binding": "hardback",
     "slug": "one-mug-four-journal",
     "title": "ADHD Cleaning Journal | one mug. four hours. zero c... | AuDHD Notebook Gift",
     "hook": "one mug. four hours. zero",
@@ -992,7 +1047,6 @@
       "adhd identity gift",
       "late diagnosed gift"
     ],
-    "productType": "hardback-journal-a5",
     "stripePriceId": "price_1Tb7aK0d1X3moMIsOVVJ5EEt",
     "stripeProductId": "prod_UaIAMHhm5n5FHa",
     "printifyShopId": 27681461,
@@ -1005,9 +1059,14 @@
       "hyperfocus-not-superpower-journal",
       "audhd-survival-kit-journal",
       "small-wins-still-journal"
-    ]
+    ],
+    "productType": "journal",
+    "productFormat": "hardback-journal-a5"
   },
   {
+    "blankPages": 96,
+    "trimSize": "5.2\" × 7.4\" (13 × 19 cm)",
+    "binding": "hardback",
     "slug": "out-sight-out-journal",
     "title": "ADHD Object Permanence Journal | out of sight, out of brain | AuDHD Notebook Gift",
     "hook": "out of sight, out of brain",
@@ -1064,7 +1123,6 @@
       "adhd identity gift",
       "late diagnosed gift"
     ],
-    "productType": "hardback-journal-a5",
     "stripePriceId": "price_1Tb7aL0d1X3moMIs6VAuRsO9",
     "stripeProductId": "prod_UaIAqQvsRy1jkV",
     "printifyShopId": 27681461,
@@ -1077,9 +1135,14 @@
       "you-found-out-journal",
       "47-tabs-all-journal",
       "monday-you-and-journal"
-    ]
+    ],
+    "productType": "journal",
+    "productFormat": "hardback-journal-a5"
   },
   {
+    "blankPages": 96,
+    "trimSize": "5.2\" × 7.4\" (13 × 19 cm)",
+    "binding": "hardback",
     "slug": "quiet-note-past-journal",
     "title": "ADHD Late Dx Journal | a quiet note for past you | AuDHD Notebook Gift",
     "hook": "a quiet note for past you",
@@ -1136,7 +1199,6 @@
       "adhd identity gift",
       "late diagnosed gift"
     ],
-    "productType": "hardback-journal-a5",
     "stripePriceId": "price_1Tb7aM0d1X3moMIsyhS8I00N",
     "stripeProductId": "prod_UaIAk5Udoud6K1",
     "printifyShopId": 27681461,
@@ -1149,9 +1211,14 @@
       "your-3am-brain-journal",
       "your-meltdown-was-journal",
       "you-remember-planning-journal"
-    ]
+    ],
+    "productType": "journal",
+    "productFormat": "hardback-journal-a5"
   },
   {
+    "blankPages": 96,
+    "trimSize": "5.2\" × 7.4\" (13 × 19 cm)",
+    "binding": "hardback",
     "slug": "rejection-sensitivity-real-journal",
     "title": "ADHD Rsd Journal | rejection sensitivity is a... | AuDHD Notebook Gift",
     "hook": "rejection sensitivity is",
@@ -1208,7 +1275,6 @@
       "adhd identity gift",
       "late diagnosed gift"
     ],
-    "productType": "hardback-journal-a5",
     "stripePriceId": "price_1Tb7aN0d1X3moMIsX6XjAVQH",
     "stripeProductId": "prod_UaIAA7AQwH4z07",
     "printifyShopId": 27681461,
@@ -1221,9 +1287,14 @@
       "47-tabs-all-journal",
       "monday-you-and-journal",
       "unread-email-not-journal"
-    ]
+    ],
+    "productType": "journal",
+    "productFormat": "hardback-journal-a5"
   },
   {
+    "blankPages": 96,
+    "trimSize": "5.2\" × 7.4\" (13 × 19 cm)",
+    "binding": "hardback",
     "slug": "reminder-fired-brain-journal",
     "title": "ADHD Time Blindness Journal | the reminder fired. the bra... | AuDHD Notebook Gift",
     "hook": "the reminder fired. the",
@@ -1280,7 +1351,6 @@
       "adhd identity gift",
       "late diagnosed gift"
     ],
-    "productType": "hardback-journal-a5",
     "stripePriceId": "price_1Tb7aO0d1X3moMIsBwvkcbJc",
     "stripeProductId": "prod_UaIAs4eO2cj6bH",
     "printifyShopId": 27681461,
@@ -1293,9 +1363,14 @@
       "your-meltdown-was-journal",
       "rest-strategy-journal",
       "rejection-sensitivity-real-journal"
-    ]
+    ],
+    "productType": "journal",
+    "productFormat": "hardback-journal-a5"
   },
   {
+    "blankPages": 96,
+    "trimSize": "5.2\" × 7.4\" (13 × 19 cm)",
+    "binding": "hardback",
     "slug": "rest-strategy-journal",
     "title": "ADHD Reframes Journal | rest is a strategy | AuDHD Notebook Gift",
     "hook": "rest is a strategy",
@@ -1352,7 +1427,6 @@
       "adhd identity gift",
       "late diagnosed gift"
     ],
-    "productType": "hardback-journal-a5",
     "stripePriceId": "price_1Tb7aP0d1X3moMIsf7tozsWC",
     "stripeProductId": "prod_UaIAeJ1XudHOc2",
     "printifyShopId": 27681461,
@@ -1365,9 +1439,14 @@
       "doorway-memory-wipe-journal",
       "unread-email-not-journal",
       "you-found-out-journal"
-    ]
+    ],
+    "productType": "journal",
+    "productFormat": "hardback-journal-a5"
   },
   {
+    "blankPages": 96,
+    "trimSize": "5.2\" × 7.4\" (13 × 19 cm)",
+    "binding": "hardback",
     "slug": "small-wins-still-journal",
     "title": "ADHD Wins Journal | small wins still count as wins | AuDHD Notebook Gift",
     "hook": "small wins still count as wins",
@@ -1424,7 +1503,6 @@
       "adhd identity gift",
       "late diagnosed gift"
     ],
-    "productType": "hardback-journal-a5",
     "stripePriceId": "price_1Tb7aQ0d1X3moMIstBrxaNGH",
     "stripeProductId": "prod_UaIAaayVvlxyqG",
     "printifyShopId": 27681461,
@@ -1437,9 +1515,14 @@
       "started-finished-post-journal",
       "mask-costs-more-journal",
       "your-meltdown-was-journal"
-    ]
+    ],
+    "productType": "journal",
+    "productFormat": "hardback-journal-a5"
   },
   {
+    "blankPages": 96,
+    "trimSize": "5.2\" × 7.4\" (13 × 19 cm)",
+    "binding": "hardback",
     "slug": "started-finished-post-journal",
     "title": "ADHD Executive Dysfunction Journal | started ≠ finished. that's... | AuDHD Notebook Gift",
     "hook": "started ≠ finished.",
@@ -1496,7 +1579,6 @@
       "adhd identity gift",
       "late diagnosed gift"
     ],
-    "productType": "hardback-journal-a5",
     "stripePriceId": "price_1Tb7aR0d1X3moMIs4cZCYDo3",
     "stripeProductId": "prod_UaIA2JUxjEC8wN",
     "printifyShopId": 27681461,
@@ -1509,9 +1591,14 @@
       "doorway-memory-wipe-journal",
       "chaos-feature-journal",
       "47-tabs-all-journal"
-    ]
+    ],
+    "productType": "journal",
+    "productFormat": "hardback-journal-a5"
   },
   {
+    "blankPages": 96,
+    "trimSize": "5.2\" × 7.4\" (13 × 19 cm)",
+    "binding": "hardback",
     "slug": "you-can-be-journal",
     "title": "ADHD Time Blindness Journal | you can be late and still b... | AuDHD Notebook Gift",
     "hook": "you can be late and still",
@@ -1568,7 +1655,6 @@
       "adhd identity gift",
       "late diagnosed gift"
     ],
-    "productType": "mug-11oz",
     "stripePriceId": "price_1Tb7aR0d1X3moMIszOURNmKr",
     "stripeProductId": "prod_UaIAm2WamEOrOY",
     "printifyShopId": 27681461,
@@ -1581,9 +1667,14 @@
       "rejection-sensitivity-real-journal",
       "one-mug-four-journal",
       "reminder-fired-brain-journal"
-    ]
+    ],
+    "productType": "journal",
+    "productFormat": "hardback-journal-a5"
   },
   {
+    "blankPages": 96,
+    "trimSize": "5.2\" × 7.4\" (13 × 19 cm)",
+    "binding": "hardback",
     "slug": "unread-email-not-journal",
     "title": "ADHD Inbox Journal | an unread email is not a mo... | AuDHD Notebook Gift",
     "hook": "an unread email is not a",
@@ -1640,7 +1731,6 @@
       "adhd identity gift",
       "late diagnosed gift"
     ],
-    "productType": "hardback-journal-a5",
     "stripePriceId": "price_1Tb7aS0d1X3moMIsyxqrihUm",
     "stripeProductId": "prod_UaIAWwUFDiayED",
     "printifyShopId": 27681461,
@@ -1653,9 +1743,14 @@
       "wired-different-rhythm-journal",
       "started-finished-post-journal",
       "draft-text-complete-journal"
-    ]
+    ],
+    "productType": "journal",
+    "productFormat": "hardback-journal-a5"
   },
   {
+    "blankPages": 96,
+    "trimSize": "5.2\" × 7.4\" (13 × 19 cm)",
+    "binding": "hardback",
     "slug": "wired-different-rhythm-journal",
     "title": "ADHD Late Dx Journal | wired for a different rhythm | AuDHD Notebook Gift",
     "hook": "wired for a different rhythm",
@@ -1712,7 +1807,6 @@
       "adhd identity gift",
       "late diagnosed gift"
     ],
-    "productType": "hardback-journal-a5",
     "stripePriceId": "price_1Tb7aT0d1X3moMIs7pg7la7e",
     "stripeProductId": "prod_UaIAxDURlwg3U0",
     "printifyShopId": 27681461,
@@ -1725,9 +1819,14 @@
       "small-wins-still-journal",
       "one-mug-four-journal",
       "your-meltdown-was-journal"
-    ]
+    ],
+    "productType": "journal",
+    "productFormat": "hardback-journal-a5"
   },
   {
+    "blankPages": 96,
+    "trimSize": "5.2\" × 7.4\" (13 × 19 cm)",
+    "binding": "hardback",
     "slug": "you-didn-lose-journal",
     "title": "ADHD Object Permanence Journal | you didn't lose it. you par... | AuDHD Notebook Gift",
     "hook": "you didn't lose it. you",
@@ -1784,7 +1883,6 @@
       "adhd identity gift",
       "late diagnosed gift"
     ],
-    "productType": "hardback-journal-a5",
     "stripePriceId": "price_1Tb7aU0d1X3moMIsE1VJXpTT",
     "stripeProductId": "prod_UaIA4qAQi2flSG",
     "printifyShopId": 27681461,
@@ -1797,9 +1895,14 @@
       "your-3am-brain-journal",
       "started-finished-post-journal",
       "you-can-be-journal"
-    ]
+    ],
+    "productType": "journal",
+    "productFormat": "hardback-journal-a5"
   },
   {
+    "blankPages": 96,
+    "trimSize": "5.2\" × 7.4\" (13 × 19 cm)",
+    "binding": "hardback",
     "slug": "you-found-out-journal",
     "title": "ADHD Late Dx Journal | you found out late. you're... | AuDHD Notebook Gift",
     "hook": "you found out late.",
@@ -1856,7 +1959,6 @@
       "adhd identity gift",
       "late diagnosed gift"
     ],
-    "productType": "hardback-journal-a5",
     "stripePriceId": "price_1Tb7aV0d1X3moMIsLGBy6KEM",
     "stripeProductId": "prod_UaIAZxsuaG5I6Z",
     "printifyShopId": 27681461,
@@ -1869,9 +1971,14 @@
       "you-didn-lose-journal",
       "rejection-sensitivity-real-journal",
       "hyperfocus-tax-annual-journal"
-    ]
+    ],
+    "productType": "journal",
+    "productFormat": "hardback-journal-a5"
   },
   {
+    "blankPages": 96,
+    "trimSize": "5.2\" × 7.4\" (13 × 19 cm)",
+    "binding": "hardback",
     "slug": "you-re-allowed-journal",
     "title": "ADHD Reframes Journal | you're allowed to be uneven | AuDHD Notebook Gift",
     "hook": "you're allowed to be uneven",
@@ -1928,7 +2035,6 @@
       "adhd identity gift",
       "late diagnosed gift"
     ],
-    "productType": "hardback-journal-a5",
     "stripePriceId": "price_1Tb7aW0d1X3moMIsKI3wOZqn",
     "stripeProductId": "prod_UaIAKVUXVkiS2D",
     "printifyShopId": 27681461,
@@ -1941,9 +2047,14 @@
       "rest-strategy-journal",
       "unread-email-not-journal",
       "one-mug-four-journal"
-    ]
+    ],
+    "productType": "journal",
+    "productFormat": "hardback-journal-a5"
   },
   {
+    "blankPages": 96,
+    "trimSize": "5.2\" × 7.4\" (13 × 19 cm)",
+    "binding": "hardback",
     "slug": "you-remember-planning-journal",
     "title": "ADHD Time Blindness Journal | you remember planning it. t... | AuDHD Notebook Gift",
     "hook": "you remember planning it.",
@@ -2000,7 +2111,6 @@
       "adhd identity gift",
       "late diagnosed gift"
     ],
-    "productType": "hardback-journal-a5",
     "stripePriceId": "price_1Tb7aX0d1X3moMIssituaMNy",
     "stripeProductId": "prod_UaIAllzEfZwwev",
     "printifyShopId": 27681461,
@@ -2013,9 +2123,14 @@
       "your-meltdown-was-journal",
       "quiet-note-past-journal",
       "your-3am-brain-journal"
-    ]
+    ],
+    "productType": "journal",
+    "productFormat": "hardback-journal-a5"
   },
   {
+    "blankPages": 96,
+    "trimSize": "5.2\" × 7.4\" (13 × 19 cm)",
+    "binding": "hardback",
     "slug": "your-3am-brain-journal",
     "title": "ADHD Hyperfocus Journal | your 3am brain is not your... | AuDHD Notebook Gift",
     "hook": "your 3am brain is not",
@@ -2072,7 +2187,6 @@
       "adhd identity gift",
       "late diagnosed gift"
     ],
-    "productType": "hardback-journal-a5",
     "stripePriceId": "price_1Tb7aX0d1X3moMIsfoDYpGzq",
     "stripeProductId": "prod_UaIAWDlCkuXuaj",
     "printifyShopId": 27681461,
@@ -2085,9 +2199,14 @@
       "your-meltdown-was-journal",
       "you-remember-planning-journal",
       "quiet-note-past-journal"
-    ]
+    ],
+    "productType": "journal",
+    "productFormat": "hardback-journal-a5"
   },
   {
+    "blankPages": 96,
+    "trimSize": "5.2\" × 7.4\" (13 × 19 cm)",
+    "binding": "hardback",
     "slug": "your-meltdown-was-journal",
     "title": "ADHD Reframes Journal | your meltdown was data | AuDHD Notebook Gift",
     "hook": "your meltdown was data",
@@ -2144,7 +2263,6 @@
       "adhd identity gift",
       "late diagnosed gift"
     ],
-    "productType": "hardback-journal-a5",
     "stripePriceId": "price_1Tb7aY0d1X3moMIstmwY95K0",
     "stripeProductId": "prod_UaIAVDmrzfX6An",
     "printifyShopId": 27681461,
@@ -2157,6 +2275,8 @@
       "rejection-sensitivity-real-journal",
       "you-found-out-journal",
       "you-didn-lose-journal"
-    ]
+    ],
+    "productType": "journal",
+    "productFormat": "hardback-journal-a5"
   }
 ]

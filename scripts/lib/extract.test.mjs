@@ -32,7 +32,7 @@ test('extractDescriptor produces journal descriptor for hardback-journal-a5', ()
   );
 });
 
-test('extractDescriptor falls back to humanised product_type for unknown types', () => {
+test('extractDescriptor falls back to humanised productFormat for unknown formats', () => {
   assert.equal(extractDescriptor('embroidered-cap-snapback'), 'embroidered cap snapback');
 });
 

@@ -11,6 +11,8 @@
     "preview": "astro preview",
     "astro": "astro",
     "rebuild-products": "node scripts/rebuild-products-json.mjs",
+    "test": "node --test tests/data-integrity.test.mjs scripts/lib/extract.test.mjs",
+    "test:data": "node --test tests/data-integrity.test.mjs",
     "test:extract": "node --test scripts/lib/extract.test.mjs"
   },
   "dependencies": {
