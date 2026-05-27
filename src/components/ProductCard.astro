@@ -1,21 +1,24 @@
 ---
 interface Props {
   slug: string;
-  name: string;
-  tag: string;
-  price: number;
-  image: string;
-  etsyUrl?: string;
+  hook: string;
+  descriptor: string;
+  heroImage: string;
+  priceCents: number;
+  category?: string;
 }
-const { slug, name, tag, price, image, etsyUrl } = Astro.props;
-const href = etsyUrl ?? `/${slug}`;
+const { slug, hook, descriptor, heroImage, priceCents, category = 'journals' } = Astro.props;
+const href = `/${category}/${slug}`;
+const priceFormatted = new Intl.NumberFormat('en-GB', {
+  style: 'currency', currency: 'GBP',
+}).format(priceCents / 100);
 ---
-<a href={href} class="card" rel={etsyUrl ? 'noopener' : undefined} target={etsyUrl ? '_blank' : undefined}>
-  <div class="card-image"><img src={image} alt={name} loading="lazy"/></div>
-  <h3 class="card-name">{name}</h3>
-  <p class="card-tag">{tag}</p>
+<a href={href} class="card" aria-label={`${hook} — ${priceFormatted}`}>
+  <div class="card-image"><img src={heroImage} alt="" loading="lazy"/></div>
+  <h3 class="card-hook">{hook}</h3>
+  <p class="card-descriptor">{descriptor}</p>
   <div class="card-meta">
-    <span class="card-price">£{price}</span>
+    <span class="card-price">{priceFormatted}</span>
     <span class="card-arrow">see it →</span>
   </div>
 </a>
@@ -25,30 +28,56 @@ const href = etsyUrl ?? `/${slug}`;
     display: block;
     background: var(--owc-ink);
     color: var(--owc-bone);
-    padding: 24px;
+    padding: 20px;
     border-radius: 12px;
     transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
+    text-decoration: none;
   }
-  .card:hover { transform: translateY(-4px) rotate(1deg); }
+  .card:hover { transform: translateY(-4px) rotate(0.5deg); }
   .card-image {
     aspect-ratio: 1;
     background: var(--owc-bone);
     border-radius: 8px;
-    margin-bottom: 16px;
+    margin-bottom: 14px;
     overflow: hidden;
   }
   .card-image img { width: 100%; height: 100%; object-fit: cover; }
-  .card-name { font-family: var(--font-mono); font-size: 20px; font-weight: 700; margin-bottom: 6px; position: relative; display: inline-block; }
-  .card-name::after { content: ''; position: absolute; bottom: -3px; left: 0; right: 0; height: 2px; background: var(--owc-pulse); transform: scaleX(0); transform-origin: left; transition: transform 0.3s ease-out; }
-  .card:hover .card-name::after { transform: scaleX(1); }
-  .card-tag { font-size: 14px; opacity: 0.7; margin-bottom: 16px; }
-  .card-meta { display: flex; justify-content: space-between; align-items: center; font-family: var(--font-mono); font-size: 13px; }
-  .card-price { color: var(--owc-pulse); font-weight: 700; font-size: 18px; }
-  .card-arrow { color: var(--owc-signal); }
+  .card-hook {
+    font-family: var(--font-mono);
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.15;
+    margin: 0 0 4px;
+    position: relative;
+    display: inline-block;
+  }
+  .card-hook::after {
+    content: ''; position: absolute; bottom: -3px; left: 0; right: 0;
+    height: 2px; background: var(--owc-pulse);
+    transform: scaleX(0); transform-origin: left;
+    transition: transform 0.3s ease-out;
+  }
+  .card:hover .card-hook::after { transform: scaleX(1); }
+  .card-descriptor {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    opacity: 0.6;
+    margin: 0 0 14px;
+    text-transform: lowercase;
+  }
+  .card-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--font-mono);
+    font-size: 13px;
+  }
+  .card-price { color: var(--owc-pulse); font-weight: 700; font-size: 16px; }
+  .card-arrow { color: var(--owc-signal); opacity: 0.8; }
   @media (prefers-reduced-motion: reduce) {
     .card { transition: none; }
     .card:hover { transform: none; }
-    .card-name::after { transition: none; }
+    .card-hook::after { transition: none; }
   }
 </style>
