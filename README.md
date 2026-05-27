@@ -6,6 +6,10 @@ npm create astro@latest -- --template minimal
 
 > 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
+## Deploy
+
+Push to `main` → GitHub Actions runs `npm ci && npm run build && wrangler deploy` automatically. No manual `wrangler deploy` needed. Workflow: `.github/workflows/deploy.yml`. Required GitHub secrets: `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`.
+
 ## 🚀 Project Structure
 
 Inside of your Astro project, you'll see the following folders and files:
