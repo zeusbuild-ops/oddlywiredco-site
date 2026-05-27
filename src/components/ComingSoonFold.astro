@@ -1,0 +1,72 @@
+---
+import NewsletterForm from './NewsletterForm.astro';
+
+interface Props {
+  category: 'apparel' | 'accessories' | 'digital';
+}
+const { category } = Astro.props;
+
+const COPY = {
+  apparel: {
+    eyebrow: 'apparel · coming soon',
+    hook: "the wardrobe is\nstill loading.",
+    body: "hoodies, caps, tees made for the brain that wired this way. cover lines you'll wear because they finally got it. coming when the fabric is right.",
+  },
+  accessories: {
+    eyebrow: 'accessories · coming soon',
+    hook: "mugs, totes,\nsmall loud things.",
+    body: "the bits that sit on your desk and remind you you're not broken. coming when the supplier list is sorted.",
+  },
+  digital: {
+    eyebrow: 'digital · coming soon',
+    hook: "templates for\nthe scattered.",
+    body: "notion templates, printable planners, dopamine-menu PDFs. coming when they're worth your inbox.",
+  },
+};
+
+const c = COPY[category];
+---
+<section class="fold dark coming-soon-fold">
+  <div class="container">
+    <div class="meta">{c.eyebrow}</div>
+    <h1 class="h-mono lg cs-hook">{c.hook}</h1>
+    <p class="cs-body">{c.body}</p>
+    <div class="cs-newsletter">
+      <p class="cs-newsletter-prompt">get told first when it lands.</p>
+      <NewsletterForm/>
+    </div>
+    <a href="/" class="cs-back">← back to home</a>
+  </div>
+</section>
+
+<style>
+  .coming-soon-fold { min-height: 80vh; }
+  .cs-hook {
+    margin: 18px 0 24px;
+    white-space: pre-line;
+  }
+  .cs-body {
+    font-family: var(--font-body);
+    font-size: 17px;
+    line-height: 1.55;
+    max-width: 520px;
+    opacity: 0.85;
+    margin-bottom: 36px;
+  }
+  .cs-newsletter { max-width: 520px; margin-bottom: 32px; }
+  .cs-newsletter-prompt {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    margin-bottom: 12px;
+    opacity: 0.7;
+  }
+  .cs-back {
+    display: inline-block;
+    margin-top: 24px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    opacity: 0.6;
+  }
+  .cs-back:hover { opacity: 1; }
+</style>
