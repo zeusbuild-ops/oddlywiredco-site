@@ -16,3 +16,41 @@ export function extractHook(title) {
   // Strip trailing " all..." or any " word..." that got truncated mid-phrase
   return middle.replace(/\s+\S+\.\.\.\s*$/, '').toLowerCase();
 }
+
+const DESCRIPTORS = {
+  'hardback-journal-a5': 'hardback journal · A5 · 96 blank pages',
+  'softback-journal-a5': 'softback journal · A5 · 128 blank pages',
+  'enamel-mug-11oz': 'enamel mug · 11oz',
+  'embroidered-cap': 'embroidered cap · one size',
+  'hoodie-unisex': 'unisex hoodie · cotton blend',
+};
+
+/**
+ * Build the customer-facing descriptor subtitle from a product_type slug.
+ * Falls back to humanised hyphenated string for unknown types.
+ */
+export function extractDescriptor(productType) {
+  if (!productType) return '';
+  if (DESCRIPTORS[productType]) return DESCRIPTORS[productType];
+  return productType.replace(/-/g, ' ');
+}
+
+const SUPPLIER_PATTERNS = [
+  /\s+via\s+printify\b/gi,
+  /\s+by\s+prodigi(?:\s+uk)?(?:\s+on behalf of\s+oddlywiredco)?/gi,
+  /\s+on behalf of\s+oddlywiredco\b/gi,
+  /\s*\(sole proprietor\)\s*/gi,
+];
+
+/**
+ * Strip all supplier/vendor name leaks from customer-facing copy.
+ * Idempotent: returns the input unchanged if no patterns match.
+ */
+export function stripSupplierNames(text) {
+  if (!text) return '';
+  let out = text;
+  for (const pat of SUPPLIER_PATTERNS) {
+    out = out.replace(pat, '');
+  }
+  return out.replace(/\s+/g, ' ').replace(/\s+([.,])/g, '$1').trim();
+}
