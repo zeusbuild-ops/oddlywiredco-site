@@ -1,0 +1,13 @@
+name = "review-email-consumer"
+main = "consumer.ts"
+compatibility_date = "2026-01-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "oddlywiredco-newsletter"
+database_id = "a55ef1cc-0551-42f6-843b-546547a4c48c"
+
+[[queues.consumers]]
+queue = "review-emails"
+max_batch_size = 10
+max_batch_timeout = 30

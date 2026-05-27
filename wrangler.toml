@@ -13,7 +13,6 @@ database_id = "a55ef1cc-0551-42f6-843b-546547a4c48c"
 queue = "review-emails"
 binding = "REVIEW_EMAILS_QUEUE"
 
-[[queues.consumers]]
-queue = "review-emails"
-max_batch_size = 10
-max_batch_timeout = 30
+# Queue consumer lives in a sibling worker — see workers/review-email-consumer/
+# The Astro adapter only generates a `fetch`-only worker entrypoint, so we
+# can't attach a `queue()` handler here. Sibling worker pattern is canonical.
