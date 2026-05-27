@@ -44,14 +44,20 @@ export function reviewRequestEmailHtml(args: {
   unsubscribeUrl: string;
 }): string {
   return `<!doctype html>
-<html><body style="font-family:Inter,system-ui,sans-serif;background:#F4EFE6;color:#0E0E11;padding:32px;line-height:1.6;">
-  <div style="max-width:520px;margin:0 auto;background:#FFFFFF;border-radius:8px;padding:32px;">
-    <img src="${args.productImage}" alt="" style="width:100%;max-width:240px;display:block;margin:0 auto 24px;border-radius:6px;">
-    <h1 style="font-family:Menlo,monospace;font-size:22px;font-weight:700;margin:0 0 14px;">what did your brain think?</h1>
-    <p style="margin:0 0 18px;">your ${args.productTitle} arrived a week ago. if it landed, we'd love to hear how.</p>
-    <p style="margin:0 0 24px;">tell us what your brain made of it. no template, no ratings essay — just a sentence is fine.</p>
-    <a href="${args.reviewUrl}" style="display:inline-block;background:#4CE2C1;color:#0E0E11;padding:12px 22px;border-radius:4px;text-decoration:none;font-weight:700;font-family:Menlo,monospace;text-transform:uppercase;letter-spacing:1.5px;font-size:13px;">leave a review →</a>
-    <p style="margin:32px 0 0;font-size:11px;opacity:0.55;">
+<html><body style="font-family:Inter,system-ui,sans-serif;background:#F4EFE6;color:#0E0E11;padding:32px;line-height:1.6;margin:0;">
+  <div style="max-width:520px;margin:0 auto;">
+    <a href="https://oddlywiredco.com" style="display:block;text-align:center;margin-bottom:24px;text-decoration:none;color:#0E0E11;font-family:Menlo,monospace;font-size:18px;font-weight:700;letter-spacing:1px;">oddlywired<span style="color:#4CE2C1;">.</span></a>
+    <div style="background:#FFFFFF;border-radius:8px;padding:32px;">
+      <img src="${args.productImage}" alt="" style="width:100%;max-width:240px;display:block;margin:0 auto 24px;border-radius:6px;">
+      <h1 style="font-family:Menlo,monospace;font-size:22px;font-weight:700;margin:0 0 14px;">what did your brain think?</h1>
+      <p style="margin:0 0 18px;">your ${args.productTitle} arrived a week ago. if it landed, we'd love to hear how.</p>
+      <p style="margin:0 0 24px;">tell us what your brain made of it. no template, no ratings essay — just a sentence is fine.</p>
+      <a href="${args.reviewUrl}" style="display:inline-block;background:#4CE2C1;color:#0E0E11;padding:12px 22px;border-radius:4px;text-decoration:none;font-weight:700;font-family:Menlo,monospace;text-transform:uppercase;letter-spacing:1.5px;font-size:13px;">leave a review →</a>
+    </div>
+    <div style="text-align:center;margin-top:24px;font-family:Menlo,monospace;font-size:10px;text-transform:uppercase;letter-spacing:2px;opacity:0.5;">
+      made with executive dysfunction · <a href="https://oddlywiredco.com" style="color:inherit;text-decoration:none;">oddlywiredco.com</a>
+    </div>
+    <p style="text-align:center;margin:14px 0 0;font-size:11px;opacity:0.45;">
       sent to verified buyers only. <a href="${args.unsubscribeUrl}" style="color:inherit;">unsubscribe</a>
     </p>
   </div>
