@@ -1,0 +1,55 @@
+---
+/**
+ * "Top of the doom pile" — bestsellers section.
+ * Pulls every product with featured: true. ND-coded brand language for
+ * "the SKUs we'd put at the top of your overwhelm-organised stack."
+ */
+import ProductCard from './ProductCard.astro';
+import { allProducts } from '../types/product';
+
+const featured = allProducts.filter((p) => (p as any).featured === true);
+---
+{featured.length > 0 && (
+  <section class="fold light doom-fold">
+    <div class="container">
+      <div class="doom-head">
+        <div class="meta">top of the doom pile</div>
+        <p class="doom-sub">the lineup we keep coming back to. starts here, never really leaves.</p>
+      </div>
+      <div class="doom-grid">
+        {featured.map((p) => (
+          <ProductCard
+            slug={p.slug}
+            hook={p.hook}
+            descriptor={p.descriptor}
+            heroImage={p.heroImage}
+            priceCents={p.priceCents}
+            category={p.category}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+)}
+
+<style>
+  .doom-fold { padding: 70px 0; }
+  .doom-head { margin-bottom: 28px; max-width: 720px; }
+  .doom-sub {
+    font-size: 17px; line-height: 1.5;
+    margin-top: 10px;
+    color: var(--owc-ink);
+    opacity: 0.78;
+  }
+  .doom-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+  }
+  @media (max-width: 900px) {
+    .doom-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+  @media (max-width: 640px) {
+    .doom-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>

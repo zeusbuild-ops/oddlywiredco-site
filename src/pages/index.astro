@@ -6,6 +6,7 @@ import CursorTypeHero from '../components/CursorTypeHero.astro';
 import ProductCard from '../components/ProductCard.astro';
 import CategoryTeaserCard from '../components/CategoryTeaserCard.astro';
 import AboutNewsletterFold from '../components/AboutNewsletterFold.astro';
+import DoomPileFold from '../components/DoomPileFold.astro';
 import { allProducts } from '../types/product';
 import { organizationSchema, websiteSchema } from '../lib/schema';
 
@@ -44,6 +45,9 @@ const featured = [...flagged, ...alphabetical.filter(p => !flagged.includes(p))]
       <p class="who-arrow">→ you're in the right place.</p>
     </div>
   </section>
+
+  <!-- Fold 2.5: Top of the doom pile — featured cross-category bestsellers -->
+  <DoomPileFold />
 
   <!-- Fold 3: Catalogue (Ink) — REWRITTEN -->
   <section class="fold dark catalogue-fold" id="stuff">

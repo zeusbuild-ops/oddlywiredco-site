@@ -38,13 +38,45 @@ export const POST: APIRoute = async ({ request }) => {
   if (!session) return new Response('no session', { status: 400 });
 
   const metadata = session.metadata || {};
-  const slug = metadata.slug;
   const shop_id = metadata.printify_shop_id;
-  const product_id = metadata.printify_product_id;
-  const variant_id = parseInt(metadata.printify_variant_id, 10);
 
-  if (!slug || !shop_id || !product_id || !variant_id) {
-    console.error('webhook session missing required metadata', metadata);
+  // Resolve line items from either basket metadata (multi-item) or single-item legacy metadata.
+  type Line = { product_id: string; variant_id: number; quantity: number };
+  let lines: Line[] = [];
+  let labelSlug = '';
+
+  if (metadata.basket_json || metadata.basket_chunks) {
+    // Multi-item basket flow — reassemble chunks if needed
+    let raw = metadata.basket_json || '';
+    if (metadata.basket_chunks) {
+      const n = parseInt(metadata.basket_chunks, 10);
+      raw = '';
+      for (let i = 0; i < n; i++) raw += metadata[`basket_json_${i}`] || '';
+    }
+    try {
+      const items = JSON.parse(raw) as Array<{ slug: string; pp: string; pv: number; q: number }>;
+      lines = items.map((it) => ({ product_id: it.pp, variant_id: it.pv, quantity: it.q }));
+      labelSlug = items[0]?.slug || 'basket';
+      if (items.length > 1) labelSlug = `basket-${items.length}`;
+    } catch (e) {
+      console.error('webhook basket_json parse failed', e, 'raw:', raw.slice(0, 200));
+      return new Response('invalid basket metadata', { status: 400 });
+    }
+  } else {
+    // Single-item legacy flow
+    const slug = metadata.slug;
+    const product_id = metadata.printify_product_id;
+    const variant_id = parseInt(metadata.printify_variant_id, 10);
+    if (!slug || !product_id || !variant_id) {
+      console.error('webhook session missing required metadata', metadata);
+      return new Response('incomplete metadata', { status: 400 });
+    }
+    lines = [{ product_id, variant_id, quantity: 1 }];
+    labelSlug = slug;
+  }
+
+  if (!shop_id || lines.length === 0) {
+    console.error('webhook session missing shop_id or has no lines', metadata);
     return new Response('incomplete metadata', { status: 400 });
   }
 
@@ -60,14 +92,8 @@ export const POST: APIRoute = async ({ request }) => {
 
   const order = {
     external_id: session.id,
-    label: `OWC-${slug}-${String(session.id).slice(-8)}`,
-    line_items: [
-      {
-        product_id,
-        variant_id,
-        quantity: 1,
-      },
-    ],
+    label: `OWC-${labelSlug}-${String(session.id).slice(-8)}`,
+    line_items: lines,
     shipping_method: 1,
     send_shipping_notification: false,
     address_to: {

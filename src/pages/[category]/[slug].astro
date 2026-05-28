@@ -97,7 +97,22 @@ const backLink = BACK_LINK_COPY[product.category] ?? { href: '/', label: '← ba
           <p class="pf-descriptor">{product.descriptor}</p>
           <p class="pf-price">{priceFormatted}</p>
           <form id="checkout-form" data-price-id={product.stripePriceId} data-slug={product.slug}>
-            <button type="submit" class="button signal" id="buy-btn">buy now →</button>
+            {product.productType === 'apparel' && 'sizes' in product && Array.isArray((product as any).sizes) && (product as any).sizes.length > 1 && (
+              <label class="pf-size-label" for="size-select">
+                size
+                <select id="size-select" name="variant_id" class="pf-size-select" required>
+                  {(product as any).sizes.map((s: { name: string; sku: string; stockState: string }) => (
+                    <option value={s.sku} disabled={s.stockState === 'sold-out'} selected={s.name === 'M'}>
+                      {s.name}{s.stockState === 'low-stock' ? ' (low stock)' : ''}{s.stockState === 'sold-out' ? ' (sold out)' : ''}
+                    </option>
+                  ))}
+                </select>
+              </label>
+            )}
+            <div class="pf-buy-row">
+              <button type="submit" class="button signal" id="buy-btn">buy now →</button>
+              <button type="button" class="button outline" id="add-to-cart-btn" data-slug={product.slug}>add to basket</button>
+            </div>
           </form>
           <ul class="pf-keypoints">
             {product.keypoints.map((kp: string) => <li>{kp}</li>)}
@@ -224,8 +239,36 @@ const backLink = BACK_LINK_COPY[product.category] ?? { href: '/', label: '← ba
     font-weight: 700;
     margin-bottom: 18px;
   }
-  #buy-btn { margin-bottom: 22px; }
-  #buy-btn:disabled { opacity: 0.6; cursor: wait; }
+  .pf-size-label {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    opacity: 0.7;
+    margin-bottom: 16px;
+  }
+  .pf-size-select {
+    display: block;
+    margin-top: 6px;
+    padding: 10px 14px;
+    font-family: var(--font-mono);
+    font-size: 14px;
+    background: var(--owc-bone);
+    color: var(--owc-ink);
+    border: 1px solid rgba(14, 14, 17, 0.2);
+    border-radius: 4px;
+    min-width: 140px;
+    cursor: pointer;
+  }
+  .pf-buy-row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 22px;
+  }
+  #buy-btn:disabled, #add-to-cart-btn:disabled { opacity: 0.6; cursor: wait; }
+  #add-to-cart-btn.added { background: var(--owc-pulse); color: var(--owc-ink); border-color: var(--owc-pulse); }
   .pf-keypoints {
     list-style: none;
     padding: 0;
@@ -299,30 +342,57 @@ const backLink = BACK_LINK_COPY[product.category] ?? { href: '/', label: '← ba
 </style>
 
 <script>
-  const form = document.getElementById('checkout-form') as HTMLFormElement;
-  const btn = document.getElementById('buy-btn') as HTMLButtonElement;
-  if (form && btn) {
+  import { addToCart, refreshCartBadge } from '../../lib/cart';
+
+  const form = document.getElementById('checkout-form') as HTMLFormElement | null;
+  const buyBtn = document.getElementById('buy-btn') as HTMLButtonElement | null;
+  const cartBtn = document.getElementById('add-to-cart-btn') as HTMLButtonElement | null;
+  const sizeSel = document.getElementById('size-select') as HTMLSelectElement | null;
+
+  function selectedVariantId(): string | null {
+    return sizeSel ? sizeSel.value : null;
+  }
+
+  if (form && buyBtn) {
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
       const priceId = form.dataset.priceId;
       const slug = form.dataset.slug;
-      btn.disabled = true;
-      btn.textContent = 'redirecting…';
+      const variantId = selectedVariantId();
+      buyBtn.disabled = true;
+      buyBtn.textContent = 'redirecting…';
       try {
+        const body: Record<string, unknown> = { price_id: priceId, slug };
+        if (variantId) body.variant_id = variantId;
         const res = await fetch('/api/checkout', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ price_id: priceId, slug }),
+          body: JSON.stringify(body),
         });
         if (!res.ok) throw new Error('checkout failed');
         const { url } = await res.json();
         if (!url) throw new Error('no url returned');
         window.location.href = url;
       } catch (err) {
-        btn.disabled = false;
-        btn.textContent = 'try again';
+        buyBtn.disabled = false;
+        buyBtn.textContent = 'try again';
         console.error(err);
       }
+    });
+  }
+
+  if (cartBtn) {
+    cartBtn.addEventListener('click', () => {
+      const slug = cartBtn.dataset.slug!;
+      const variantId = selectedVariantId() || undefined;
+      addToCart({ slug, variantId, quantity: 1 });
+      cartBtn.textContent = 'added ✓';
+      cartBtn.classList.add('added');
+      refreshCartBadge();
+      setTimeout(() => {
+        cartBtn.textContent = 'add to basket';
+        cartBtn.classList.remove('added');
+      }, 1500);
     });
   }
 </script>

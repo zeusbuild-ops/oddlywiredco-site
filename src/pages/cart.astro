@@ -1,0 +1,223 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { allProducts } from '../types/product';
+---
+<BaseLayout
+  title="your basket · OddlyWiredCo"
+  description="the things you've added to your basket. proceed to secure checkout via stripe."
+  ogType="website"
+>
+  <section class="fold light cart-fold">
+    <div class="container">
+      <h1 class="cart-title">your basket</h1>
+
+      <div id="cart-empty" class="cart-empty" hidden>
+        <p class="cart-empty-line">nothing in here yet.</p>
+        <p class="cart-empty-sub">add something from <a href="/journals">journals</a>, <a href="/apparel">apparel</a> or <a href="/accessories">accessories</a>.</p>
+      </div>
+
+      <div id="cart-body" hidden>
+        <ul id="cart-lines" class="cart-lines"></ul>
+
+        <div class="cart-summary">
+          <div class="cart-totals">
+            <div class="cart-line-row">
+              <span>subtotal</span>
+              <span id="cart-subtotal" class="num">£0.00</span>
+            </div>
+            <div class="cart-line-row cart-line-shipping">
+              <span>shipping</span>
+              <span class="num">included at checkout</span>
+            </div>
+          </div>
+          <button type="button" id="cart-checkout" class="button signal cart-checkout-btn">checkout →</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script is:inline define:vars={{ products: allProducts }}>
+    window.__owc_products__ = products;
+  </script>
+
+  <script>
+    import { getCart, updateQuantity, refreshCartBadge, toCheckoutPayload, clearCart } from '../lib/cart';
+
+    const products = (window as any).__owc_products__ as Array<{
+      slug: string; hook: string; descriptor: string; priceCents: number; heroImage: string; category: string;
+      sizes?: Array<{ name: string; sku: string; stockState: string }>;
+    }>;
+
+    const fmt = (cents: number) => new Intl.NumberFormat('en-GB', { style: 'currency', currency: 'GBP' }).format(cents / 100);
+    const productBySlug = (slug: string) => products.find((p) => p.slug === slug);
+    const sizeNameFor = (slug: string, variantId?: string) => {
+      const p = productBySlug(slug);
+      if (!p || !p.sizes || !variantId) return null;
+      const s = p.sizes.find((s) => s.sku === variantId);
+      return s ? s.name : null;
+    };
+
+    function render() {
+      const cart = getCart();
+      const empty = document.getElementById('cart-empty')!;
+      const body = document.getElementById('cart-body')!;
+      const lines = document.getElementById('cart-lines')!;
+      const subtotalEl = document.getElementById('cart-subtotal')!;
+
+      if (cart.items.length === 0) {
+        empty.removeAttribute('hidden');
+        body.setAttribute('hidden', '');
+        refreshCartBadge();
+        return;
+      }
+      empty.setAttribute('hidden', '');
+      body.removeAttribute('hidden');
+
+      lines.innerHTML = '';
+      let subtotal = 0;
+      for (const it of cart.items) {
+        const p = productBySlug(it.slug);
+        if (!p) continue;
+        const sizeName = sizeNameFor(it.slug, it.variantId);
+        subtotal += p.priceCents * it.quantity;
+        const li = document.createElement('li');
+        li.className = 'cart-line';
+        li.dataset.slug = it.slug;
+        li.dataset.variantId = it.variantId || '';
+        li.innerHTML = `
+          <a href="/${p.category}/${p.slug}" class="cart-line-img">
+            <img src="${p.heroImage}" alt="" loading="lazy" />
+          </a>
+          <div class="cart-line-info">
+            <a href="/${p.category}/${p.slug}" class="cart-line-hook">${p.hook}</a>
+            <p class="cart-line-meta">${p.descriptor}${sizeName ? ` · size ${sizeName}` : ''}</p>
+            <p class="cart-line-unit">${fmt(p.priceCents)} each</p>
+          </div>
+          <div class="cart-line-qty">
+            <button type="button" class="qty-btn" data-action="dec" aria-label="decrease quantity">−</button>
+            <span class="qty-val">${it.quantity}</span>
+            <button type="button" class="qty-btn" data-action="inc" aria-label="increase quantity">+</button>
+          </div>
+          <div class="cart-line-total num">${fmt(p.priceCents * it.quantity)}</div>
+          <button type="button" class="cart-remove" data-action="remove" aria-label="remove">×</button>
+        `;
+        lines.appendChild(li);
+      }
+      subtotalEl.textContent = fmt(subtotal);
+      refreshCartBadge();
+    }
+
+    document.getElementById('cart-lines')!.addEventListener('click', (e) => {
+      const target = e.target as HTMLElement;
+      const action = target.dataset.action;
+      if (!action) return;
+      const line = target.closest('.cart-line') as HTMLLIElement | null;
+      if (!line) return;
+      const slug = line.dataset.slug!;
+      const variantId = line.dataset.variantId || undefined;
+      const current = getCart().items.find((i) => i.slug === slug && (i.variantId || '') === (variantId || ''));
+      const curQty = current?.quantity || 0;
+      if (action === 'inc') updateQuantity(slug, variantId, curQty + 1);
+      else if (action === 'dec') updateQuantity(slug, variantId, curQty - 1);
+      else if (action === 'remove') updateQuantity(slug, variantId, 0);
+      render();
+    });
+
+    document.getElementById('cart-checkout')!.addEventListener('click', async () => {
+      const btn = document.getElementById('cart-checkout') as HTMLButtonElement;
+      btn.disabled = true;
+      btn.textContent = 'redirecting…';
+      try {
+        const payload = toCheckoutPayload();
+        const res = await fetch('/api/checkout', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+        if (!res.ok) throw new Error('checkout failed');
+        const { url } = await res.json();
+        if (!url) throw new Error('no url returned');
+        window.location.href = url;
+      } catch (err) {
+        btn.disabled = false;
+        btn.textContent = 'try again';
+        console.error(err);
+      }
+    });
+
+    render();
+  </script>
+
+  <style>
+    .cart-fold { padding: 60px 0 80px; }
+    .cart-title {
+      font-family: var(--font-mono);
+      font-size: 14px; text-transform: uppercase; letter-spacing: 1.5px;
+      opacity: 0.6; margin: 0 0 28px;
+    }
+    .cart-empty { text-align: center; padding: 60px 0; }
+    .cart-empty-line { font-size: 22px; margin: 0 0 12px; }
+    .cart-empty-sub { font-size: 14px; opacity: 0.7; }
+    .cart-empty a { color: var(--owc-ink); text-decoration: underline; }
+
+    .cart-lines { list-style: none; padding: 0; margin: 0 0 32px; }
+    .cart-line {
+      display: grid;
+      grid-template-columns: 80px 1fr auto auto 32px;
+      gap: 16px;
+      align-items: center;
+      padding: 18px 0;
+      border-bottom: 1px solid rgba(14, 14, 17, 0.08);
+    }
+    @media (max-width: 640px) {
+      .cart-line {
+        grid-template-columns: 64px 1fr 32px;
+        grid-template-rows: auto auto;
+        column-gap: 12px; row-gap: 8px;
+      }
+      .cart-line-qty, .cart-line-total {
+        grid-column: 2 / 3;
+      }
+    }
+    .cart-line-img {
+      display: block; width: 80px; height: 80px; border-radius: 4px; overflow: hidden;
+      background: rgba(14, 14, 17, 0.04);
+    }
+    .cart-line-img img { width: 100%; height: 100%; object-fit: cover; }
+    .cart-line-hook {
+      display: block;
+      color: var(--owc-ink); text-decoration: none;
+      font-size: 16px; font-weight: 600; margin-bottom: 4px;
+    }
+    .cart-line-hook:hover { color: var(--owc-pulse); }
+    .cart-line-meta { font-family: var(--font-mono); font-size: 11px; opacity: 0.6; margin: 0 0 4px; }
+    .cart-line-unit { font-family: var(--font-mono); font-size: 11px; opacity: 0.6; margin: 0; }
+    .cart-line-qty { display: inline-flex; align-items: center; gap: 8px; }
+    .qty-btn {
+      width: 28px; height: 28px; border: 1px solid rgba(14, 14, 17, 0.2);
+      background: var(--owc-bone); color: var(--owc-ink); border-radius: 4px;
+      cursor: pointer; font-size: 16px; line-height: 1;
+    }
+    .qty-btn:hover { border-color: var(--owc-ink); }
+    .qty-val { font-family: var(--font-mono); font-size: 14px; min-width: 24px; text-align: center; }
+    .cart-line-total { font-family: var(--font-mono); font-size: 16px; font-weight: 700; }
+    .cart-remove {
+      background: none; border: 0; color: var(--owc-ink);
+      opacity: 0.4; cursor: pointer; font-size: 22px; line-height: 1; padding: 0;
+    }
+    .cart-remove:hover { opacity: 1; color: var(--owc-pulse); }
+    .num { font-variant-numeric: tabular-nums; }
+
+    .cart-summary {
+      display: flex; justify-content: space-between; align-items: flex-end;
+      gap: 32px; flex-wrap: wrap;
+    }
+    .cart-totals { min-width: 240px; }
+    .cart-line-row { display: flex; justify-content: space-between; gap: 24px; padding: 6px 0; }
+    .cart-line-row span:first-child { font-family: var(--font-mono); font-size: 12px; text-transform: uppercase; letter-spacing: 1.5px; opacity: 0.7; }
+    .cart-line-row.cart-line-shipping span:last-child { font-family: var(--font-mono); font-size: 11px; opacity: 0.6; }
+    #cart-subtotal { font-family: var(--font-mono); font-size: 22px; font-weight: 700; }
+    .cart-checkout-btn { min-width: 200px; }
+    .cart-checkout-btn:disabled { opacity: 0.6; cursor: wait; }
+  </style>
+</BaseLayout>

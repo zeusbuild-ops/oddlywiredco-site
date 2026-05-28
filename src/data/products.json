@@ -150,8 +150,7 @@
       "quiet-note-past-journal",
       "rejection-sensitivity-real-journal",
       "draft-text-complete-journal"
-    ],
-    "featured": true
+    ]
   },
   {
     "slug": "chaos-feature-journal",
@@ -835,7 +834,8 @@
       "unread-email-not-journal",
       "audhd-survival-kit-journal",
       "dopamine-before-discipline-journal"
-    ]
+    ],
+    "featured": true
   },
   {
     "slug": "monday-you-and-journal",
@@ -2203,8 +2203,7 @@
       "your-meltdown-was-journal",
       "you-remember-planning-journal",
       "quiet-note-past-journal"
-    ],
-    "featured": true
+    ]
   },
   {
     "slug": "your-meltdown-was-journal",
@@ -2488,7 +2487,8 @@
         "sku": "32922",
         "stockState": "in-stock"
       }
-    ]
+    ],
+    "featured": true
   },
   {
     "slug": "oddly-hoodie-overstimulated",
@@ -2592,7 +2592,8 @@
         "sku": "32922",
         "stockState": "in-stock"
       }
-    ]
+    ],
+    "featured": true
   },
   {
     "slug": "oddly-hoodie-interest-based",
@@ -3632,7 +3633,8 @@
         "sku": "12128",
         "stockState": "in-stock"
       }
-    ]
+    ],
+    "featured": true
   },
   {
     "slug": "oddly-tee-pov-3am",
@@ -3736,7 +3738,8 @@
         "sku": "12128",
         "stockState": "in-stock"
       }
-    ]
+    ],
+    "featured": true
   },
   {
     "slug": "oddly-tee-side-quest",
@@ -4650,7 +4653,8 @@
       "Cool wash, no bleach",
       "Skip the tumble dryer to preserve the print",
       "Iron inside-out if needed"
-    ]
+    ],
+    "featured": true
   },
   {
     "slug": "oddly-tote-neurospicy",
@@ -4814,7 +4818,8 @@
       "Cool wash, no bleach",
       "Skip the tumble dryer to preserve the print",
       "Iron inside-out if needed"
-    ]
+    ],
+    "featured": true
   },
   {
     "slug": "oddly-tote-body-doubling",
