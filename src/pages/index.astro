@@ -28,7 +28,7 @@ const featured = [...flagged, ...alphabetical.filter(p => !flagged.includes(p))]
       <Squiggle variant="sine" width="100%"/>
       <CursorTypeHero lines={["your brain isn't broken.", "it's just oddly wired."]}/>
       <p class="hero-sub">the chaos is a feature.</p>
-      <a href="#stuff" class="button">see the journals →</a>
+      <a href="#stuff" class="button">see what's here →</a>
     </div>
   </section>
 
@@ -53,7 +53,7 @@ const featured = [...flagged, ...alphabetical.filter(p => !flagged.includes(p))]
   <section class="fold dark catalogue-fold" id="stuff">
     <div class="container">
       <div class="meta">03 / the catalogue</div>
-      <h2 class="h-mono lg">30 journals.<br>each one a moment<br>nobody else named.</h2>
+      <h2 class="h-mono lg">60 things.<br>each one a moment<br>nobody else named.</h2>
       <div class="featured-grid">
         {featured.map((p) => (
           <ProductCard
@@ -66,18 +66,22 @@ const featured = [...flagged, ...alphabetical.filter(p => !flagged.includes(p))]
           />
         ))}
       </div>
-      <a href="/journals" class="button">see all 30 →</a>
+      <div class="catalogue-ctas">
+        <a href="/journals" class="button">30 journals →</a>
+        <a href="/apparel" class="button">22 apparel →</a>
+        <a href="/accessories" class="button">8 accessories →</a>
+      </div>
     </div>
   </section>
 
-  <!-- Fold 4: What's coming (Bone) — NEW -->
+  <!-- Fold 4: The full lineup by category — apparel + accessories now live -->
   <section class="fold light coming-fold">
     <div class="container">
-      <div class="meta">04 / what's coming</div>
-      <h2 class="h-mono lg">more, slowly.<br>when we get it right.</h2>
+      <div class="meta">04 / by category</div>
+      <h2 class="h-mono lg">the full lineup.<br>slow on purpose.</h2>
       <div class="teaser-grid">
-        <CategoryTeaserCard category="apparel"     hook="t-shirts + hoodies for brains that don't sit still" />
-        <CategoryTeaserCard category="accessories" hook="mugs + things to hold while the world re-loads" />
+        <CategoryTeaserCard category="apparel"     hook="tees + hoodies for brains that don't sit still"      comingSoon={false} />
+        <CategoryTeaserCard category="accessories" hook="totes + things to hold while the world re-loads"     comingSoon={false} />
         <CategoryTeaserCard category="digital"     hook="printable + fillable. instant download, no shipping." />
       </div>
     </div>
@@ -95,6 +99,8 @@ const featured = [...flagged, ...alphabetical.filter(p => !flagged.includes(p))]
     .who-list { display: flex; flex-direction: column; gap: 16px; margin: 24px 0; font-family: var(--font-mono); font-size: clamp(24px, 4vw, 36px); font-weight: 700; }
     .who-arrow { font-family: var(--font-mono); font-size: 18px; color: var(--owc-signal); margin-top: 24px; }
     .catalogue-fold .featured-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin: 36px 0; }
+    .catalogue-fold .catalogue-ctas { display: flex; flex-wrap: wrap; gap: 12px; }
+    .catalogue-fold .catalogue-ctas .button { flex: 0 1 auto; }
     .coming-fold .teaser-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 36px; }
     @media (max-width: 900px) {
       .catalogue-fold .featured-grid, .coming-fold .teaser-grid { grid-template-columns: repeat(2, 1fr); }
