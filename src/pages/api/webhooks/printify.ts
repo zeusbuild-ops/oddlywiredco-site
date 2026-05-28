@@ -23,7 +23,26 @@ function randomToken(length = 32): string {
   return out;
 }
 
+function constantTimeEqual(a: string, b: string): boolean {
+  if (a.length !== b.length) return false;
+  let result = 0;
+  for (let i = 0; i < a.length; i++) {
+    result |= a.charCodeAt(i) ^ b.charCodeAt(i);
+  }
+  return result === 0;
+}
+
 export const POST: APIRoute = async ({ request }) => {
+  // Shared-secret guard. Printify webhooks aren't signed, so we gate the endpoint
+  // on a query-string key configured in Printify's webhook URL and bound as a
+  // Cloudflare secret. Without this, anyone POSTing a plausible body can mint
+  // review tokens + burn Brevo quota.
+  const expectedKey = (env as any).PRINTIFY_WEBHOOK_SECRET as string | undefined;
+  const providedKey = new URL(request.url).searchParams.get('key') ?? '';
+  if (!expectedKey || !constantTimeEqual(providedKey, expectedKey)) {
+    return new Response('forbidden', { status: 403 });
+  }
+
   const event = (await request.json()) as PrintifyShipmentEvent;
 
   if (event.type !== 'order:shipment:created') {
