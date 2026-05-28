@@ -5,3 +5,4 @@ Disallow: /reviews/submit
 Disallow: /reviews/thanks
 
 Sitemap: https://oddlywiredco.com/sitemap-index.xml
+Sitemap: https://oddlywiredco.com/sitemap-products.xml
