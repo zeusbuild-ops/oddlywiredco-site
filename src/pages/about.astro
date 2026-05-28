@@ -18,10 +18,10 @@ import Squiggle from '../components/Squiggle.astro';
     </div>
   </section>
 
-  <!-- Fold 2: Hi, I'm Jay (Bone) -->
+  <!-- Fold 2: Hi, I'm Mads (Bone) -->
   <section class="fold light">
     <div class="container">
-      <div class="meta">01 / hi, i'm jay</div>
+      <div class="meta">01 / hi, i'm mads</div>
       <h2 class="h-mono md">i started this after my diagnosis<br>in my thirties.</h2>
       <p class="body">
         I realised two things at once. One: a lot of my life suddenly made sense.
@@ -60,7 +60,7 @@ import Squiggle from '../components/Squiggle.astro';
     </div>
   </section>
 
-  <!-- Fold 4: What we sell + How designs are made (Bone) -->
+  <!-- Fold 4: What we make (Bone) -->
   <section class="fold light">
     <div class="container">
       <div class="meta">03 / what we make</div>
@@ -75,10 +75,14 @@ import Squiggle from '../components/Squiggle.astro';
         The 2am doom-scroll. The hyperfocus spiral. Rejection sensitivity. The bits that do not make it into
         mainstream "ADHD content" because they are too honest.
       </p>
+    </div>
+  </section>
 
-      <Squiggle variant="zigzag" width="40%"/>
-
-      <div class="meta sub-meta">04 / how designs are made</div>
+  <!-- Fold 5: How designs are made (Ink) -->
+  <section class="fold dark">
+    <div class="container">
+      <div class="meta">04 / how designs are made</div>
+      <h2 class="h-mono md">ai-assisted.<br>human-finalised.<br>told you so up front.</h2>
       <p class="body">
         Honestly: I use AI tools as part of the design process. I generate layout drafts, explore type and colour
         variations, and speed up the production side using AI. Every design is then reviewed, edited, voiced, and
@@ -91,58 +95,44 @@ import Squiggle from '../components/Squiggle.astro';
     </div>
   </section>
 
-  <!-- Fold 5: What you will not find (Ink) -->
-  <section class="fold dark">
+  <!-- Fold 6: What you will not find (Bone) -->
+  <section class="fold light">
     <div class="container">
       <div class="meta">05 / what you will not find here</div>
       <h2 class="h-mono md">no "adhd is your superpower" content.</h2>
       <ul class="wont-list">
-        <li>no clinical advice</li>
-        <li>no content that talks down to neurodivergent people</li>
-        <li>no promises that a planner will fix you</li>
-        <li>no treating us as a problem to be solved</li>
+        <li><span class="x" aria-hidden="true">×</span> no clinical advice</li>
+        <li><span class="x" aria-hidden="true">×</span> no content that talks down to neurodivergent people</li>
+        <li><span class="x" aria-hidden="true">×</span> no promises that a planner will fix you</li>
+        <li><span class="x" aria-hidden="true">×</span> no treating us as a problem to be solved</li>
       </ul>
-      <p class="hero-sub">tools and humour, that's it.</p>
+      <p class="wont-tag">tools and humour, that's it.</p>
     </div>
   </section>
 
-  <!-- Fold 6: Thanks + CTAs (Bone) -->
-  <section class="fold light">
+  <!-- Fold 7: Thanks + CTAs (Ink) -->
+  <section class="fold dark">
     <div class="container">
       <div class="meta">06 / thanks for being here</div>
+      <h2 class="h-mono md">i make this for people who get it.</h2>
       <p class="body">
         If you buy something, I see your order. If you message the shop, you are messaging me.
         If a product does not work for your brain, that's information about the product, not about you.
-        I make this for people who get it. I am glad you found the shop.
+        I am glad you found the shop.
       </p>
       <div class="cta-row">
-        <a href="https://www.etsy.com/shop/oddlywiredco" class="button" target="_blank" rel="noopener">shop on etsy →</a>
-        <a href="/" class="button outline">← back to home</a>
+        <a href="/journals" class="button">shop the journals →</a>
+        <a href="https://www.etsy.com/shop/oddlywiredco" class="button outline" target="_blank" rel="noopener">or shop on etsy →</a>
       </div>
     </div>
   </section>
-
-  <!-- Footer (Bone) -->
-  <footer class="fold light footer-fold">
-    <div class="container">
-      <Squiggle variant="sine" width="200px"/>
-      <Wordmark size="md" variant="dark"/>
-      <ul class="footer-links">
-        <li><a href="https://www.etsy.com/shop/oddlywiredco" rel="noopener" target="_blank">Etsy</a></li>
-        <li><span>TikTok (coming soon)</span></li>
-        <li><span>Pinterest (coming soon)</span></li>
-        <li><span>Instagram (coming soon)</span></li>
-      </ul>
-      <p class="copyright">© 2026 OddlyWiredCo</p>
-      <p class="easter-egg">made with executive dysfunction</p>
-    </div>
-  </footer>
 
   <style>
     .about-hero { padding-top: 64px; padding-bottom: 64px; }
     .about-hero .container { display: flex; flex-direction: column; gap: 20px; }
     .hero-sub { color: var(--owc-bone); opacity: 0.65; font-family: var(--font-mono); font-size: 16px; max-width: 620px; }
     .body { font-size: 18px; line-height: 1.6; max-width: 680px; margin: 0 0 20px; }
+
     .pullquote {
       font-family: var(--font-mono);
       font-size: clamp(18px, 2.2vw, 22px);
@@ -153,22 +143,66 @@ import Squiggle from '../components/Squiggle.astro';
       margin: 32px 0 0;
       max-width: 640px;
     }
-    .sub-meta { margin-top: 48px; }
+
+    /* "what you will not find" — stronger visual moment */
     .wont-list {
-      display: flex; flex-direction: column; gap: 12px;
-      margin: 24px 0;
+      list-style: none;
+      padding: 0;
+      margin: 28px 0 0;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      max-width: 720px;
+    }
+    .wont-list li {
+      display: flex;
+      align-items: baseline;
+      gap: 14px;
       font-family: var(--font-mono);
-      font-size: 18px;
+      font-size: clamp(18px, 1.9vw, 22px);
+      font-weight: 500;
+      line-height: 1.35;
+      padding: 4px 0;
+    }
+    .wont-list li .x {
+      flex: 0 0 auto;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      background: var(--owc-pulse);
+      color: var(--owc-ink);
+      font-weight: 700;
+      font-size: 16px;
+      border-radius: 4px;
+      line-height: 1;
+    }
+    .wont-tag {
+      margin-top: 32px;
+      font-family: var(--font-mono);
+      font-size: 16px;
+      opacity: 0.7;
       max-width: 620px;
     }
-    .wont-list li::before { content: '× '; color: var(--owc-signal); margin-right: 4px; }
-    .cta-row { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 24px; }
-    .footer-fold { padding-top: 64px; padding-bottom: 64px; }
-    .footer-fold .container { display: flex; flex-direction: column; gap: 24px; align-items: flex-start; }
-    .footer-links { display: flex; gap: 24px; flex-wrap: wrap; font-family: var(--font-mono); font-size: 13px; text-transform: uppercase; letter-spacing: 1.5px; }
-    .footer-links a:hover { color: var(--owc-pulse); }
-    .footer-links span { opacity: 0.4; }
-    .copyright { font-family: var(--font-mono); font-size: 12px; opacity: 0.5; }
-    .easter-egg { font-family: var(--font-mono); font-size: 10px; opacity: 0.3; text-transform: uppercase; letter-spacing: 2px; }
+
+    /* CTA row — primary filled, secondary outline */
+    .cta-row { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 28px; }
+
+    /* Subtle Pulse hairline between folds — visual rhythm */
+    .fold + .fold {
+      position: relative;
+    }
+    .fold + .fold::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 40px;
+      height: 2px;
+      background: var(--owc-pulse);
+      opacity: 0.5;
+    }
   </style>
 </BaseLayout>
