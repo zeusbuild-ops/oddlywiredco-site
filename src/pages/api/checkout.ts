@@ -39,7 +39,7 @@ export const POST: APIRoute = async ({ request }) => {
   form.set('line_items[0][price]', product.stripePriceId);
   form.set('line_items[0][quantity]', '1');
   form.set('success_url', `${origin}/checkout/success?session_id={CHECKOUT_SESSION_ID}`);
-  form.set('cancel_url', `${origin}/journals/${product.slug}`);
+  form.set('cancel_url', `${origin}/${product.category}/${product.slug}`);
   form.set('billing_address_collection', 'auto');
   ALLOWED_COUNTRIES.forEach((c, i) => {
     form.set(`shipping_address_collection[allowed_countries][${i}]`, c);
