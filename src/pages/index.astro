@@ -7,6 +7,7 @@ import ProductCard from '../components/ProductCard.astro';
 import CategoryTeaserCard from '../components/CategoryTeaserCard.astro';
 import AboutNewsletterFold from '../components/AboutNewsletterFold.astro';
 import { allProducts } from '../types/product';
+import { organizationSchema, websiteSchema } from '../lib/schema';
 
 // Featured-3 picker — flag-driven with alphabetical fallback
 const flagged = allProducts.filter(p => p.featured);
@@ -16,6 +17,7 @@ const featured = [...flagged, ...alphabetical.filter(p => !flagged.includes(p))]
 <BaseLayout
   title="OddlyWiredCo — your brain isn't broken, it's just oddly wired"
   description="An ADHD brand for the moments nobody else names. Mugs, journals, prints made by an ADHD person for ADHD/AuDHD brains. UK-printed."
+  jsonLd={[organizationSchema(), websiteSchema()]}
 >
   <!-- Fold 1: Hero (Ink) — unchanged from existing -->
   <section class="fold dark hero-fold">

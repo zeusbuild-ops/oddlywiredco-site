@@ -3,17 +3,35 @@ import '../styles/global.css';
 import SiteNav from '../components/SiteNav.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 
+interface ProductMeta {
+  priceGBP: number;        // e.g. 19.00
+  availability: 'in stock' | 'out of stock' | 'preorder';
+  retailerItemId?: string; // SKU
+}
+
 interface Props {
   title: string;
   description: string;
   ogImage?: string;
+  ogType?: 'website' | 'product' | 'article';
+  productMeta?: ProductMeta;
+  jsonLd?: Array<Record<string, unknown>>;
 }
 
-const { title, description, ogImage = '/og-image.png' } = Astro.props;
+const {
+  title,
+  description,
+  ogImage = '/og-image.png',
+  ogType = 'website',
+  productMeta,
+  jsonLd,
+} = Astro.props;
+
 const canonical = new URL(Astro.url.pathname, Astro.site).toString();
+const ogImageAbs = new URL(ogImage, Astro.site).toString();
 ---
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,20 +41,37 @@ const canonical = new URL(Astro.url.pathname, Astro.site).toString();
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 
   <!-- Open Graph -->
-  <meta property="og:type" content="website">
+  <meta property="og:type" content={ogType}>
   <meta property="og:url" content={canonical}>
   <meta property="og:title" content={title}>
   <meta property="og:description" content={description}>
-  <meta property="og:image" content={new URL(ogImage, Astro.site).toString()}>
+  <meta property="og:image" content={ogImageAbs}>
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:site_name" content="OddlyWiredCo">
+
+  {productMeta && (
+    <>
+      <meta property="product:price:amount" content={productMeta.priceGBP.toFixed(2)}>
+      <meta property="product:price:currency" content="GBP">
+      <meta property="product:availability" content={productMeta.availability}>
+      {productMeta.retailerItemId && (
+        <meta property="product:retailer_item_id" content={productMeta.retailerItemId}>
+      )}
+    </>
+  )}
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content={title}>
   <meta name="twitter:description" content={description}>
-  <meta name="twitter:image" content={new URL(ogImage, Astro.site).toString()}>
+  <meta name="twitter:image" content={ogImageAbs}>
 
   <!-- Pinterest domain verification -->
   <meta name="p:domain_verify" content="a9c244f0238a6891d5efbffd5990cd6f">
+
+  {jsonLd && jsonLd.map((schema) => (
+    <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  ))}
 
   <!-- Inter + Space Mono via Google Fonts (only external dep — OK for v1) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">

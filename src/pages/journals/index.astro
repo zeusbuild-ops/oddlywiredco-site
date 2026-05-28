@@ -2,12 +2,18 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import CategoryGrid from '../../components/CategoryGrid.astro';
 import { allProducts } from '../../types/product';
+import { categoryBreadcrumbSchema, collectionPageSchema } from '../../lib/schema';
 
 const journals = allProducts.filter(p => p.category === 'journals');
+const description = '30 hardback journals for ADHD brains. UK-printed. Each one names a moment nobody else does.';
 ---
 <BaseLayout
   title="ADHD journals — 30 designs · OddlyWiredCo"
-  description="30 hardback journals for ADHD brains. UK-printed. Each one names a moment nobody else does."
+  description={description}
+  jsonLd={[
+    categoryBreadcrumbSchema('journals'),
+    collectionPageSchema('journals', description, journals),
+  ]}
 >
   <CategoryGrid
     products={journals}

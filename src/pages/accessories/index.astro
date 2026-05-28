@@ -3,13 +3,21 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import ComingSoonFold from '../../components/ComingSoonFold.astro';
 import CategoryGrid from '../../components/CategoryGrid.astro';
 import { allProducts } from '../../types/product';
+import { categoryBreadcrumbSchema, collectionPageSchema } from '../../lib/schema';
 
 const items = allProducts.filter(p => p.category === 'accessories');
 const isLive = items.length > 0;
+const description = isLive
+  ? "Mugs and things to hold while the world reloads."
+  : "Accessories coming. Newsletter below for first dibs.";
+const jsonLd = isLive
+  ? [categoryBreadcrumbSchema('accessories'), collectionPageSchema('accessories', description, items)]
+  : [categoryBreadcrumbSchema('accessories')];
 ---
 <BaseLayout
   title={isLive ? "ADHD accessories — OddlyWiredCo" : "Accessories coming soon — OddlyWiredCo"}
-  description={isLive ? "Mugs and things to hold while the world reloads." : "Accessories coming. Newsletter below for first dibs."}
+  description={description}
+  jsonLd={jsonLd}
 >
   {isLive
     ? <CategoryGrid products={items} heading="accessories." eyebrow="01 / the catalogue" />
