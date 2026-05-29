@@ -56,6 +56,16 @@ import { allProducts } from '../types/product';
       const s = p.sizes.find((s) => s.sku === variantId);
       return s ? s.name : null;
     };
+    // Per-variant pricing (2XL upcharge etc) — falls back to product default
+    const unitPriceCentsFor = (slug: string, variantId?: string) => {
+      const p = productBySlug(slug);
+      if (!p) return 0;
+      if (variantId && p.sizes) {
+        const s = p.sizes.find((s) => s.sku === variantId);
+        if (s && typeof (s as any).priceCents === 'number') return (s as any).priceCents;
+      }
+      return p.priceCents;
+    };
 
     function render() {
       const cart = getCart();
@@ -79,7 +89,8 @@ import { allProducts } from '../types/product';
         const p = productBySlug(it.slug);
         if (!p) continue;
         const sizeName = sizeNameFor(it.slug, it.variantId);
-        subtotal += p.priceCents * it.quantity;
+        const unitCents = unitPriceCentsFor(it.slug, it.variantId);
+        subtotal += unitCents * it.quantity;
         const li = document.createElement('li');
         li.className = 'cart-line';
         li.dataset.slug = it.slug;
@@ -91,14 +102,14 @@ import { allProducts } from '../types/product';
           <div class="cart-line-info">
             <a href="/${p.category}/${p.slug}" class="cart-line-hook">${p.hook}</a>
             <p class="cart-line-meta">${p.descriptor}${sizeName ? ` · size ${sizeName}` : ''}</p>
-            <p class="cart-line-unit">${fmt(p.priceCents)} each</p>
+            <p class="cart-line-unit">${fmt(unitCents)} each</p>
           </div>
           <div class="cart-line-qty">
             <button type="button" class="qty-btn" data-action="dec" aria-label="decrease quantity">−</button>
             <span class="qty-val">${it.quantity}</span>
             <button type="button" class="qty-btn" data-action="inc" aria-label="increase quantity">+</button>
           </div>
-          <div class="cart-line-total num">${fmt(p.priceCents * it.quantity)}</div>
+          <div class="cart-line-total num">${fmt(unitCents * it.quantity)}</div>
           <button type="button" class="cart-remove" data-action="remove" aria-label="remove">×</button>
         `;
         lines.appendChild(li);

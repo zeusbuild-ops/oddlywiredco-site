@@ -53,11 +53,13 @@ async function singleCheckout(
   if (!resolvedVariantId) {
     return json({ error: 'invalid variant_id for product' }, 400);
   }
+  // Per-variant price (2XL upcharge etc) falls back to product default
+  const lineItemPriceId = resolvePriceId(product, variant_id) || product.stripePriceId;
 
   const origin = new URL(request.url).origin;
   const form = new URLSearchParams();
   form.set('mode', 'payment');
-  form.set('line_items[0][price]', product.stripePriceId);
+  form.set('line_items[0][price]', lineItemPriceId);
   form.set('line_items[0][quantity]', '1');
   setSessionCommon(form, origin, product.category, product.slug);
 
@@ -82,15 +84,16 @@ async function basketCheckout(
     return json({ error: 'basket too large (max 20 line items)' }, 400);
   }
 
-  // Resolve every item: product lookup + variant validation
-  const resolved: Array<{ product: any; variantId: number; quantity: number }> = [];
+  // Resolve every item: product lookup + variant validation + price selection
+  const resolved: Array<{ product: any; variantId: number; quantity: number; priceId: string }> = [];
   for (const it of items) {
     const product = (products as any[]).find((p) => p.slug === it.slug);
     if (!product) return json({ error: `unknown slug: ${it.slug}` }, 400);
     const variantId = resolveVariantId(product, it.variant_id);
     if (!variantId) return json({ error: `invalid variant_id for ${it.slug}` }, 400);
+    const priceId = resolvePriceId(product, it.variant_id) || product.stripePriceId;
     const quantity = Math.max(1, Math.min(10, Math.floor(Number(it.quantity) || 1)));
-    resolved.push({ product, variantId, quantity });
+    resolved.push({ product, variantId, quantity, priceId });
   }
 
   // All items must be on the same Printify shop (true today — everything is shop 27681461)
@@ -104,7 +107,7 @@ async function basketCheckout(
   const form = new URLSearchParams();
   form.set('mode', 'payment');
   resolved.forEach((r, i) => {
-    form.set(`line_items[${i}][price]`, r.product.stripePriceId);
+    form.set(`line_items[${i}][price]`, r.priceId);
     form.set(`line_items[${i}][quantity]`, String(r.quantity));
   });
   // For multi-item return-to-cart on cancel
@@ -145,6 +148,36 @@ function setSessionCommon(form: URLSearchParams, origin: string, category: strin
     form.set(`shipping_address_collection[allowed_countries][${i}]`, c);
   });
   form.set('payment_method_types[0]', 'card');
+  addShippingOptions(form);
+}
+
+/** Shipping_options on the Checkout Session. Customer picks one based on
+ *  their address. UK = free (already baked into retail), International = +£7
+ *  to cover the higher cost of shipping from T Shirt and Sons UK to US/EU/AU.
+ *  Honor-system — Stripe doesn't filter shipping_options by destination so
+ *  a US customer could in theory pick UK Free. Most won't. Tune the rates
+ *  here if margin reality shifts.
+ */
+function addShippingOptions(form: URLSearchParams): void {
+  // Option 0: UK Royal Mail Tracked, free
+  form.set('shipping_options[0][shipping_rate_data][display_name]', 'UK Royal Mail Tracked');
+  form.set('shipping_options[0][shipping_rate_data][type]', 'fixed_amount');
+  form.set('shipping_options[0][shipping_rate_data][fixed_amount][amount]', '0');
+  form.set('shipping_options[0][shipping_rate_data][fixed_amount][currency]', 'gbp');
+  form.set('shipping_options[0][shipping_rate_data][delivery_estimate][minimum][unit]', 'business_day');
+  form.set('shipping_options[0][shipping_rate_data][delivery_estimate][minimum][value]', '2');
+  form.set('shipping_options[0][shipping_rate_data][delivery_estimate][maximum][unit]', 'business_day');
+  form.set('shipping_options[0][shipping_rate_data][delivery_estimate][maximum][value]', '4');
+
+  // Option 1: International Tracked, +£7
+  form.set('shipping_options[1][shipping_rate_data][display_name]', 'International Tracked');
+  form.set('shipping_options[1][shipping_rate_data][type]', 'fixed_amount');
+  form.set('shipping_options[1][shipping_rate_data][fixed_amount][amount]', '700');
+  form.set('shipping_options[1][shipping_rate_data][fixed_amount][currency]', 'gbp');
+  form.set('shipping_options[1][shipping_rate_data][delivery_estimate][minimum][unit]', 'business_day');
+  form.set('shipping_options[1][shipping_rate_data][delivery_estimate][minimum][value]', '5');
+  form.set('shipping_options[1][shipping_rate_data][delivery_estimate][maximum][unit]', 'business_day');
+  form.set('shipping_options[1][shipping_rate_data][delivery_estimate][maximum][value]', '10');
 }
 
 function resolveVariantId(product: any, requested: string | number | undefined): number | null {
@@ -161,6 +194,16 @@ function resolveVariantId(product: any, requested: string | number | undefined):
   }
   // Fall back to product default
   return Number(product.printifyVariantId);
+}
+
+function resolvePriceId(product: any, requested: string | number | undefined): string | null {
+  // For per-variant pricing (2XL upcharge). Returns the variant's own
+  // stripePriceId if set, else null (caller falls back to product default).
+  if (requested === undefined || requested === null || requested === '') return null;
+  if (!Array.isArray(product.sizes)) return null;
+  const requestedNum = Number(requested);
+  const match = product.sizes.find((s: any) => Number(s.sku) === requestedNum);
+  return match?.stripePriceId || null;
 }
 
 function chunkString(s: string, size: number): string[] {

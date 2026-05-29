@@ -95,17 +95,22 @@ const backLink = BACK_LINK_COPY[product.category] ?? { href: '/', label: '← ba
         <div class="pf-info">
           <h1 class="pf-hook h-mono">{product.hook}</h1>
           <p class="pf-descriptor">{product.descriptor}</p>
-          <p class="pf-price">{priceFormatted}</p>
+          <p class="pf-price" id="displayed-price" data-base-cents={product.priceCents}>{priceFormatted}</p>
           <form id="checkout-form" data-price-id={product.stripePriceId} data-slug={product.slug}>
             {product.productType === 'apparel' && 'sizes' in product && Array.isArray((product as any).sizes) && (product as any).sizes.length > 1 && (
               <label class="pf-size-label" for="size-select">
                 size
                 <select id="size-select" name="variant_id" class="pf-size-select" required>
-                  {(product as any).sizes.map((s: { name: string; sku: string; stockState: string }) => (
-                    <option value={s.sku} disabled={s.stockState === 'sold-out'} selected={s.name === 'M'}>
-                      {s.name}{s.stockState === 'low-stock' ? ' (low stock)' : ''}{s.stockState === 'sold-out' ? ' (sold out)' : ''}
-                    </option>
-                  ))}
+                  {(product as any).sizes.map((s: { name: string; sku: string; stockState: string; priceCents?: number }) => {
+                    const extraPence = (s.priceCents ?? product.priceCents) - product.priceCents;
+                    const upchargeLabel = extraPence > 0 ? ` (+£${(extraPence / 100).toFixed(0)})` : '';
+                    const stateLabel = s.stockState === 'low-stock' ? ' (low stock)' : s.stockState === 'sold-out' ? ' (sold out)' : '';
+                    return (
+                      <option value={s.sku} data-price-cents={s.priceCents ?? product.priceCents} disabled={s.stockState === 'sold-out'} selected={s.name === 'M'}>
+                        {s.name}{upchargeLabel}{stateLabel}
+                      </option>
+                    );
+                  })}
                 </select>
               </label>
             )}
@@ -348,9 +353,23 @@ const backLink = BACK_LINK_COPY[product.category] ?? { href: '/', label: '← ba
   const buyBtn = document.getElementById('buy-btn') as HTMLButtonElement | null;
   const cartBtn = document.getElementById('add-to-cart-btn') as HTMLButtonElement | null;
   const sizeSel = document.getElementById('size-select') as HTMLSelectElement | null;
+  const priceEl = document.getElementById('displayed-price') as HTMLElement | null;
 
   function selectedVariantId(): string | null {
     return sizeSel ? sizeSel.value : null;
+  }
+
+  // Live-update the displayed price when the size selection changes
+  // (2XL upcharge etc). Reads data-price-cents off the selected <option>.
+  if (sizeSel && priceEl) {
+    const fmt = new Intl.NumberFormat('en-GB', { style: 'currency', currency: 'GBP' });
+    sizeSel.addEventListener('change', () => {
+      const opt = sizeSel.selectedOptions[0];
+      const cents = Number(opt?.dataset?.priceCents);
+      if (Number.isFinite(cents) && cents > 0) {
+        priceEl.textContent = fmt.format(cents / 100);
+      }
+    });
   }
 
   if (form && buyBtn) {

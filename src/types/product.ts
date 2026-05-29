@@ -33,9 +33,19 @@ export interface JournalProduct extends BaseProduct {
   binding: 'hardback' | 'softback' | 'spiral';
 }
 
+export interface ApparelSize {
+  name: string;
+  sku: string;
+  stockState: 'in-stock' | 'low-stock' | 'sold-out';
+  /** Optional per-variant pricing (for 2XL upcharge). Falls back to
+   *  product.priceCents / product.stripePriceId when absent. */
+  priceCents?: number;
+  stripePriceId?: string;
+}
+
 export interface ApparelProduct extends BaseProduct {
   productType: 'apparel';
-  sizes: { name: string; sku: string; stockState: 'in-stock' | 'low-stock' | 'sold-out' }[];
+  sizes: ApparelSize[];
   material: string;
   fitNote: string;
 }

@@ -2283,7 +2283,7 @@
   },
   {
     "slug": "oddly-hoodie-waiting-mode",
-    "title": "Oddly Hoodie | currently in: waiting mode | ADHD Moment Gift",
+    "title": "ADHD Hoodie | currently in: waiting mode | ADHD Mood Gift",
     "hook": "currently in: waiting mode",
     "descriptor": "heavy blend hoodie \u00b7 Gildan 18500 \u00b7 S to 2XL",
     "priceCents": 4500,
@@ -2361,33 +2361,43 @@
       {
         "name": "S",
         "sku": "32918",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 4500,
+        "stripePriceId": "price_1TcCVY0d1X3moMIsH2Ph5zeQ"
       },
       {
         "name": "M",
         "sku": "32919",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 4500,
+        "stripePriceId": "price_1TcCVY0d1X3moMIsH2Ph5zeQ"
       },
       {
         "name": "L",
         "sku": "32920",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 4500,
+        "stripePriceId": "price_1TcCVY0d1X3moMIsH2Ph5zeQ"
       },
       {
         "name": "XL",
         "sku": "32921",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 4500,
+        "stripePriceId": "price_1TcCVY0d1X3moMIsH2Ph5zeQ"
       },
       {
         "name": "2XL",
         "sku": "32922",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 4800,
+        "stripePriceId": "price_1TcNEG0d1X3moMIsQ2N4AziE"
       }
     ]
   },
   {
     "slug": "oddly-hoodie-late-diagnosed-club",
-    "title": "Oddly Hoodie | late diagnosed. in retrospect. | Neurodivergent Pride Gift",
+    "title": "Neurodivergent Hoodie | late diagnosed. in retrospect. | AuDHD Pride Gift",
     "hook": "late diagnosed. in retrospect",
     "descriptor": "heavy blend hoodie \u00b7 Gildan 18500 \u00b7 S to 2XL",
     "priceCents": 4500,
@@ -2465,34 +2475,44 @@
       {
         "name": "S",
         "sku": "32918",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 4500,
+        "stripePriceId": "price_1TcCVT0d1X3moMIs2aIoMIya"
       },
       {
         "name": "M",
         "sku": "32919",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 4500,
+        "stripePriceId": "price_1TcCVT0d1X3moMIs2aIoMIya"
       },
       {
         "name": "L",
         "sku": "32920",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 4500,
+        "stripePriceId": "price_1TcCVT0d1X3moMIs2aIoMIya"
       },
       {
         "name": "XL",
         "sku": "32921",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 4500,
+        "stripePriceId": "price_1TcCVT0d1X3moMIs2aIoMIya"
       },
       {
         "name": "2XL",
         "sku": "32922",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 4800,
+        "stripePriceId": "price_1TcNEE0d1X3moMIs4H1wbu2x"
       }
     ],
     "featured": true
   },
   {
     "slug": "oddly-hoodie-overstimulated",
-    "title": "Oddly Hoodie | OVERSTIMULATED | Neurospicy Statement Gift",
+    "title": "Neurodivergent Hoodie | OVERSTIMULATED | Neurospicy Statement Gift",
     "hook": "OVERSTIMULATED",
     "descriptor": "heavy blend hoodie \u00b7 Gildan 18500 \u00b7 S to 2XL",
     "priceCents": 4500,
@@ -2570,34 +2590,44 @@
       {
         "name": "S",
         "sku": "32918",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 4500,
+        "stripePriceId": "price_1TcCVV0d1X3moMIsu8i9mtEm"
       },
       {
         "name": "M",
         "sku": "32919",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 4500,
+        "stripePriceId": "price_1TcCVV0d1X3moMIsu8i9mtEm"
       },
       {
         "name": "L",
         "sku": "32920",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 4500,
+        "stripePriceId": "price_1TcCVV0d1X3moMIsu8i9mtEm"
       },
       {
         "name": "XL",
         "sku": "32921",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 4500,
+        "stripePriceId": "price_1TcCVV0d1X3moMIsu8i9mtEm"
       },
       {
         "name": "2XL",
         "sku": "32922",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 4800,
+        "stripePriceId": "price_1TcNEE0d1X3moMIsWuaNxDbh"
       }
     ],
     "featured": true
   },
   {
     "slug": "oddly-hoodie-interest-based",
-    "title": "Oddly Hoodie | not lazy. interest-based. | ADHD Reframe Gift",
+    "title": "ADHD Hoodie | not lazy. interest-based. | ADHD Reframe Gift",
     "hook": "not lazy. interest-based",
     "descriptor": "heavy blend hoodie \u00b7 Gildan 18500 \u00b7 S to 2XL",
     "priceCents": 4500,
@@ -2675,33 +2705,43 @@
       {
         "name": "S",
         "sku": "32918",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 4500,
+        "stripePriceId": "price_1TcCVS0d1X3moMIsEpTI6q3u"
       },
       {
         "name": "M",
         "sku": "32919",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 4500,
+        "stripePriceId": "price_1TcCVS0d1X3moMIsEpTI6q3u"
       },
       {
         "name": "L",
         "sku": "32920",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 4500,
+        "stripePriceId": "price_1TcCVS0d1X3moMIsEpTI6q3u"
       },
       {
         "name": "XL",
         "sku": "32921",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 4500,
+        "stripePriceId": "price_1TcCVS0d1X3moMIsEpTI6q3u"
       },
       {
         "name": "2XL",
         "sku": "32922",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 4800,
+        "stripePriceId": "price_1TcNEE0d1X3moMIsA4tjsx1e"
       }
     ]
   },
   {
     "slug": "oddly-hoodie-audhd",
-    "title": "Oddly Hoodie | AuDHD. both. always. | Neurodivergent Pride Gift",
+    "title": "Neurodivergent Hoodie | AuDHD. both. always. | AuDHD Pride Gift",
     "hook": "AuDHD. both. always",
     "descriptor": "heavy blend hoodie \u00b7 Gildan 18500 \u00b7 S to 2XL",
     "priceCents": 4500,
@@ -2779,33 +2819,43 @@
       {
         "name": "S",
         "sku": "32918",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 4500,
+        "stripePriceId": "price_1TcCVP0d1X3moMIsfGPPpz8J"
       },
       {
         "name": "M",
         "sku": "32919",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 4500,
+        "stripePriceId": "price_1TcCVP0d1X3moMIsfGPPpz8J"
       },
       {
         "name": "L",
         "sku": "32920",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 4500,
+        "stripePriceId": "price_1TcCVP0d1X3moMIsfGPPpz8J"
       },
       {
         "name": "XL",
         "sku": "32921",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 4500,
+        "stripePriceId": "price_1TcCVP0d1X3moMIsfGPPpz8J"
       },
       {
         "name": "2XL",
         "sku": "32922",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 4800,
+        "stripePriceId": "price_1TcNED0d1X3moMIspOtWeiXN"
       }
     ]
   },
   {
     "slug": "oddly-hoodie-task-paralysis",
-    "title": "Oddly Hoodie | i want to do the thing. i cannot start the thing. | Neurodivergent Identity Gift",
+    "title": "ADHD Hoodie | i want to do the thing. i cannot start the thing. | Late Diagnosed Gift",
     "hook": "i want to do the thing. i cannot start the thing",
     "descriptor": "heavy blend hoodie \u00b7 Gildan 18500 \u00b7 S to 2XL",
     "priceCents": 4500,
@@ -2883,33 +2933,43 @@
       {
         "name": "S",
         "sku": "32918",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 4500,
+        "stripePriceId": "price_1TcCVX0d1X3moMIsGWBYM9JW"
       },
       {
         "name": "M",
         "sku": "32919",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 4500,
+        "stripePriceId": "price_1TcCVX0d1X3moMIsGWBYM9JW"
       },
       {
         "name": "L",
         "sku": "32920",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 4500,
+        "stripePriceId": "price_1TcCVX0d1X3moMIsGWBYM9JW"
       },
       {
         "name": "XL",
         "sku": "32921",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 4500,
+        "stripePriceId": "price_1TcCVX0d1X3moMIsGWBYM9JW"
       },
       {
         "name": "2XL",
         "sku": "32922",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 4800,
+        "stripePriceId": "price_1TcNEF0d1X3moMIsgQgFdZZz"
       }
     ]
   },
   {
     "slug": "oddly-hoodie-too-much",
-    "title": "Oddly Hoodie | too much. not enough. | ADHD Reframe Gift",
+    "title": "ADHD Hoodie | too much. not enough. | ADHD Reframe Gift",
     "hook": "too much. not enough",
     "descriptor": "heavy blend hoodie \u00b7 Gildan 18500 \u00b7 S to 2XL",
     "priceCents": 4500,
@@ -2987,33 +3047,43 @@
       {
         "name": "S",
         "sku": "32918",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 4500,
+        "stripePriceId": "price_1TcCVX0d1X3moMIsWLjuPdLf"
       },
       {
         "name": "M",
         "sku": "32919",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 4500,
+        "stripePriceId": "price_1TcCVX0d1X3moMIsWLjuPdLf"
       },
       {
         "name": "L",
         "sku": "32920",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 4500,
+        "stripePriceId": "price_1TcCVX0d1X3moMIsWLjuPdLf"
       },
       {
         "name": "XL",
         "sku": "32921",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 4500,
+        "stripePriceId": "price_1TcCVX0d1X3moMIsWLjuPdLf"
       },
       {
         "name": "2XL",
         "sku": "32922",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 4800,
+        "stripePriceId": "price_1TcNEF0d1X3moMIsBTex4Srd"
       }
     ]
   },
   {
     "slug": "oddly-hoodie-rejection-sensitive",
-    "title": "Oddly Hoodie | it wasn't personal. my brain made it personal. | Neurodivergent Identity Gift",
+    "title": "ADHD Hoodie | it wasn't personal. my brain made it personal. | Late Diagnosed Gift",
     "hook": "it wasn't personal. my brain made it personal",
     "descriptor": "heavy blend hoodie \u00b7 Gildan 18500 \u00b7 S to 2XL",
     "priceCents": 4500,
@@ -3091,33 +3161,43 @@
       {
         "name": "S",
         "sku": "32918",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 4500,
+        "stripePriceId": "price_1TcCVW0d1X3moMIsPbALdn2S"
       },
       {
         "name": "M",
         "sku": "32919",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 4500,
+        "stripePriceId": "price_1TcCVW0d1X3moMIsPbALdn2S"
       },
       {
         "name": "L",
         "sku": "32920",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 4500,
+        "stripePriceId": "price_1TcCVW0d1X3moMIsPbALdn2S"
       },
       {
         "name": "XL",
         "sku": "32921",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 4500,
+        "stripePriceId": "price_1TcCVW0d1X3moMIsPbALdn2S"
       },
       {
         "name": "2XL",
         "sku": "32922",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 4800,
+        "stripePriceId": "price_1TcNEF0d1X3moMIsWMjxuusV"
       }
     ]
   },
   {
     "slug": "oddly-hoodie-differently-wired",
-    "title": "Oddly Hoodie | wired this way. on purpose. | ADHD Reframe Gift",
+    "title": "ADHD Hoodie | wired this way. on purpose. | ADHD Reframe Gift",
     "hook": "wired this way. on purpose",
     "descriptor": "heavy blend hoodie \u00b7 Gildan 18500 \u00b7 S to 2XL",
     "priceCents": 4500,
@@ -3195,33 +3275,43 @@
       {
         "name": "S",
         "sku": "32918",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 4500,
+        "stripePriceId": "price_1TcCVQ0d1X3moMIsqL1M94de"
       },
       {
         "name": "M",
         "sku": "32919",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 4500,
+        "stripePriceId": "price_1TcCVQ0d1X3moMIsqL1M94de"
       },
       {
         "name": "L",
         "sku": "32920",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 4500,
+        "stripePriceId": "price_1TcCVQ0d1X3moMIsqL1M94de"
       },
       {
         "name": "XL",
         "sku": "32921",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 4500,
+        "stripePriceId": "price_1TcCVQ0d1X3moMIsqL1M94de"
       },
       {
         "name": "2XL",
         "sku": "32922",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 4800,
+        "stripePriceId": "price_1TcNED0d1X3moMIsEnkirtgN"
       }
     ]
   },
   {
     "slug": "oddly-hoodie-executive-dysfunction",
-    "title": "Oddly Hoodie | EXECUTIVE DYSFUNCTION | Neurospicy Statement Gift",
+    "title": "Neurodivergent Hoodie | EXECUTIVE DYSFUNCTION | Neurospicy Statement Gift",
     "hook": "EXECUTIVE DYSFUNCTION",
     "descriptor": "heavy blend hoodie \u00b7 Gildan 18500 \u00b7 S to 2XL",
     "priceCents": 4500,
@@ -3299,33 +3389,43 @@
       {
         "name": "S",
         "sku": "32918",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 4500,
+        "stripePriceId": "price_1TcCVS0d1X3moMIsz7TKnDC6"
       },
       {
         "name": "M",
         "sku": "32919",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 4500,
+        "stripePriceId": "price_1TcCVS0d1X3moMIsz7TKnDC6"
       },
       {
         "name": "L",
         "sku": "32920",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 4500,
+        "stripePriceId": "price_1TcCVS0d1X3moMIsz7TKnDC6"
       },
       {
         "name": "XL",
         "sku": "32921",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 4500,
+        "stripePriceId": "price_1TcCVS0d1X3moMIsz7TKnDC6"
       },
       {
         "name": "2XL",
         "sku": "32922",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 4800,
+        "stripePriceId": "price_1TcNED0d1X3moMIs80HzbYX8"
       }
     ]
   },
   {
     "slug": "oddly-hoodie-stimming",
-    "title": "Oddly Hoodie | STIMMING | Neurospicy Statement Gift",
+    "title": "Neurodivergent Hoodie | STIMMING | Neurospicy Statement Gift",
     "hook": "STIMMING",
     "descriptor": "heavy blend hoodie \u00b7 Gildan 18500 \u00b7 S to 2XL",
     "priceCents": 4500,
@@ -3403,33 +3503,43 @@
       {
         "name": "S",
         "sku": "32918",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 4500,
+        "stripePriceId": "price_1TcCVW0d1X3moMIs1cz4gsJ4"
       },
       {
         "name": "M",
         "sku": "32919",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 4500,
+        "stripePriceId": "price_1TcCVW0d1X3moMIs1cz4gsJ4"
       },
       {
         "name": "L",
         "sku": "32920",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 4500,
+        "stripePriceId": "price_1TcCVW0d1X3moMIs1cz4gsJ4"
       },
       {
         "name": "XL",
         "sku": "32921",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 4500,
+        "stripePriceId": "price_1TcCVW0d1X3moMIs1cz4gsJ4"
       },
       {
         "name": "2XL",
         "sku": "32922",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 4800,
+        "stripePriceId": "price_1TcNEF0d1X3moMIsarfLADq6"
       }
     ]
   },
   {
     "slug": "oddly-hoodie-masking-fatigue",
-    "title": "Oddly Hoodie | i was fine. i was not fine. i was masking. | Neurodivergent Identity Gift",
+    "title": "ADHD Hoodie | i was fine. i was not fine. i was masking. | Late Diagnosed Gift",
     "hook": "i was fine. i was not fine. i was masking",
     "descriptor": "heavy blend hoodie \u00b7 Gildan 18500 \u00b7 S to 2XL",
     "priceCents": 4500,
@@ -3507,33 +3617,43 @@
       {
         "name": "S",
         "sku": "32918",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 4500,
+        "stripePriceId": "price_1TcCVT0d1X3moMIsQc4Anvcx"
       },
       {
         "name": "M",
         "sku": "32919",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 4500,
+        "stripePriceId": "price_1TcCVT0d1X3moMIsQc4Anvcx"
       },
       {
         "name": "L",
         "sku": "32920",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 4500,
+        "stripePriceId": "price_1TcCVT0d1X3moMIsQc4Anvcx"
       },
       {
         "name": "XL",
         "sku": "32921",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 4500,
+        "stripePriceId": "price_1TcCVT0d1X3moMIsQc4Anvcx"
       },
       {
         "name": "2XL",
         "sku": "32922",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 4800,
+        "stripePriceId": "price_1TcNEE0d1X3moMIsTMVX60Rb"
       }
     ]
   },
   {
     "slug": "oddly-tee-hyperfocus",
-    "title": "Oddly Tee | not now. hyperfocusing. | Neurospicy Statement Gift",
+    "title": "Neurodivergent Tee | not now. hyperfocusing. | Neurospicy Statement Gift",
     "hook": "not now. hyperfocusing",
     "descriptor": "heavy cotton tee \u00b7 Gildan 5000 \u00b7 S to 2XL",
     "priceCents": 2800,
@@ -3611,34 +3731,44 @@
       {
         "name": "S",
         "sku": "12126",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 2800,
+        "stripePriceId": "price_1TcCVg0d1X3moMIsC3mBicbc"
       },
       {
         "name": "M",
         "sku": "12125",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 2800,
+        "stripePriceId": "price_1TcCVg0d1X3moMIsC3mBicbc"
       },
       {
         "name": "L",
         "sku": "12124",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 2800,
+        "stripePriceId": "price_1TcCVg0d1X3moMIsC3mBicbc"
       },
       {
         "name": "XL",
         "sku": "12127",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 2800,
+        "stripePriceId": "price_1TcCVg0d1X3moMIsC3mBicbc"
       },
       {
         "name": "2XL",
         "sku": "12128",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 3100,
+        "stripePriceId": "price_1TcNEH0d1X3moMIsErJEa4tr"
       }
     ],
     "featured": true
   },
   {
     "slug": "oddly-tee-pov-3am",
-    "title": "Oddly Tee | and then you remembered the thing. | ADHD Moment Gift",
+    "title": "ADHD Tee | and then you remembered the thing. | ADHD Mood Gift",
     "hook": "and then you remembered the thing",
     "descriptor": "heavy cotton tee \u00b7 Gildan 5000 \u00b7 S to 2XL",
     "priceCents": 2800,
@@ -3716,34 +3846,44 @@
       {
         "name": "S",
         "sku": "12126",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 2800,
+        "stripePriceId": "price_1TcCVi0d1X3moMIs6NQbHQAE"
       },
       {
         "name": "M",
         "sku": "12125",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 2800,
+        "stripePriceId": "price_1TcCVi0d1X3moMIs6NQbHQAE"
       },
       {
         "name": "L",
         "sku": "12124",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 2800,
+        "stripePriceId": "price_1TcCVi0d1X3moMIs6NQbHQAE"
       },
       {
         "name": "XL",
         "sku": "12127",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 2800,
+        "stripePriceId": "price_1TcCVi0d1X3moMIs6NQbHQAE"
       },
       {
         "name": "2XL",
         "sku": "12128",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 3100,
+        "stripePriceId": "price_1TcNEJ0d1X3moMIsW2VcouYG"
       }
     ],
     "featured": true
   },
   {
     "slug": "oddly-tee-side-quest",
-    "title": "Oddly Tee | not distracted. on a side quest. | ADHD Reframe Gift",
+    "title": "ADHD Tee | not distracted. on a side quest. | ADHD Reframe Gift",
     "hook": "not distracted. on a side quest",
     "descriptor": "heavy cotton tee \u00b7 Gildan 5000 \u00b7 S to 2XL",
     "priceCents": 2800,
@@ -3821,33 +3961,43 @@
       {
         "name": "S",
         "sku": "12126",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 2800,
+        "stripePriceId": "price_1TcCVj0d1X3moMIs6kWi61om"
       },
       {
         "name": "M",
         "sku": "12125",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 2800,
+        "stripePriceId": "price_1TcCVj0d1X3moMIs6kWi61om"
       },
       {
         "name": "L",
         "sku": "12124",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 2800,
+        "stripePriceId": "price_1TcCVj0d1X3moMIs6kWi61om"
       },
       {
         "name": "XL",
         "sku": "12127",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 2800,
+        "stripePriceId": "price_1TcCVj0d1X3moMIs6kWi61om"
       },
       {
         "name": "2XL",
         "sku": "12128",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 3100,
+        "stripePriceId": "price_1TcNEJ0d1X3moMIsjOCJ6ySL"
       }
     ]
   },
   {
     "slug": "oddly-tee-object-permanence",
-    "title": "Oddly Tee | out of sight. out of existence. | Neurodivergent Identity Gift",
+    "title": "ADHD Tee | out of sight. out of existence. | Late Diagnosed Gift",
     "hook": "out of sight. out of existence",
     "descriptor": "heavy cotton tee \u00b7 Gildan 5000 \u00b7 S to 2XL",
     "priceCents": 2800,
@@ -3925,33 +4075,43 @@
       {
         "name": "S",
         "sku": "12126",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 2800,
+        "stripePriceId": "price_1TcCVh0d1X3moMIsvNBL5FF1"
       },
       {
         "name": "M",
         "sku": "12125",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 2800,
+        "stripePriceId": "price_1TcCVh0d1X3moMIsvNBL5FF1"
       },
       {
         "name": "L",
         "sku": "12124",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 2800,
+        "stripePriceId": "price_1TcCVh0d1X3moMIsvNBL5FF1"
       },
       {
         "name": "XL",
         "sku": "12127",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 2800,
+        "stripePriceId": "price_1TcCVh0d1X3moMIsvNBL5FF1"
       },
       {
         "name": "2XL",
         "sku": "12128",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 3100,
+        "stripePriceId": "price_1TcNEJ0d1X3moMIstdhuZPYq"
       }
     ]
   },
   {
     "slug": "oddly-tee-calendar-optimism",
-    "title": "Oddly Tee | future-me seemed more capable. | Neurodivergent Identity Gift",
+    "title": "ADHD Tee | future-me seemed more capable. | Late Diagnosed Gift",
     "hook": "future-me seemed more capable",
     "descriptor": "heavy cotton tee \u00b7 Gildan 5000 \u00b7 S to 2XL",
     "priceCents": 2800,
@@ -4029,33 +4189,43 @@
       {
         "name": "S",
         "sku": "12126",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 2800,
+        "stripePriceId": "price_1TcCVZ0d1X3moMIs6JV7PD9t"
       },
       {
         "name": "M",
         "sku": "12125",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 2800,
+        "stripePriceId": "price_1TcCVZ0d1X3moMIs6JV7PD9t"
       },
       {
         "name": "L",
         "sku": "12124",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 2800,
+        "stripePriceId": "price_1TcCVZ0d1X3moMIs6JV7PD9t"
       },
       {
         "name": "XL",
         "sku": "12127",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 2800,
+        "stripePriceId": "price_1TcCVZ0d1X3moMIs6JV7PD9t"
       },
       {
         "name": "2XL",
         "sku": "12128",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 3100,
+        "stripePriceId": "price_1TcNEG0d1X3moMIsG0M4I3YD"
       }
     ]
   },
   {
     "slug": "oddly-tee-dumpsterfire-brain",
-    "title": "Oddly Tee | attention. deficit. disorder. | ADHD Reframe Gift",
+    "title": "ADHD Tee | attention. deficit. disorder. | ADHD Reframe Gift",
     "hook": "attention. deficit. disorder",
     "descriptor": "heavy cotton tee \u00b7 Gildan 5000 \u00b7 S to 2XL",
     "priceCents": 2800,
@@ -4133,33 +4303,43 @@
       {
         "name": "S",
         "sku": "12126",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 2800,
+        "stripePriceId": "price_1TcCVf0d1X3moMIsQOQ63dR2"
       },
       {
         "name": "M",
         "sku": "12125",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 2800,
+        "stripePriceId": "price_1TcCVf0d1X3moMIsQOQ63dR2"
       },
       {
         "name": "L",
         "sku": "12124",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 2800,
+        "stripePriceId": "price_1TcCVf0d1X3moMIsQOQ63dR2"
       },
       {
         "name": "XL",
         "sku": "12127",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 2800,
+        "stripePriceId": "price_1TcCVf0d1X3moMIsQOQ63dR2"
       },
       {
         "name": "2XL",
         "sku": "12128",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 3100,
+        "stripePriceId": "price_1TcNEG0d1X3moMIsekHPPeNH"
       }
     ]
   },
   {
     "slug": "oddly-tee-panic-sprint",
-    "title": "Oddly Tee | nothing. panic. hyperfocus. done. | ADHD Brain Gift",
+    "title": "ADHD Tee | nothing. panic. hyperfocus. done. | ADHD Brain Gift",
     "hook": "nothing. panic. hyperfocus. done",
     "descriptor": "heavy cotton tee \u00b7 Gildan 5000 \u00b7 S to 2XL",
     "priceCents": 2800,
@@ -4237,33 +4417,43 @@
       {
         "name": "S",
         "sku": "12126",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 2800,
+        "stripePriceId": "price_1TcCVh0d1X3moMIsYHEBdmTE"
       },
       {
         "name": "M",
         "sku": "12125",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 2800,
+        "stripePriceId": "price_1TcCVh0d1X3moMIsYHEBdmTE"
       },
       {
         "name": "L",
         "sku": "12124",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 2800,
+        "stripePriceId": "price_1TcCVh0d1X3moMIsYHEBdmTE"
       },
       {
         "name": "XL",
         "sku": "12127",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 2800,
+        "stripePriceId": "price_1TcCVh0d1X3moMIsYHEBdmTE"
       },
       {
         "name": "2XL",
         "sku": "12128",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 3100,
+        "stripePriceId": "price_1TcNEJ0d1X3moMIs1bMLNX1R"
       }
     ]
   },
   {
     "slug": "oddly-tee-dopamine-deficit",
-    "title": "Oddly Tee | dopamine deficit disorder. | ADHD Reframe Gift",
+    "title": "ADHD Tee | dopamine deficit disorder. | ADHD Reframe Gift",
     "hook": "dopamine deficit disorder",
     "descriptor": "heavy cotton tee \u00b7 Gildan 5000 \u00b7 S to 2XL",
     "priceCents": 2800,
@@ -4341,33 +4531,43 @@
       {
         "name": "S",
         "sku": "12126",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 2800,
+        "stripePriceId": "price_1TcCVZ0d1X3moMIsAyTQGFZ5"
       },
       {
         "name": "M",
         "sku": "12125",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 2800,
+        "stripePriceId": "price_1TcCVZ0d1X3moMIsAyTQGFZ5"
       },
       {
         "name": "L",
         "sku": "12124",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 2800,
+        "stripePriceId": "price_1TcCVZ0d1X3moMIsAyTQGFZ5"
       },
       {
         "name": "XL",
         "sku": "12127",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 2800,
+        "stripePriceId": "price_1TcCVZ0d1X3moMIsAyTQGFZ5"
       },
       {
         "name": "2XL",
         "sku": "12128",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 3100,
+        "stripePriceId": "price_1TcNEG0d1X3moMIsO7injwHC"
       }
     ]
   },
   {
     "slug": "oddly-tee-waiting-since-breakfast",
-    "title": "Oddly Tee | waiting mode. since breakfast. | ADHD Moment Gift",
+    "title": "ADHD Tee | waiting mode. since breakfast. | ADHD Mood Gift",
     "hook": "waiting mode. since breakfast",
     "descriptor": "heavy cotton tee \u00b7 Gildan 5000 \u00b7 S to 2XL",
     "priceCents": 2800,
@@ -4445,33 +4645,43 @@
       {
         "name": "S",
         "sku": "12126",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 2800,
+        "stripePriceId": "price_1TcCVj0d1X3moMIsW0gfWCCg"
       },
       {
         "name": "M",
         "sku": "12125",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 2800,
+        "stripePriceId": "price_1TcCVj0d1X3moMIsW0gfWCCg"
       },
       {
         "name": "L",
         "sku": "12124",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 2800,
+        "stripePriceId": "price_1TcCVj0d1X3moMIsW0gfWCCg"
       },
       {
         "name": "XL",
         "sku": "12127",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 2800,
+        "stripePriceId": "price_1TcCVj0d1X3moMIsW0gfWCCg"
       },
       {
         "name": "2XL",
         "sku": "12128",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 3100,
+        "stripePriceId": "price_1TcNEK0d1X3moMIs3QYEhyWG"
       }
     ]
   },
   {
     "slug": "oddly-tee-no-gender-only-adhd",
-    "title": "Oddly Tee | no gender. only adhd. | Neurodivergent Pride Gift",
+    "title": "Neurodivergent Tee | no gender. only adhd. | AuDHD Pride Gift",
     "hook": "no gender. only adhd",
     "descriptor": "heavy cotton tee \u00b7 Gildan 5000 \u00b7 S to 2XL",
     "priceCents": 2800,
@@ -4549,33 +4759,43 @@
       {
         "name": "S",
         "sku": "12126",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 2800,
+        "stripePriceId": "price_1TcCVg0d1X3moMIs25sjDi57"
       },
       {
         "name": "M",
         "sku": "12125",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 2800,
+        "stripePriceId": "price_1TcCVg0d1X3moMIs25sjDi57"
       },
       {
         "name": "L",
         "sku": "12124",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 2800,
+        "stripePriceId": "price_1TcCVg0d1X3moMIs25sjDi57"
       },
       {
         "name": "XL",
         "sku": "12127",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 2800,
+        "stripePriceId": "price_1TcCVg0d1X3moMIs25sjDi57"
       },
       {
         "name": "2XL",
         "sku": "12128",
-        "stockState": "in-stock"
+        "stockState": "in-stock",
+        "priceCents": 3100,
+        "stripePriceId": "price_1TcNEH0d1X3moMIsCamRmvbA"
       }
     ]
   },
   {
     "slug": "oddly-tote-19-tabs",
-    "title": "Oddly Tote | 19 tabs open. 3 frozen. no idea where the music is coming from. | ADHD Brain Gift",
+    "title": "ADHD Tote Bag | 19 tabs open. 3 frozen. no idea where the music is coming from. | ADHD Brain Gift",
     "hook": "19 tabs open. 3 frozen. no idea where the music is coming...",
     "descriptor": "heavy cotton canvas tote \u00b7 38cm \u00d7 42cm \u00b7 70cm handles",
     "priceCents": 2300,
@@ -4658,7 +4878,7 @@
   },
   {
     "slug": "oddly-tote-neurospicy",
-    "title": "Oddly Tote | neurospicy | Neurospicy Statement Gift",
+    "title": "Neurodivergent Tote Bag | neurospicy | Neurospicy Statement Gift",
     "hook": "neurospicy",
     "descriptor": "heavy cotton canvas tote \u00b7 38cm \u00d7 42cm \u00b7 70cm handles",
     "priceCents": 2300,
@@ -4740,7 +4960,7 @@
   },
   {
     "slug": "oddly-tote-doom-pile",
-    "title": "Oddly Tote | this is a doom pile. it is load-bearing. | Neurodivergent Identity Gift",
+    "title": "ADHD Tote Bag | this is a doom pile. it is load-bearing. | Late Diagnosed Gift",
     "hook": "this is a doom pile. it is load-bearing",
     "descriptor": "heavy cotton canvas tote \u00b7 38cm \u00d7 42cm \u00b7 70cm handles",
     "priceCents": 2300,
@@ -4823,7 +5043,7 @@
   },
   {
     "slug": "oddly-tote-body-doubling",
-    "title": "Oddly Tote | i work best when someone else is nearby. | Neurodivergent Identity Gift",
+    "title": "ADHD Tote Bag | i work best when someone else is nearby. | Late Diagnosed Gift",
     "hook": "i work best when someone else is nearby",
     "descriptor": "heavy cotton canvas tote \u00b7 38cm \u00d7 42cm \u00b7 70cm handles",
     "priceCents": 2300,
@@ -4905,7 +5125,7 @@
   },
   {
     "slug": "oddly-tote-doom-scroll-circuit",
-    "title": "Oddly Tote | you opened your phone. to check the time. | ADHD Moment Gift",
+    "title": "ADHD Tote Bag | you opened your phone. to check the time. | ADHD Mood Gift",
     "hook": "you opened your phone. to check the time",
     "descriptor": "heavy cotton canvas tote \u00b7 38cm \u00d7 42cm \u00b7 70cm handles",
     "priceCents": 2300,
@@ -4987,7 +5207,7 @@
   },
   {
     "slug": "oddly-tote-hyperfixation-crafters",
-    "title": "Oddly Tote | the hyperfixation society. | Neurodivergent Pride Gift",
+    "title": "Neurodivergent Tote Bag | the hyperfixation society. | AuDHD Pride Gift",
     "hook": "the hyperfixation society",
     "descriptor": "heavy cotton canvas tote \u00b7 38cm \u00d7 42cm \u00b7 70cm handles",
     "priceCents": 2300,
@@ -5069,7 +5289,7 @@
   },
   {
     "slug": "oddly-tote-anyway-where-was-i",
-    "title": "Oddly Tote | anyway. where was i. | ADHD Moment Gift",
+    "title": "ADHD Tote Bag | anyway. where was i. | ADHD Mood Gift",
     "hook": "anyway. where was i",
     "descriptor": "heavy cotton canvas tote \u00b7 38cm \u00d7 42cm \u00b7 70cm handles",
     "priceCents": 2300,
@@ -5151,7 +5371,7 @@
   },
   {
     "slug": "oddly-tote-interest-based-nervous",
-    "title": "Oddly Tote | motivated by interest. urgency. novelty. | ADHD Brain Gift",
+    "title": "ADHD Tote Bag | motivated by interest. urgency. novelty. | ADHD Brain Gift",
     "hook": "motivated by interest. urgency. novelty",
     "descriptor": "heavy cotton canvas tote \u00b7 38cm \u00d7 42cm \u00b7 70cm handles",
     "priceCents": 2300,
