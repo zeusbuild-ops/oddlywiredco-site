@@ -25,7 +25,12 @@ const priceFormatted = new Intl.NumberFormat('en-GB', {
 
 <style>
   .card {
-    display: block;
+    /* Flex column so card-meta (price + see-it) can be pushed to the bottom
+       with margin-top: auto, regardless of how many lines the hook wraps to.
+       Without this, cards with short hooks have price floating up and cards
+       in the same row look misaligned. */
+    display: flex;
+    flex-direction: column;
     background: var(--owc-ink);
     color: var(--owc-bone);
     padding: 20px;
@@ -33,6 +38,7 @@ const priceFormatted = new Intl.NumberFormat('en-GB', {
     transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     text-decoration: none;
+    height: 100%;
   }
   .card:hover { transform: translateY(-4px) rotate(0.5deg); }
   .card-image {
@@ -41,6 +47,7 @@ const priceFormatted = new Intl.NumberFormat('en-GB', {
     border-radius: 8px;
     margin-bottom: 14px;
     overflow: hidden;
+    flex-shrink: 0;
   }
   .card-image img { width: 100%; height: 100%; object-fit: cover; }
   .card-hook {
@@ -67,6 +74,9 @@ const priceFormatted = new Intl.NumberFormat('en-GB', {
     text-transform: lowercase;
   }
   .card-meta {
+    /* margin-top: auto pins this row to the bottom of the flex container,
+       so every card in a row aligns its price + CTA on the same baseline. */
+    margin-top: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
