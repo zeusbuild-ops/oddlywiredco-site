@@ -152,8 +152,9 @@ function setSessionCommon(form: URLSearchParams, origin: string, category: strin
 }
 
 /** Shipping_options on the Checkout Session. Customer picks one based on
- *  their address. UK = free (already baked into retail), International = +£7
- *  to cover the higher cost of shipping from T Shirt and Sons UK to US/EU/AU.
+ *  their address. UK = free (already baked into retail), International = +£10
+ *  to cover the higher cost of shipping from T Shirt and Sons UK to US/EU/AU
+ *  (real ship cost ~£10-12; £10 surcharge keeps hoodies above the £5 net floor).
  *  Honor-system — Stripe doesn't filter shipping_options by destination so
  *  a US customer could in theory pick UK Free. Most won't. Tune the rates
  *  here if margin reality shifts.
@@ -169,10 +170,10 @@ function addShippingOptions(form: URLSearchParams): void {
   form.set('shipping_options[0][shipping_rate_data][delivery_estimate][maximum][unit]', 'business_day');
   form.set('shipping_options[0][shipping_rate_data][delivery_estimate][maximum][value]', '4');
 
-  // Option 1: International Tracked, +£7
+  // Option 1: International Tracked, +£10
   form.set('shipping_options[1][shipping_rate_data][display_name]', 'International Tracked');
   form.set('shipping_options[1][shipping_rate_data][type]', 'fixed_amount');
-  form.set('shipping_options[1][shipping_rate_data][fixed_amount][amount]', '700');
+  form.set('shipping_options[1][shipping_rate_data][fixed_amount][amount]', '1000');
   form.set('shipping_options[1][shipping_rate_data][fixed_amount][currency]', 'gbp');
   form.set('shipping_options[1][shipping_rate_data][delivery_estimate][minimum][unit]', 'business_day');
   form.set('shipping_options[1][shipping_rate_data][delivery_estimate][minimum][value]', '5');
