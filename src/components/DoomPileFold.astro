@@ -52,4 +52,7 @@ const featured = allProducts.filter((p) => (p as any).featured === true);
   @media (max-width: 640px) {
     .doom-grid { grid-template-columns: repeat(2, 1fr); }
   }
+  @media (max-width: 560px) {
+    .doom-grid { grid-template-columns: 1fr; }
+  }
 </style>

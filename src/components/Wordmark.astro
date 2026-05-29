@@ -10,7 +10,7 @@ const colors = {
   darkmode: { type: 'var(--owc-bone)', squiggle: 'var(--owc-pulse)' },
 };
 const c = colors[variant];
-const sizeMap = { sm: '28px', md: '48px', lg: '72px', xl: '96px' };
+const sizeMap = { sm: '28px', md: '48px', lg: '72px', xl: 'clamp(42px, 11vw, 96px)' };
 const fontSize = sizeMap[size];
 ---
 <a href="/" class="wordmark" data-size={size} aria-label="oddlywiredco home" style={`font-size: ${fontSize};`}>
