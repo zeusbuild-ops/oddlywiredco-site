@@ -5,7 +5,7 @@ import CategoryGrid from '../../components/CategoryGrid.astro';
 import { allProducts } from '../../types/product';
 import { categoryBreadcrumbSchema, collectionPageSchema } from '../../lib/schema';
 
-const items = allProducts.filter(p => p.category === 'accessories');
+const items = allProducts.filter(p => p.category === 'accessories' || p.category === 'mug');
 const isLive = items.length > 0;
 const description = isLive
   ? "Mugs and things to hold while the world reloads."
