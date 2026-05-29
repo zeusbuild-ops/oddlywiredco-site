@@ -9,7 +9,7 @@ const products = JSON.parse(
   readFileSync(join(__dirname, '../src/data/products.json'), 'utf-8')
 );
 
-const VALID_PRODUCT_TYPES = ['journal', 'apparel', 'accessory', 'digital'];
+const VALID_PRODUCT_TYPES = ['journal', 'apparel', 'accessory', 'mug', 'digital'];
 const SUPPLIER_PATTERN = /prodigi|printify|printful|supplier/i;
 
 test('every product has a valid productType', () => {
