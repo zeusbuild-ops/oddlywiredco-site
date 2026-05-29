@@ -53,7 +53,7 @@ const featured = [...flagged, ...alphabetical.filter(p => !flagged.includes(p))]
   <section class="fold dark catalogue-fold" id="stuff">
     <div class="container">
       <div class="meta">03 / the catalogue</div>
-      <h2 class="h-mono lg">60 things.<br>each one a moment<br>nobody else named.</h2>
+      <h2 class="h-mono lg">68 things.<br>each one a moment<br>nobody else named.</h2>
       <div class="featured-grid">
         {featured.map((p) => (
           <ProductCard
@@ -69,7 +69,7 @@ const featured = [...flagged, ...alphabetical.filter(p => !flagged.includes(p))]
       <div class="catalogue-ctas">
         <a href="/journals" class="button">30 journals →</a>
         <a href="/apparel" class="button">22 apparel →</a>
-        <a href="/accessories" class="button">8 accessories →</a>
+        <a href="/accessories" class="button">16 accessories →</a>
       </div>
     </div>
   </section>
@@ -81,7 +81,7 @@ const featured = [...flagged, ...alphabetical.filter(p => !flagged.includes(p))]
       <h2 class="h-mono lg">the full lineup.<br>slow on purpose.</h2>
       <div class="teaser-grid">
         <CategoryTeaserCard category="apparel"     hook="tees + hoodies for brains that don't sit still"      comingSoon={false} />
-        <CategoryTeaserCard category="accessories" hook="totes + things to hold while the world re-loads"     comingSoon={false} />
+        <CategoryTeaserCard category="accessories" hook="mugs + totes to hold while the world re-loads"        comingSoon={false} />
         <CategoryTeaserCard category="digital"     hook="printable + fillable. instant download, no shipping." />
       </div>
     </div>
