@@ -75,7 +75,44 @@ export interface MugProduct extends BaseProduct {
 export type Product = JournalProduct | ApparelProduct | AccessoryProduct | DigitalProduct | MugProduct;
 
 import productsData from '../data/products.json';
-export const allProducts = productsData as Product[];
+
+// Featured slugs are the source of truth for the homepage "doom pile" + Featured-3
+// section. They live here in code (not products.json) because the rebuild script
+// regenerates products.json from Printify/Stripe artifacts and would wipe any
+// hand-edited `featured: true` flags. Edit this set to change what's featured.
+const FEATURED_SLUGS = new Set<string>([
+  // Apparel — highest margin, leads on mobile
+  'oddly-hoodie-late-diagnosed-club',
+  'oddly-hoodie-overstimulated',
+  'oddly-tee-hyperfocus',
+  'oddly-tee-pov-3am',
+  // Mugs — new format, pairs visually with the featured hoodie/tee hooks
+  'oddly-mug-overstimulated',
+  'oddly-mug-hyperfocusing',
+  // Accessory — brand-iconic doom-pile hook
+  'oddly-tote-doom-pile',
+  // Journal — the iconic one
+  '47-tabs-all-journal',
+]);
+
+const CATEGORY_ORDER: Record<Product['productType'], number> = {
+  apparel: 0, mug: 1, accessory: 2, journal: 3, digital: 4,
+};
+
+const _raw = productsData as Product[];
+export const allProducts: Product[] = _raw.map(p => ({
+  ...p,
+  featured: FEATURED_SLUGS.has(p.slug),
+}));
+
+// Featured products, sorted by category priority then price desc.
+// Used by DoomPileFold and the homepage Featured-3.
+export const featuredProducts: Product[] = allProducts
+  .filter(p => p.featured)
+  .sort((a, b) => {
+    const c = CATEGORY_ORDER[a.productType] - CATEGORY_ORDER[b.productType];
+    return c !== 0 ? c : b.priceCents - a.priceCents;
+  });
 
 export function findProductBySlug(slug: string, category?: string): Product | undefined {
   return allProducts.find(p =>

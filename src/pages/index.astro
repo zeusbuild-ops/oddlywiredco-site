@@ -7,13 +7,15 @@ import ProductCard from '../components/ProductCard.astro';
 import CategoryTeaserCard from '../components/CategoryTeaserCard.astro';
 import AboutNewsletterFold from '../components/AboutNewsletterFold.astro';
 import DoomPileFold from '../components/DoomPileFold.astro';
-import { allProducts } from '../types/product';
+import { allProducts, featuredProducts } from '../types/product';
 import { organizationSchema, websiteSchema } from '../lib/schema';
 
-// Featured-3 picker — flag-driven with alphabetical fallback
-const flagged = allProducts.filter(p => p.featured);
+// Featured-3 picker — uses the category-sorted featured set, falls back
+// alphabetically if fewer than 3 products are featured. featuredProducts is
+// already sorted (apparel → mug → accessory → journal), so the catalogue tease
+// leads with the highest-margin SKUs.
 const alphabetical = [...allProducts].sort((a, b) => a.slug.localeCompare(b.slug));
-const featured = [...flagged, ...alphabetical.filter(p => !flagged.includes(p))].slice(0, 3);
+const featured = [...featuredProducts, ...alphabetical.filter(p => !featuredProducts.includes(p))].slice(0, 3);
 ---
 <BaseLayout
   title="OddlyWiredCo — your brain isn't broken, it's just oddly wired"

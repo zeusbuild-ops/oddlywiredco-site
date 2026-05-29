@@ -5,9 +5,9 @@
  * "the SKUs we'd put at the top of your overwhelm-organised stack."
  */
 import ProductCard from './ProductCard.astro';
-import { allProducts } from '../types/product';
+import { featuredProducts } from '../types/product';
 
-const featured = allProducts.filter((p) => (p as any).featured === true);
+const featured = featuredProducts;
 ---
 {featured.length > 0 && (
   <section class="fold light doom-fold">
