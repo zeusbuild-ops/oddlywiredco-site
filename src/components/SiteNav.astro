@@ -11,6 +11,8 @@ const links = [
 const socials = [
   { label: 'instagram', href: 'https://www.instagram.com/oddlywiredco/' },
   { label: 'tiktok',    href: 'https://www.tiktok.com/@oddlywiredco' },
+  { label: 'pinterest', href: 'https://uk.pinterest.com/oddlywiredco/' },
+  { label: 'newsletter', href: '/#newsletter' },
 ];
 function isActive(href: string) {
   if (href === '/journals') return pathname.startsWith('/journals');
@@ -53,6 +55,28 @@ function isActive(href: string) {
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
              stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/>
+        </svg>
+      </a>
+    </li>
+    <li>
+      <a href="https://uk.pinterest.com/oddlywiredco/"
+         target="_blank" rel="noopener noreferrer"
+         class="social-link" aria-label="OddlyWiredCo on Pinterest (opens new tab)">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="9"/>
+          <path d="M10.5 20.5 12 13"/>
+          <path d="M8.5 12.5c-.3-.7-.5-1.5-.5-2.3 0-2.6 2-4.7 4.8-4.7 2.5 0 4.2 1.7 4.2 4.1 0 2.7-1.7 4.9-4 4.9-1.1 0-2-.5-2.3-1.3"/>
+        </svg>
+      </a>
+    </li>
+    <li>
+      <a href="/#newsletter"
+         class="social-link" aria-label="Subscribe to the OddlyWiredCo newsletter">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="3" y="5" width="18" height="14" rx="2"/>
+          <path d="M3 7l9 6 9-6"/>
         </svg>
       </a>
     </li>
@@ -200,7 +224,7 @@ function isActive(href: string) {
     min-height: 40px;
   }
   .drawer-socials a:hover { opacity: 1; color: var(--owc-pulse); }
-  @media (max-width: 800px) {
+  @media (max-width: 900px) {
     .links.desktop, .socials.desktop { display: none; }
     .hamburger { display: flex; }
   }
