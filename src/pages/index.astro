@@ -95,7 +95,8 @@ const featured = [...flagged, ...alphabetical.filter(p => !flagged.includes(p))]
   <style>
     .hero-fold { min-height: 92vh; display: flex; align-items: center; }
     .hero-fold .container { display: flex; flex-direction: column; gap: 28px; }
-    .hero-sub { color: var(--owc-bone); opacity: 0.65; font-family: var(--font-mono); font-size: 14px; }
+    .hero-fold .button { align-self: flex-start; }
+    .hero-sub { color: var(--owc-bone); opacity: 0.65; font-family: var(--font-mono); font-size: clamp(15px, 4.2vw, 17px); }
     .who-list { display: flex; flex-direction: column; gap: 16px; margin: 24px 0; font-family: var(--font-mono); font-size: clamp(24px, 4vw, 36px); font-weight: 700; }
     .who-arrow { font-family: var(--font-mono); font-size: 18px; color: var(--owc-signal); margin-top: 24px; }
     .catalogue-fold .featured-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin: 36px 0; }
@@ -107,6 +108,9 @@ const featured = [...flagged, ...alphabetical.filter(p => !flagged.includes(p))]
     }
     @media (max-width: 560px) {
       .catalogue-fold .featured-grid, .coming-fold .teaser-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .hero-fold { min-height: auto; }
     }
   </style>
 </BaseLayout>
