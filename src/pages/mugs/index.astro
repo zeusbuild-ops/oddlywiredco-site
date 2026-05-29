@@ -1,0 +1,23 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CategoryGrid from '../../components/CategoryGrid.astro';
+import { allProducts } from '../../types/product';
+import { categoryBreadcrumbSchema, collectionPageSchema } from '../../lib/schema';
+
+const mugs = allProducts.filter(p => p.category === 'mug');
+const description = 'ADHD mugs for the chronically overstimulated. UK-printed ceramic. Each one names something your brain already knows.';
+---
+<BaseLayout
+  title="ADHD mugs — 8 designs · OddlyWiredCo"
+  description={description}
+  jsonLd={[
+    categoryBreadcrumbSchema('mug'),
+    collectionPageSchema('mug', description, mugs),
+  ]}
+>
+  <CategoryGrid
+    products={mugs}
+    heading="all 8 mugs."
+    eyebrow="the catalogue"
+  />
+</BaseLayout>

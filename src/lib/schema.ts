@@ -8,6 +8,7 @@ const CATEGORY_LABEL: Record<Product['category'], string> = {
   apparel: 'Apparel',
   accessories: 'Accessories',
   digital: 'Digital downloads',
+  mug: 'Mugs',
 };
 
 export function organizationSchema(): Record<string, unknown> {

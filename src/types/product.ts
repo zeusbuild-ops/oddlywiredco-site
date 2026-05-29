@@ -5,8 +5,8 @@ export interface BaseProduct {
   descriptor: string;
   priceCents: number;
   currency: 'GBP';
-  category: 'journals' | 'apparel' | 'accessories' | 'digital';
-  productType: 'journal' | 'apparel' | 'accessory' | 'digital';
+  category: 'journals' | 'apparel' | 'accessories' | 'digital' | 'mug';
+  productType: 'journal' | 'apparel' | 'accessory' | 'digital' | 'mug';
   productFormat: string;
   heroImage: string;
   gallery: string[];
@@ -66,7 +66,13 @@ export interface DigitalProduct extends BaseProduct {
   instantDelivery: boolean;
 }
 
-export type Product = JournalProduct | ApparelProduct | AccessoryProduct | DigitalProduct;
+export interface MugProduct extends BaseProduct {
+  productType: 'mug';
+  category: 'mug';
+  whatsInside: string[];
+}
+
+export type Product = JournalProduct | ApparelProduct | AccessoryProduct | DigitalProduct | MugProduct;
 
 import productsData from '../data/products.json';
 export const allProducts = productsData as Product[];

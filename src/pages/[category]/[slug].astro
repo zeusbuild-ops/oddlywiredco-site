@@ -53,6 +53,7 @@ const CROSS_SELL_COPY: Record<string, string> = {
   apparel:   'other things to wear for the same brain',
   accessory: 'other things to hold for the same brain',
   digital:   'other downloads for the same brain',
+  mug:       'other mugs for the same brain',
 };
 const crossSellHeading = CROSS_SELL_COPY[product.productType] ?? 'other things for the same brain';
 
@@ -61,6 +62,7 @@ const BACK_LINK_COPY: Record<string, { href: string; label: string }> = {
   apparel:     { href: '/apparel',     label: '← back to all apparel' },
   accessories: { href: '/accessories', label: '← back to all accessories' },
   digital:     { href: '/digital',     label: '← back to all downloads' },
+  mug:         { href: '/mugs',        label: '← back to all mugs' },
 };
 const backLink = BACK_LINK_COPY[product.category] ?? { href: '/', label: '← back' };
 ---
@@ -141,6 +143,16 @@ const backLink = BACK_LINK_COPY[product.category] ?? { href: '/', label: '← ba
   {product.productType === 'apparel'   && <ApparelDetails product={product} />}
   {product.productType === 'accessory' && <AccessoryDetails product={product} />}
   {product.productType === 'digital'   && <DigitalDetails product={product} />}
+  {product.productType === 'mug' && 'whatsInside' in product && (
+    <section class="fold light pf-mug-details">
+      <div class="container">
+        <div class="meta">what you get</div>
+        <ul class="pf-keypoints" style="margin-top:14px">
+          {(product as any).whatsInside.map((item: string) => <li>{item}</li>)}
+        </ul>
+      </div>
+    </section>
+  )}
 
   <!-- Fold 4: FAQ (Bone) -->
   {product.faq && product.faq.length > 0 && (
