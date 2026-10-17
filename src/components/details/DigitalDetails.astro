@@ -5,8 +5,8 @@ const { product } = Astro.props;
 ---
 <section class="details-fold light">
   <div class="container">
-    <div class="meta">what you get</div>
-    <h2 class="h-mono lg">instant download.<br>{product.fileTypes.join(' + ')}.</h2>
+    <h2 class="d-title">What you get</h2>
+    <p class="d-lead">Instant download. {product.fileTypes.join(' + ')}.</p>
     <ul class="digital-list">
       {product.pageCount && <li>{product.pageCount} pages</li>}
       {product.printable && <li>printable at home (A4 + US Letter)</li>}
@@ -17,8 +17,20 @@ const { product } = Astro.props;
 </section>
 
 <style>
-  .details-fold { padding: 80px 0; background: var(--owc-bone); color: var(--owc-ink); }
-  .meta { font-family: var(--font-mono); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; opacity: 0.55; margin-bottom: 18px; }
-  .h-mono.lg { font-family: var(--font-mono); font-size: clamp(28px, 4vw, 38px); font-weight: 700; line-height: 1.15; margin: 0 0 24px; }
-  .digital-list { padding-left: 22px; display: flex; flex-direction: column; gap: 6px; font-size: 15px; max-width: 540px; }
+  .details-fold { padding: var(--space-2xl) var(--gutter) 0 calc(var(--gutter) + var(--space-md)); background: transparent; color: var(--ink); }
+  .container { max-width: none; margin: 0; }
+  .d-title {
+    margin: 0 0 var(--space-md); min-width: 0; overflow-wrap: anywhere;
+    font-family: var(--font-display); font-stretch: 62%; font-variation-settings: 'wdth' 62;
+    font-weight: 800; text-transform: uppercase; line-height: 0.92; font-size: clamp(40px, 5vw, 72px);
+  }
+  .d-lead { margin: 0 0 var(--space-lg); font-size: var(--text-xl); line-height: 1.35; max-width: 40ch; font-weight: 600; }
+  ul { list-style: none; margin: 0 0 var(--space-md); padding: 0; max-width: 52ch; }
+  li { position: relative; padding: var(--space-3xs) 0 var(--space-3xs) var(--space-md); line-height: 1.5; }
+  li::before { content: ''; position: absolute; left: 0; top: 0.8em; width: 10px; height: 3px; border-radius: 2px; background: var(--wire); }
+  .trim { margin: 0; color: var(--muted); font-size: var(--text-sm); }
+  .size-table { border-collapse: collapse; font-variant-numeric: tabular-nums; }
+  .size-table th, .size-table td { padding: var(--space-2xs) var(--space-lg) var(--space-2xs) 0; text-align: left; border-bottom: 1px solid var(--hairline); }
+  .size-table th { font-size: var(--text-xs); letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+  .size-table tr.stock-sold-out td { color: var(--muted); text-decoration: line-through; }
 </style>
