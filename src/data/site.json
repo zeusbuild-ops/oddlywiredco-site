@@ -1,4 +1,11 @@
 {
   "_note": "comingSoon: true = the live site shows only /coming-soon (plus legal pages, the signup and payment webhooks). Local dev (npm run dev) always shows the full site. Set to false and push to main to launch.",
-  "comingSoon": true
+  "comingSoon": true,
+  "bundle": {
+    "_note": "Multi-buy discount applied by Stripe at checkout when the bag holds minItems or more items. Changing percentOff makes a new Stripe coupon automatically. On printed items 20% roughly halves profit on a 2-item order.",
+    "enabled": true,
+    "minItems": 2,
+    "percentOff": 20,
+    "label": "Buy any 2, save 20%"
+  }
 }

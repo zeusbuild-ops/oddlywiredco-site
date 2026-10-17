@@ -1,6 +1,7 @@
 import type { APIRoute } from 'astro';
 import { env } from 'cloudflare:workers';
 import products from '../../data/products.json';
+import site from '../../data/site.json';
 
 const ALLOWED_COUNTRIES = [
   'GB', 'IE',
@@ -135,6 +136,17 @@ async function basketCheckout(
   form.set('metadata[printify_shop_id]', shopId);
   form.set('metadata[basket_size]', String(resolved.length));
 
+  // Multi-buy discount (src/data/site.json → bundle).
+  const totalItems = resolved.reduce((n, r) => n + r.quantity, 0);
+  const bundle = site.bundle;
+  if (bundle?.enabled && totalItems >= bundle.minItems) {
+    const couponId = await ensureBundleCoupon(key, bundle.percentOff);
+    if (couponId) {
+      form.set('discounts[0][coupon]', couponId);
+      form.set('metadata[bundle_discount]', `${bundle.percentOff}%`);
+    }
+  }
+
   return createStripeSession(key, form);
 }
 
@@ -211,6 +223,27 @@ function chunkString(s: string, size: number): string[] {
   const out: string[] = [];
   for (let i = 0; i < s.length; i += size) out.push(s.slice(i, i + size));
   return out;
+}
+
+/** Returns the id of a Stripe coupon for `percent`% off, creating it the first
+ *  time. The id is fixed per percentage, so repeat calls reuse one coupon.
+ *  If Stripe can't be reached the order still goes through, just undiscounted. */
+async function ensureBundleCoupon(key: string, percent: number): Promise<string | null> {
+  const id = `OW_MULTIBUY_${percent}`;
+  const auth = { Authorization: `Bearer ${key}` };
+  const existing = await fetch(`https://api.stripe.com/v1/coupons/${id}`, { headers: auth });
+  if (existing.ok) return id;
+  const form = new URLSearchParams({
+    id, percent_off: String(percent), duration: 'once', name: `Multi-buy ${percent}% off`,
+  });
+  const created = await fetch('https://api.stripe.com/v1/coupons', {
+    method: 'POST',
+    headers: { ...auth, 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: form.toString(),
+  });
+  if (created.ok) return id;
+  console.error('bundle coupon unavailable', created.status, await created.text());
+  return null;
 }
 
 async function createStripeSession(key: string, form: URLSearchParams): Promise<Response> {

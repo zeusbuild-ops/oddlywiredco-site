@@ -1,6 +1,8 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { allProducts } from '../types/product';
+import site from '../data/site.json';
+const bundle = site.bundle;
 ---
 <BaseLayout
   title="Your bag · Oddly Wired"
@@ -9,11 +11,11 @@ import { allProducts } from '../types/product';
 >
   <section class="fold light cart-fold">
     <div class="container">
-      <h1 class="cart-title">your basket</h1>
+      <h1 class="cart-title">Your bag</h1>
 
       <div id="cart-empty" class="cart-empty" hidden>
-        <p class="cart-empty-line">nothing in here yet.</p>
-        <p class="cart-empty-sub">add something from <a href="/journals">journals</a>, <a href="/apparel">apparel</a> or <a href="/accessories">accessories</a>.</p>
+        <p class="cart-empty-line">Nothing in here yet.</p>
+        <p class="cart-empty-sub">Try the <a href="/journals">journals</a>, <a href="/apparel">apparel</a> or <a href="/mugs">mugs</a>.</p>
       </div>
 
       <div id="cart-body" hidden>
@@ -22,22 +24,28 @@ import { allProducts } from '../types/product';
         <div class="cart-summary">
           <div class="cart-totals">
             <div class="cart-line-row">
-              <span>subtotal</span>
+              <span>Subtotal</span>
               <span id="cart-subtotal" class="num">£0.00</span>
             </div>
+            <div class="cart-line-row cart-line-bundle" id="cart-bundle-row" hidden>
+              <span>{bundle.label}</span>
+              <span id="cart-bundle" class="num"></span>
+            </div>
             <div class="cart-line-row cart-line-shipping">
-              <span>shipping</span>
-              <span class="num">included at checkout</span>
+              <span>UK postage</span>
+              <span class="num">Free</span>
             </div>
           </div>
-          <button type="button" id="cart-checkout" class="button signal cart-checkout-btn">checkout →</button>
+          {bundle.enabled && <p class="cart-bundle-hint" id="cart-bundle-hint">{bundle.label}. Applied automatically at checkout.</p>}
+          <button type="button" id="cart-checkout" class="button cart-checkout-btn">Checkout</button>
         </div>
       </div>
     </div>
   </section>
 
-  <script is:inline define:vars={{ products: allProducts }}>
+  <script is:inline define:vars={{ products: allProducts, bundle }}>
     window.__owc_products__ = products;
+    window.__owc_bundle__ = bundle;
   </script>
 
   <script>
@@ -115,6 +123,16 @@ import { allProducts } from '../types/product';
         lines.appendChild(li);
       }
       subtotalEl.textContent = fmt(subtotal);
+      // Show the multi-buy saving the checkout will apply (src/data/site.json → bundle).
+      const bundle = (window as any).__owc_bundle__ as { enabled: boolean; minItems: number; percentOff: number } | undefined;
+      const count = cart.items.reduce((n, it) => n + it.quantity, 0);
+      const bundleRow = document.getElementById('cart-bundle-row');
+      const bundleEl = document.getElementById('cart-bundle');
+      const applies = !!bundle?.enabled && count >= bundle.minItems;
+      if (bundleRow && bundleEl) {
+        bundleRow.hidden = !applies;
+        if (applies) bundleEl.textContent = '−' + fmt(Math.round(subtotal * bundle!.percentOff / 100));
+      }
       refreshCartBadge();
     }
 
@@ -137,7 +155,7 @@ import { allProducts } from '../types/product';
     document.getElementById('cart-checkout')!.addEventListener('click', async () => {
       const btn = document.getElementById('cart-checkout') as HTMLButtonElement;
       btn.disabled = true;
-      btn.textContent = 'redirecting…';
+      btn.textContent = 'Taking you to checkout…';
       try {
         const payload = toCheckoutPayload();
         const res = await fetch('/api/checkout', {
@@ -151,7 +169,7 @@ import { allProducts } from '../types/product';
         window.location.href = url;
       } catch (err) {
         btn.disabled = false;
-        btn.textContent = 'try again';
+        btn.textContent = 'That didn’t work. Try again';
         console.error(err);
       }
     });
@@ -160,11 +178,18 @@ import { allProducts } from '../types/product';
   </script>
 
   <style>
-    .cart-fold { padding: 60px 0 80px; }
+    .cart-line-bundle span:last-child { color: var(--ink); font-weight: 600; }
+    .cart-line-bundle span:first-child { text-decoration: underline; text-decoration-color: var(--wire); text-decoration-thickness: 2px; text-underline-offset: 4px; }
+    .cart-bundle-hint { margin: var(--space-sm) 0; font-size: var(--text-sm); color: var(--muted); }
+  </style>
+  <!-- Global: the bag's lines are drawn by script, so they never get Astro's scoped attributes. All selectors are cart-prefixed. -->
+  <style is:global>
+    .cart-fold { padding: var(--space-2xl) var(--gutter) var(--space-3xl) calc(var(--gutter) + var(--space-md)); }
+    .cart-fold .container { max-width: 960px; margin: 0; }
     .cart-title {
-      font-family: var(--font-mono);
-      font-size: 14px; text-transform: uppercase; letter-spacing: 1.5px;
-      opacity: 0.6; margin: 0 0 28px;
+      font-family: var(--font-display); font-stretch: 62%; font-variation-settings: 'wdth' 62;
+      font-weight: 800; text-transform: uppercase; line-height: 0.9;
+      font-size: clamp(56px, 9vw, 120px); margin: 0 0 var(--space-xl);
     }
     .cart-empty { text-align: center; padding: 60px 0; }
     .cart-empty-line { font-size: 22px; margin: 0 0 12px; }
