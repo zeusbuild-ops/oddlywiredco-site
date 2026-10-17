@@ -1,0 +1,99 @@
+---
+// Shown for every page on the live site while src/data/site.json has
+// comingSoon: true. Standalone (no nav, no bag) so nothing leads anywhere closed.
+import '../styles/global.css';
+import Wordmark from '../components/Wordmark.astro';
+import WirePicker from '../components/WirePicker.astro';
+import NewsletterForm from '../components/NewsletterForm.astro';
+import season from '../data/season.json';
+const canonical = new URL('/', Astro.site).toString();
+---
+<!DOCTYPE html>
+<html lang="en-GB" style={`--wire: ${season.wire};`}>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oddly Wired · Doors open soon</title>
+  <meta name="description" content="Oddly Wired is a club for adults with ADHD. The shop is being rewired. Join to hear first when the doors open.">
+  <link rel="canonical" href={canonical}>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <meta property="og:title" content="Oddly Wired · Doors open soon">
+  <meta property="og:description" content="A club for adults with ADHD. If you get it, you’re in.">
+  <meta property="og:image" content={new URL('/og-image.png', Astro.site).toString()}>
+  <script is:inline>
+    (function () { try { var w = localStorage.getItem('ow-wire'); if (w && /^#[0-9A-F]{6}$/i.test(w)) document.documentElement.style.setProperty('--wire', w); } catch (e) {} })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,700..900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="page soon">
+    <div class="wire-rail" aria-hidden="true"></div>
+    <header class="top"><Wordmark size="sm" variant="dark" /></header>
+
+    <main class="main">
+      <h1 class="headline">Doors open <span>soon.</span></h1>
+      <p class="aside">We know. We said that about the laundry too.</p>
+      <p class="lede">Oddly Wired is a club for adults with ADHD. The shop is being rewired. Members hear first when the doors open.</p>
+      <div class="join" id="newsletter">
+        <NewsletterForm />
+      </div>
+      <div class="pick">
+        <p class="pick-label">While you wait, pick your wire.</p>
+        <WirePicker variant="compact" />
+      </div>
+    </main>
+
+    <footer class="base">
+      <p>If you get it, you’re in.</p>
+      <ul>
+        <li><a href="https://www.instagram.com/oddlywiredco/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+        <li><a href="https://www.tiktok.com/@oddlywiredco" target="_blank" rel="noopener noreferrer">TikTok</a></li>
+        <li><a href="https://uk.pinterest.com/oddlywiredco/" target="_blank" rel="noopener noreferrer">Pinterest</a></li>
+        <li><a href="/legal/privacy">Privacy</a></li>
+      </ul>
+    </footer>
+    <span class="terminal" aria-hidden="true"></span>
+  </div>
+
+  <style>
+    .soon {
+      min-height: 100dvh; display: grid; grid-template-rows: auto 1fr auto;
+      background: var(--bone); color: var(--ink);
+      padding: 0 var(--gutter) 0 calc(var(--gutter) + var(--space-md));
+    }
+    .top { padding: var(--space-lg) 0; }
+    .main { align-self: center; padding: var(--space-2xl) 0; max-width: 1100px; }
+    .headline {
+      margin: 0 0 var(--space-sm); min-width: 0; overflow-wrap: anywhere;
+      font-family: var(--font-display); font-stretch: 62%; font-variation-settings: 'wdth' 62;
+      font-weight: 800; text-transform: uppercase; line-height: 0.88;
+      font-size: clamp(72px, 15vw, 220px);
+    }
+    .headline span { text-decoration: underline; text-decoration-color: var(--wire); text-decoration-thickness: 0.07em; text-underline-offset: 0.1em; }
+    .aside { margin: 0 0 var(--space-2xl); color: var(--muted); font-size: var(--text-lg); }
+    .lede { margin: 0 0 var(--space-lg); font-size: var(--text-xl); line-height: 1.35; max-width: 30ch; font-weight: 600; }
+    .join { margin-bottom: var(--space-2xl); }
+    .join :global(.email-input) { border-color: var(--ink); color: var(--ink); }
+    .join :global(.email-input::placeholder) { color: var(--muted); }
+    .pick { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-sm) var(--space-md); }
+    .pick-label { margin: 0; font-size: var(--text-sm); color: var(--muted); }
+    .base {
+      display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--space-sm);
+      border-top: 1px solid var(--hairline); padding: var(--space-md) 0 var(--space-lg);
+      font-size: var(--text-sm);
+    }
+    .base p { margin: 0; font-weight: 600; }
+    .base ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: var(--space-md); }
+    .base a { color: var(--muted); text-decoration: none; white-space: nowrap; }
+    .base a:hover { color: var(--ink); text-decoration: underline; text-decoration-color: var(--wire); }
+    .terminal {
+      position: absolute; bottom: var(--space-lg);
+      left: calc(var(--rail-x) + var(--rail-w) / 2); transform: translateX(-50%);
+      width: calc(var(--rail-w) * 1.8); height: calc(var(--rail-w) * 1.8);
+      border-radius: 50%; background: var(--wire);
+    }
+  </style>
+</body>
+</html>

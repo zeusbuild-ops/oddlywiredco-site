@@ -1,0 +1,4 @@
+{
+  "_note": "comingSoon: true = the live site shows only /coming-soon (plus legal pages, the signup and payment webhooks). Local dev (npm run dev) always shows the full site. Set to false and push to main to launch.",
+  "comingSoon": true
+}
