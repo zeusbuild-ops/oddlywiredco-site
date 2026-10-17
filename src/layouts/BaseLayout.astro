@@ -2,6 +2,7 @@
 import '../styles/global.css';
 import SiteNav from '../components/SiteNav.astro';
 import SiteFooter from '../components/SiteFooter.astro';
+import season from '../data/season.json';
 
 interface ProductMeta {
   priceGBP: number;        // e.g. 19.00
@@ -31,7 +32,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site).toString();
 const ogImageAbs = new URL(ogImage, Astro.site).toString();
 ---
 <!DOCTYPE html>
-<html lang="en-GB">
+<html lang="en-GB" style={`--wire: ${season.wire};`}>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -73,14 +74,27 @@ const ogImageAbs = new URL(ogImage, Astro.site).toString();
     <script type="application/ld+json" set:html={JSON.stringify(schema)} />
   ))}
 
-  <!-- Inter + Space Mono via Google Fonts (only external dep — OK for v1) -->
+  <!-- Restore the visitor's chosen wire before paint (no flash of the season colour). -->
+  <script is:inline>
+    (function () {
+      try {
+        var w = localStorage.getItem('ow-wire');
+        if (w && /^#[0-9A-F]{6}$/i.test(w)) document.documentElement.style.setProperty('--wire', w);
+      } catch (e) {}
+    })();
+  </script>
+
+  <!-- Archivo (variable width, for condensed headlines) + Inter via Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,700..900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <SiteNav />
-  <slot />
-  <SiteFooter />
+  <div class="page">
+    <div class="wire-rail" aria-hidden="true"></div>
+    <slot />
+    <SiteFooter />
+  </div>
 </body>
 </html>

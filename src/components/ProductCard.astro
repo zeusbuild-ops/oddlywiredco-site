@@ -19,75 +19,54 @@ const priceFormatted = new Intl.NumberFormat('en-GB', {
   <p class="card-descriptor">{descriptor}</p>
   <div class="card-meta">
     <span class="card-price">{priceFormatted}</span>
-    <span class="card-arrow">see it →</span>
+    <span class="card-arrow">View</span>
   </div>
 </a>
 
 <style>
+  /* Papier-style card: the product photo does the work, text stays quiet. */
   .card {
-    /* Flex column so card-meta (price + see-it) can be pushed to the bottom
-       with margin-top: auto, regardless of how many lines the hook wraps to.
-       Without this, cards with short hooks have price floating up and cards
-       in the same row look misaligned. */
     display: flex;
     flex-direction: column;
-    background: var(--owc-ink);
-    color: var(--owc-bone);
-    padding: 20px;
-    border-radius: 12px;
-    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
+    color: var(--ink);
     text-decoration: none;
     height: 100%;
   }
-  .card:hover { transform: translateY(-4px) rotate(0.5deg); }
   .card-image {
-    aspect-ratio: 1;
-    background: var(--owc-bone);
-    border-radius: 8px;
+    aspect-ratio: 4 / 5;
+    background: var(--linen);
     margin-bottom: 14px;
     overflow: hidden;
     flex-shrink: 0;
   }
-  .card-image img { width: 100%; height: 100%; object-fit: cover; }
+  .card-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+  .card:hover .card-image img { transform: scale(1.03); }
   .card-hook {
-    font-family: var(--font-mono);
-    font-size: 17px;
-    font-weight: 700;
-    line-height: 1.15;
+    font-family: var(--font-body);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.25;
     margin: 0 0 4px;
-    position: relative;
-    display: inline-block;
   }
-  .card-hook::after {
-    content: ''; position: absolute; bottom: -3px; left: 0; right: 0;
-    height: 2px; background: var(--owc-pulse);
-    transform: scaleX(0); transform-origin: left;
-    transition: transform 0.3s ease-out;
-  }
-  .card:hover .card-hook::after { transform: scaleX(1); }
   .card-descriptor {
-    font-family: var(--font-mono);
-    font-size: 11px;
-    opacity: 0.6;
-    margin: 0 0 14px;
-    text-transform: lowercase;
+    font-size: 13px;
+    color: var(--muted);
+    margin: 0 0 10px;
   }
   .card-meta {
-    /* margin-top: auto pins this row to the bottom of the flex container,
-       so every card in a row aligns its price + CTA on the same baseline. */
     margin-top: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-family: var(--font-mono);
-    font-size: 13px;
+    font-size: 14px;
   }
-  .card-price { color: var(--owc-pulse); font-weight: 700; font-size: 16px; }
-  .card-arrow { color: var(--owc-signal); opacity: 0.8; }
+  .card-price { font-weight: 600; }
+  .card-arrow { font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); }
+  .card:hover .card-arrow { color: var(--wire); }
+  :global(.fold.dark) .card { color: var(--bone); }
+  :global(.fold.dark) .card-descriptor, :global(.fold.dark) .card-arrow { color: var(--stone); }
   @media (prefers-reduced-motion: reduce) {
-    .card { transition: none; }
-    .card:hover { transform: none; }
-    .card-hook::after { transition: none; }
+    .card-image img { transition: none; }
+    .card:hover .card-image img { transform: none; }
   }
 </style>

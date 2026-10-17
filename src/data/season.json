@@ -1,0 +1,20 @@
+{
+  "_note": "The swappable seasonal top section of the homepage. Change this file to change the season. 'wire' must be one of the brand wires in brand-kit.md v3.",
+  "name": "Christmas",
+  "wireName": "Overload",
+  "wire": "#D7262E",
+  "offer": "Buy any 2, save 20%",
+  "eyebrow": "Christmas 2026",
+  "headline": [
+    "silent night.",
+    "loud brain."
+  ],
+  "sub": "Christmas jumpers, mugs, baubles and cards for the oddly wired. Landing early November. Members hear first.",
+  "ctaLabel": "Get first dibs",
+  "ctaHref": "#newsletter",
+  "wireOfSeason": {
+    "title": "Overload red",
+    "body": "This season's wire. On every Christmas piece, here until the decorations come down."
+  },
+  "_offer_note": "The 'offer' is not shown anywhere until checkout actually applies it."
+}

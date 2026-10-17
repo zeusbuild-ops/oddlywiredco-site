@@ -1,197 +1,135 @@
 ---
+// The club's story (brand-kit.md v3 §3, approved 2026-10-17). Signed Member 001:
+// no founder name, no face. Paced as a read: opening line → the recognitions →
+// the turn → the wire → the card.
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Wordmark from '../components/Wordmark.astro';
-import Squiggle from '../components/Squiggle.astro';
+import WirePicker from '../components/WirePicker.astro';
+import season from '../data/season.json';
+
+const recognitions = [
+  'Forty-seven tabs open, all important.',
+  'The text you wrote in your head and never sent.',
+  'A whole Saturday lost to finding out everything about lighthouses.',
+  'Being told you were “a lot”, or “so much potential”,',
+];
 ---
 <BaseLayout
-  title="About · OddlyWiredCo"
-  description="An ADHD brand made by an ADHD person. We name the parts nobody else is brave enough to put on a mug. UK-printed, neurodivergent-first, no toxic positivity."
+  title="The club · Oddly Wired"
+  description="Oddly Wired is a club for adults with ADHD. Not a cure, not a superpower, not a checklist. Well-made things for people who get the joke, because they live it."
 >
-  <!-- Fold 1: Hero (Ink) -->
-  <section class="fold dark about-hero">
-    <div class="container">
-      <Wordmark size="sm" variant="darkmode"/>
-      <div class="meta">about / who's behind this</div>
-      <h1 class="h-mono lg">an adhd brand<br>made by an adhd person.</h1>
-      <Squiggle variant="sine" width="50%"/>
-      <p class="hero-sub">we name the parts of adhd nobody else is brave enough to put on a mug.</p>
-    </div>
-  </section>
+  <article class="story">
+    <h1 class="opener">Nobody had to explain it to us.</h1>
 
-  <!-- Fold 2: Hi, I'm Mads (Bone) -->
-  <section class="fold light">
-    <div class="container">
-      <div class="meta">01 / hi, i'm mads</div>
-      <h2 class="h-mono md">i started this after my diagnosis<br>in my thirties.</h2>
-      <p class="body">
-        I realised two things at once. One: a lot of my life suddenly made sense.
-        Two: most of the products marketed at people like me were either clinical and joyless,
-        or built around the idea that ADHD is a quirky productivity superpower if you just hustle harder.
-      </p>
-      <p class="body">
-        Neither of those felt like my actual experience. The actual experience is funnier,
-        messier, more tender, and a lot more specific than that. So I started making the things
-        I wished existed when I got diagnosed.
-      </p>
-    </div>
-  </section>
+    <ol class="recog">
+      {recognitions.map((r) => <li>{r}</li>)}
+    </ol>
+    <p class="tail">and wondering for years why everything felt harder for you than for everyone else.</p>
 
-  <!-- Fold 3: Who this is for (Ink) -->
-  <section class="fold dark">
-    <div class="container">
-      <div class="meta">02 / who this is for</div>
-      <h2 class="h-mono md">the late-diagnosed.<br>the audhd ones.<br>the ones who slipped through.</h2>
-      <p class="body">
-        OddlyWiredCo is built for the late-diagnosed adults, the AuDHD ones, the ADHD women who slipped through every
-        screening as kids, the ADHD parents raising ADHD kids, and anyone who has ever sat in a chair for forty minutes
-        trying to start a task they actually wanted to do.
+    <section class="turn" aria-label="What the club is">
+      <p class="turn-lead">Oddly Wired is a club for brains like ours.</p>
+      <p class="isnt">
+        It isn’t a <s>cure</s>, it isn’t a <s>superpower</s>, and it isn’t a <s>checklist</s>.
       </p>
-      <p class="body">
-        The door is open wider than ADHD. Autistic adults who only worked it out in their thirties, people in autistic
-        burnout, the dyslexic and dyspraxic, the sensory-different, the demand-avoidant, the OCD and tic kids who grew
-        up masking. The whole neurodivergent room. The products lead from ADHD because that is what I live with, but
-        if your brain does not run on the productivity industry's defaults, this is your shop too.
-      </p>
-      <p class="body">
-        If "I thought I was just bad at being a person, turns out I'm neurodivergent" landed somewhere
-        in your gut. You are in the right shop.
-      </p>
-      <div class="pullquote">
-        this is an adhd-only brand by design.<br>
-        no general productivity merch.<br>
-        no inspirational quotes.<br>
-        no toxic positivity.<br>
-        one niche, full commitment.
+      <p class="is">It’s well-made things for people who get the joke, because they live it.</p>
+    </section>
+
+    <section class="current" aria-label="Your wire">
+      <p class="current-line">Every brain runs on its own current. So every piece comes in <span class="your">your wire</span>.</p>
+      <WirePicker variant="full" />
+    </section>
+
+    <section class="sign" aria-label="Signed">
+      <div class="card" aria-label="Membership card: Member 001">
+        <svg class="card-mark" viewBox="0 0 200 200" aria-hidden="true">
+          <circle cx="100" cy="100" r="88" fill="none" stroke="currentColor" stroke-width="14"/>
+          <path d="M35,100 Q55,65 75,100 Q95,135 115,100 Q135,65 155,100" stroke="var(--wire)" stroke-width="14" fill="none" stroke-linecap="round"/>
+          <circle cx="35" cy="100" r="11" fill="var(--wire)"/><circle cx="155" cy="100" r="11" fill="var(--wire)"/>
+        </svg>
+        <p class="card-club">Oddly Wired</p>
+        <p class="card-no">Member 001</p>
+        <dl class="card-meta">
+          <div><dt>Since</dt><dd>2026</dd></div>
+          <div><dt>Wire</dt><dd data-current-wire>{season.wireName}</dd></div>
+        </dl>
       </div>
-    </div>
-  </section>
-
-  <!-- Fold 4: What we make (Bone) -->
-  <section class="fold light">
-    <div class="container">
-      <div class="meta">03 / what we make</div>
-      <h2 class="h-mono md">three things,<br>all neurodivergent.</h2>
-      <p class="body">
-        Humour and identity mugs and prints. Digital planners and tools designed for executive-function reality
-        (not the "wake up at 5am and journal" version). Seasonal drops around moments like Mental Health Awareness
-        Month, perimenopause overlap, and late-diagnosis anniversaries.
-      </p>
-      <p class="body">
-        Every product targets a specific neurodivergent moment. Masking fatigue. Time blindness. Object permanence.
-        The 2am doom-scroll. The hyperfocus spiral. Rejection sensitivity. The bits that do not make it into
-        mainstream "ADHD content" because they are too honest.
-      </p>
-    </div>
-  </section>
-
-  <!-- Fold 5: What you will not find (Bone) -->
-  <section class="fold light">
-    <div class="container">
-      <div class="meta">04 / what you will not find here</div>
-      <h2 class="h-mono md">no "adhd is your superpower" content.</h2>
-      <ul class="wont-list">
-        <li><span class="x" aria-hidden="true">×</span> no clinical advice</li>
-        <li><span class="x" aria-hidden="true">×</span> no content that talks down to neurodivergent people</li>
-        <li><span class="x" aria-hidden="true">×</span> no promises that a planner will fix you</li>
-        <li><span class="x" aria-hidden="true">×</span> no treating us as a problem to be solved</li>
-      </ul>
-      <p class="wont-tag">tools and humour, that's it.</p>
-    </div>
-  </section>
-
-  <!-- Fold 6: Thanks + CTAs (Ink) -->
-  <section class="fold dark">
-    <div class="container">
-      <div class="meta">05 / thanks for being here</div>
-      <h2 class="h-mono md">i make this for people who get it.</h2>
-      <p class="body">
-        If you buy something, I see your order. If you message the shop, you are messaging me.
-        If a product does not work for your brain, that's information about the product, not about you.
-        I am glad you found the shop.
-      </p>
-      <div class="cta-row">
-        <a href="/journals" class="button">shop the journals →</a>
-        <a href="https://www.etsy.com/shop/oddlywiredco" class="button outline" target="_blank" rel="noopener">or shop on etsy →</a>
+      <div class="sign-copy">
+        <p>Written by member 001, on behalf of everyone who read this far without opening another tab.</p>
+        <div class="sign-actions">
+          <a href="#newsletter" class="button">Join the club</a>
+          <a href="/#lines" class="quiet">See the lines</a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </article>
 
   <style>
-    .about-hero { padding-top: 64px; padding-bottom: 64px; }
-    .about-hero .container { display: flex; flex-direction: column; gap: 20px; }
-    .hero-sub { color: var(--owc-bone); opacity: 0.65; font-family: var(--font-mono); font-size: 16px; max-width: 620px; }
-    .body { font-size: 18px; line-height: 1.6; max-width: 680px; margin: 0 0 20px; }
+    .story { padding: var(--space-3xl) var(--gutter) var(--space-3xl) calc(var(--gutter) + var(--space-md)); }
+    .story > * { max-width: 1100px; }
 
-    .pullquote {
-      font-family: var(--font-mono);
-      font-size: clamp(18px, 2.2vw, 22px);
-      font-weight: 700;
-      line-height: 1.45;
-      border-left: 4px solid var(--owc-pulse);
-      padding: 18px 24px;
-      margin: 32px 0 0;
-      max-width: 640px;
+    .opener {
+      margin: 0 0 var(--space-3xl); min-width: 0; overflow-wrap: anywhere;
+      font-family: var(--font-display); font-stretch: 62%; font-variation-settings: 'wdth' 62;
+      font-weight: 800; text-transform: uppercase; line-height: 0.88;
+      font-size: clamp(64px, 12vw, 184px);
     }
 
-    /* "what you will not find" — stronger visual moment */
-    .wont-list {
-      list-style: none;
-      padding: 0;
-      margin: 28px 0 0;
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-      max-width: 720px;
+    .recog { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-lg); }
+    .recog li {
+      font-family: var(--font-display); font-stretch: 75%; font-variation-settings: 'wdth' 75;
+      font-weight: 800; line-height: 1.02; font-size: clamp(30px, 4.6vw, 64px);
+      max-width: 22ch;
     }
-    .wont-list li {
-      display: flex;
-      align-items: baseline;
-      gap: 14px;
-      font-family: var(--font-mono);
-      font-size: clamp(18px, 1.9vw, 22px);
-      font-weight: 500;
-      line-height: 1.35;
-      padding: 4px 0;
-    }
-    .wont-list li .x {
-      flex: 0 0 auto;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 28px;
-      height: 28px;
-      background: var(--owc-pulse);
-      color: var(--owc-ink);
-      font-weight: 700;
-      font-size: 16px;
-      border-radius: 4px;
-      line-height: 1;
-    }
-    .wont-tag {
-      margin-top: 32px;
-      font-family: var(--font-mono);
-      font-size: 16px;
-      opacity: 0.7;
-      max-width: 620px;
-    }
+    .recog li:nth-child(even) { margin-left: clamp(0px, 12vw, 200px); }
+    .tail { margin: var(--space-lg) 0 var(--space-3xl); font-size: var(--text-xl); line-height: 1.4; max-width: 32ch; color: var(--muted); }
 
-    /* CTA row — primary filled, secondary outline */
-    .cta-row { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 28px; }
-
-    /* Subtle Pulse hairline between folds — visual rhythm */
-    .fold + .fold {
-      position: relative;
+    .turn { border-top: 1px solid var(--hairline); padding-top: var(--space-2xl); margin-bottom: var(--space-3xl); }
+    .turn-lead {
+      margin: 0 0 var(--space-lg);
+      font-family: var(--font-display); font-stretch: 62%; font-variation-settings: 'wdth' 62;
+      font-weight: 800; text-transform: uppercase; line-height: 0.92; font-size: clamp(44px, 7vw, 104px);
     }
-    .fold + .fold::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 40px;
-      height: 2px;
-      background: var(--owc-pulse);
-      opacity: 0.5;
+    .isnt, .is { margin: 0 0 var(--space-md); font-size: clamp(22px, 2.6vw, 34px); line-height: 1.35; max-width: 34ch; }
+    .isnt s { text-decoration-color: var(--wire); text-decoration-thickness: 0.14em; }
+    .is { font-weight: 600; }
+
+    .current { background: var(--linen); margin-left: calc(-1 * var(--space-md)); padding: var(--space-2xl) var(--space-xl); margin-bottom: var(--space-3xl); }
+    .current-line { margin: 0 0 var(--space-xl); font-size: clamp(24px, 3vw, 40px); line-height: 1.25; max-width: 28ch; font-weight: 600; }
+    .your { text-decoration: underline; text-decoration-color: var(--wire); text-decoration-thickness: 0.12em; text-underline-offset: 0.14em; }
+
+    .sign { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: var(--space-2xl); align-items: center; }
+    .card {
+      width: min(340px, 100%); aspect-ratio: 85.6 / 54; /* a real card's proportions */
+      background: var(--ink); color: var(--bone); border-radius: 14px;
+      padding: var(--space-md); display: grid; grid-template-columns: auto 1fr; grid-template-rows: auto 1fr auto;
+      column-gap: var(--space-xs);
+      transform: rotate(-3deg);
+      box-shadow: 0 18px 40px rgba(21, 21, 21, 0.22);
+    }
+    .card-mark { width: 30px; height: 30px; }
+    .card-club {
+      margin: 0; align-self: center;
+      font-family: var(--font-display); font-stretch: 62%; font-variation-settings: 'wdth' 62;
+      font-weight: 800; text-transform: uppercase; font-size: var(--text-lg); line-height: 1;
+    }
+    .card-no {
+      grid-column: 1 / -1; align-self: end; margin: 0;
+      font-family: var(--font-display); font-stretch: 62%; font-variation-settings: 'wdth' 62;
+      font-weight: 800; text-transform: uppercase; font-size: clamp(32px, 4vw, 44px); line-height: 1;
+    }
+    .card-meta { grid-column: 1 / -1; display: flex; gap: var(--space-lg); margin: var(--space-xs) 0 0; }
+    .card-meta div { display: flex; gap: var(--space-2xs); font-size: var(--text-xs); }
+    .card-meta dt { color: var(--stone); text-transform: uppercase; letter-spacing: 0.12em; }
+    .card-meta dd { margin: 0; font-weight: 600; }
+
+    .sign-copy p { margin: 0 0 var(--space-lg); font-size: var(--text-lg); line-height: 1.5; max-width: 36ch; }
+    .sign-actions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-md) var(--space-lg); }
+    .quiet { color: var(--ink); font-size: var(--text-sm); font-weight: 600; white-space: nowrap; text-decoration-color: var(--wire); text-decoration-thickness: 2px; text-underline-offset: 5px; }
+
+    @media (max-width: 760px) {
+      .recog li:nth-child(even) { margin-left: 0; }
+      .current { margin-left: 0; padding: var(--space-xl) var(--space-md); }
+      .sign { grid-template-columns: minmax(0, 1fr); }
+      .card { transform: rotate(-2deg); }
     }
   </style>
 </BaseLayout>

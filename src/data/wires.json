@@ -1,0 +1,9 @@
+[
+  { "name": "Live Wire",  "hex": "#E8572A", "note": "House colour" },
+  { "name": "Signal",     "hex": "#2EC4B6", "note": "The original teal" },
+  { "name": "Hyperfocus", "hex": "#2F5BFF", "note": "Deep blue" },
+  { "name": "Dopamine",   "hex": "#FF5FA2", "note": "Hot pink" },
+  { "name": "Static",     "hex": "#D7F23C", "note": "Electric lime" },
+  { "name": "Overload",   "hex": "#D7262E", "note": "Red" },
+  { "name": "Chalk",      "hex": "#E9E5DC", "note": "Barely there" }
+]

@@ -1,9 +1,17 @@
+/* Hallmark · macrostructure: Wire Index (custom, brand-led) · genre: editorial · tone: dry members' club
+ * theme: custom — brand-kit.md v3 "The club" (bone paper · ink · one wire accent, user-selectable)
+ * nav: masthead + wire swatches · footer: Ft5 Statement + newsletter · enrichment: none (typography + the wire)
+ */
 @import './tokens.css';
 @import './reset.css';
 
 :root {
-  --font-wordmark: 'Courier New', Menlo, monospace;
-  --font-mono: 'Space Mono', Menlo, 'Courier New', monospace;
+  /* v3: Archivo (narrow, ExtraBold) for headlines, Inter for everything else.
+     --font-mono is a legacy name used across components for UI labels; it now
+     points at Inter so the old monospace look disappears site-wide. */
+  --font-display: 'Archivo', 'Helvetica Neue', Arial, sans-serif;
+  --font-wordmark: var(--font-display);
+  --font-mono: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
   --fold-padding-y: clamp(56px, 12vmin, 120px);
@@ -19,10 +27,21 @@
 
 .fold.dark { background: var(--owc-ink); color: var(--owc-type-on-dark); }
 .fold.light { background: var(--owc-bone); color: var(--owc-type-on-light); }
+.fold.linen { background: var(--linen); color: var(--ink); }
+
+body { background: var(--bone); color: var(--ink); font-family: var(--font-body); }
 
 .container { max-width: var(--container-max); margin: 0 auto; }
 
-.h-mono { font-family: var(--font-mono); font-weight: 700; letter-spacing: -1.5px; line-height: 1.05; }
+.h-mono, .display {
+  font-family: var(--font-display);
+  font-stretch: 62%;
+  font-variation-settings: 'wdth' 62;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -0.005em;
+  line-height: 0.92;
+}
 .h-mono.xl { font-size: clamp(38px, 8vw, 96px); }
 .h-mono.lg { font-size: clamp(28px, 5vw, 64px); }
 .h-mono.md { font-size: clamp(28px, 4vw, 40px); }
@@ -31,31 +50,34 @@
   font-family: var(--font-mono);
   font-size: 11px;
   text-transform: uppercase;
-  letter-spacing: 2.5px;
+  letter-spacing: 0.2em;
   opacity: 0.6;
 }
-.meta::before { content: '> '; color: var(--owc-pulse); }
 
 .button {
   display: inline-block;
   padding: 14px 24px;
-  background: var(--owc-pulse);
-  color: var(--owc-ink);
-  font-family: var(--font-mono);
-  font-size: 13px;
-  font-weight: 700;
+  background: var(--ink);
+  color: var(--bone);
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  border-radius: 8px;
+  letter-spacing: 0.18em;
+  border-radius: 2px;
+  text-decoration: none;
   transition: transform 0.15s var(--transition-base);
 }
 .button:hover { transform: translateY(-2px); }
-.button.signal { background: var(--owc-signal); color: var(--owc-bone); }
-.button.outline { background: transparent; border: 2px solid var(--owc-pulse); color: var(--owc-pulse); padding: 12px 22px; }
+.button.signal { background: var(--wire); color: var(--bone); }
+.button.light { background: var(--bone); color: var(--ink); }
+.button.outline { background: transparent; border: 1px solid currentColor; color: inherit; padding: 13px 23px; }
+.fold.dark .button { background: var(--bone); color: var(--ink); }
+.fold.dark .button.outline { background: transparent; color: var(--bone); }
 
 :focus { outline: none; }
 :focus-visible {
-  outline: 2px solid var(--owc-pulse);
+  outline: 2px solid var(--wire);
   outline-offset: 3px;
   border-radius: 2px;
 }
@@ -63,7 +85,7 @@
   outline-offset: 4px;
 }
 .fold.dark :focus-visible {
-  outline-color: var(--owc-pulse);
+  outline-color: var(--bone);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -73,4 +95,17 @@
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+/* The wire: one continuous line down the page's left edge, from the masthead
+   to the footer, ending in a terminal dot. Coloured by --wire. */
+html, body { overflow-x: clip; }
+.page { position: relative; }
+.wire-rail {
+  position: absolute; top: 0; bottom: calc(var(--space-lg) + var(--rail-w)); left: var(--rail-x); width: var(--rail-w);
+  background: var(--wire);
+  -webkit-mask: url('/wire-v.svg') repeat-y center top / 100% 96px;
+          mask: url('/wire-v.svg') repeat-y center top / 100% 96px;
+  pointer-events: none; z-index: 1;
+  transition: background-color var(--dur-short) var(--ease-out);
 }
